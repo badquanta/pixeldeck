@@ -5,6 +5,7 @@ module.exports = {
   version: package.version,
   resDir: Path.resolve(__dirname, '../res'),
   viewsDir: Path.resolve(__dirname, '../views'),
+  ui: 'blessed',
   locals: {
     cache: false,
     compileDebug: true
@@ -14,5 +15,9 @@ module.exports = {
     autoload: true,
     autosave: true,
     pretty: true
+  },
+  replOpts:{
+    prompt: 'A>',
+
   }
 }

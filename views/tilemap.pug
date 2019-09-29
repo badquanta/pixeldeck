@@ -11,11 +11,14 @@ svg(
   width=width*tilewidth
   height=height*tileheight
 )
+  - const revTilesets = tilesets.slice().reverse()
   - function getTidUrl(tid){
-  -   let tileset = tilesets.reverse().find(function(ts,idx){
-  -     return idx === tilesets.length-1 ? true : tilesets[idx+1].firstGid <= tid
+  -   let tileset = revTilesets.find(function(ts,idx){
+  -     return ts.firstgid <= tid
   -   })
-  -    return `${tileset.source.replace('.json','.ts.svg')}#${tid}`
+  -   if( tid < tileset.firstgid )throw new Error(`TID: ${tid} ${JSON.stringify(tileset)}`)
+  -   let id = (tid -tileset.firstgid)+1
+  -    return `${tileset.source.replace('.json','.ts.svg')}#${id}`
   -  }
 
   - function getX(cnt){
