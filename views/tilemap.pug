@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+svg(
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  id="svg8"
+  version="1.1"
+  width=width*tilewidth
+  height=height*tileheight
+)
+  - function getTidUrl(tid){
+  -    return `${tilesets[0].source.replace('.json','.ts.svg')}#${tid}`
+  -  }
+
+  - function getX(cnt){
+  -   return ((cnt) % width) * tilewidth
+  - }
+
+  - function getY(cnt){
+  -   return Math.floor((cnt)/width ) * tileheight
+  - }
+  style
+    | image {
+    |  width:#{tilewidth};
+    |  height:#{tileheight}
+    | }
+  g.map()
+    each layer in layers
+      g.layer(id=layer.id name=layer.name)
+        each item, cnt in layer.data
+          if item!=0
+            image.cell(xlink:href=getTidUrl(item) x=getX(cnt) y=getY(cnt) width=tilewidth height=tileheight)
+

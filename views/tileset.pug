@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+svg(
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  id="svg8"
+  version="1.1"
+  viewBox=`0 0 ${imagewidth} ${imageheight}`
+
+
+)
+  script#json(type="text/json")=json
+  image(xlink:href=image x="0" y="0" width=imagewidth height=imageheight )
+  - let cnt = 1;
+  - let x = 0, y = 0
+
+  while y < parseInt(imageheight)
+    while x < parseInt(imagewidth)
+      - let tileInfo = tiles.find((tile)=>{ return tile.id===cnt})
+      = `<!--${x},${y} -->`
+      = `<!-- ${JSON.stringify(tileInfo)} -->`
+      view(id=`${cnt}` width=tilewidth height=tileheight viewBox=`${x} ${y} ${tilewidth} ${tileheight}`)
+      - cnt++
+      - x+=tilewidth
+    - x=0
+    - y+=tileheight
+
