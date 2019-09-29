@@ -21,19 +21,25 @@ svg(
   -    return `${tileset.source.replace('.json','.ts.svg')}#${id}`
   -  }
 
-  - function getX(cnt){
-  -   return ((cnt) % width) * tilewidth
+  - function getX(cnt, w = width){
+  -   return ((cnt) % w) * tilewidth
   - }
 
-  - function getY(cnt){
-  -   return Math.floor((cnt)/width ) * tileheight
+  - function getY(cnt, w = width, th = tileheight){
+  -   return Math.floor((cnt)/w ) * th
   - }
   script(type="text/json")
     != json
   g.map()
     each layer in layers
       g.layer(id=layer.id name=layer.name)
-        each item, cnt in layer.data
-          if item!=0
-            image.cell(xlink:href=getTidUrl(item) x=getX(cnt) y=getY(cnt) width=tilewidth height=tileheight)
-
+        if layer.data
+          each item, cnt in layer.data
+            if item!=0
+              image.cell(xlink:href=getTidUrl(item) x=getX(cnt) y=getY(cnt) width=tilewidth height=tileheight)
+        else if layer.chunks
+          each chunk, chunkCnt in layer.chunks
+            g.chunk(x=chunk.x y=chunk.y)
+              each item, cnt in chunk.data
+                if item!=0
+                  image.cell(xlink:href=getTidUrl(item) x=getX(cnt,chunk.width) y=getY(cnt,chunk.width) width=tilewidth height=tileheight)
