@@ -13,7 +13,7 @@ svg(
 
 )
   script#json(type="text/json")=json
-  image(xlink:href=image x="0" y="0" width=imagewidth height=imageheight )
+
   - let cnt = 1;
   - let x = 0, y = 0
 
@@ -22,9 +22,9 @@ svg(
       - let tileInfo = tiles.find((tile)=>{ return tile.id===cnt})
       = `<!--${x},${y} -->`
       = `<!-- ${JSON.stringify(tileInfo)} -->`
-      view(id=`${cnt}` width=tilewidth height=tileheight viewBox=`${x} ${y} ${tilewidth} ${tileheight}`)
+      view(id=`${cnt}` width=tilewidth height=tileheight viewBox=`${x} ${y} ${tilewidth} ${tileheight}` data=tileInfo)
       - cnt++
       - x+=tilewidth
     - x=0
     - y+=tileheight
-
+  image(xlink:href=image x="0" y="0" width=imagewidth height=imageheight )

@@ -2,14 +2,15 @@
   "name": "pixeldeck",
   "version": "0.0.1",
   "description": "A 2d virtual environment",
-  "main": "lib/pixeldeck.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG=* lib/pixeldeck.js"
+    "start": "DEBUG=* bin/pixeldeck.js"
   },
   "author": "",
   "license": "GPL-3.0",
   "dependencies": {
+    "blessed": "^0.1.81",
     "config": "^3.2.2",
     "datauri": "^2.0.0",
     "debug": "^4.1.1",

@@ -12,7 +12,10 @@ svg(
   height=height*tileheight
 )
   - function getTidUrl(tid){
-  -    return `${tilesets[0].source.replace('.json','.ts.svg')}#${tid}`
+  -   let tileset = tilesets.reverse().find(function(ts,idx){
+  -     return idx === tilesets.length-1 ? true : tilesets[idx+1].firstGid <= tid
+  -   })
+  -    return `${tileset.source.replace('.json','.ts.svg')}#${tid}`
   -  }
 
   - function getX(cnt){
