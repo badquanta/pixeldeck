@@ -22,11 +22,8 @@ svg(
   - function getY(cnt){
   -   return Math.floor((cnt)/width ) * tileheight
   - }
-  style
-    | image {
-    |  width:#{tilewidth};
-    |  height:#{tileheight}
-    | }
+  script(type="text/json")
+    != json
   g.map()
     each layer in layers
       g.layer(id=layer.id name=layer.name)
