@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG=* bin/pixeldeck.js"
+    "start": "DEBUG=* bin/pixeldeck.js",
+    "doc": "rm -rf docs; npx jsdoc -c ./jsdoc.conf.json"
   },
   "author": "",
   "license": "GPL-3.0",
@@ -19,5 +20,17 @@
     "lokijs": "^1.5.7",
     "pug": "^2.0.4",
     "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.3",
+    "nodemon": "^1.19.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.json",
+      "test/*",
+      "docs/*"
+    ],
+    "delay": "2500"
   }
 }
