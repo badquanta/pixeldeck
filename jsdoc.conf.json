@@ -11,9 +11,10 @@
     "include": [
       "package.json",
       "lib/",
-      "README.md"
+      "README.md",
+
     ],
-    "includePattern": ".+\\.js(doc|x)?$"
+    "includePattern": ".+\\.(js(doc|x))?$"
   },
   "plugins": [
     "plugins/markdown",

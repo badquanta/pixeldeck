@@ -1,16 +1,40 @@
 {
   "name": "pixeldeck",
   "version": "0.0.1",
-  "description": "A 2d virtual environment",
   "main": "lib/index.js",
+  "description": "A 2d virtual environment",
+  "homepage": "https://badquanta.github.io/pixeldeck/",
+  "bugs": {
+    "url": "https://github.com/badquanta/pixeldeck/labels/bug"
+  },
+  "keywords": [
+    "multiplayer",
+    "game-engine",
+    "2d",
+    "web-browser",
+    "web-service"
+  ],
+  "files": [
+    "config/*",
+    "lib/*",
+    "views/*",
+    "res/*",
+    "bin/*",
+    "README.md",
+    "LICENSE.md",
+    "package.json"
+  ],
+  "bin": {
+    "pixeldeck": "./bin/pixeldeck.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG=$DEBUG||'*' bin/pixeldeck.js",
-    "start-watch": "DEBUG=$DEBUG||'*' nodemon --exec npm start",
+    "start": "DEBUG=\"*\" bin/pixeldeck.js",
+    "start-watch": "DEBUG='*' nodemon --exec npm start",
     "doc": "npx jsdoc -c ./jsdoc.conf.json",
     "doc-watch": "nodemon --exec npm run doc"
   },
-  "author": "",
+  "author": "BadQuanta",
   "license": "GPL-3.0",
   "dependencies": {
     "blessed": "^0.1.81",
@@ -30,5 +54,4 @@
     "nodemon": "^1.19.3",
     "nyc": "^14.1.1"
   }
-
 }
