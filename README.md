@@ -1,8 +1,8 @@
 <a name="top">PixelDeck links:</a>
 
- [home](https://BadQuanta.github.io/pixeldeck/),
- [github](https://github.com/BadQuanta/pixeldeck/),
- [APIv0.0.1](https://badquanta.github.io/pixeldeck/pixeldeck/0.0.1/index.html),
+[home](https://BadQuanta.github.io/pixeldeck/),
+[github](https://github.com/BadQuanta/pixeldeck/),
+[APIv0.0.1](https://badquanta.github.io/pixeldeck/pixeldeck/0.0.1/index.html),
  ...
 
 ## About:
@@ -28,3 +28,31 @@ In general order of addition to repository.  Please [create a new issue](https:/
 
 ### characters (sets):
 
+
+
+### javascript libraries:
+
+there are really so many, so check out [package.json](./package.json) if you really want to see just the top level dependencies.  Here are the top 10 highlights (so var...)
+
+  1) [express](#TODO) TODO:
+  2) [lokijs](#TODO) TODO:
+  3) [mocha](#TODO) TODO:
+  4) [pug](#TODO) TODO:
+  5) [socket.io](#TODO) TODO:
+  6) [jsdoc](#TODO) TODO:
+  7) [nodemon](#TODO) TODO:
+  9) [nyc](#TODO) TODO:
+  10) [config](#TODO) TODO:
+
+
+<a name="TODO">
+# TODOs
+
+things I need to get done:
+
+* [x] a lot...
+* [ ] give due credit
+* [ ] version 0.0.1
+
+
+back to [#top](#top)?
