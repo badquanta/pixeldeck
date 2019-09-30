@@ -1,3 +1,0 @@
-# pixeldeck (-hijklmnop) [-abcdefg]
-
-TODO: This is how you use pixeldeck...
