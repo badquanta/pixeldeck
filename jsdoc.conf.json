@@ -1,4 +1,5 @@
 {
+  "debug": true,
   "sourceType": "module",
   "tags": {
     "allowUnknownTags": true,
@@ -10,10 +11,10 @@
   "source": {
     "include": [
       "package.json",
-      "lib/",
-      "README.md"
+      "lib/"
+      //"README.md"
     ],
-    "includePattern": ".+\\.(js)?$"
+    "includePattern": ".*"
   },
   "plugins": [
     "plugins/markdown",

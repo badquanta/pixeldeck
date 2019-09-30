@@ -33,7 +33,7 @@
     "start": "DEBUG=\"*\" bin/pixeldeck.js",
     "start-watch": "DEBUG='*' nodemon --exec npm start",
     "docs":"npm run doc-html && npm run doc-man",
-    "doc-html": "npx jsdoc -c ./jsdoc.conf.json",
+    "doc-html": "npx jsdoc --debug -c ./jsdoc.conf.json",
     "doc-man": "./scripts/updateMan.js ./docs/pixeldeck.md",
     "docs-watch": "nodemon --exec npm -- run docs"
   },

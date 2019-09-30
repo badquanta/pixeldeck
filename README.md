@@ -1,15 +1,15 @@
 <a name="top">PixelDeck links:</a>
 
-[home](https://BadQuanta.github.io/pixeldeck/),
-[github](https://github.com/BadQuanta/pixeldeck/),
-[APIv0.0.1](https://badquanta.github.io/pixeldeck/pixeldeck/0.0.1/index.html),
+[home](https://BadQuanta.github.io/pixeldeck/)
+[github](https://github.com/BadQuanta/pixeldeck/)
+[APIv0.0.1](https://badquanta.github.io/pixeldeck/pixeldeck/0.0.1/index.html)
  ...
 
 ---
 
 ### About:
 
-A work-in-progress environment for 2d games
+A work-in-progress environment for 2d games.  Lots of goals.
 
 [![Screenshot](https://badquanta.github.io/pixeldeck/imgs/Screenshot01.thumbnail.png "Screenshot" )](https://badquanta.github.io/pixeldeck/imgs/Screenshot01.png)
 

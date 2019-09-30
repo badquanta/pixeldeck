@@ -1,9 +1,7 @@
 {
-  "verbose": false,
+  "verbose": true,
   "watch": [
-    "*.md",
-    "*.js",
-    "*.json"
+
   ],
   "ignore": [
     "*.db.json",
@@ -11,5 +9,6 @@
     "docs/pixeldeck",
     "man/"
   ],
+  "ext":"js,md,json",
   "delay": "1000"
 }
