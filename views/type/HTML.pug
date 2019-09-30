@@ -1,0 +1,33 @@
+html
+  head
+    title
+      block HEAD_TITLE
+        PixelDeck
+  body
+    span TODO: HTML Mixins; maybe the SVG ones too.
+    header
+      // pre block BODY_HEADER
+      block BODY_HEADER
+        // default block BODY_HEADER
+        h1
+          block BODY_HEADER_TITLE
+            // default block BODY_HEADER_TITLE
+            block HEAD_TITLE
+            // end default block BODY_HEADER_TITLE
+        span TODO: Better header?
+      // post block BODY_HEADER
+    main
+      // pre block MAIN
+      block MAIN
+        // default block MAIN
+        // pre block
+        block
+          // default block
+        // post block
+        // end default block MAIN
+      // post block MAIN
+    footer
+      // pre block BODY_FOOTER
+      block BODY_FOOTER
+        // default block BODY_FOOTER
+        span TODO: Better footer?

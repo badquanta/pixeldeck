@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: start.js</title>
+    <title>JSDoc: Source: data/base.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: start.js</h1>
+    <h1 class="page-title">Source: data/base.js</h1>
 
     
 
@@ -26,32 +26,12 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>module.exports = start
-const dbg = require('./dbg').extend('start')
+            <pre class="prettyprint source linenums"><code>const LokiJs = require('lokijs')
+const cfg = require('../cfg')
 /**
- * initialize pixeldeck services
+ * instance of a [loki.js](https://github.com/techfort/LokiJS) embedded database instance
  */
-function start () {
-  const cfg = require('./cfg')
-  const server = require('./server')
-  server.listen(4444, function () {
-    dbg('listening')
-
-    if (cfg.interactive) {
-      const repl = require('./repl')
-      repl()
-      Object.defineProperties(repl.server.context, {
-        pixeldeck: { get: () => require('./root') },
-        db: { get: () => require('./data/base') },
-        server: { get: () => require('./server') },
-        Tileset: { get: () => require('./Tileset') },
-        repl: { get: () => require('./repl') }
-      })
-    }
-
-  })
-
-}</code></pre>
+const db = module.exports = new LokiJs(cfg.dbName, cfg.dbOpts)</code></pre>
         </article>
     </section>
 

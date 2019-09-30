@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: start.js</title>
+    <title>JSDoc: Source: data/_Model.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: start.js</h1>
+    <h1 class="page-title">Source: data/_Model.js</h1>
 
     
 
@@ -26,31 +26,73 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>module.exports = start
-const dbg = require('./dbg').extend('start')
+            <pre class="prettyprint source linenums"><code>module.exports = _Model
+
 /**
- * initialize pixeldeck services
+ * Abstract model for extending
  */
-function start () {
-  const cfg = require('./cfg')
-  const server = require('./server')
-  server.listen(4444, function () {
-    dbg('listening')
+class _Model {
+  /**
+   * Retrieves/Updates &amp; Persists @param json
+   * @param json {object} to be used in query or
+   */
+  constructor (json){
+    if(!this){return new _Model(...arguments)}
+    const query = cleanQuery(json)
+    const record = this.record = this.collection.findOne(query) || this.collection.insert(json)
 
-    if (cfg.interactive) {
-      const repl = require('./repl')
-      repl()
-      Object.defineProperties(repl.server.context, {
-        pixeldeck: { get: () => require('./root') },
-        db: { get: () => require('./data/base') },
-        server: { get: () => require('./server') },
-        Tileset: { get: () => require('./Tileset') },
-        repl: { get: () => require('./repl') }
-      })
+  }
+  static get dbg(){
+    return
+  }
+  // --- STATIC METHODS:
+  /**
+   * Should return a Loki Collection
+   * @returns {Loki} Collection
+   */
+  static get collection(){return AbstractMethod(1)}
+
+  // --- INSTANCE PROPERTIES:
+  linux = test
+  get collection(){
+    return this.constructor.collection
+  }
+  // --- INSTANCE METHODS:
+  save(){
+    record = this.collection.update(record)
+  }
+}
+// class methods:
+Model.getCollection = AbstractMethod
+// instance methods:
+Model.prototype = {
+  get collection(){
+    return this.constructor.collection
+  },
+  save(){
+    this.collection.update(this.record)
+  }
+}
+
+function AbstractMethod(ofs=0){
+  throw new Error(`${arguments.callee[ofs].name} should be overridden. `)
+}
+
+function cleanQuery(){
+  const query = {}
+  for (const arg of arguments) {
+    switch(typeof arg){
+      case 'object':
+        Object.keys(arg).forEach((key) => {
+          if (typeof json[key] !== 'object') {
+            query[key] = arg[key]
+          }
+        })
+        break
+      default:
+        throw new Error(`don't know how to handle ${typeof arg}`)
     }
-
-  })
-
+  }
 }</code></pre>
         </article>
     </section>
