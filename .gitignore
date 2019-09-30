@@ -3,3 +3,4 @@ coverage/
 ARCHIVES/
 *.db.json
 docs/
+.nyc_output
