@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "DEBUG=* bin/pixeldeck.js",
+    "start-watch": "DEBUG=* nodemon bin/pixeldeck.js ",
     "doc": "rm -rf docs; npx jsdoc -c ./jsdoc.conf.json"
   },
   "author": "",
@@ -25,7 +26,8 @@
   },
   "devDependencies": {
     "jsdoc": "^3.6.3",
-    "nodemon": "^1.19.3"
+    "nodemon": "^1.19.3",
+    "nyc": "^14.1.1"
   },
   "nodemonConfig": {
     "ignore": [
