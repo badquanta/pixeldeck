@@ -1,0 +1,12 @@
+{
+  "verbose": false,
+  "watch": [
+
+  ],
+  "ignore": [
+    "*.db.json",
+    "test/*",
+    "docs/*"
+  ],
+  "delay": "1000"
+}

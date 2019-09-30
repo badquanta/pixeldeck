@@ -2,7 +2,7 @@
 
 The general idea is to make a fun multiplayer 2d rpg engine/framework.
 
-![Screenshot](https://badquanta.github.io/pixeldeck/imgs/Screenshot01.png "Screenshot")
+[![Screenshot](https://badquanta.github.io/pixeldeck/imgs/Screenshot01.thumbnail.png "Screenshot" )](https://badquanta.github.io/pixeldeck/imgs/Screenshot01.png)
 
 
 ## License:

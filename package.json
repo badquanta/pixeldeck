@@ -29,13 +29,6 @@
     "jsdoc": "^3.6.3",
     "nodemon": "^1.19.3",
     "nyc": "^14.1.1"
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "*.db.json",
-      "test/*",
-      "docs/*"
-    ],
-    "delay": "2500"
   }
+
 }
