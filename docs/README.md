@@ -1,8 +1,9 @@
-| Main links: |                                                                               |
-|             | [home](https://BadQuanta.github.io/pixeldeck/)                                |
-|             | [github](https://github.com/BadQuanta/pixeldeck/)                             |
-|             | [APIv0.0.1](https://badquanta.github.io/pixeldeck/pixeldeck/0.0.1/index.html) |
-|             | ...                                                                           |
+<a name="top">
+PixelDeck links:
+||| [home](https://BadQuanta.github.io/pixeldeck/)
+||| [github](https://github.com/BadQuanta/pixeldeck/)
+||| [APIv0.0.1](https://badquanta.github.io/pixeldeck/pixeldeck/0.0.1/index.html)
+||| ...                                                      |
 
 ### API Documentation:
 * [0.0.1](./pixeldeck/0.0.1/index.html)
@@ -30,3 +31,5 @@ The tilemap is a 2nd SVG. Each tile in this is represented by an individual `ima
 
 
 __The immediate next steps are to__: Investigate other means of generating the tilesheet & tilemap svgs.  This is to embed everything into a single HTML file (all  svgs, stylesheets, javascript, and possibly json data.)  The reason is so that this can all be sent to the client all at once.  White this is a multiplayer game; if it is possible to make single player games possible to play offline the embedding of both assets; game logic; and state into one file makes it ideal for  sharing and archiving.
+
+[#top](#top)
