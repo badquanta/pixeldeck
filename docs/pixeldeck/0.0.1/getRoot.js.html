@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: index.js</title>
+    <title>JSDoc: Source: getRoot.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: index.js</h1>
+    <h1 class="page-title">Source: getRoot.js</h1>
 
     
 
@@ -26,15 +26,15 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>
+            <pre class="prettyprint source linenums"><code>module.exports = getRoot
 /**
- * map [app](#app) handlers to routes
+ *
+ * @param {*} req
+ * @param {*} res
  */
-const index = module.exports = require('./app')
-index.get(/\/(.*)\.ts\.svg/, require('./getTilesetSvg'))
-index.get(/\/(.*)\.tm\.svg/, require('./getTilemapSvg'))
-index.get('/', require('./getRoot'))
-</code></pre>
+function getRoot (req, res) {
+  res.render('main')
+}</code></pre>
         </article>
     </section>
 

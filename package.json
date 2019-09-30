@@ -5,9 +5,10 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "DEBUG=* bin/pixeldeck.js",
-    "start-watch": "DEBUG=* nodemon bin/pixeldeck.js ",
-    "doc": "rm -rf docs/pixeldeck; npx jsdoc -c ./jsdoc.conf.json"
+    "start": "DEBUG=$DEBUG||'*' bin/pixeldeck.js",
+    "start-watch": "DEBUG=$DEBUG||'*' nodemon --exec npm start",
+    "doc": "npx jsdoc -c ./jsdoc.conf.json",
+    "doc-watch": "nodemon --exec npm run doc"
   },
   "author": "",
   "license": "GPL-3.0",

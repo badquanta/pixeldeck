@@ -98,13 +98,15 @@
 
         
             
-<h4 class="name" id="cfg"><span class="type-signature"></span>cfg<span class="type-signature"></span></h4>
+<h4 class="name" id="app"><span class="type-signature">(constant) </span>app<span class="type-signature"></span></h4>
 
+
+<p class="summary"><p>pixeldeck uses <a href="http://expressjs.com/en/4x/api.html">express.js v4</a> as the remote holoemition router.</p>
 
 
 
 <div class="description">
-    <p>loads runtime configuration using the <a href="https://www.npmjs.com/package/config">config library</a></p>
+    <p>pixeldeck uses <a href="http://expressjs.com/en/4x/api.html">express.js v4</a> as the remote holoemition router.</p>
 </div>
 
 
@@ -142,7 +144,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="cfg.js.html">cfg.js</a>, <a href="cfg.js.html#line1">line 1</a>
+        <a href="app.js.html">app.js</a>, <a href="app.js.html#line7">line 7</a>
     </li></ul></dd>
     
 
@@ -162,6 +164,8 @@
             
 <h4 class="name" id="db"><span class="type-signature">(constant) </span>db<span class="type-signature"></span></h4>
 
+
+<p class="summary"><p>instance of a <a href="https://github.com/techfort/LokiJS">loki.js</a> embedded database instance</p>.</p>
 
 
 
@@ -222,22 +226,18 @@
 
         
             
-<h4 class="name" id="pixeldeck"><span class="type-signature"></span>pixeldeck<span class="type-signature"> :express()</span></h4>
+<h4 class="name" id="dbg"><span class="type-signature">(constant) </span>dbg<span class="type-signature"></span></h4>
+
+
+<p class="summary"><p><a href="https://www.npmjs.com/package/debug">debug</a> provides our output</p>.</p>
 
 
 
+<div class="description">
+    <p><a href="https://www.npmjs.com/package/debug">debug</a> provides our output</p>
+</div>
 
 
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">express()</span>
-
-
-        </li>
-    </ul>
 
 
 
@@ -272,7 +272,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line1">line 1</a>
+        <a href="dbg.js.html">dbg.js</a>, <a href="dbg.js.html#line4">line 4</a>
     </li></ul></dd>
     
 
@@ -290,11 +290,16 @@
 
         
             
-<h4 class="name" id="replBootupaservicereplsowecaninteract/debug/admintheserver-side."><span class="type-signature"></span>repl
-Boot up a service repl so we can interact/debug/admin the server-side.<span class="type-signature"></span></h4>
+<h4 class="name" id="index"><span class="type-signature">(constant) </span>index<span class="type-signature"></span></h4>
+
+
+<p class="summary"><p>map <a href="#app">app</a> handlers to routes</p>.</p>
 
 
 
+<div class="description">
+    <p>map <a href="#app">app</a> handlers to routes</p>
+</div>
 
 
 
@@ -331,7 +336,7 @@ Boot up a service repl so we can interact/debug/admin the server-side.<span clas
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="repl.js.html">repl.js</a>, <a href="repl.js.html#line12">line 12</a>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line5">line 5</a>
     </li></ul></dd>
     
 
@@ -351,6 +356,8 @@ Boot up a service repl so we can interact/debug/admin the server-side.<span clas
             
 <h4 class="name" id="server"><span class="type-signature"></span>server<span class="type-signature"></span></h4>
 
+
+<p class="summary"><p><a href="https://nodejs.org/docs/latest-v10.x/api/http.html#http_class_http_server">Node.js http.Server</a> instance for our <a href="./index.js.html">indexed express application</a>.</p>
 
 
 
@@ -424,6 +431,8 @@ Boot up a service repl so we can interact/debug/admin the server-side.<span clas
     <h4 class="name" id="close"><span class="type-signature">(async) </span>close<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
+    
+    <p class="summary"><p>Shutdown the pixeldeck service</p>.</p>
     
 
 
@@ -504,6 +513,949 @@ Boot up a service repl so we can interact/debug/admin the server-side.<span clas
 
 
         
+            
+
+    
+
+    
+    <h4 class="name" id="getRoot"><span class="type-signature"></span>getRoot<span class="signature">(req, res)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>req</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>res</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="getRoot.js.html">getRoot.js</a>, <a href="getRoot.js.html#line7">line 7</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getTilemapSvg"><span class="type-signature"></span>getTilemapSvg<span class="signature">(req, res, next)</span><span class="type-signature"></span></h4>
+    
+
+    
+    <p class="summary">Route handler for <code>tm.svg</code> files.</p>
+    
+
+
+
+<div class="description">
+    <p>Route handler for <code>tm.svg</code> files.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>req</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>res</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>next</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="getTilemapSvg.js.html">getTilemapSvg.js</a>, <a href="getTilemapSvg.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getTilesetSvg"><span class="type-signature"></span>getTilesetSvg<span class="signature">(req, res, next)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>req</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>res</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>next</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="getTilesetSvg.js.html">getTilesetSvg.js</a>, <a href="getTilesetSvg.js.html#line16">line 16</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="repl"><span class="type-signature"></span>repl<span class="signature">(opts, &hellip;args)</span><span class="type-signature"> &rarr; {repl.REPLServer}</span></h4>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>opts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">any</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="repl.js.html">repl.js</a>, <a href="repl.js.html#line18">line 18</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">repl.REPLServer</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="start"><span class="type-signature"></span>start<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+    <p class="summary"><p>initialize pixeldeck services</p>.</p>
+    
+
+
+
+<div class="description">
+    <p>initialize pixeldeck services</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="start.js.html">start.js</a>, <a href="start.js.html#line6">line 6</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="Tileset"><span class="type-signature"></span>Tileset<span class="signature">(json)</span><span class="type-signature"></span></h4>
+    
+
+    
+    <p class="summary">Give me something to load.</p>
+    
+
+
+
+<div class="description">
+    <p>Give me something to load.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>json</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>is pretty much just any kind of data.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Tileset.js.html">Tileset.js</a>, <a href="Tileset.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
     
 
     
@@ -519,14 +1471,13 @@ Boot up a service repl so we can interact/debug/admin the server-side.<span clas
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#cfg">cfg</a></li><li><a href="global.html#close">close</a></li><li><a href="global.html#db">db</a></li><li><a href="global.html#pixeldeck">pixeldeck</a></li><li><a href="global.html#replBootupaservicereplsowecaninteract/debug/admintheserver-side.">repl
-Boot up a service repl so we can interact/debug/admin the server-side.</a></li><li><a href="global.html#server">server</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#app">app</a></li><li><a href="global.html#close">close</a></li><li><a href="global.html#db">db</a></li><li><a href="global.html#dbg">dbg</a></li><li><a href="global.html#getRoot">getRoot</a></li><li><a href="global.html#getTilemapSvg">getTilemapSvg</a></li><li><a href="global.html#getTilesetSvg">getTilesetSvg</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#repl">repl</a></li><li><a href="global.html#server">server</a></li><li><a href="global.html#start">start</a></li><li><a href="global.html#Tileset">Tileset</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Sun Sep 29 2019 22:36:05 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Sep 30 2019 01:00:43 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

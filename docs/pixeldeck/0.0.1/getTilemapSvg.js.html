@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: index.js</title>
+    <title>JSDoc: Source: getTilemapSvg.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: index.js</h1>
+    <h1 class="page-title">Source: getTilemapSvg.js</h1>
 
     
 
@@ -26,15 +26,35 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>
+            <pre class="prettyprint source linenums"><code>module.exports = getTilemapSvg
+const path = require('path')
+const dbg = require('./dbg').extend('getTilemapSvg')
+const cfg = require('./cfg')
 /**
- * map [app](#app) handlers to routes
+ * Route handler for `tm.svg` files.
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
  */
-const index = module.exports = require('./app')
-index.get(/\/(.*)\.ts\.svg/, require('./getTilesetSvg'))
-index.get(/\/(.*)\.tm\.svg/, require('./getTilemapSvg'))
-index.get('/', require('./getRoot'))
-</code></pre>
+function getTilemapSvg (req, res, next) {
+  dbg('get tilemap', req.path)
+  let inputPath = path.join(cfg.resDir, req.path.replace('.tm.svg', '.json'))
+  if (require.cache[inputPath]) {
+    dbg('unloaded previously loaded input data...')
+    delete require.cache[inputPath]
+  }
+  try {
+    res.locals = require(inputPath)
+  } catch (e) {
+    next(e)
+  }
+  res.locals.doctype = 'svg'
+  res.locals.pretty = true
+  res.locals.json = JSON.stringify(res.locals)
+  res.type('svg')
+  res.render('tilemap')
+  dbg('%o rendered', req.path)
+}</code></pre>
         </article>
     </section>
 

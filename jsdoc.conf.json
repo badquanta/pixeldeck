@@ -12,12 +12,12 @@
       "package.json",
       "lib/",
       "README.md"
-
     ],
     "includePattern": ".+\\.js(doc|x)?$"
   },
   "plugins": [
-    "plugins/markdown"
+    "plugins/markdown",
+    "plugins/summarize"
   ],
   "templates": {
     "cleverLinks": true,

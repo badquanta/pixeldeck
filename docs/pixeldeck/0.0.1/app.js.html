@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: index.js</title>
+    <title>JSDoc: Source: app.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: index.js</h1>
+    <h1 class="page-title">Source: app.js</h1>
 
     
 
@@ -26,14 +26,18 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>
+            <pre class="prettyprint source linenums"><code>const express = require('express')
+// TODO: Express App settings?
 /**
- * map [app](#app) handlers to routes
+ * @description
+ *    pixeldeck uses [express.js v4](http://expressjs.com/en/4x/api.html) as the remote holoemition router.
  */
-const index = module.exports = require('./app')
-index.get(/\/(.*)\.ts\.svg/, require('./getTilesetSvg'))
-index.get(/\/(.*)\.tm\.svg/, require('./getTilemapSvg'))
-index.get('/', require('./getRoot'))
+const app = module.exports = express()
+const cfg = require('./cfg')
+app.set('view engine', 'pug')
+app.set('views', cfg.viewsDir)
+Object.assign(app.locals, cfg.locals)
+
 </code></pre>
         </article>
     </section>

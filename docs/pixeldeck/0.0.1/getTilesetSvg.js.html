@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: index.js</title>
+    <title>JSDoc: Source: getTilesetSvg.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: index.js</h1>
+    <h1 class="page-title">Source: getTilesetSvg.js</h1>
 
     
 
@@ -26,15 +26,34 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>
+            <pre class="prettyprint source linenums"><code>module.exports = getTilesetSvg
+
+const dbgTs = require('./dbg').extend('getTilesetSvg')
+const datauri = require('datauri')
+const path = require('path')
+const cfg = require('./cfg')
+const fs = require('fs')
+const Tileset = require('./Tileset')
+let loadedImages = getTilesetSvg.loadedImages = {}
 /**
- * map [app](#app) handlers to routes
+ *
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
  */
-const index = module.exports = require('./app')
-index.get(/\/(.*)\.ts\.svg/, require('./getTilesetSvg'))
-index.get(/\/(.*)\.tm\.svg/, require('./getTilemapSvg'))
-index.get('/', require('./getRoot'))
-</code></pre>
+function getTilesetSvg (req, res, next) {
+  dbgTs('rendering %o...', req.path)
+  const tileset = res.locals.tileset = Tileset.forPath(req.path)
+
+
+
+  res.locals.doctype = 'svg'
+  res.locals.pretty = true
+  res.type('svg')
+  res.render('tileset')
+
+  dbgTs('%o rendered.', req.path)
+}</code></pre>
         </article>
     </section>
 
