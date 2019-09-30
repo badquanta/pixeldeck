@@ -1,6 +1,6 @@
 {
+  "sourceType": "module",
   "tags": {
-    "sourceType": "module",
     "allowUnknownTags": true,
     "dictionaries": [
       "jsdoc",
@@ -13,7 +13,7 @@
       "lib/",
       "README.md"
     ],
-    "includePattern": ".+\\.(js(doc|x))?$"
+    "includePattern": ".+\\.(js)?$"
   },
   "plugins": [
     "plugins/markdown",

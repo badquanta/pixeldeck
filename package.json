@@ -35,8 +35,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "DEBUG=\"*\" bin/pixeldeck.js",
     "start-watch": "DEBUG='*' nodemon --exec npm start",
-    "doc": "npx jsdoc -c ./jsdoc.conf.json",
-    "doc-watch": "nodemon --exec npm run doc"
+    "docs":"npm run doc-html && npm run doc-man",
+    "doc-html": "npx jsdoc -c ./jsdoc.conf.json",
+    "doc-man": "./bin/updateMan.js ./docs/pixeldeck.md",
+    "doc-watch": "nodemon --exec npm run docs"
   },
   "author": "BadQuanta",
   "license": "GPL-3.0",
