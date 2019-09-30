@@ -1,10 +1,8 @@
-html
-  head
-    title PixelDeck
-  body
-    h1 Main
-    embed(src='/test/test1.tm.svg')
-    embed(src='/test/test2.tm.svg')
-    embed(src='/tilesets/lpc-terrains/terrain-map-v7.ts.svg')
+extends ./.HTML
+block MAIN
+  h1 Main
+  embed(src='/test/test1.tm.svg')
+  embed(src='/test/test2.tm.svg')
+  embed(src='/tilesets/lpc-terrains/terrain-map-v7.ts.svg')
 
-    include _credits
+  include _credits
