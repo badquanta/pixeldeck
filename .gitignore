@@ -2,5 +2,6 @@ node_modules/
 coverage/
 ARCHIVES/
 *.db.json
-docs/
+#docs/
 .nyc_output
+.vscode
