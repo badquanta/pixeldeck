@@ -39,7 +39,7 @@ svg(
               image.cell(xlink:href=getTidUrl(item) x=getX(cnt) y=getY(cnt) width=tilewidth height=tileheight)
         else if layer.chunks
           each chunk, chunkCnt in layer.chunks
-            g.chunk(x=chunk.x y=chunk.y)
+            g.chunk(transform=`translate(${chunk.x*tilewidth} ${chunk.y*tileheight})`)
               each item, cnt in chunk.data
                 if item!=0
                   image.cell(xlink:href=getTidUrl(item) x=getX(cnt,chunk.width) y=getY(cnt,chunk.width) width=tilewidth height=tileheight)

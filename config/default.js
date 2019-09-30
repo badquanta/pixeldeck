@@ -1,6 +1,6 @@
 const Path = require('path')
 const package = require('../package')
-module.exports = {
+const defs = module.exports = {
   name: package.name,
   version: package.version,
   resDir: Path.resolve(__dirname, '../res'),
@@ -10,14 +10,18 @@ module.exports = {
     cache: false,
     compileDebug: true
   },
-  dbName: `${package.name}.json`,
+  dbName: `${package.name}.db.json`,
   dbOpts: {
     autoload: true,
     autosave: true,
     pretty: true
   },
-  replOpts:{
-    prompt: 'A>',
+  env: "development",
+  replOpts: {
+    get prompt () { return `${defs.name}:${defs.env}>_` }
+  },
+  get interactive() {
 
+    return !(process.env.INTERACTIVE && process.env.INTERACTIVE.match(/false/))
   }
 }

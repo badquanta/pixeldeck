@@ -8,23 +8,23 @@ svg(
   xmlns:xlink="http://www.w3.org/1999/xlink"
   id="svg8"
   version="1.1"
-  viewBox=`0 0 ${imagewidth} ${imageheight}`
+  viewBox=`0 0 ${tileset.imagewidth} ${tileset.imageheight}`
 
 
 )
-  script#json(type="text/json")=json
+  script#json(type="text/json")=tileset.json
 
   - let cnt = 1;
   - let x = 0, y = 0
 
-  while y < parseInt(imageheight)
-    while x < parseInt(imagewidth)
-      - let tileInfo = tiles.find((tile)=>{ return tile.id===cnt})
+  while y < parseInt(tileset.imageheight)
+    while x < parseInt(tileset.imagewidth)
+      - let tileInfo = tileset.tiles.find((tile)=>{ return tile.id===cnt})
       = `<!--${x},${y} -->`
       = `<!-- ${JSON.stringify(tileInfo)} -->`
-      view(id=`${cnt}` width=tilewidth height=tileheight viewBox=`${x} ${y} ${tilewidth} ${tileheight}` data=tileInfo)
+      view(id=`${cnt}` width=tileset.tilewidth height=tileset.tileheight viewBox=`${x} ${y} ${tileset.tilewidth} ${tileset.tileheight}` data=tileInfo)
       - cnt++
-      - x+=tilewidth
+      - x+=tileset.tilewidth
     - x=0
-    - y+=tileheight
-  image(xlink:href=image x="0" y="0" width=imagewidth height=imageheight )
+    - y+=tileset.tileheight
+  image(xlink:href=tileset.imageDataUrl x="0" y="0" width=tileset.imagewidth height=tileset.imageheight )
