@@ -14,13 +14,10 @@
     "web-browser",
     "web-service"
   ],
+  "directories": {
+    "lib":"lib/","bin":"bin/","man":"man/","doc":"docs/","test":"test/","res":"res/","config":"config/"
+  },
   "files": [
-    "config/*",
-    "lib/*",
-    "views/*",
-    "res/*",
-    "bin/*",
-    "man/*",
     "README.md",
     "LICENSE.md",
     "package.json"
@@ -37,9 +34,10 @@
     "start-watch": "DEBUG='*' nodemon --exec npm start",
     "docs":"npm run doc-html && npm run doc-man",
     "doc-html": "npx jsdoc -c ./jsdoc.conf.json",
-    "doc-man": "./bin/updateMan.js ./docs/pixeldeck.md",
+    "doc-man": "./scripts/updateMan.js ./docs/pixeldeck.md",
     "doc-watch": "nodemon --exec npm run docs"
   },
+  "os":["linux","!win32","!win64","!darwin"],
   "author": "BadQuanta",
   "license": "GPL-3.0",
   "dependencies": {
