@@ -1,7 +1,8 @@
-Main links: | [home](https://BadQuanta.github.io/pixeldeck/)
-| [github](https://github.com/BadQuanta/pixeldeck/)
-| [APIv0.0.1](https://badquanta.github.io/pixeldeck/pixeldeck/0.0.1/index.html)
-|
+| Main links: |                                                                               |
+|             | [home](https://BadQuanta.github.io/pixeldeck/)                                |
+|             | [github](https://github.com/BadQuanta/pixeldeck/)                             |
+|             | [APIv0.0.1](https://badquanta.github.io/pixeldeck/pixeldeck/0.0.1/index.html) |
+|             | ...                                                                           |
 
 ### API Documentation:
 * [0.0.1](./pixeldeck/0.0.1/index.html)
