@@ -15,7 +15,13 @@
     "web-service"
   ],
   "directories": {
-    "lib":"lib/","bin":"bin/","man":"man/","doc":"docs/","test":"test/","res":"res/","config":"config/"
+    "lib": "lib/",
+    "bin": "bin/",
+    "man": "man/",
+    "doc": "docs/",
+    "test": "test/",
+    "res": "res/",
+    "config": "config/"
   },
   "files": [
     "README.md",
@@ -29,15 +35,21 @@
     "man/pixeldeck.1"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "DEBUG=pixeldeck* mocha",
+    "diagnostics": "nodemon --exec npm -- run test",
     "start": "DEBUG=\"*\" bin/pixeldeck.js",
     "start-watch": "DEBUG='*' nodemon --exec npm start",
-    "docs":"npm run doc-html && npm run doc-man",
+    "docs": "npm run doc-html && npm run doc-man",
     "doc-html": "npx jsdoc --debug -c ./jsdoc.conf.json",
     "doc-man": "./scripts/updateMan.js ./docs/pixeldeck.md",
     "docs-watch": "nodemon --exec npm -- run docs"
   },
-  "os":["linux","!win32","!win64","!darwin"],
+  "os": [
+    "linux",
+    "!win32",
+    "!win64",
+    "!darwin"
+  ],
   "author": "BadQuanta",
   "license": "GPL-3.0",
   "dependencies": {
@@ -59,6 +71,8 @@
     "nyc": "^14.1.1",
     "remark-man": "^6.0.0",
     "remark-parse": "^7.0.1",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2",
     "to-vfile": "^6.0.0",
     "unified": "^8.4.0"
   }

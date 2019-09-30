@@ -5,7 +5,6 @@
   ],
   "ignore": [
     "*.db.json",
-    "test/*",
     "docs/pixeldeck",
     "man/"
   ],
