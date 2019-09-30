@@ -47,6 +47,7 @@ there are really so many, so check out [package.json](./package.json) if you rea
 
 <a name="TODO">
 # TODOs
+</a>
 
 things I need to get done:
 
