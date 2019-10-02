@@ -3,5 +3,11 @@
   "server": {
     "port": null
   },
-  "interactive": false
+  "interactive": false,
+  "dbName": "test",
+  "dbOpts": {
+    "autoload": false,
+    "autosave": false,
+    "pretty": true
+  }
 }

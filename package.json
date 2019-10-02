@@ -40,6 +40,7 @@
     "start": "DEBUG=\"*\" bin/pixeldeck.js",
     "start-watch": "DEBUG='*' nodemon --exec npm start",
     "docs": "npm run doc-html && npm run doc-man",
+    "cover": "npx nyc mocha | tee ./docs/COVERAGE.TXT",
     "doc-html": "npx jsdoc --debug -c ./jsdoc.conf.json",
     "doc-man": "./scripts/updateMan.js ./docs/pixeldeck.md",
     "docs-watch": "nodemon --exec npm -- run docs"
@@ -52,6 +53,66 @@
   ],
   "author": "BadQuanta",
   "license": "GPL-3.0",
+  "nodemon":{
+    "verbose": true,
+    "watch": [
+
+    ],
+    "ignore": [
+      "*.db.json",
+      "docs/pixeldeck",
+      "man/"
+    ],
+    "ext":"js,md,json",
+    "delay": "1000"
+  },
+  "nyc":{
+    "include":[
+      "lib/*",
+      "scripts/*",
+      "bin/*"
+    ],
+    "exclude":[
+      "ARCHIVES/*",
+      "docs/*"
+    ],
+    "skip-full": true,
+    "reporter": ["html","text","text-summary"],
+    "report-dir": "docs/coverage",
+    "all": true
+  },
+  "jsdoc":{
+      "debug": true,
+      "sourceType": "module",
+      "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": [
+          "jsdoc",
+          "closure"
+        ]
+      },
+      "source": {
+        "include": [
+          "package.json",
+          "lib/"
+        ],
+        "includePattern": ".*"
+      },
+      "plugins": [
+        "plugins/markdown",
+        "plugins/summarize"
+      ],
+      "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": true
+      },
+      "opts": {
+        "destination": "docs",
+        "recurse": true,
+        "readme": "README.md"
+      },
+      "recurse": true
+    },
   "dependencies": {
     "blessed": "^0.1.81",
     "chai": "^4.2.0",

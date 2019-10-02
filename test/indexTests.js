@@ -1,7 +1,7 @@
 const test = require('./')
 describe('pixeldeck (AKA: lib/index.js)', function () {
   this.afterAll(() => {
-    test.pixeldeck.close()
+    test.pixeldeck.evt.Stop()
   })
   function propertyWorks (name) {
     it(`has property ${name}`, function () {
@@ -16,6 +16,5 @@ describe('pixeldeck (AKA: lib/index.js)', function () {
   propertyWorks('data')
   propertyWorks('repl')
   propertyWorks('server')
-  propertyWorks('start')
-  propertyWorks('close')
+
 })

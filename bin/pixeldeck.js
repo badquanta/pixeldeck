@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-if (require.main === module) require('../lib/start')();
+if (require.main === module) require('../lib/evt/Start')();
