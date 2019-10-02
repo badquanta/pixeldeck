@@ -1,8 +1,9 @@
+- title = title || "PixelDeck"
 html
   head
     title
       block HEAD_TITLE
-        PixelDeck
+        = title
   body
     span TODO: HTML Mixins; maybe the SVG ones too.
     header
@@ -12,7 +13,7 @@ html
         h1
           block BODY_HEADER_TITLE
             // default block BODY_HEADER_TITLE
-            block HEAD_TITLE
+            = title
             // end default block BODY_HEADER_TITLE
         span TODO: Better header?
       // post block BODY_HEADER

@@ -21,7 +21,10 @@ const defs = module.exports = {
     get prompt () { return `${defs.name}:${defs.env}>_` }
   },
   get interactive() {
-
     return !(process.env.INTERACTIVE && process.env.INTERACTIVE.match(/false/))
+  },
+  server: {
+    port: 4444,
+    address: '::'
   }
 }

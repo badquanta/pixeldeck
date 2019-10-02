@@ -1,0 +1,7 @@
+{
+  "env":"test",
+  "server": {
+    "port": null
+  },
+  "interactive": false
+}
