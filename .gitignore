@@ -1,7 +1,7 @@
 node_modules/
 
 ARCHIVES/
-*.db.json
+*.db.json*
 #docs/
 .nyc_output
 .vscode

@@ -14,7 +14,8 @@ const defs = module.exports = {
   dbOpts: {
     autoload: true,
     autosave: true,
-    pretty: true
+    autosaveInterval: 1000,
+    serializationMethod: "pretty"
   },
   env: "development",
   replOpts: {

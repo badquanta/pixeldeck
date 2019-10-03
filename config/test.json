@@ -8,6 +8,6 @@
   "dbOpts": {
     "autoload": false,
     "autosave": false,
-    "pretty": true
+    "serializationMethod":"pretty"
   }
 }

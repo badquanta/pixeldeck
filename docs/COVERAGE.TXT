@@ -1,7 +1,7 @@
 
 
   pixeldeck (AKA: lib/index.js)
-    ✓ has property service (204ms)
+    ✓ has property service (207ms)
     ✓ has property cfg
     ✓ has property dbg
     ✓ has property data
@@ -9,9 +9,9 @@
     ✓ has property server
 
   pixeldeck/
-    ✓ responds with 200 (688ms)
-    ✓ can give us a tileSet (2105ms)
-    ✓ can give us a tilemap (349ms)
+    ✓ responds with 200 (656ms)
+    ✓ can give us a tileSet (2297ms)
+    ✓ can give us a tilemap (354ms)
 
   start
     ✓ should work
