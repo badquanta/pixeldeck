@@ -1,5 +1,11 @@
 extends ./type/SVG
 
+mixin Layer(layer)
+  g.layer(id=layer.id name=layer.name)
+    switch(layer.type){
+
+    }
+
 block SVG
   - const revTilesets = tilesets.slice().reverse()
   - function getTidUrl(tid){
@@ -33,3 +39,5 @@ block SVG
               each item, cnt in chunk.data
                 if item!=0
                   image.cell(xlink:href=getTidUrl(item) x=getX(cnt,chunk.width) y=getY(cnt,chunk.width) width=tilewidth height=tileheight)
+        else if layer.layers
+          each sublayer in layer.layers
