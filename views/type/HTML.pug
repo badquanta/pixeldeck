@@ -16,6 +16,12 @@ html
             = title
             // end default block BODY_HEADER_TITLE
         span TODO: Better header?
+      nav
+        a(href="/") Home
+        -var tests = 1
+        while tests <= 4
+          a(href=`/test/test${tests}.tm.html`)=`test${tests}`
+          -tests++
       // post block BODY_HEADER
     main
       // pre block MAIN
