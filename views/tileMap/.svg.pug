@@ -28,7 +28,7 @@ mixin ObjectGroupLayer(thisLayer)
         id=obj.id
         name=obj.name
         type=obj.type
-        transform=`translate(${obj.x} ${obj.y})`)
+        transform=`translate(${obj.x} ${obj.y-obj.height})`)
 
         +TileImage(obj.gid, 0, 0, obj.width, obj.height)
   //End of ObjectGroupLayer

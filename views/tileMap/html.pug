@@ -2,6 +2,6 @@ extends ../type/HTML
 include .svg
 block MAIN
   h5=tileMapPath
-  svg
+  svg(width='100%' height='100%')
     +TileMap(tileMap)
   //embed(src=tileMapPath)
