@@ -1,0 +1,102 @@
+
+
+mixin Layers(theseLayers)
+  - dbg('mixin layers')
+  g.layers(id=theseLayers.id name=theseLayers.name)
+    each thisLayer in theseLayers
+      +Layer(thisLayer)
+  //End of Layers
+
+mixin Layer(thisLayer)
+  - dbg('mixin layer',thisLayer.type)
+  case thisLayer.type
+    when 'tilelayer'
+      +TileLayer(thisLayer)
+    when 'group'
+      +GroupLayer(thisLayer)
+    when 'objectgroup'
+      +ObjectGroupLayer(thisLayer)
+    default
+      = `Unknown tile layer type: ${thisLayer.type}`
+  //End of Layer
+
+mixin ObjectGroupLayer(thisLayer)
+  - dbg('mixin objectgrouplayer')
+  g.objects.group.layer(id=thisLayer.id name=thisLayer.name)
+    each obj in thisLayer.objects
+      g.object(
+        id=obj.id
+        name=obj.name
+        type=obj.type
+        transform=`translate(${obj.x} ${obj.y})`)
+
+        +TileImage(obj.gid, 0, 0, obj.width, obj.height)
+  //End of ObjectGroupLayer
+
+
+mixin GroupLayer(group)
+  - dbg('mixin grouplayer')
+  g.group.layers(id=group.id name=group.name)
+    +Layers(group.layers)
+  //End of GroupLayer
+
+mixin TileImage(thisData, x=0,y=0, tw=tileMap.tilewidth,th=tileMap.tileheight)
+  - const revTilesets = tileMap.tilesets.slice().reverse()
+  - function getTidUrl(tid){
+  -   let tileset = revTilesets.find(function(ts,idx){
+  -     return ts.firstgid <= tid
+  -   })
+  -   if( tid < tileset.firstgid )throw new Error(`TID: ${tid} ${JSON.stringify(tileset)}`)
+  -   let id = (tid -tileset.firstgid)+1
+  -    return `${tileset.source.replace('.json','.ts.svg')}#${id}`
+  -  }
+  //- dbg('mixin tileimage')
+  image.tile(
+    xlink:href=getTidUrl(thisData)
+    x=x y=y
+    width=tw height=th
+  )
+
+mixin TileData(thisData, w=tileMap.width, h=tileMap.height, tw=tileMap.tilewidth,th=tileMap.tileheight)
+
+
+  - function getX(idx, w = tileMap.width){
+  -   return ((idx) % w) * tileMap.tilewidth
+  - }
+
+  - function getY(idx, w = tileMap.width, th = tileMap.tileheight){
+  -   return Math.floor((idx)/w ) * th
+  - }
+  - dbg('mixin tiledata')
+  each item, idx in thisData
+    if item!=0
+      +TileImage(item, getX(idx,w),getY(idx,w),tw,th)
+  //End of TileData
+
+mixin TileLayer(thisLayer)
+  - dbg('mixin tilelayer')
+  g.layer.tiles(id=thisLayer.id name=thisLayer.name)
+    if thisLayer.chunks
+      - dbg('tilelayer has chunks')
+      each chunk in thisLayer.chunks
+        g.chunk(transform=`translate(${chunk.x*tileMap.tilewidth} ${chunk.y*tileMap.tileheight})`)
+          +TileData(chunk.data, chunk.width, chunk.height)
+    else if thisLayer.data
+      - dbg('tilelayer has data')
+      +TileData(thisLayer.data)
+    else
+      h1 Unknown layer data:
+      pre=JSON.stringify(thisLayer)
+  //End of TileLayer
+
+mixin TileMap(thisMap)
+  - dbg('mixin TileMap')
+  g.map(infinite=thisMap.infinite nextlayerid=thisMap.nextlayerid nextobjectid=thisMap.nextobjectid type=thisMap.type)
+    +Layers(thisMap.layers)
+  //End of TileMap
+
+
+
+
+
+

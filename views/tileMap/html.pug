@@ -1,0 +1,7 @@
+extends ../type/HTML
+include .svg
+block MAIN
+  h5=tileMapPath
+  svg
+    +TileMap(tileMap)
+  //embed(src=tileMapPath)

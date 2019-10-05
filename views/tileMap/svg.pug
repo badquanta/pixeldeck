@@ -1,0 +1,8 @@
+extends ../type/SVG
+
+include ./.svg
+block SVG
+
+  script(type="text/json")
+    != JSON.stringify(tileMap)
+  +TileMap(tileMap)
