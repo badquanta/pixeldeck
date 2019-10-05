@@ -1,34 +1,32 @@
 {
-  "jsdoc": {
-    "debug": true,
-    "sourceType": "module",
-    "tags": {
-      "allowUnknownTags": true,
-      "dictionaries": [
-        "jsdoc",
-        "closure"
-      ]
-    },
-    "source": {
-      "include": [
-        "package.json",
-        "./lib/*"
-      ],
-      "includePattern": ".*"
-    },
-    "plugins": [
-      "plugins/markdown",
-      "plugins/summarize"
+  "debug": true,
+  "sourceType": "module",
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": [
+      "jsdoc",
+      "closure"
+    ]
+  },
+  "source": {
+    "include": [
+      "package.json",
+      "./lib/"
     ],
-    "templates": {
-      "cleverLinks": true,
-      "monospaceLinks": true
-    },
-    "opts": {
-      "destination": "docs",
-      "recurse": true,
-      "readme": "README.md"
-    },
-    "recurse": true
-  }
+    "includePattern": ".*"
+  },
+  "plugins": [
+    "plugins/markdown",
+    "plugins/summarize"
+  ],
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true
+  },
+  "opts": {
+    "destination": "./docs",
+    "recurse": true,
+    "readme": "README.md"
+  },
+  "recurse": true
 }

@@ -41,7 +41,7 @@
     "start-watch": "DEBUG='*' nodemon --exec npm start",
     "docs": "npm run doc-html && npm run doc-man",
     "cover": "npx nyc mocha | tee ./docs/COVERAGE.TXT",
-    "doc-html": "npx jsdoc --debug -c ./jsdoc.conf.json lib/*",
+    "doc-html": "npx jsdoc -c jsdoc.conf.json",
     "doc-man": "./scripts/updateMan.js ./docs/pixeldeck.md",
     "docs-watch": "nodemon --exec npm -- run docs"
   },

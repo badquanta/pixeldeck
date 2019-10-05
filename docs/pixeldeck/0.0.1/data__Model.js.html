@@ -26,8 +26,8 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>module.exports = _Model
-
+            <pre class="prettyprint source linenums"><code>const dbg = require('../dbg').extend('data')
+const arch = require('../arch')
 /**
  * Abstract model for extending
  */
@@ -36,64 +36,96 @@ class _Model {
    * Retrieves/Updates &amp; Persists @param json
    * @param json {object} to be used in query or
    */
-  constructor (json){
-    if(!this){return new _Model(...arguments)}
-    const query = cleanQuery(json)
-    const record = this.record = this.collection.findOne(query) || this.collection.insert(json)
+  constructor (json) {
+    let record;
+    if (!json.$loki) {
+      const query = cleanQuery(json)
+      this.constructor.dbg('finding or creating by: %o', json)
+      record = this.collection.findOne(query) || this.collection.insert(json)
+    } else {
+      this.constructor.dbg('initializing new reference to: %o', json)
+      record = json
+    }
+    Object.defineProperties(this, {
+      record: { writable: false, enumerable: false, configurable: false, value: record },
+      dbg: { writable: false, enumerable: false, configurable: false, value: this.constructor.dbg.extend(`[${record.id}]`) }
+    })
+    this.dbg('loaded')
+  }
 
+  static find (json) {
+    const query = cleanQuery(json)
+    this.dbg('find where: %o', json)
+    const record = this.collection.findOne(json)
+    if (record) {
+      this.dbg('found')
+      return new this(record)
+    } else {
+      this.dbg('not-found')
+      return false
+    }
   }
-  static get dbg(){
-    return
+  static readFromSync (path) {
+    const hostPath = arch.getResPathFor(path, '.json')
+    dbg('loadFromJsonFile', hostPath)
+    if (arch.Fs.existsSync(hostPath)) {
+
+      const json = arch.Fs.readFileSync(hostPath)
+
+      const data = JSON.parse(json)
+      return new this(Object.assign(data, { path }))
+    } else {
+      throw new Error(`No such json file: ${hostPath}`)
+    }
   }
+
+  static findOrLoad(path){
+    this.dbg('findOrLoad',path)
+    let rec = this.find(path)
+    if(!rec) rec = this.readFromSync(path)
+    return rec
+  }
+
+  static get dbg () {
+    return dbg.extend(this.name)
+  }
+
+
+
   // --- STATIC METHODS:
-  /**
-   * Should return a Loki Collection
-   * @returns {Loki} Collection
-   */
-  static get collection(){return AbstractMethod(1)}
+
 
   // --- INSTANCE PROPERTIES:
-  linux = test
-  get collection(){
+
+  get collection () {
     return this.constructor.collection
   }
   // --- INSTANCE METHODS:
-  save(){
+  save () {
     record = this.collection.update(record)
   }
 }
-// class methods:
-Model.getCollection = AbstractMethod
-// instance methods:
-Model.prototype = {
-  get collection(){
-    return this.constructor.collection
-  },
-  save(){
-    this.collection.update(this.record)
-  }
-}
 
-function AbstractMethod(ofs=0){
-  throw new Error(`${arguments.callee[ofs].name} should be overridden. `)
-}
-
-function cleanQuery(){
+function cleanQuery () {
   const query = {}
   for (const arg of arguments) {
-    switch(typeof arg){
+    switch (typeof arg) {
       case 'object':
         Object.keys(arg).forEach((key) => {
-          if (typeof json[key] !== 'object') {
+          if (typeof arg[key] !== 'object') {
             query[key] = arg[key]
           }
         })
+        break
+      case 'string':
+        query['path'] = arg
         break
       default:
         throw new Error(`don't know how to handle ${typeof arg}`)
     }
   }
-}</code></pre>
+}
+module.exports = _Model</code></pre>
         </article>
     </section>
 
@@ -103,13 +135,13 @@ function cleanQuery(){
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="-_Model.html">_Model</a></li></ul><h3>Global</h3><ul><li><a href="global.html#app">app</a></li><li><a href="global.html#base">base</a></li><li><a href="global.html#close">close</a></li><li><a href="global.html#dbg">dbg</a></li><li><a href="global.html#getRoot">getRoot</a></li><li><a href="global.html#getTilemapSvg">getTilemapSvg</a></li><li><a href="global.html#getTileSetSvg">getTileSetSvg</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#Path">Path</a></li><li><a href="global.html#repl">repl</a></li><li><a href="global.html#server">server</a></li><li><a href="global.html#service">service</a></li><li><a href="global.html#start">start</a></li><li><a href="global.html#TileSets">TileSets</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="-_Model.html">_Model</a></li><li><a href="TileMaps.html">TileMaps</a></li></ul><h3>Global</h3><ul><li><a href="global.html#app">app</a></li><li><a href="global.html#arch">arch</a></li><li><a href="global.html#base">base</a></li><li><a href="global.html#dbg">dbg</a></li><li><a href="global.html#getRoot">getRoot</a></li><li><a href="global.html#getTileMapSvg">getTileMapSvg</a></li><li><a href="global.html#getTileSetSvg">getTileSetSvg</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#repl">repl</a></li><li><a href="global.html#server">server</a></li><li><a href="global.html#Start">Start</a></li><li><a href="global.html#TileSets">TileSets</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Sep 30 2019 16:17:23 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Sat Oct 05 2019 03:09:24 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
