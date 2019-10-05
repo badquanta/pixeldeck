@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">lib/ui.js | pixeldeck</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="2d pixel-graphic environment"><meta property="og:type" content="website"><meta property="og:url" content="https://github.com/BadQuanta/pixeldeck"><meta property="og:site_name" content="pixeldeck"><meta property="og:title" content="pixeldeck"><meta property="og:image" content="http://my-library.org/logo.png"><meta property="og:description" content="2d pixel-graphic environment"><meta property="og:author" content="https://github.com/BadQuanta"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="pixeldeck"><meta property="twitter:description" content="2d pixel-graphic environment"><meta property="twitter:image" content="http://my-library.org/logo.png"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.gif" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/foo/bar"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-repl">repl</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-arch">arch</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-cfg">cfg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dbg">dbg</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#data">data</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/data/TileMaps.js~TileMaps.html">TileMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/data/_Model.js~_Model.html">_Model</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-TileSets">TileSets</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-LokiJs">LokiJs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-base">base</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#evt">evt</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Restart">Restart</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Start">Start</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Stop">Stop</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#service">service</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRoot">getRoot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getTileMapSvg">getTileMapSvg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getTileSetSvg">getTileSetSvg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-app">app</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-index">index</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">lib/ui.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const cfg = require(&apos;./cfg&apos;)
+const ui = module.exports = { blessed, tty: unimplemented, stdio: unimplemented }
+
+if (ui[cfg.ui]) { ui.manager = ui[cfg.ui]() } else {
+  throw new Error(`Unkown UI: ${cfg.ui}`)
+}
+function blessed () {
+
+  var blessed = require(&apos;blessed&apos;);
+
+  // Create a screen object.
+  var screen = blessed.screen({
+    smartCSR: true
+  });
+
+  screen.title = &apos;my window title&apos;;
+
+  // Create a box perfectly centered horizontally and vertically.
+  var box = blessed.box({
+    top: &apos;center&apos;,
+    left: &apos;center&apos;,
+    width: &apos;50%&apos;,
+    height: &apos;50%&apos;,
+    content: &apos;Hello {bold}world{/bold}!&apos;,
+    tags: true,
+    border: {
+      type: &apos;line&apos;
+    },
+    style: {
+      fg: &apos;white&apos;,
+      bg: &apos;magenta&apos;,
+      border: {
+        fg: &apos;#f0f0f0&apos;
+      },
+      hover: {
+        bg: &apos;green&apos;
+      }
+    }
+  });
+  const dbg = new blessed.log({ parent: screen, left: 0, top: 0, height: 5, width: 10 })
+  dbg.show(true)
+  require(&apos;debug&apos;).log = dbg.log.bind(dbg)
+  const stream = require(&apos;stream&apos;)
+  const replTerm = require(&apos;term.js&apos;)()
+  const repl = require(&apos;./repl&apos;)
+  //process.stdout.unpipe(repl.outputStream)
+  //repl.inputStream.unpipe(process.stdin)
+
+  const replUi = new blessed.terminal({
+    parent: screen, terminal: replTerm, handler: function () {
+      repl.write(...arguments)
+
+    }
+  })
+
+
+
+
+
+
+  const konsole = new blessed.log({ parent: screen })
+  // Append our box to the screen.
+  screen.append(box);
+  //console.log = konsole.log.bind(konsole)
+
+  // Add a png icon to the box
+  var icon = blessed.image({
+    parent: box,
+    top: 0,
+    left: 0,
+    type: &apos;ansi&apos;,
+    width: &apos;shrink&apos;,
+    height: &apos;shrink&apos;,
+    file: __dirname + &apos;/my-program-icon.png&apos;,
+    search: false
+  });
+
+  // If our box is clicked, change the content.
+  box.on(&apos;click&apos;, function (data) {
+    box.setContent(&apos;{center}Some different {red-fg}content{/red-fg}.{/center}&apos;);
+
+    screen.program.clear();
+    screen.render();
+  });
+
+  // If box is focused, handle `enter`/`return` and give us some more content.
+  box.key(&apos;enter&apos;, function (ch, key) {
+    box.setContent(&apos;{right}Even different {black-fg}content{/black-fg}.{/right}\n&apos;);
+    box.setLine(1, &apos;bar&apos;);
+    box.insertLine(1, &apos;foo&apos;);
+    screen.render();
+  });
+
+
+
+  // Quit on Escape, q, or Control-C.
+  screen.key([&apos;escape&apos;, &apos;q&apos;, &apos;C-c&apos;], function (ch, key) {
+    return require(&apos;./close&apos;)()
+  });
+
+  // Focus our element.
+  box.focus();
+
+  // Render the screen.
+  screen.render();
+
+  return {
+    close () {
+      screen.quit()
+    }
+  }
+}
+
+function unimplemented () {
+  throw new Error(&apos;Not implemented&apos;, arguments.callee.name)
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

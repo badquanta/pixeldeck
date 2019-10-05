@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | pixeldeck</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="2d pixel-graphic environment"><meta property="og:type" content="website"><meta property="og:url" content="https://github.com/BadQuanta/pixeldeck"><meta property="og:site_name" content="pixeldeck"><meta property="og:title" content="pixeldeck"><meta property="og:image" content="http://my-library.org/logo.png"><meta property="og:description" content="2d pixel-graphic environment"><meta property="og:author" content="https://github.com/BadQuanta"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="pixeldeck"><meta property="twitter:description" content="2d pixel-graphic environment"><meta property="twitter:image" content="http://my-library.org/logo.png"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./" style="display: flex; align-items: center;"><img src="./image/brand_logo.gif" style="width:34px;"></a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/foo/bar"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h3" data-link="manual/README.html"><a href="manual/README.html#api-documentation-" data-ice="link">API Documentation:</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#developer--39-s-blog" data-ice="link">Developer&apos;s Blog</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/README.html"><a href="manual/README.html#monday-september-30th---02-25pm-u-s-a--pst" data-ice="link">Monday September 30th, @02:25pm U.S.A./PST</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h2" data-link="manual/REPOVIEW.html"><a href="manual/REPOVIEW.html#overview-of-repository-on-monday-sep-30th-2019" data-ice="link">Overview of repository on Monday Sep 30th 2019</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><p>Here I will try to document an overview of implementation and examples; as well as the project progress, the goals, and perhaps my thoughts along the way.</p>
+<h2 id="overview-of-repository-on-monday-sep-30th-2019">Overview of repository on Monday Sep 30th 2019</h2><ul>
+<li><code>bin/</code> home to &quot;binaries&quot; (A.K.A: command, program, executable, application, software)<ul>
+<li><code>pixeldeck.js</code>  command line interface the intended interface for starting and stopping the service.</li>
+</ul>
+</li>
+<li><code>config/</code> home to the programmer&apos;s collection of defaults<ul>
+<li><code>default.js</code> the default&apos;s default.</li>
+</ul>
+</li>
+<li><code>docs/</code> various documentation resides here:<ul>
+<li><code>imgs/</code> for screenshots, diagrams, etc.</li>
+<li><code>pixeldeck/</code> contains jsdoc` auto-generated html content that is revision-controlled.</li>
+<li><code>README.md</code> acts as the project&apos;s <a href="https://badquanta.github.io/pixeldeck/">Home</a> `GitHub.io Page&apos;; as well as the other content in this directory.</li>
+</ul>
+</li>
+<li><p><code>lib/</code> meat and potatoes of the project</p>
+<ul>
+<li><code>service/</code><ul>
+<li><code>app.js</code> contains the root <code>express()</code> application instances with basic configuration applied.</li>
+<li><code>index.js</code> map routes on <code>app.js</code> to the <code>express handler functions</code>; but also returns access to directory modules as auto-requires.</li>
+</ul>
+</li>
+<li><code>cfg.js</code> manages the loading of the <code>../config</code> settings, as well as the searching for system, user, or current working directory overrides.</li>
+<li><code>close.js</code> is a <code>async function</code> that manages the shutdown process of the various <code>pixeldeck</code> components.</li>
+<li><code>db.js</code> contains the service&apos;s <code>loki.js</code> in memory database; persisted to the local running environment.</li>
+<li><p><code>express handler functions:</code></p>
+<ul>
+<li><code>getRoot.js</code> =&gt;   <strong>/</strong></li>
+<li><code>getTilesetSvg.js</code> =&gt; <strong>/*.ts.svg</strong></li>
+<li><p><code>getTilemapSvg.js</code> =&gt; <strong>/*.tm.svg</strong></p>
+<p>2) [ ] provide a handy-dandy require-on-demand index of all components</p>
+</li>
+</ul>
+</li>
+<li><code>repl.js</code> is a <code>function object</code>
+provides an interactive interface to the <code>pixeldeck</code> service as it runs. Intended for development and possibly administrative purposes; as the service does not need to run the <code>repl</code> for it&apos;s core functionality.  I&apos;m considering writing a nice T.U.I. for the server-side console... but honestly that&apos;s feature-creep.<ul>
+<li><em>WARNING: WILL BE REFACTORED</em></li>
+</ul>
+</li>
+<li><code>server.js</code> contains the instance of node.js&apos;s <code>http.httpServer</code> for this <code>./app.js</code></li>
+<li><code>start.js</code> is a <code>async function</code> that manages the startup process of various <code>pixeldeck</code> components.</li>
+<li><code>TileSet.js</code> is my first stab at a <code>database model</code> using <code>Loki.js</code>.</li>
+<li><code>ui.js</code>  currently not used; intended to be an optional developer&apos;s or administrator&apos;s T.U.I.<ul>
+<li><em>WARNING: WILL BE REFACTORED</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>man/</code>
+To be installed with pixeldeck command so that man commands work</p>
+<pre><code class="lang-shell"><code class="source-code prettyprint">$&gt;  man pixeldeck
+$&gt;  man pixeldeck-topic</code>
+</code></pre>
+</li>
+<li><p><code>res/</code>
+The core TileSheets that I&apos;m using for proof of concept.  They may be stripped out of the library; to be included with an optional and replaceable peer dependency</p>
+</li>
+<li><code>test/</code><ul>
+<li><a href="#TODO">TODO</a></li>
+</ul>
+</li>
+<li><code>views/</code><ul>
+<li><code>credits.pug</code></li>
+<li><code>_tilemap.pug</code></li>
+<li><code>.HTML.pug</code></li>
+<li><code>.SVG.pug</code></li>
+<li><code>main.pug</code></li>
+<li><code>tilemap.pug</code></li>
+<li><code>tileset.pug</code></li>
+</ul>
+</li>
+<li><code>LICENSE</code> All of this code is licensed under the G.N.U. G.P.L. version 3.0, a markdown formatted version of this license is <a href="https://github.com/badquanta/pixeldeck/blob/master/docs/LICENSE.md">available</a>.</li>
+</ul>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

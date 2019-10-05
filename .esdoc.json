@@ -1,0 +1,50 @@
+{
+  "source": "./lib",
+  "destination": "./docs/esdoc",
+  "plugins": [
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "lint": {
+          "enable": true
+        },
+        "coverage": {
+          "enable": true
+        },
+        "accessor": {
+          "access": [
+            "public",
+            "protected",
+            "private"
+          ],
+          "autoPrivate": true
+        },
+        "undocumentIdentifier": {
+          "enable": false
+        },
+        "unexportedIdentifier": {
+          "enable": true
+        },
+        "typeInference": {
+          "enable": true
+        },
+        "manual": {
+
+          "files": [
+            "./docs/README.md",
+            "./docs/REPOVIEW.md"
+          ]
+        },
+        "brand": {
+          "logo": "./logo.gif",
+          "title": "pixeldeck",
+          "description": "2d pixel-graphic environment",
+          "repository": "https://github.com/foo/bar",
+          "site": "https://github.com/BadQuanta/pixeldeck",
+          "author": "https://github.com/BadQuanta",
+          "image": "http://my-library.org/logo.png"
+        }
+      }
+    }
+  ]
+}
