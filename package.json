@@ -64,7 +64,8 @@
       "man/*"
     ],
     "ext": "js,md,json",
-    "delay": "2500"
+    "delay": "1000"
+
   },
   "nyc": {
     "include": [
