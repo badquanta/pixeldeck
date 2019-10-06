@@ -53,35 +53,36 @@
   ],
   "author": "BadQuanta",
   "license": "GPL-3.0",
-  "nodemon":{
+  "nodemon": {
     "verbose": true,
-    "watch": [
-
-    ],
+    "watch": [],
     "ignore": [
       "*.db.json",
       "docs/pixeldeck",
       "man/"
     ],
-    "ext":"js,md,json",
+    "ext": "js,md,json",
     "delay": "1000"
   },
-  "nyc":{
-    "include":[
+  "nyc": {
+    "include": [
       "lib/*",
       "scripts/*",
       "bin/*"
     ],
-    "exclude":[
+    "exclude": [
       "ARCHIVES/*",
       "docs/*"
     ],
     "skip-full": true,
-    "reporter": ["html","text","text-summary"],
+    "reporter": [
+      "html",
+      "text",
+      "text-summary"
+    ],
     "report-dir": "docs/coverage",
     "all": true
   },
-
   "dependencies": {
     "blessed": "^0.1.81",
     "chai": "^4.2.0",
