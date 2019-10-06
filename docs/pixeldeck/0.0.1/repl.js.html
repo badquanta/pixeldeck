@@ -19,28 +19,43 @@
 
     <h1 class="page-title">Source: repl.js</h1>
 
-    
 
 
 
-    
+
+
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>module.exports = repl
+/** @ignore */
 repl.close = replClose
+/** @ignore */
 repl.log = replLog
+/** @ignore */
 const cfg = require('./cfg')
+/**
+ * https://nodejs.org/docs/latest-v10.x/api/repl.html
+ */
 const Repl = require('repl')
 //const streamBuffers = require('stream-buffers')
 //const outBuffer = new streamBuffers.WritableStreamBuffer()
 //const inBuffer = new streamBuffers.ReadableStreamBuffer()
 //process.stdout.pipe(outBuffer)
 //inBuffer.pipe(process.stdin)
+/** @ignore */
 const dbg = require('./dbg').extend('repl')
 /**
-
+ * @desc Initialize the Read, Evaluate, Print Loop.
+ * @desc This will make the pixeldeck library instances
+ * @desc available for inspection and control.
+ * @note This is not an async function; but it does create a promise. It saves that promise to repl.Loading
+ * @property {replClose} repl.close
  * @param {*} opts
  * @param  {...any} args
+ * @emits &lt;evt>REPL:starting
+ * @emits &lt;evt>REPL:started
+ * @emits &lt;evt>REPL:closed
+ * @emits &lt;evt>REPL:line
  * @returns {repl.REPLServer}
  */
 function repl (opts = {}, ...args) {
@@ -63,10 +78,15 @@ function repl (opts = {}, ...args) {
     require('./evt/Stop')()
   });
 }
+/**
+ * @async
+ *
+ * ensure that the REPLServer is closed (properly?)
+ */
 async function replClose () {
   dbg('repl close requested')
   clearTimeout(timeoutId)
-  return new Promise((res, rej) => {
+  return new Promise((resolve, reject) => {
     if (!repl.server) {
       dbg('no repl server running')
       return res()
@@ -78,9 +98,21 @@ async function replClose () {
     }
   })
 }
+/**
+ * used to track re-prompt timeout callback.
+ * @note cleared on each output and reset.
+ * @todo Should be a better way of handling input/output/prompt clashes.
+ */
 let timeoutId = null;
+/** @ignore */
 const seconds = 1000;
+/**
+ * The number of seconds the repl should wait before it prompts again in ms
+ */
 const suspendTimeout = 1 * seconds;
+/**
+ * a function that gets called to suspend repl input.
+ */
 function suspendRepl () {
   const alreadyTimedout = timeoutId != null
   if (timeoutId) {
@@ -100,8 +132,9 @@ function suspendRepl () {
 
 }
 
-
-
+/**
+ * this is a callback function used to display the prompt again after other output.
+ */
 function restoreRepl () {
   timeoutId = null;
   process.stdin.resume()
@@ -110,13 +143,18 @@ function restoreRepl () {
     repl.server.prompt()
   }
 }
-
-const oldstdoutwrite = console.log.bind(console)
+/**
+ * original logging function
+ */
+const orgLog = console.log.bind(console)
 //process.stdout.write = replLog
 require('debug').log = replLog
+/**
+ * a function used to replace {dbg} logs
+ */
 function replLog () {
   if(!timeoutId)suspendRepl()
-  oldstdoutwrite(...arguments)
+  orgLog(...arguments)
 
 }</code></pre>
         </article>
@@ -128,13 +166,13 @@ function replLog () {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="-_Model.html">_Model</a></li><li><a href="TileMaps.html">TileMaps</a></li></ul><h3>Global</h3><ul><li><a href="global.html#app">app</a></li><li><a href="global.html#arch">arch</a></li><li><a href="global.html#base">base</a></li><li><a href="global.html#dbg">dbg</a></li><li><a href="global.html#getRoot">getRoot</a></li><li><a href="global.html#getTileMapSvg">getTileMapSvg</a></li><li><a href="global.html#getTileSetSvg">getTileSetSvg</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#repl">repl</a></li><li><a href="global.html#Restart">Restart</a></li><li><a href="global.html#server">server</a></li><li><a href="global.html#Start">Start</a></li><li><a href="global.html#Stop">Stop</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="-_Model.html">_Model</a></li><li><a href="TileMaps.html">TileMaps</a></li><li><a href="TileSets.html">TileSets</a></li></ul><h3>Global</h3><ul><li><a href="global.html#app">app</a></li><li><a href="global.html#arch">arch</a></li><li><a href="global.html#base">base</a></li><li><a href="global.html#data">data</a></li><li><a href="global.html#evt">evt</a></li><li><a href="global.html#getRoot">getRoot</a></li><li><a href="global.html#getTileMapSvg">getTileMapSvg</a></li><li><a href="global.html#getTileSetSvg">getTileSetSvg</a></li><li><a href="global.html#load">load</a></li><li><a href="global.html#LokiJs">LokiJs</a></li><li><a href="global.html#newLoadPromise">newLoadPromise</a></li><li><a href="global.html#orgLog">orgLog</a></li><li><a href="global.html#pixeldeck">pixeldeck</a></li><li><a href="global.html#repl">repl</a></li><li><a href="global.html#Repl">Repl</a></li><li><a href="global.html#replClose">replClose</a></li><li><a href="global.html#replLog">replLog</a></li><li><a href="global.html#Restart">Restart</a></li><li><a href="global.html#restoreRepl">restoreRepl</a></li><li><a href="global.html#server">server</a></li><li><a href="global.html#service">service</a></li><li><a href="global.html#Start">Start</a></li><li><a href="global.html#Stop">Stop</a></li><li><a href="global.html#suspendRepl">suspendRepl</a></li><li><a href="global.html#suspendTimeout">suspendTimeout</a></li><li><a href="global.html#timeoutId">timeoutId</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Sat Oct 05 2019 04:10:22 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Sun Oct 06 2019 02:58:38 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

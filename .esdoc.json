@@ -39,7 +39,7 @@
           "logo": "./logo.gif",
           "title": "pixeldeck",
           "description": "2d pixel-graphic environment",
-          "repository": "https://github.com/foo/bar",
+          "repository": "https://github.com/BadQuanta/pixeldeck",
           "site": "https://github.com/BadQuanta/pixeldeck",
           "author": "https://github.com/BadQuanta",
           "image": "http://my-library.org/logo.png"

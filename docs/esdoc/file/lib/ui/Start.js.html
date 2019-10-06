@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">lib/repl.js | pixeldeck</title>
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">lib/ui/Start.js | pixeldeck</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -24,127 +24,89 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-<a style="position:relative; top:3px;" href="https://github.com/foo/bar"><img width="20px" src="./image/github.png"></a></header>
+<a style="position:relative; top:3px;" href="https://github.com/BadQuanta/pixeldeck"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-repl">repl</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-arch">arch</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-arch">arch</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-cfg">cfg</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dbg">dbg</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-pixeldeck">pixeldeck</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-server">server</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#data">data</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/data/TileMaps.js~TileMaps.html">TileMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/data/TileSets.js~TileSets.html">TileSets</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/data/_Model.js~_Model.html">_Model</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-TileSets">TileSets</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-newLoadPromise">newLoadPromise</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-LokiJs">LokiJs</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-base">base</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#evt">evt</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Restart">Restart</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-load">load</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-data">data</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#evt">evt</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/evt/index.js~EvtHub.html">EvtHub</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Restart">Restart</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Start">Start</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Stop">Stop</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-EventEmitter">EventEmitter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-evt">evt</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#service">service</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRoot">getRoot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getTileMapHtml">getTileMapHtml</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getTileMapSvg">getTileMapSvg</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getTileSetSvg">getTileSetSvg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Express">Express</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-app">app</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-index">index</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui">ui</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Start">Start</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Stop">Stop</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Repl">Repl</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-repl">repl</a></span></span></li>
 </ul>
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">lib/repl.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">module.exports = repl
-repl.close = replClose
-repl.log = replLog
-const cfg = require(&apos;./cfg&apos;)
-const Repl = require(&apos;repl&apos;)
-//const streamBuffers = require(&apos;stream-buffers&apos;)
-//const outBuffer = new streamBuffers.WritableStreamBuffer()
-//const inBuffer = new streamBuffers.ReadableStreamBuffer()
-//process.stdout.pipe(outBuffer)
-//inBuffer.pipe(process.stdin)
-const dbg = require(&apos;./dbg&apos;).extend(&apos;repl&apos;)
+<div class="content" data-ice="content"><h1 data-ice="title">lib/ui/Start.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">module.exports = Start
 /**
-
- * @param {*} opts
- * @param  {...any} args
- * @returns {repl.REPLServer}
+ * https://nodejs.org/docs/latest-v10.x/api/repl.html
+ * @private
  */
-function repl (opts = {}, ...args) {
+const Repl = require(&apos;repl&apos;)
+/** @ignore */
+const dbg = require(&apos;../dbg&apos;).extend(&apos;ui:Start&apos;)
+/** @ignore */
+const evt = require(&apos;../evt&apos;)
+/**
+ * Start the user interface
+ * @emits {evt} uiStarting
+ * @emits {evt} uiStarted
+ * @todo Debug more events
+ */
+async function Start (opts = {}) {
+  const cfg = require(&apos;../cfg&apos;)
   if (!cfg.interactive) {
-    dbg(&apos;INTERACTIVE REPL DISABLED&apos;)
-    return
+    dbg(&apos;User Interface Disabled&apos;)
+    return Promise.resolve(null)
   }
-  if (repl.server &amp;&amp; !repl.closing) {
-    dbg(&apos;repl server already started&apos;)
-    return repl.server
+  const ui = require(&apos;.&apos;)
+  if (!ui.REPLServer &amp;&amp; ui.starting) {
+    dbg(&apos;User Interface Already Starting...&apos;)
+  } else {
+    evt.emit(&apos;uiStarting&apos;)
+    dbg(&apos;Promising to start user interface...&apos;)
+    ui.starting = new Promise(function (resolve, reject) {
+      const finalReplOpts = Object.assign({}, opts, cfg.replOpts)
+      dbg(&apos;starting repl(%o)&apos;, finalReplOpts)
+      ui.REPLServer = Repl.start(finalReplOpts)
+      ui.REPLServer.once(&apos;close&apos;, function () {
+        dbg(&apos;on REPLServer close, closing pixeldeck too&apos;)
+        require(&apos;../evt/Stop&apos;)()
+      })
+      evt.emit(&apos;uiStarted&apos;)
+      return resolve(ui)
+    })
   }
-  const finalReplOpts = Object.assign({}, opts, cfg.replOpts)
-  dbg(&apos;starting repl(%o , %O)&apos;, opts, ...args)
-  repl.server = Repl.start(
-    finalReplOpts, ...args
-  )
-  repl.server.once(&apos;close&apos;, function () {
-    dbg(&apos;closing....&apos;)
-    repl.closing = true;
-    require(&apos;./evt/Stop&apos;)()
-  });
+  return ui.starting
 }
-async function replClose () {
-  dbg(&apos;repl close requested&apos;)
-  clearTimeout(timeoutId)
-  return new Promise((res, rej) =&gt; {
-    if (!repl.server) {
-      dbg(&apos;no repl server running&apos;)
-      return res()
-    } else {
-
-      dbg(&apos;commanding repl server close&apos;)
-      repl.server.close()
-      return res()
-    }
-  })
-}
-let timeoutId = null;
-const seconds = 1000;
-const suspendTimeout = 1 * seconds;
-function suspendRepl () {
-  const alreadyTimedout = timeoutId != null
-  if (timeoutId) {
-    //dbg(&apos;already paused&apos;)
-    clearTimeout(timeoutId)
-  }
-  timeoutId = setTimeout(restoreRepl, suspendTimeout)
-
-  //dbg(&apos;pausing&apos;)
- // process.stdout.write(&apos;\n&apos;)
-  process.stdin.pause()
-  if (repl.server) {
-    repl.server.pause()
-    //repl.server.clearLine()
-    //repl.server.clearBufferedCommand()
-  }
-
-}
-
-
-
-function restoreRepl () {
-  timeoutId = null;
-  process.stdin.resume()
-  //dbg(&apos;resuming&apos;)
-  if (repl.server &amp;&amp; repl.server.paused) {
-    repl.server.prompt()
-  }
-}
-
-const oldstdoutwrite = console.log.bind(console)
-//process.stdout.write = replLog
-require(&apos;debug&apos;).log = replLog
-function replLog () {
-  if(!timeoutId)suspendRepl()
-  oldstdoutwrite(...arguments)
-
-}</code></pre>
+</code></pre>
 
 </div>
 

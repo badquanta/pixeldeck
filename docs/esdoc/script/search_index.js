@@ -1,8 +1,32 @@
 window.esdocSearchIndex = [
   [
+    "pixeldeck/lib/evt/index.js~eventemitter",
+    "variable/index.html#static-variable-EventEmitter",
+    "<span>EventEmitter</span> <span class=\"search-result-import-path\">pixeldeck/lib/evt/index.js</span>",
+    "variable"
+  ],
+  [
+    "pixeldeck/lib/evt/index.js~evthub",
+    "class/lib/evt/index.js~EvtHub.html",
+    "<span>EvtHub</span> <span class=\"search-result-import-path\">pixeldeck/lib/evt/index.js</span>",
+    "class"
+  ],
+  [
+    "pixeldeck/lib/service/app.js~express",
+    "variable/index.html#static-variable-Express",
+    "<span>Express</span> <span class=\"search-result-import-path\">pixeldeck/lib/service/app.js</span>",
+    "variable"
+  ],
+  [
     "pixeldeck/lib/data/base.js~lokijs",
     "variable/index.html#static-variable-LokiJs",
     "<span>LokiJs</span> <span class=\"search-result-import-path\">pixeldeck/lib/data/base.js</span>",
+    "variable"
+  ],
+  [
+    "pixeldeck/lib/ui/start.js~repl",
+    "variable/index.html#static-variable-Repl",
+    "<span>Repl</span> <span class=\"search-result-import-path\">pixeldeck/lib/ui/Start.js</span>",
     "variable"
   ],
   [
@@ -18,9 +42,21 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "pixeldeck/lib/ui/start.js~start",
+    "function/index.html#static-function-Start",
+    "<span>Start</span> <span class=\"search-result-import-path\">pixeldeck/lib/ui/Start.js</span>",
+    "function"
+  ],
+  [
     "pixeldeck/lib/evt/stop.js~stop",
     "function/index.html#static-function-Stop",
     "<span>Stop</span> <span class=\"search-result-import-path\">pixeldeck/lib/evt/Stop.js</span>",
+    "function"
+  ],
+  [
+    "pixeldeck/lib/ui/stop.js~stop",
+    "function/index.html#static-function-Stop",
+    "<span>Stop</span> <span class=\"search-result-import-path\">pixeldeck/lib/ui/Stop.js</span>",
     "function"
   ],
   [
@@ -31,9 +67,9 @@ window.esdocSearchIndex = [
   ],
   [
     "pixeldeck/lib/data/tilesets.js~tilesets",
-    "function/index.html#static-function-TileSets",
+    "class/lib/data/TileSets.js~TileSets.html",
     "<span>TileSets</span> <span class=\"search-result-import-path\">pixeldeck/lib/data/TileSets.js</span>",
-    "function"
+    "class"
   ],
   [
     "pixeldeck/lib/data/_model.js~_model",
@@ -66,15 +102,33 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "pixeldeck/lib/data/index.js~data",
+    "variable/index.html#static-variable-data",
+    "<span>data</span> <span class=\"search-result-import-path\">pixeldeck/lib/data/index.js</span>",
+    "variable"
+  ],
+  [
     "pixeldeck/lib/dbg.js~dbg",
     "variable/index.html#static-variable-dbg",
     "<span>dbg</span> <span class=\"search-result-import-path\">pixeldeck/lib/dbg.js</span>",
     "variable"
   ],
   [
+    "pixeldeck/lib/evt/index.js~evt",
+    "variable/index.html#static-variable-evt",
+    "<span>evt</span> <span class=\"search-result-import-path\">pixeldeck/lib/evt/index.js</span>",
+    "variable"
+  ],
+  [
     "pixeldeck/lib/service/getroot.js~getroot",
     "function/index.html#static-function-getRoot",
     "<span>getRoot</span> <span class=\"search-result-import-path\">pixeldeck/lib/service/getRoot.js</span>",
+    "function"
+  ],
+  [
+    "pixeldeck/lib/service/gettilemaphtml.js~gettilemaphtml",
+    "function/index.html#static-function-getTileMapHtml",
+    "<span>getTileMapHtml</span> <span class=\"search-result-import-path\">pixeldeck/lib/service/getTileMapHtml.js</span>",
     "function"
   ],
   [
@@ -96,16 +150,34 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "pixeldeck/lib/data/base.js~load",
+    "variable/index.html#static-variable-load",
+    "<span>load</span> <span class=\"search-result-import-path\">pixeldeck/lib/data/base.js</span>",
+    "variable"
+  ],
+  [
+    "pixeldeck/lib/data/base.js~newloadpromise",
+    "function/index.html#static-function-newLoadPromise",
+    "<span>newLoadPromise</span> <span class=\"search-result-import-path\">pixeldeck/lib/data/base.js</span>",
+    "function"
+  ],
+  [
     "pixeldeck~pixeldeck",
     "variable/index.html#static-variable-pixeldeck",
     "<span>pixeldeck</span> <span class=\"search-result-import-path\">pixeldeck</span>",
     "variable"
   ],
   [
-    "pixeldeck/lib/repl.js~repl",
-    "function/index.html#static-function-repl",
-    "<span>repl</span> <span class=\"search-result-import-path\">pixeldeck/lib/repl.js</span>",
-    "function"
+    "pixeldeck/lib/ui/index.js~repl",
+    "variable/index.html#static-variable-repl",
+    "<span>repl</span> <span class=\"search-result-import-path\">pixeldeck/lib/ui/index.js</span>",
+    "variable"
+  ],
+  [
+    "pixeldeck/lib/server.js~server",
+    "variable/index.html#static-variable-server",
+    "<span>server</span> <span class=\"search-result-import-path\">pixeldeck/lib/server.js</span>",
+    "variable"
   ],
   [
     "lib/.external-ecmascript.js~array",
@@ -510,6 +582,90 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "lib/data/tilesets.js~tilesets#columns",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-columns",
+    "lib/data/TileSets.js~TileSets#columns",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#image",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-image",
+    "lib/data/TileSets.js~TileSets#image",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#imageheight",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-imageheight",
+    "lib/data/TileSets.js~TileSets#imageheight",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#imagewidth",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-imagewidth",
+    "lib/data/TileSets.js~TileSets#imagewidth",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#margin",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-margin",
+    "lib/data/TileSets.js~TileSets#margin",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#name",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-name",
+    "lib/data/TileSets.js~TileSets#name",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#spacing",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-spacing",
+    "lib/data/TileSets.js~TileSets#spacing",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#terrains",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-terrains",
+    "lib/data/TileSets.js~TileSets#terrains",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#tilecount",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-tilecount",
+    "lib/data/TileSets.js~TileSets#tilecount",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#tileheight",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-tileheight",
+    "lib/data/TileSets.js~TileSets#tileheight",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#tiles",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-tiles",
+    "lib/data/TileSets.js~TileSets#tiles",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#tilewidth",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-tilewidth",
+    "lib/data/TileSets.js~TileSets#tilewidth",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#type",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-type",
+    "lib/data/TileSets.js~TileSets#type",
+    "member"
+  ],
+  [
+    "lib/data/tilesets.js~tilesets#version",
+    "class/lib/data/TileSets.js~TileSets.html#instance-get-version",
+    "lib/data/TileSets.js~TileSets#version",
+    "member"
+  ],
+  [
     "lib/data/_model.js",
     "file/lib/data/_Model.js.html",
     "lib/data/_Model.js",
@@ -526,6 +682,12 @@ window.esdocSearchIndex = [
     "class/lib/data/_Model.js~_Model.html#instance-constructor-constructor",
     "lib/data/_Model.js~_Model#constructor",
     "method"
+  ],
+  [
+    "lib/data/_model.js~_model#record",
+    "class/lib/data/_Model.js~_Model.html#instance-member-record",
+    "lib/data/_Model.js~_Model#record",
+    "member"
   ],
   [
     "lib/data/_model.js~_model#save",
@@ -600,15 +762,15 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "lib/evt/index.js~evthub#constructor",
+    "class/lib/evt/index.js~EvtHub.html#instance-constructor-constructor",
+    "lib/evt/index.js~EvtHub#constructor",
+    "method"
+  ],
+  [
     "lib/index.js",
     "file/lib/index.js.html",
     "lib/index.js",
-    "file"
-  ],
-  [
-    "lib/repl.js",
-    "file/lib/repl.js.html",
-    "lib/repl.js",
     "file"
   ],
   [
@@ -654,9 +816,21 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "lib/ui.js",
-    "file/lib/ui.js.html",
-    "lib/ui.js",
+    "lib/ui/start.js",
+    "file/lib/ui/Start.js.html",
+    "lib/ui/Start.js",
+    "file"
+  ],
+  [
+    "lib/ui/stop.js",
+    "file/lib/ui/Stop.js.html",
+    "lib/ui/Stop.js",
+    "file"
+  ],
+  [
+    "lib/ui/index.js",
+    "file/lib/ui/index.js.html",
+    "lib/ui/index.js",
     "file"
   ]
 ]

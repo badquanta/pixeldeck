@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">78.57% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/14</span>
+        <span class='fraction'>11/14</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,21 +30,21 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">33.33% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/3</span>
+        <span class='fraction'>1/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">78.57% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/14</span>
+        <span class='fraction'>11/14</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -88,58 +88,58 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
  * @fileOverview lokijs database instance
  * @requires ../cfg,../evt,../dbg
  */
 &nbsp;
 &nbsp;
 &nbsp;
-const LokiJs = <span class="cstat-no" title="statement not covered" >require('lokijs')</span>
-const LokiJsFsStructuredAdapter = <span class="cstat-no" title="statement not covered" >require('lokijs/src/loki-fs-structured-adapter')</span>
-const lfsAdapter = <span class="cstat-no" title="statement not covered" >new LokiJsFsStructuredAdapter()</span>
-const cfg = <span class="cstat-no" title="statement not covered" >require('../cfg')</span>
-const evt = <span class="cstat-no" title="statement not covered" >require('../evt')</span>
-const dbg = <span class="cstat-no" title="statement not covered" >require('../dbg').extend('data:base')</span>
+const LokiJs = require('lokijs')
+const LokiJsFsStructuredAdapter = require('lokijs/src/loki-fs-structured-adapter')
+const lfsAdapter = new LokiJsFsStructuredAdapter()
+const cfg = require('../cfg')
+const evt = require('../evt')
+const dbg = require('../dbg').extend('data:base')
 /**
  * instance of a [loki.js](https://github.com/techfort/LokiJS) embedded database instance
  */
-const base = <span class="cstat-no" title="statement not covered" >module.exports = new LokiJs(cfg.dbName, Object.assign({</span>
+const base = module.exports = new LokiJs(cfg.dbName, Object.assign({
   persistenceMethod: 'fs',
   autoloadCallback: onAutoload,
   autosaveCallback: onAutosave
 }, cfg.dbOpts))
-<span class="cstat-no" title="statement not covered" >base.on('close',<span class="fstat-no" title="function not covered" >()</span>=&gt;{</span>
-<span class="cstat-no" title="statement not covered" >  dbg('Database closed, deleting this module from cache:',__filename)</span>
-<span class="cstat-no" title="statement not covered" >  delete require.cache[__filename]</span>
+base.on('close',()=&gt;{
+  dbg('Database closed, deleting this module from cache:',__filename)
+  delete require.cache[__filename]
 })
 &nbsp;
 &nbsp;
@@ -151,13 +151,13 @@ function <span class="fstat-no" title="function not covered" >onAutoload(</span>
 function <span class="fstat-no" title="function not covered" >onAutosave(</span>){
 <span class="cstat-no" title="statement not covered" >  dbg('onAutosave',...arguments)</span>
 }
-<span class="cstat-no" title="statement not covered" >dbg('loading...')</span></pre></td></tr>
+dbg('loading...')</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 05 2019 21:35:18 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 06 2019 01:53:26 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

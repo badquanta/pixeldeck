@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">lib/ui.js | pixeldeck</title>
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">lib/ui/index.js | pixeldeck</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -24,150 +24,57 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-<a style="position:relative; top:3px;" href="https://github.com/foo/bar"><img width="20px" src="./image/github.png"></a></header>
+<a style="position:relative; top:3px;" href="https://github.com/BadQuanta/pixeldeck"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-repl">repl</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-arch">arch</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-arch">arch</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-cfg">cfg</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-dbg">dbg</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-pixeldeck">pixeldeck</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-server">server</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#data">data</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/data/TileMaps.js~TileMaps.html">TileMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/data/TileSets.js~TileSets.html">TileSets</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/data/_Model.js~_Model.html">_Model</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-TileSets">TileSets</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-newLoadPromise">newLoadPromise</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-LokiJs">LokiJs</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-base">base</a></span></span></li>
-<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#evt">evt</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Restart">Restart</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-load">load</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-data">data</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#evt">evt</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/lib/evt/index.js~EvtHub.html">EvtHub</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Restart">Restart</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Start">Start</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Stop">Stop</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-EventEmitter">EventEmitter</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-evt">evt</a></span></span></li>
 <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#service">service</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getRoot">getRoot</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getTileMapHtml">getTileMapHtml</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getTileMapSvg">getTileMapSvg</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getTileSetSvg">getTileSetSvg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Express">Express</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-app">app</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-index">index</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#ui">ui</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Start">Start</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-Stop">Stop</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Repl">Repl</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-repl">repl</a></span></span></li>
 </ul>
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1 data-ice="title">lib/ui.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">const cfg = require(&apos;./cfg&apos;)
-const ui = module.exports = { blessed, tty: unimplemented, stdio: unimplemented }
+<div class="content" data-ice="content"><h1 data-ice="title">lib/ui/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * repl module
+ * @type {function}
 
-if (ui[cfg.ui]) { ui.manager = ui[cfg.ui]() } else {
-  throw new Error(`Unkown UI: ${cfg.ui}`)
+ */
+// eslint-disable-next-line no-unused-vars
+const repl = module.exports = {
+  get Start () { return require(&apos;./Start&apos;) },
+  get Stop () { return require(&apos;./Stop&apos;) }
 }
-function blessed () {
-
-  var blessed = require(&apos;blessed&apos;);
-
-  // Create a screen object.
-  var screen = blessed.screen({
-    smartCSR: true
-  });
-
-  screen.title = &apos;my window title&apos;;
-
-  // Create a box perfectly centered horizontally and vertically.
-  var box = blessed.box({
-    top: &apos;center&apos;,
-    left: &apos;center&apos;,
-    width: &apos;50%&apos;,
-    height: &apos;50%&apos;,
-    content: &apos;Hello {bold}world{/bold}!&apos;,
-    tags: true,
-    border: {
-      type: &apos;line&apos;
-    },
-    style: {
-      fg: &apos;white&apos;,
-      bg: &apos;magenta&apos;,
-      border: {
-        fg: &apos;#f0f0f0&apos;
-      },
-      hover: {
-        bg: &apos;green&apos;
-      }
-    }
-  });
-  const dbg = new blessed.log({ parent: screen, left: 0, top: 0, height: 5, width: 10 })
-  dbg.show(true)
-  require(&apos;debug&apos;).log = dbg.log.bind(dbg)
-  const stream = require(&apos;stream&apos;)
-  const replTerm = require(&apos;term.js&apos;)()
-  const repl = require(&apos;./repl&apos;)
-  //process.stdout.unpipe(repl.outputStream)
-  //repl.inputStream.unpipe(process.stdin)
-
-  const replUi = new blessed.terminal({
-    parent: screen, terminal: replTerm, handler: function () {
-      repl.write(...arguments)
-
-    }
-  })
-
-
-
-
-
-
-  const konsole = new blessed.log({ parent: screen })
-  // Append our box to the screen.
-  screen.append(box);
-  //console.log = konsole.log.bind(konsole)
-
-  // Add a png icon to the box
-  var icon = blessed.image({
-    parent: box,
-    top: 0,
-    left: 0,
-    type: &apos;ansi&apos;,
-    width: &apos;shrink&apos;,
-    height: &apos;shrink&apos;,
-    file: __dirname + &apos;/my-program-icon.png&apos;,
-    search: false
-  });
-
-  // If our box is clicked, change the content.
-  box.on(&apos;click&apos;, function (data) {
-    box.setContent(&apos;{center}Some different {red-fg}content{/red-fg}.{/center}&apos;);
-
-    screen.program.clear();
-    screen.render();
-  });
-
-  // If box is focused, handle `enter`/`return` and give us some more content.
-  box.key(&apos;enter&apos;, function (ch, key) {
-    box.setContent(&apos;{right}Even different {black-fg}content{/black-fg}.{/right}\n&apos;);
-    box.setLine(1, &apos;bar&apos;);
-    box.insertLine(1, &apos;foo&apos;);
-    screen.render();
-  });
-
-
-
-  // Quit on Escape, q, or Control-C.
-  screen.key([&apos;escape&apos;, &apos;q&apos;, &apos;C-c&apos;], function (ch, key) {
-    return require(&apos;./close&apos;)()
-  });
-
-  // Focus our element.
-  box.focus();
-
-  // Render the screen.
-  screen.render();
-
-  return {
-    close () {
-      screen.quit()
-    }
-  }
-}
-
-function unimplemented () {
-  throw new Error(&apos;Not implemented&apos;, arguments.callee.name)
-}</code></pre>
+</code></pre>
 
 </div>
 

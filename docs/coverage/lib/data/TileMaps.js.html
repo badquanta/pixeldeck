@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">26.09% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/28</span>
+        <span class='fraction'>6/23</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/20</span>
+        <span class='fraction'>0/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">26.09% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/27</span>
+        <span class='fraction'>6/23</span>
       </div>
     </div>
     <p class="quiet">
@@ -107,33 +107,28 @@
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
 <a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a>
-<a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -167,23 +162,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict'
 &nbsp;
-&nbsp;
-const base = <span class="cstat-no" title="statement not covered" >require('./base')</span>
-&nbsp;
-const _Model = <span class="cstat-no" title="statement not covered" >require('./_Model')</span>
-const arch = <span class="cstat-no" title="statement not covered" >require('../arch')</span>
-const dbg = <span class="cstat-no" title="statement not covered" >require('../dbg').extend('data:TileMaps')</span>
+/** @ignore */
+const base = require('./base')
+/** @ignore */
+const _Model = require('./_Model')
+/** @ignore */
+const arch = require('../arch')
+/** @ignore */
+const dbg = require('../dbg').extend('data:TileMaps')
 /**
  * Object Relational Model Root for `TileMaps` loki collection.
  *
@@ -191,14 +185,11 @@ const dbg = <span class="cstat-no" title="statement not covered" >require('../db
  * @extends _Model
  */
 class TileMaps extends _Model {
+  /**
+   * Maek a tilemap from json.
+   */
 <span class="fstat-no" title="function not covered" >  co</span>nstructor (json) {
 <span class="cstat-no" title="statement not covered" >    super(json)</span>
-    const defineReaders = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(.</span>..fields) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      Object.defineProperties(this, fields.reduce(<span class="fstat-no" title="function not covered" >(o</span>bj, field) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        obj[field] = { get: <span class="fstat-no" title="function not covered" >fu</span>nction () { <span class="cstat-no" title="statement not covered" >return this.record[field] </span>}, enumerable: true }</span>
-<span class="cstat-no" title="statement not covered" >        return obj</span>
-      }, {}))
-    }
 &nbsp;
   }
   /** @type {number}  */
@@ -213,41 +204,38 @@ class TileMaps extends _Model {
 <span class="fstat-no" title="function not covered" >  ge</span>t nextobjectid () { <span class="cstat-no" title="statement not covered" >return this.record['nextobjectid'] </span>}
   /** @type {string}  */
 <span class="fstat-no" title="function not covered" >  ge</span>t orientation () { <span class="cstat-no" title="statement not covered" >return this.record['orientation'] </span>}
-  /** */
+  /** @type {string} */
 <span class="fstat-no" title="function not covered" >  ge</span>t renderorder () { <span class="cstat-no" title="statement not covered" >return this.record['renderorder'] </span>}
   /** @type {number} */
 <span class="fstat-no" title="function not covered" >  ge</span>t tiledversion () { <span class="cstat-no" title="statement not covered" >return this.record['tiledversion'] </span>}
   /** @type {number} */
 <span class="fstat-no" title="function not covered" >  ge</span>t tileheight () { <span class="cstat-no" title="statement not covered" >return this.record['tileheight'] </span>}
-  /** */
+  /** @type {Array&lt;TileSet&gt;}*/
 <span class="fstat-no" title="function not covered" >  ge</span>t tilesets () { <span class="cstat-no" title="statement not covered" >return this.record['tilesets'] </span>}
   /** @type {number} */
 <span class="fstat-no" title="function not covered" >  ge</span>t tilewidth () { <span class="cstat-no" title="statement not covered" >return this.record['tilewidth'] </span>}
-  /** */
+  /** @type {string} */
 <span class="fstat-no" title="function not covered" >  ge</span>t type () { <span class="cstat-no" title="statement not covered" >return this.record['type'] </span>}
-  /** */
+  /** @type {string} */
 <span class="fstat-no" title="function not covered" >  ge</span>t version () { <span class="cstat-no" title="statement not covered" >return this.record['version'] </span>}
   /** @type {number} */
 <span class="fstat-no" title="function not covered" >  ge</span>t width () { <span class="cstat-no" title="statement not covered" >return this.record['width'] </span>}
-  /** */
+  /** @type {string} */
 <span class="fstat-no" title="function not covered" >  ge</span>t path () { <span class="cstat-no" title="statement not covered" >return this.record['path'] </span>}
-  /** */
+  /** @type {Object}
+   *  @todo document better
+   **/
 <span class="fstat-no" title="function not covered" >  ge</span>t meta () { <span class="cstat-no" title="statement not covered" >return this.record['meta'] </span>}
-&nbsp;
-&nbsp;
-  /** @member {TileMaps} */
-  /** @member {TileMaps} */
-  /** @member {TileMaps} */
 }
-<span class="cstat-no" title="statement not covered" >TileMaps.collection = base.addCollection('TileMaps', {})</span>
-<span class="cstat-no" title="statement not covered" >module.exports = TileMaps</span>
+TileMaps.collection = base.addCollection('TileMaps', {})
+module.exports = TileMaps
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 05 2019 21:35:18 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 06 2019 01:53:26 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/15</span>
+        <span class='fraction'>8/16</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,16 +35,16 @@
         <span class='fraction'>0/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/15</span>
+        <span class='fraction'>8/16</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -71,17 +71,15 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -91,24 +89,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >module.exports = getTileSetSvg</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">module.exports = getTileSetSvg
 &nbsp;
-const dbg = <span class="cstat-no" title="statement not covered" >require('../dbg').extend('getTileSetSvg')</span>
-const dataUri = <span class="cstat-no" title="statement not covered" >require('datauri')</span>
-const path = <span class="cstat-no" title="statement not covered" >require('path')</span>
-const cfg = <span class="cstat-no" title="statement not covered" >require('../cfg')</span>
-const fs = <span class="cstat-no" title="statement not covered" >require('fs')</span>
-const TileSets = <span class="cstat-no" title="statement not covered" >require('../data/TileSets')</span>
-let loadedImages = <span class="cstat-no" title="statement not covered" >getTileSetSvg.loadedImages = {}</span>
+const dbg = require('../dbg').extend('getTileSetSvg')
+const dataUri = require('datauri')
+const path = require('path')
+const cfg = require('../cfg')
+const fs = require('fs')
+const TileSets = require('../data/TileSets')
+let loadedImages = getTileSetSvg.loadedImages = {}
 /**
  *
  * @param {*} req
@@ -117,14 +113,12 @@ let loadedImages = <span class="cstat-no" title="statement not covered" >getTile
  */
 function <span class="fstat-no" title="function not covered" >getTileSetSvg </span>(req, res, next) {
 <span class="cstat-no" title="statement not covered" >  dbg('rendering %o...', req.path)</span>
-  const tileset = <span class="cstat-no" title="statement not covered" >res.locals.tileset = TileSets.forPath(req.path)</span>
-&nbsp;
-&nbsp;
-&nbsp;
+  const tileSet = <span class="cstat-no" title="statement not covered" >res.locals.tileSet = TileSets.findOrLoad(req.path)</span>
+<span class="cstat-no" title="statement not covered" >  dbg('tileSet',!!tileSet)</span>
 <span class="cstat-no" title="statement not covered" >  res.locals.doctype = 'svg'</span>
 <span class="cstat-no" title="statement not covered" >  res.locals.pretty = true</span>
 <span class="cstat-no" title="statement not covered" >  res.type('svg')</span>
-<span class="cstat-no" title="statement not covered" >  res.render('tileSet')</span>
+<span class="cstat-no" title="statement not covered" >  res.render('tileSet/svg')</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  dbg('%o rendered.', req.path)</span>
 }</pre></td></tr>
@@ -133,7 +127,7 @@ function <span class="fstat-no" title="function not covered" >getTileSetSvg </sp
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 05 2019 21:35:18 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 06 2019 01:53:26 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

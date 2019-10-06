@@ -28,69 +28,58 @@
         <article>
             <pre class="prettyprint source linenums"><code>'use strict'
 
-
+/** @ignore */
 const base = require('./base')
-
+/** @ignore */
 const _Model = require('./_Model')
-const arch = require('../arch')
+
+/** @ignore */
 const dbg = require('../dbg').extend('data:TileMaps')
 /**
  * Object Relational Model Root for `TileMaps` loki collection.
  *
  * @class TileMaps
- * @extends _Model
+ * @extends {_Model}
  */
 class TileMaps extends _Model {
-  constructor (json) {
-    super(json)
-    const defineReaders = (...fields) => {
-      Object.defineProperties(this, fields.reduce((obj, field) => {
-        obj[field] = { get: function () { return this.record[field] }, enumerable: true }
-        return obj
-      }, {}))
-    }
-
-  }
   /** @type {number}  */
-  get height () { return this.record['height'] }
+  get height () { return this.record.height }
   /** @type {boolean} */
-  get infinite () { return this.record['infinite'] }
+  get infinite () { return this.record.infinite }
   /** @type {Array} */
-  get layers () { return this.record['layers'] }
+  get layers () { return this.record.layers }
   /** @type {number}  */
-  get nextlayerid () { return this.record['nextlayerid'] }
+  get nextlayerid () { return this.record.nextlayerid }
   /** @type {number}  */
-  get nextobjectid () { return this.record['nextobjectid'] }
+  get nextobjectid () { return this.record.nextobjectid }
   /** @type {string}  */
-  get orientation () { return this.record['orientation'] }
-  /** */
-  get renderorder () { return this.record['renderorder'] }
+  get orientation () { return this.record.orientation }
+  /** @type {string} */
+  get renderorder () { return this.record.renderorder }
   /** @type {number} */
-  get tiledversion () { return this.record['tiledversion'] }
+  get tiledversion () { return this.record.tiledversion }
   /** @type {number} */
-  get tileheight () { return this.record['tileheight'] }
-  /** */
-  get tilesets () { return this.record['tilesets'] }
+  get tileheight () { return this.record.tileheight }
+  /** @type {Array&lt;TileSet>} */
+  get tilesets () { return this.record.tilesets }
   /** @type {number} */
-  get tilewidth () { return this.record['tilewidth'] }
-  /** */
-  get type () { return this.record['type'] }
-  /** */
-  get version () { return this.record['version'] }
+  get tilewidth () { return this.record.tilewidth }
+  /** @type {string} */
+  get type () { return this.record.type }
+  /** @type {string} */
+  get version () { return this.record.version }
   /** @type {number} */
-  get width () { return this.record['width'] }
-  /** */
-  get path () { return this.record['path'] }
-  /** */
-  get meta () { return this.record['meta'] }
-
-
-  /** @member {TileMaps} */
-  /** @member {TileMaps} */
-  /** @member {TileMaps} */
+  get width () { return this.record.width }
+  /** @type {string} */
+  get path () { return this.record.path }
+  /** @type {Object}
+   *  @todo document better
+   **/
+  get meta () { return this.record.meta }
 }
 TileMaps.collection = base.addCollection('TileMaps', {})
 module.exports = TileMaps
+dbg('loaded')
 </code></pre>
         </article>
     </section>
@@ -101,13 +90,13 @@ module.exports = TileMaps
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="-_Model.html">_Model</a></li><li><a href="TileMaps.html">TileMaps</a></li></ul><h3>Global</h3><ul><li><a href="global.html#app">app</a></li><li><a href="global.html#arch">arch</a></li><li><a href="global.html#base">base</a></li><li><a href="global.html#dbg">dbg</a></li><li><a href="global.html#getRoot">getRoot</a></li><li><a href="global.html#getTileMapSvg">getTileMapSvg</a></li><li><a href="global.html#getTileSetSvg">getTileSetSvg</a></li><li><a href="global.html#index">index</a></li><li><a href="global.html#repl">repl</a></li><li><a href="global.html#Restart">Restart</a></li><li><a href="global.html#server">server</a></li><li><a href="global.html#Start">Start</a></li><li><a href="global.html#Stop">Stop</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="-_Model.html">_Model</a></li><li><a href="EvtHub.html">EvtHub</a></li><li><a href="TileMaps.html">TileMaps</a></li><li><a href="TileSets.html">TileSets</a></li></ul><h3>Global</h3><ul><li><a href="global.html#app">app</a></li><li><a href="global.html#arch">arch</a></li><li><a href="global.html#base">base</a></li><li><a href="global.html#EventEmitter">EventEmitter</a></li><li><a href="global.html#evt">evt</a></li><li><a href="global.html#Express">Express</a></li><li><a href="global.html#getRoot">getRoot</a></li><li><a href="global.html#getTileMapHtml">getTileMapHtml</a></li><li><a href="global.html#getTileMapSvg">getTileMapSvg</a></li><li><a href="global.html#getTileSetSvg">getTileSetSvg</a></li><li><a href="global.html#load">load</a></li><li><a href="global.html#LokiJs">LokiJs</a></li><li><a href="global.html#newLoadPromise">newLoadPromise</a></li><li><a href="global.html#pixeldeck">pixeldeck</a></li><li><a href="global.html#Restart">Restart</a></li><li><a href="global.html#server">server</a></li><li><a href="global.html#service">service</a></li><li><a href="global.html#Start">Start</a></li><li><a href="global.html#Stop">Stop</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Sat Oct 05 2019 04:10:22 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Sun Oct 06 2019 04:59:18 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

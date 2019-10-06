@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "lib/arch.js",
-    "content": "/**\n * @todo more reason for existence\n * @public\n */\nconst arch = module.exports = {\n  // TODO: maybe fs?\n  /** node.js `path` library */\n  get Path () { return require('path') },\n  get Fs () { return require('fs')},\n  defineRequires (dirname, target, ...names) {\n    return Object.defineProperties(target, names.reduce((obj, name) => {\n      obj[name] = { get: () => require(arch.Path.resolve(dirname, name)) }\n      return obj\n    }, {}))\n  },\n  /**\n   *\n   * @param {string} aPath\n   * @param {string} replacementExt (optional), giving '' strips off any extension\n   */\n  getResPathFor (aPath, replacementExt = null) {\n    let resPath = arch.Path.join(require('./cfg').resDir, aPath)\n    if(replacementExt){\n      while(arch.Path.extname(resPath)!=''){\n        resPath = resPath.replace(arch.Path.extname(resPath),'')\n      }\n      resPath+=replacementExt\n    }\n    return resPath\n  }\n}",
+    "content": "/**\n * @todo more reason for existence\n * @public\n */\nconst arch = module.exports = {\n  // TODO: maybe fs?\n  /** node.js `path` library */\n  get Path () { return require('path') },\n  get Fs () { return require('fs') },\n  defineRequires (dirname, target, ...names) {\n    return Object.defineProperties(target, names.reduce((obj, name) => {\n      obj[name] = { get: () => require(arch.Path.resolve(dirname, name)) }\n      return obj\n    }, {}))\n  },\n  /**\n   *\n   * @param {string} aPath\n   * @param {string} replacementExt (optional), giving '' strips off any extension\n   */\n  getResPathFor (aPath, replacementExt = null) {\n    let resPath = arch.Path.join(require('./cfg').resDir, aPath)\n    if (replacementExt) {\n      while (arch.Path.extname(resPath) !== '') {\n        resPath = resPath.replace(arch.Path.extname(resPath), '')\n      }\n      resPath += replacementExt\n    }\n    return resPath\n  },\n  /**\n * take all inputs and turn them into a single clean query object\n * @param {...object} arguments one or more input objects to clean of sub-objects and return as one query.\n * @note order of president follows argument order. #1 overrides #0, etc.\n * @return {object} single object with all non object properties copied onto it.\n **/\n  cleanQuery () {\n    const query = {}\n    for (const arg of arguments) {\n      switch (typeof arg) {\n        case 'object':\n          Object.keys(arg).forEach((key) => {\n            if (typeof arg[key] !== 'object') {\n              query[key] = arg[key]\n            }\n          })\n          break\n        case 'string':\n          query.path = arg\n          break\n        default:\n          throw new Error(`don't know how to handle ${typeof arg}`)\n      }\n    }\n  }\n}\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/arch.js",
     "access": "public",
@@ -600,7 +600,7 @@
     "__docId__": 50,
     "kind": "file",
     "name": "lib/cfg.js",
-    "content": "/**\n * loads runtime configuration using the [config library](https://www.npmjs.com/package/config)\n * @name cfg\n * @public\n * @memberof pixeldeck\n */\nconst cfg = module.exports = require('config')\n",
+    "content": "/**\n * loads runtime configuration using the [config library](https://www.npmjs.com/package/config)\n * @name cfg\n * @public\n * @memberof pixeldeck\n */\n// eslint-disable-next-line no-unused-vars\nconst cfg = module.exports = require('config')\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/cfg.js",
     "access": "public",
@@ -619,7 +619,7 @@
     "importPath": "pixeldeck/lib/cfg.js",
     "importStyle": null,
     "description": "loads runtime configuration using the [config library](https://www.npmjs.com/package/config)",
-    "lineNumber": 7,
+    "lineNumber": 8,
     "type": {
       "types": [
         "*"
@@ -630,7 +630,7 @@
     "__docId__": 52,
     "kind": "file",
     "name": "lib/data/TileMaps.js",
-    "content": "'use strict'\n\n\nconst base = require('./base')\n\nconst _Model = require('./_Model')\nconst arch = require('../arch')\nconst dbg = require('../dbg').extend('data:TileMaps')\n/**\n * Object Relational Model Root for `TileMaps` loki collection.\n *\n * @class TileMaps\n * @extends _Model\n */\nclass TileMaps extends _Model {\n  constructor (json) {\n    super(json)\n    const defineReaders = (...fields) => {\n      Object.defineProperties(this, fields.reduce((obj, field) => {\n        obj[field] = { get: function () { return this.record[field] }, enumerable: true }\n        return obj\n      }, {}))\n    }\n\n  }\n  /** @type {number}  */\n  get height () { return this.record['height'] }\n  /** @type {boolean} */\n  get infinite () { return this.record['infinite'] }\n  /** @type {Array} */\n  get layers () { return this.record['layers'] }\n  /** @type {number}  */\n  get nextlayerid () { return this.record['nextlayerid'] }\n  /** @type {number}  */\n  get nextobjectid () { return this.record['nextobjectid'] }\n  /** @type {string}  */\n  get orientation () { return this.record['orientation'] }\n  /** */\n  get renderorder () { return this.record['renderorder'] }\n  /** @type {number} */\n  get tiledversion () { return this.record['tiledversion'] }\n  /** @type {number} */\n  get tileheight () { return this.record['tileheight'] }\n  /** */\n  get tilesets () { return this.record['tilesets'] }\n  /** @type {number} */\n  get tilewidth () { return this.record['tilewidth'] }\n  /** */\n  get type () { return this.record['type'] }\n  /** */\n  get version () { return this.record['version'] }\n  /** @type {number} */\n  get width () { return this.record['width'] }\n  /** */\n  get path () { return this.record['path'] }\n  /** */\n  get meta () { return this.record['meta'] }\n\n\n  /** @member {TileMaps} */\n  /** @member {TileMaps} */\n  /** @member {TileMaps} */\n}\nTileMaps.collection = base.addCollection('TileMaps', {})\nmodule.exports = TileMaps\n",
+    "content": "'use strict'\n\n/** @ignore */\nconst base = require('./base')\n/** @ignore */\nconst _Model = require('./_Model')\n\n/** @ignore */\nconst dbg = require('../dbg').extend('data:TileMaps')\n/**\n * Object Relational Model Root for `TileMaps` loki collection.\n *\n * @class TileMaps\n * @extends {_Model}\n */\nclass TileMaps extends _Model {\n  /** @type {number}  */\n  get height () { return this.record.height }\n  /** @type {boolean} */\n  get infinite () { return this.record.infinite }\n  /** @type {Array} */\n  get layers () { return this.record.layers }\n  /** @type {number}  */\n  get nextlayerid () { return this.record.nextlayerid }\n  /** @type {number}  */\n  get nextobjectid () { return this.record.nextobjectid }\n  /** @type {string}  */\n  get orientation () { return this.record.orientation }\n  /** @type {string} */\n  get renderorder () { return this.record.renderorder }\n  /** @type {number} */\n  get tiledversion () { return this.record.tiledversion }\n  /** @type {number} */\n  get tileheight () { return this.record.tileheight }\n  /** @type {Array<TileSet>} */\n  get tilesets () { return this.record.tilesets }\n  /** @type {number} */\n  get tilewidth () { return this.record.tilewidth }\n  /** @type {string} */\n  get type () { return this.record.type }\n  /** @type {string} */\n  get version () { return this.record.version }\n  /** @type {number} */\n  get width () { return this.record.width }\n  /** @type {string} */\n  get path () { return this.record.path }\n  /** @type {Object}\n   *  @todo document better\n   **/\n  get meta () { return this.record.meta }\n}\nTileMaps.collection = base.addCollection('TileMaps', {})\nmodule.exports = TileMaps\ndbg('loaded')\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/data/TileMaps.js",
     "access": "public",
@@ -650,13 +650,12 @@
     "importStyle": null,
     "description": null,
     "lineNumber": 4,
-    "undocument": true,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 54,
@@ -671,37 +670,15 @@
     "importStyle": null,
     "description": null,
     "lineNumber": 6,
-    "undocument": true,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 55,
-    "kind": "variable",
-    "name": "arch",
-    "memberof": "lib/data/TileMaps.js",
-    "static": true,
-    "longname": "lib/data/TileMaps.js~arch",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileMaps.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 7,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 56,
     "kind": "variable",
     "name": "dbg",
     "memberof": "lib/data/TileMaps.js",
@@ -712,17 +689,16 @@
     "importPath": "pixeldeck/lib/data/TileMaps.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 8,
-    "undocument": true,
+    "lineNumber": 9,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 57,
+    "__docId__": 56,
     "kind": "class",
     "name": "TileMaps",
     "memberof": "lib/data/TileMaps.js",
@@ -733,7 +709,7 @@
     "importPath": "pixeldeck/lib/data/TileMaps.js",
     "importStyle": null,
     "description": "Object Relational Model Root for `TileMaps` loki collection.",
-    "lineNumber": 15,
+    "lineNumber": 16,
     "unknown": [
       {
         "tagName": "@class",
@@ -742,26 +718,11 @@
     ],
     "interface": false,
     "extends": [
-      "*"
+      "_Model"
     ]
   },
   {
-    "__docId__": 58,
-    "kind": "constructor",
-    "name": "constructor",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#constructor",
-    "access": "public",
-    "description": null,
-    "lineNumber": 16,
-    "undocument": true,
-    "ignore": true
-  },
-  {
-    "__docId__": 59,
+    "__docId__": 57,
     "kind": "get",
     "name": "height",
     "memberof": "lib/data/TileMaps.js~TileMaps",
@@ -771,7 +732,7 @@
     "longname": "lib/data/TileMaps.js~TileMaps#height",
     "access": "public",
     "description": null,
-    "lineNumber": 27,
+    "lineNumber": 18,
     "type": {
       "nullable": null,
       "types": [
@@ -782,7 +743,7 @@
     }
   },
   {
-    "__docId__": 60,
+    "__docId__": 58,
     "kind": "get",
     "name": "infinite",
     "memberof": "lib/data/TileMaps.js~TileMaps",
@@ -792,7 +753,7 @@
     "longname": "lib/data/TileMaps.js~TileMaps#infinite",
     "access": "public",
     "description": null,
-    "lineNumber": 29,
+    "lineNumber": 20,
     "type": {
       "nullable": null,
       "types": [
@@ -803,7 +764,7 @@
     }
   },
   {
-    "__docId__": 61,
+    "__docId__": 59,
     "kind": "get",
     "name": "layers",
     "memberof": "lib/data/TileMaps.js~TileMaps",
@@ -813,7 +774,7 @@
     "longname": "lib/data/TileMaps.js~TileMaps#layers",
     "access": "public",
     "description": null,
-    "lineNumber": 31,
+    "lineNumber": 22,
     "type": {
       "nullable": null,
       "types": [
@@ -824,7 +785,7 @@
     }
   },
   {
-    "__docId__": 62,
+    "__docId__": 60,
     "kind": "get",
     "name": "nextlayerid",
     "memberof": "lib/data/TileMaps.js~TileMaps",
@@ -834,7 +795,7 @@
     "longname": "lib/data/TileMaps.js~TileMaps#nextlayerid",
     "access": "public",
     "description": null,
-    "lineNumber": 33,
+    "lineNumber": 24,
     "type": {
       "nullable": null,
       "types": [
@@ -845,7 +806,7 @@
     }
   },
   {
-    "__docId__": 63,
+    "__docId__": 61,
     "kind": "get",
     "name": "nextobjectid",
     "memberof": "lib/data/TileMaps.js~TileMaps",
@@ -853,6 +814,581 @@
     "async": false,
     "static": false,
     "longname": "lib/data/TileMaps.js~TileMaps#nextobjectid",
+    "access": "public",
+    "description": null,
+    "lineNumber": 26,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "get",
+    "name": "orientation",
+    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileMaps.js~TileMaps#orientation",
+    "access": "public",
+    "description": null,
+    "lineNumber": 28,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "get",
+    "name": "renderorder",
+    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileMaps.js~TileMaps#renderorder",
+    "access": "public",
+    "description": null,
+    "lineNumber": 30,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "get",
+    "name": "tiledversion",
+    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileMaps.js~TileMaps#tiledversion",
+    "access": "public",
+    "description": null,
+    "lineNumber": 32,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "get",
+    "name": "tileheight",
+    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileMaps.js~TileMaps#tileheight",
+    "access": "public",
+    "description": null,
+    "lineNumber": 34,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "get",
+    "name": "tilesets",
+    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileMaps.js~TileMaps#tilesets",
+    "access": "public",
+    "description": null,
+    "lineNumber": 36,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Array<TileSet>"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "get",
+    "name": "tilewidth",
+    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileMaps.js~TileMaps#tilewidth",
+    "access": "public",
+    "description": null,
+    "lineNumber": 38,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "get",
+    "name": "type",
+    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileMaps.js~TileMaps#type",
+    "access": "public",
+    "description": null,
+    "lineNumber": 40,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "get",
+    "name": "version",
+    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileMaps.js~TileMaps#version",
+    "access": "public",
+    "description": null,
+    "lineNumber": 42,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 70,
+    "kind": "get",
+    "name": "width",
+    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileMaps.js~TileMaps#width",
+    "access": "public",
+    "description": null,
+    "lineNumber": 44,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "get",
+    "name": "path",
+    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileMaps.js~TileMaps#path",
+    "access": "public",
+    "description": null,
+    "lineNumber": 46,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "get",
+    "name": "meta",
+    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileMaps.js~TileMaps#meta",
+    "access": "public",
+    "description": null,
+    "lineNumber": 50,
+    "todo": [
+      "document better"
+    ],
+    "type": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "file",
+    "name": "lib/data/TileSets.js",
+    "content": "'use strict'\n/** @ignore */\nconst dbg = require('../dbg').extend('Tileset')\n/** @ignore */\nconst data = require('./')\n/** @ignore */\nconst _Model = require('./_Model')\n/**\n * ORM 4 Tile Sets\n */\nclass TileSets extends _Model {\n  /** @type {number} */\n  get columns () { return this.record.columns }\n  /** @type {string} */\n  get image () { return this.record.image }\n  /** @type {number} */\n  get imageheight () { return this.record.imageheight }\n  /** @type {number} */\n  get imagewidth () { return this.record.imagewidth }\n  /** @type {number} */\n  get margin () { return this.record.margin }\n  /** @type {string} */\n  get name () { return this.record.name }\n  /** @type {number} */\n  get spacing () { return this.record.spacing }\n  /** @type {Array<Object>} */\n  get terrains () { return this.record.terrains }\n  /** @type {number} */\n  get tilecount () { return this.record.tilecount }\n  /** @type {number} */\n  get tileheight () { return this.record.tileheight }\n  /** @type {Array<Object>} */\n  get tiles () { return this.record.tiles }\n  /** @type {number} */\n  get tilewidth () { return this.record.tilewidth }\n  /** @type {string} */\n  get type () { return this.record.type }\n  /** @type {string} */\n  get version () { return this.record.version }\n}\n/**\n * @type {Loki.collection}\n */\nTileSets.collection = data.base.addCollection('tilesets', {\n  indices: ['path', 'hostPath'],\n  unique: ['path', 'hostPath']\n})\n\n/**\n * Give me something to load.\n * @param {*} json is pretty much just any kind of data.\n * @memberof data\n * /\n\n *\nTileSets.list = listTileSets\n\nTileSets.loadJson = loadJson\n\nTileSets.jsonPathFrom = jsonPathFrom\n\nTileSets.forPath = forPath\n\nfunction TileSets (json) {\n  const query = {}\n  Object.keys(json).forEach((key) => {\n    if (typeof json[key] !== 'object') {\n      query[key] = json[key]\n    }\n  })\n  const record = TileSets.collection.findOne(query) || TileSets.collection.insert(json)\n  let imageDataUrl;\n  const dbgg = dbg.extend(record.name)\n  const tileset = {\n    get record () { return record },\n    get columns () { return record.columns },\n    get image () { return record.image },\n    get imageheight () { return record.imageheight },\n    get imagewidth () { return record.imagewidth },\n    get margin () { return record.margin },\n    get name () { return record.name },\n    get spacing () { return record.spacing },\n    get terrains () { return record.terrains },\n    get tilecount () { return record.tilecount },\n    get tiledversion () { return record.tiledversion },\n    get tileheight () { return record.tileheight },\n    get tilewidth () { return record.tilewidth },\n    get tiles () { return record.tiles },\n    get tilewidth () { return record.tilewidth },\n    get type () { return record.type },\n    get version () { return record.version },\n    get imageHostPath () { return Path.join(Path.dirname(record.hostPath), record.image) },\n    get imageDataUrl () {\n\n      if (!record.imageDataUrl) {\n        dbgg('loading tileset image into data uri from %o', tileset.imageHostPath)\n        const datauri = require('datauri')\n        record.imageDataUrl = (new datauri(tileset.imageHostPath)).content\n        tileset.update()\n      } else {\n        dbgg('image data already loaded...')\n      }\n      return record.imageDataUrl\n    },\n    update(values={}){\n      Object.assign(record,values)\n      return TileSets.collection.update(record)\n    }\n  }\n  return tileset\n}\n\nconst Path = require('path')\nconst cfg = require('../cfg')\nconst Fs = require('fs')\nfunction resourcePathFrom (filepath) {\n  let localpath = filepath\n  while (Path.extname(localpath) != '') {\n    localpath = localpath.replace(Path.extname(localpath), '')\n  }\n  if (!localpath.startsWith(cfg.resDir)) localpath = Path.join(cfg.resDir, localpath)\n  return localpath\n}\n\nfunction jsonPathFrom (filepath) {\n  return resourcePathFrom(filepath) + '.json'\n}\n\nfunction loadJson (filepath) {\n  //TODO: Better way of handling extenctions// move away from .x.y.z\n  let hostPath = jsonPathFrom(filepath)\n  if (Fs.existsSync(hostPath)) {\n    const json = Fs.readFileSync(hostPath)\n    const data = JSON.parse(json)\n    return Object.assign({ hostPath }, data)\n  } else {\n    throw new Error(`No such json file: ${hostPath}`)\n  }\n}\n\nfunction forPath (filepath) {\n  const hostPath = jsonPathFrom(filepath)\n  dbg('getTilesetFrom %o = %o', filepath, hostPath)\n  let record = TileSets.collection.findOne({ hostPath: hostPath })\n  if (record) {\n    dbg('existing tileset located...')\n    return TileSets(record)\n  }\n  dbg('loading tileset data...')\n  const json = loadJson(hostPath)\n  dbg('saving tileset data...')\n  return TileSets(json)\n}\n\nfunction listTileSets () {\n  return TileSets.collection.find({}).map((item) => item.name)\n}\n*/\ndbg('loaded')\n\nmodule.exports = TileSets\n",
+    "static": true,
+    "longname": "/home/badquanta/Projects/pixeldeck/lib/data/TileSets.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 74,
+    "kind": "variable",
+    "name": "dbg",
+    "memberof": "lib/data/TileSets.js",
+    "static": true,
+    "longname": "lib/data/TileSets.js~dbg",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/data/TileSets.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "variable",
+    "name": "data",
+    "memberof": "lib/data/TileSets.js",
+    "static": true,
+    "longname": "lib/data/TileSets.js~data",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/data/TileSets.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "variable",
+    "name": "_Model",
+    "memberof": "lib/data/TileSets.js",
+    "static": true,
+    "longname": "lib/data/TileSets.js~_Model",
+    "access": "private",
+    "export": false,
+    "importPath": "pixeldeck/lib/data/TileSets.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "class",
+    "name": "TileSets",
+    "memberof": "lib/data/TileSets.js",
+    "static": true,
+    "longname": "lib/data/TileSets.js~TileSets",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/data/TileSets.js",
+    "importStyle": null,
+    "description": "ORM 4 Tile Sets",
+    "lineNumber": 11,
+    "interface": false,
+    "extends": [
+      "_Model"
+    ]
+  },
+  {
+    "__docId__": 78,
+    "kind": "get",
+    "name": "columns",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#columns",
+    "access": "public",
+    "description": null,
+    "lineNumber": 13,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 79,
+    "kind": "get",
+    "name": "image",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#image",
+    "access": "public",
+    "description": null,
+    "lineNumber": 15,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "get",
+    "name": "imageheight",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#imageheight",
+    "access": "public",
+    "description": null,
+    "lineNumber": 17,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "get",
+    "name": "imagewidth",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#imagewidth",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "get",
+    "name": "margin",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#margin",
+    "access": "public",
+    "description": null,
+    "lineNumber": 21,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "get",
+    "name": "name",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#name",
+    "access": "public",
+    "description": null,
+    "lineNumber": 23,
+    "type": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "get",
+    "name": "spacing",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#spacing",
+    "access": "public",
+    "description": null,
+    "lineNumber": 25,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "get",
+    "name": "terrains",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#terrains",
+    "access": "public",
+    "description": null,
+    "lineNumber": 27,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Array<Object>"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "get",
+    "name": "tilecount",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#tilecount",
+    "access": "public",
+    "description": null,
+    "lineNumber": 29,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "get",
+    "name": "tileheight",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#tileheight",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "type": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 88,
+    "kind": "get",
+    "name": "tiles",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#tiles",
+    "access": "public",
+    "description": null,
+    "lineNumber": 33,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Array<Object>"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 89,
+    "kind": "get",
+    "name": "tilewidth",
+    "memberof": "lib/data/TileSets.js~TileSets",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/data/TileSets.js~TileSets#tilewidth",
     "access": "public",
     "description": null,
     "lineNumber": 35,
@@ -866,14 +1402,14 @@
     }
   },
   {
-    "__docId__": 64,
+    "__docId__": 90,
     "kind": "get",
-    "name": "orientation",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "name": "type",
+    "memberof": "lib/data/TileSets.js~TileSets",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#orientation",
+    "longname": "lib/data/TileSets.js~TileSets#type",
     "access": "public",
     "description": null,
     "lineNumber": 37,
@@ -887,499 +1423,31 @@
     }
   },
   {
-    "__docId__": 65,
-    "kind": "get",
-    "name": "renderorder",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#renderorder",
-    "access": "public",
-    "description": "",
-    "lineNumber": 39,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 66,
-    "kind": "get",
-    "name": "tiledversion",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#tiledversion",
-    "access": "public",
-    "description": null,
-    "lineNumber": 41,
-    "type": {
-      "nullable": null,
-      "types": [
-        "number"
-      ],
-      "spread": false,
-      "description": null
-    }
-  },
-  {
-    "__docId__": 67,
-    "kind": "get",
-    "name": "tileheight",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#tileheight",
-    "access": "public",
-    "description": null,
-    "lineNumber": 43,
-    "type": {
-      "nullable": null,
-      "types": [
-        "number"
-      ],
-      "spread": false,
-      "description": null
-    }
-  },
-  {
-    "__docId__": 68,
-    "kind": "get",
-    "name": "tilesets",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#tilesets",
-    "access": "public",
-    "description": "",
-    "lineNumber": 45,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 69,
-    "kind": "get",
-    "name": "tilewidth",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#tilewidth",
-    "access": "public",
-    "description": null,
-    "lineNumber": 47,
-    "type": {
-      "nullable": null,
-      "types": [
-        "number"
-      ],
-      "spread": false,
-      "description": null
-    }
-  },
-  {
-    "__docId__": 70,
-    "kind": "get",
-    "name": "type",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#type",
-    "access": "public",
-    "description": "",
-    "lineNumber": 49,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 71,
+    "__docId__": 91,
     "kind": "get",
     "name": "version",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
+    "memberof": "lib/data/TileSets.js~TileSets",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#version",
-    "access": "public",
-    "description": "",
-    "lineNumber": 51,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 72,
-    "kind": "get",
-    "name": "width",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#width",
+    "longname": "lib/data/TileSets.js~TileSets#version",
     "access": "public",
     "description": null,
-    "lineNumber": 53,
+    "lineNumber": 39,
     "type": {
       "nullable": null,
       "types": [
-        "number"
+        "string"
       ],
       "spread": false,
       "description": null
     }
   },
   {
-    "__docId__": 73,
-    "kind": "get",
-    "name": "path",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#path",
-    "access": "public",
-    "description": "",
-    "lineNumber": 55,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 74,
-    "kind": "get",
-    "name": "meta",
-    "memberof": "lib/data/TileMaps.js~TileMaps",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "lib/data/TileMaps.js~TileMaps#meta",
-    "access": "public",
-    "description": "",
-    "lineNumber": 57,
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 75,
-    "kind": "file",
-    "name": "lib/data/TileSets.js",
-    "content": "module.exports = TileSets\nTileSets.list = listTileSets\nTileSets.loadJson = loadJson\nTileSets.jsonPathFrom = jsonPathFrom\nTileSets.forPath = forPath\nconst dbg = require('../dbg').extend('Tileset')\nconst data = require('./')\nTileSets.collection = data.base.addCollection('tilesets', {\n  indices: ['path','hostPath'],\n  unique: ['path','hostPath']\n})\n\n/**\n * Give me something to load.\n * @param {*} json is pretty much just any kind of data.\n * @memberof data\n */\nfunction TileSets (json) {\n  const query = {}\n  Object.keys(json).forEach((key) => {\n    if (typeof json[key] !== 'object') {\n      query[key] = json[key]\n    }\n  })\n  const record = TileSets.collection.findOne(query) || TileSets.collection.insert(json)\n  let imageDataUrl;\n  const dbgg = dbg.extend(record.name)\n  const tileset = {\n    get record () { return record },\n    get columns () { return record.columns },\n    get image () { return record.image },\n    get imageheight () { return record.imageheight },\n    get imagewidth () { return record.imagewidth },\n    get margin () { return record.margin },\n    get name () { return record.name },\n    get spacing () { return record.spacing },\n    get terrains () { return record.terrains },\n    get tilecount () { return record.tilecount },\n    get tiledversion () { return record.tiledversion },\n    get tileheight () { return record.tileheight },\n    get tilewidth () { return record.tilewidth },\n    get tiles () { return record.tiles },\n    get tilewidth () { return record.tilewidth },\n    get type () { return record.type },\n    get version () { return record.version },\n    get imageHostPath () { return Path.join(Path.dirname(record.hostPath), record.image) },\n    get imageDataUrl () {\n\n      if (!record.imageDataUrl) {\n        dbgg('loading tileset image into data uri from %o', tileset.imageHostPath)\n        const datauri = require('datauri')\n        record.imageDataUrl = (new datauri(tileset.imageHostPath)).content\n        tileset.update()\n      } else {\n        dbgg('image data already loaded...')\n      }\n      return record.imageDataUrl\n    },\n    update(values={}){\n      Object.assign(record,values)\n      return TileSets.collection.update(record)\n    }\n  }\n  return tileset\n}\n\nconst Path = require('path')\nconst cfg = require('../cfg')\nconst Fs = require('fs')\nfunction resourcePathFrom (filepath) {\n  let localpath = filepath\n  while (Path.extname(localpath) != '') {\n    localpath = localpath.replace(Path.extname(localpath), '')\n  }\n  if (!localpath.startsWith(cfg.resDir)) localpath = Path.join(cfg.resDir, localpath)\n  return localpath\n}\n\nfunction jsonPathFrom (filepath) {\n  return resourcePathFrom(filepath) + '.json'\n}\n\nfunction loadJson (filepath) {\n  //TODO: Better way of handling extenctions// move away from .x.y.z\n  let hostPath = jsonPathFrom(filepath)\n  if (Fs.existsSync(hostPath)) {\n    const json = Fs.readFileSync(hostPath)\n    const data = JSON.parse(json)\n    return Object.assign({ hostPath }, data)\n  } else {\n    throw new Error(`No such json file: ${hostPath}`)\n  }\n}\n\nfunction forPath (filepath) {\n  const hostPath = jsonPathFrom(filepath)\n  dbg('getTilesetFrom %o = %o', filepath, hostPath)\n  let record = TileSets.collection.findOne({ hostPath: hostPath })\n  if (record) {\n    dbg('existing tileset located...')\n    return TileSets(record)\n  }\n  dbg('loading tileset data...')\n  const json = loadJson(hostPath)\n  dbg('saving tileset data...')\n  return TileSets(json)\n}\n\nfunction listTileSets () {\n  return TileSets.collection.find({}).map((item) => item.name)\n}\ndbg('loaded')",
-    "static": true,
-    "longname": "/home/badquanta/Projects/pixeldeck/lib/data/TileSets.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 76,
-    "kind": "variable",
-    "name": "dbg",
-    "memberof": "lib/data/TileSets.js",
-    "static": true,
-    "longname": "lib/data/TileSets.js~dbg",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileSets.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 6,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 77,
-    "kind": "variable",
-    "name": "data",
-    "memberof": "lib/data/TileSets.js",
-    "static": true,
-    "longname": "lib/data/TileSets.js~data",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileSets.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 7,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 78,
-    "kind": "function",
-    "name": "TileSets",
-    "memberof": "lib/data/TileSets.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/data/TileSets.js~TileSets",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileSets.js",
-    "importStyle": null,
-    "description": "Give me something to load.",
-    "lineNumber": 18,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "json",
-        "description": "is pretty much just any kind of data."
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 79,
-    "kind": "variable",
-    "name": "Path",
-    "memberof": "lib/data/TileSets.js",
-    "static": true,
-    "longname": "lib/data/TileSets.js~Path",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileSets.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 67,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 80,
-    "kind": "variable",
-    "name": "cfg",
-    "memberof": "lib/data/TileSets.js",
-    "static": true,
-    "longname": "lib/data/TileSets.js~cfg",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileSets.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 68,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 81,
-    "kind": "variable",
-    "name": "Fs",
-    "memberof": "lib/data/TileSets.js",
-    "static": true,
-    "longname": "lib/data/TileSets.js~Fs",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileSets.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 69,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 82,
-    "kind": "function",
-    "name": "resourcePathFrom",
-    "memberof": "lib/data/TileSets.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/data/TileSets.js~resourcePathFrom",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileSets.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 70,
-    "undocument": true,
-    "params": [
-      {
-        "name": "filepath",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 83,
-    "kind": "function",
-    "name": "jsonPathFrom",
-    "memberof": "lib/data/TileSets.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/data/TileSets.js~jsonPathFrom",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileSets.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 79,
-    "undocument": true,
-    "params": [
-      {
-        "name": "filepath",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 84,
-    "kind": "function",
-    "name": "loadJson",
-    "memberof": "lib/data/TileSets.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/data/TileSets.js~loadJson",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileSets.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 83,
-    "undocument": true,
-    "params": [
-      {
-        "name": "filepath",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 85,
-    "kind": "function",
-    "name": "forPath",
-    "memberof": "lib/data/TileSets.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/data/TileSets.js~forPath",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileSets.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 95,
-    "undocument": true,
-    "params": [
-      {
-        "name": "filepath",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 86,
-    "kind": "function",
-    "name": "listTileSets",
-    "memberof": "lib/data/TileSets.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/data/TileSets.js~listTileSets",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/TileSets.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 109,
-    "undocument": true,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 87,
+    "__docId__": 92,
     "kind": "file",
     "name": "lib/data/_Model.js",
-    "content": "\nconst dbg = require('../dbg').extend('data')\nconst arch = require('../arch')\n/**\n * Abstract model for extending\n */\nclass _Model {\n  /**\n   * Retrieves/Updates & Persists @param json\n   * @param json {object} to be used in query or\n   */\n  constructor (json) {\n    let record;\n    if (!json.$loki) {\n      const query = cleanQuery(json)\n      this.constructor.dbg('finding or creating by: %o', json)\n      record = this.collection.findOne(query) || this.collection.insert(json)\n    } else {\n      this.constructor.dbg('initializing new reference to: %o', json)\n      record = json\n    }\n    Object.defineProperties(this, {\n      record: { writable: false, enumerable: false, configurable: false, value: record },\n      dbg: { writable: false, enumerable: false, configurable: false, value: this.constructor.dbg.extend(`[${record.id}]`) }\n    })\n    this.dbg('loaded')\n  }\n  /**\n   * `json` will be passed to `cleanQuery` before being used to query.\n   *\n   * @param {object|string} json\n   */\n  static find (json) {\n    const query = cleanQuery(json)\n    this.dbg('find where: %o', json)\n    const record = this.collection.findOne(json)\n    if (record) {\n      this.dbg('found')\n      return new this(record)\n    } else {\n      this.dbg('not-found')\n      return false\n    }\n  }\n\n  /**\n   * Read a JSON resource file from a path, return the parsed JSON\n   * @param {*} path\n   */\n  static readFromSync (path) {\n    const hostPath = arch.getResPathFor(path, '.json')\n    dbg('loadFromJsonFile', hostPath)\n    if (arch.Fs.existsSync(hostPath)) {\n\n      const json = arch.Fs.readFileSync(hostPath)\n\n      const data = JSON.parse(json)\n      return new this(Object.assign(data, { path }))\n    } else {\n      throw new Error(`No such json file: ${hostPath}`)\n    }\n  }\n  /**\n   * Either find an existing record for this path;\n   * Or load and create a record from data at this path\n   * @param {*} path\n   */\n  static findOrLoad(path){\n    this.dbg('findOrLoad',path)\n    let rec = this.find(path)\n    if(!rec) rec = this.readFromSync(path)\n    return rec\n  }\n\n  /**\n   * get a the classes output handle.\n   */\n  static get dbg () {\n    return dbg.extend(this.name)\n  }\n  /**\n   * Defaults to the collection defined on the constructor\n   * @returns {Loki} collection\n   */\n  get collection () {\n    return this.constructor.collection\n  }\n  /**\n   *\n   */\n  // --- INSTANCE METHODS:\n  /**\n   * persist this record to the loki database.\n   */\n  save () {\n    record = this.collection.update(record)\n  }\n}\n\nfunction cleanQuery () {\n  const query = {}\n  for (const arg of arguments) {\n    switch (typeof arg) {\n      case 'object':\n        Object.keys(arg).forEach((key) => {\n          if (typeof arg[key] !== 'object') {\n            query[key] = arg[key]\n          }\n        })\n        break\n      case 'string':\n        query['path'] = arg\n        break\n      default:\n        throw new Error(`don't know how to handle ${typeof arg}`)\n    }\n  }\n}\nmodule.exports = _Model",
+    "content": "\n/** @ignore */\nconst dbg = require('../dbg').extend('data')\n/** @ignore */\nconst arch = require('../arch')\n/**\n * Abstract model for extending\n * @returns {_Model}\n * @property {object} record\n * @property {debug} dbg\n */\nclass _Model {\n  /**\n   * Retrieves/Updates & Persists @param json\n   * @param {object} json to be used in query or\n\n   */\n  constructor (json) {\n    let record\n    if (!json.$loki) {\n      const query = arch.cleanQuery(json)\n      this.constructor.dbg('finding or creating by: %o', json)\n      record = this.collection.findOne(query) || this.collection.insert(json)\n    } else {\n      this.constructor.dbg('initializing new reference to: %o', json)\n      record = json\n    }\n    Object.defineProperties(this, {\n      record: { writable: false, enumerable: false, configurable: false, value: record },\n      dbg: { writable: false, enumerable: false, configurable: false, value: this.constructor.dbg.extend(`[${record.id}]`) }\n    })\n    this.dbg('loaded')\n  }\n\n  /**\n   * `json` will be passed to `cleanQuery` before being used to query.\n   *\n   * @param {object|string} json\n   * @return {_Model}\n   */\n  static find (json) {\n    const query = arch.cleanQuery(json)\n    this.dbg('find where: %o', json)\n    const record = this.collection.findOne(query)\n    if (record) {\n      this.dbg('found')\n      return new this(record)\n    } else {\n      this.dbg('not-found')\n      return false\n    }\n  }\n\n  /**\n   * Read a JSON resource file from a path, return the parsed JSON\n   * @param {*} path\n   * @return {Object} parsed JSON from file at path into object\n   * @throws {Error} if file doesn't exist\n   */\n  static readFromSync (path) {\n    const hostPath = arch.getResPathFor(path, '.json')\n    dbg('loadFromJsonFile', hostPath)\n    if (arch.Fs.existsSync(hostPath)) {\n      const json = arch.Fs.readFileSync(hostPath)\n\n      const data = JSON.parse(json)\n      return new this(Object.assign(data, { path }))\n    } else {\n      throw new Error(`No such json file: ${hostPath}`)\n    }\n  }\n\n  /**\n   * Either find an existing record for this path;\n   * Or load and create a record from data at this path\n   * @param {*} path\n   * @return {_Model}\n   */\n  static findOrLoad (path) {\n    this.dbg('findOrLoad', path)\n    let rec = this.find(path)\n    if (!rec) rec = this.readFromSync(path)\n    return rec\n  }\n\n  /**\n   * get a the classes output handle.\n   */\n  static get dbg () {\n    return dbg.extend(this.name)\n  }\n\n  /**\n   * Defaults to the collection defined on the constructor\n   * @returns {Loki} collection\n   */\n  get collection () {\n    return this.constructor.collection\n  }\n\n  /**\n   *\n   */\n  // --- INSTANCE METHODS:\n  /**\n   * persist this record to the loki database.\n   */\n  save () {\n    /**\n     * @property {object} record\n     */\n    this.record = this.collection.update(this.record)\n  }\n}\n\nmodule.exports = _Model\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/data/_Model.js",
     "access": "public",
@@ -1387,7 +1455,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 88,
+    "__docId__": 93,
     "kind": "variable",
     "name": "dbg",
     "memberof": "lib/data/_Model.js",
@@ -1398,17 +1466,16 @@
     "importPath": "pixeldeck/lib/data/_Model.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 2,
-    "undocument": true,
+    "lineNumber": 3,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 89,
+    "__docId__": 94,
     "kind": "variable",
     "name": "arch",
     "memberof": "lib/data/_Model.js",
@@ -1419,17 +1486,16 @@
     "importPath": "pixeldeck/lib/data/_Model.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 3,
-    "undocument": true,
+    "lineNumber": 5,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 90,
+    "__docId__": 95,
     "kind": "class",
     "name": "_Model",
     "memberof": "lib/data/_Model.js",
@@ -1440,11 +1506,47 @@
     "importPath": "pixeldeck/lib/data/_Model.js",
     "importStyle": null,
     "description": "Abstract model for extending",
-    "lineNumber": 7,
+    "lineNumber": 12,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{_Model}"
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "record",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "debug"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "dbg",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "_Model"
+      ],
+      "spread": false,
+      "description": ""
+    },
     "interface": false
   },
   {
-    "__docId__": 91,
+    "__docId__": 96,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "lib/data/_Model.js~_Model",
@@ -1454,22 +1556,22 @@
     "longname": "lib/data/_Model.js~_Model#constructor",
     "access": "public",
     "description": "Retrieves/Updates & Persists @param json",
-    "lineNumber": 12,
+    "lineNumber": 18,
     "params": [
       {
         "nullable": null,
         "types": [
-          "*"
+          "object"
         ],
         "spread": false,
         "optional": false,
         "name": "json",
-        "description": "{object} to be used in query or"
+        "description": "to be used in query or"
       }
     ]
   },
   {
-    "__docId__": 92,
+    "__docId__": 97,
     "kind": "method",
     "name": "find",
     "memberof": "lib/data/_Model.js~_Model",
@@ -1479,7 +1581,7 @@
     "longname": "lib/data/_Model.js~_Model.find",
     "access": "public",
     "description": "`json` will be passed to `cleanQuery` before being used to query.",
-    "lineNumber": 33,
+    "lineNumber": 41,
     "params": [
       {
         "nullable": null,
@@ -1494,13 +1596,16 @@
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "boolean"
-      ]
+        "_Model"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 93,
+    "__docId__": 98,
     "kind": "method",
     "name": "readFromSync",
     "memberof": "lib/data/_Model.js~_Model",
@@ -1510,7 +1615,7 @@
     "longname": "lib/data/_Model.js~_Model.readFromSync",
     "access": "public",
     "description": "Read a JSON resource file from a path, return the parsed JSON",
-    "lineNumber": 50,
+    "lineNumber": 60,
     "params": [
       {
         "nullable": null,
@@ -1524,13 +1629,24 @@
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
-    }
+        "Object"
+      ],
+      "spread": false,
+      "description": "parsed JSON from file at path into object"
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": "if file doesn't exist"
+      }
+    ]
   },
   {
-    "__docId__": 94,
+    "__docId__": 99,
     "kind": "method",
     "name": "findOrLoad",
     "memberof": "lib/data/_Model.js~_Model",
@@ -1540,7 +1656,7 @@
     "longname": "lib/data/_Model.js~_Model.findOrLoad",
     "access": "public",
     "description": "Either find an existing record for this path;\nOr load and create a record from data at this path",
-    "lineNumber": 68,
+    "lineNumber": 79,
     "params": [
       {
         "nullable": null,
@@ -1554,13 +1670,16 @@
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "_Model"
+      ],
+      "spread": false,
+      "description": ""
     }
   },
   {
-    "__docId__": 95,
+    "__docId__": 100,
     "kind": "get",
     "name": "dbg",
     "memberof": "lib/data/_Model.js~_Model",
@@ -1570,7 +1689,7 @@
     "longname": "lib/data/_Model.js~_Model.dbg",
     "access": "public",
     "description": "get a the classes output handle.",
-    "lineNumber": 78,
+    "lineNumber": 89,
     "type": {
       "types": [
         "*"
@@ -1578,7 +1697,7 @@
     }
   },
   {
-    "__docId__": 96,
+    "__docId__": 101,
     "kind": "get",
     "name": "collection",
     "memberof": "lib/data/_Model.js~_Model",
@@ -1588,7 +1707,7 @@
     "longname": "lib/data/_Model.js~_Model#collection",
     "access": "public",
     "description": "Defaults to the collection defined on the constructor",
-    "lineNumber": 85,
+    "lineNumber": 97,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1610,7 +1729,7 @@
     }
   },
   {
-    "__docId__": 97,
+    "__docId__": 102,
     "kind": "method",
     "name": "save",
     "memberof": "lib/data/_Model.js~_Model",
@@ -1620,62 +1739,30 @@
     "longname": "lib/data/_Model.js~_Model#save",
     "access": "public",
     "description": "persist this record to the loki database.",
-    "lineNumber": 95,
+    "lineNumber": 108,
     "params": [],
     "return": null
   },
   {
-    "__docId__": 98,
-    "kind": "function",
-    "name": "cleanQuery",
-    "memberof": "lib/data/_Model.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/data/_Model.js~cleanQuery",
+    "__docId__": 103,
+    "kind": "member",
+    "name": "record",
+    "memberof": "lib/data/_Model.js~_Model",
+    "static": false,
+    "longname": "lib/data/_Model.js~_Model#record",
     "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/_Model.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 100,
-    "undocument": true,
-    "params": [],
-    "return": null,
-    "ignore": true
-  },
-  {
-    "__docId__": 99,
-    "kind": "file",
-    "name": "lib/data/base.js",
-    "content": "/**\n * @fileOverview lokijs database instance\n * @requires ../cfg,../evt,../dbg\n */\n\n\n\nconst LokiJs = require('lokijs')\nconst LokiJsFsStructuredAdapter = require('lokijs/src/loki-fs-structured-adapter')\nconst lfsAdapter = new LokiJsFsStructuredAdapter()\nconst cfg = require('../cfg')\nconst evt = require('../evt')\nconst dbg = require('../dbg').extend('data:base')\n/**\n * instance of a [loki.js](https://github.com/techfort/LokiJS) embedded database instance\n */\nconst base = module.exports = new LokiJs(cfg.dbName, Object.assign({\n  persistenceMethod: 'fs',\n  autoloadCallback: onAutoload,\n  autosaveCallback: onAutosave\n}, cfg.dbOpts))\nbase.on('close',()=>{\n  dbg('Database closed, deleting this module from cache:',__filename)\n  delete require.cache[__filename]\n})\n\n\nfunction onAutoload(){\n  evt.emit('Loaded')\n  dbg('onAutoload',...arguments)\n}\n\nfunction onAutosave(){\n  dbg('onAutosave',...arguments)\n}\ndbg('loading...')",
-    "static": true,
-    "longname": "/home/badquanta/Projects/pixeldeck/lib/data/base.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 100,
-    "kind": "variable",
-    "name": "LokiJs",
-    "memberof": "lib/data/base.js",
-    "static": true,
-    "longname": "lib/data/base.js~LokiJs",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/base.js",
-    "importStyle": null,
     "description": "",
-    "lineNumber": 8,
-    "unknown": [
+    "lineNumber": 112,
+    "properties": [
       {
-        "tagName": "@fileOverview",
-        "tagValue": "lokijs database instance"
-      },
-      {
-        "tagName": "@requires",
-        "tagValue": "../cfg,../evt,../dbg"
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "record",
+        "description": ""
       }
     ],
     "type": {
@@ -1685,49 +1772,37 @@
     }
   },
   {
-    "__docId__": 101,
+    "__docId__": 104,
+    "kind": "file",
+    "name": "lib/data/base.js",
+    "content": "/**\n * @fileOverview lokijs database instance\n * @requires ../cfg,../evt,../dbg\n */\n\n/**\n * https://github.com/techfort/LokiJS\n */\nconst LokiJs = require('lokijs')\n/** @ignore */\n// const LokiJsFsStructuredAdapter = require('lokijs/src/loki-fs-structured-adapter')\n/** @ignore */\n// const lfsAdapter = new LokiJsFsStructuredAdapter()\n/** @ignore */\nconst cfg = require('../cfg')\n/** @ignore */\nconst evt = require('../evt')\n/** @ignore */\nconst dbg = require('../dbg').extend('data:base')\n/**\n * this object contains a promise and associated callback handlers\n * @todo Review this solution for `promise-ify-ing`\n */\nconst load = newLoadPromise()\n/**\n * instance of a [loki.js](https://github.com/techfort/LokiJS) embedded database instance\n */\nconst base = module.exports = new LokiJs(cfg.dbName, Object.assign({\n  persistenceMethod: 'fs',\n  autoloadCallback: load.onAutoload,\n  autosaveCallback: load.onAutosave\n}, cfg.dbOpts))\n\nbase.loaded = load.promise\n\nbase.on('close', () => {\n  dbg('Database closed, deleting this module from cache:', __filename)\n  delete require.cache[__filename]\n})\n/**\n *\n */\nasync function newLoadPromise () {\n  const load = { finished: false }\n  load.promise = new Promise(function (resolve, reject) {\n    /**\n     * @emit Loaded\n     */\n    function onAutoload () {\n      if (load.finished) { throw new Error('WTF?') }\n      evt.emit('Loaded')\n      dbg('onAutoload', ...arguments)\n      load.finished = true\n      resolve()\n    }\n    load.onAutoload = onAutoload\n    /**\n     * @emits Saved\n     */\n    function onAutosave () {\n      if (load.finished) { throw new Error('WTF? already finished?') }\n      evt.emit('Saved')\n      dbg('onAutosave', ...arguments)\n      load.finished = true\n      resolve()\n    }\n    load.onAutosave = onAutosave\n  })\n  return load\n}\n\ndbg('loading...')\n",
+    "static": true,
+    "longname": "/home/badquanta/Projects/pixeldeck/lib/data/base.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 105,
     "kind": "variable",
-    "name": "LokiJsFsStructuredAdapter",
+    "name": "LokiJs",
     "memberof": "lib/data/base.js",
     "static": true,
-    "longname": "lib/data/base.js~LokiJsFsStructuredAdapter",
+    "longname": "lib/data/base.js~LokiJs",
     "access": "public",
     "export": false,
     "importPath": "pixeldeck/lib/data/base.js",
     "importStyle": null,
-    "description": null,
+    "description": "https://github.com/techfort/LokiJS",
     "lineNumber": 9,
-    "undocument": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 102,
-    "kind": "variable",
-    "name": "lfsAdapter",
-    "memberof": "lib/data/base.js",
-    "static": true,
-    "longname": "lib/data/base.js~lfsAdapter",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/base.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 10,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 103,
+    "__docId__": 106,
     "kind": "variable",
     "name": "cfg",
     "memberof": "lib/data/base.js",
@@ -1738,17 +1813,16 @@
     "importPath": "pixeldeck/lib/data/base.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 11,
-    "undocument": true,
+    "lineNumber": 15,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 104,
+    "__docId__": 107,
     "kind": "variable",
     "name": "evt",
     "memberof": "lib/data/base.js",
@@ -1759,17 +1833,16 @@
     "importPath": "pixeldeck/lib/data/base.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 12,
-    "undocument": true,
+    "lineNumber": 17,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 105,
+    "__docId__": 108,
     "kind": "variable",
     "name": "dbg",
     "memberof": "lib/data/base.js",
@@ -1780,17 +1853,38 @@
     "importPath": "pixeldeck/lib/data/base.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 13,
-    "undocument": true,
+    "lineNumber": 19,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 106,
+    "__docId__": 109,
+    "kind": "variable",
+    "name": "load",
+    "memberof": "lib/data/base.js",
+    "static": true,
+    "longname": "lib/data/base.js~load",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/data/base.js",
+    "importStyle": null,
+    "description": "this object contains a promise and associated callback handlers",
+    "lineNumber": 24,
+    "todo": [
+      "Review this solution for `promise-ify-ing`"
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 110,
     "kind": "variable",
     "name": "base",
     "memberof": "lib/data/base.js",
@@ -1801,7 +1895,7 @@
     "importPath": "pixeldeck/lib/data/base.js",
     "importStyle": null,
     "description": "instance of a [loki.js](https://github.com/techfort/LokiJS) embedded database instance",
-    "lineNumber": 17,
+    "lineNumber": 28,
     "type": {
       "types": [
         "*"
@@ -1809,50 +1903,32 @@
     }
   },
   {
-    "__docId__": 107,
+    "__docId__": 111,
     "kind": "function",
-    "name": "onAutoload",
+    "name": "newLoadPromise",
     "memberof": "lib/data/base.js",
     "generator": false,
-    "async": false,
+    "async": true,
     "static": true,
-    "longname": "lib/data/base.js~onAutoload",
+    "longname": "lib/data/base.js~newLoadPromise",
     "access": "public",
     "export": false,
     "importPath": "pixeldeck/lib/data/base.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 28,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 43,
     "params": [],
-    "return": null,
-    "ignore": true
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
   },
   {
-    "__docId__": 108,
-    "kind": "function",
-    "name": "onAutosave",
-    "memberof": "lib/data/base.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/data/base.js~onAutosave",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/data/base.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 33,
-    "undocument": true,
-    "params": [],
-    "return": null,
-    "ignore": true
-  },
-  {
-    "__docId__": 109,
+    "__docId__": 112,
     "kind": "file",
     "name": "lib/data/index.js",
-    "content": "Object.defineProperties(module.exports,{\n  base:{get:()=>require('./base')},\n  TileMap:{get:()=>require('./TileMaps')},\n  TileSet:{get:()=>require('./TileSets')}\n\n\n})",
+    "content": "/**\n * another handy-dandy index\n * @type {{base:Loki,TileMaps:TileMaps,TileSets:TileSets}}\n */\n// eslint-disable-next-line no-unused-vars\nconst data = Object.defineProperties(module.exports, {\n  base: { get: () => require('./base') },\n  TileMaps: { get: () => require('./TileMaps') },\n  TileSets: { get: () => require('./TileSets') }\n})\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/data/index.js",
     "access": "public",
@@ -1860,10 +1936,32 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 110,
+    "__docId__": 113,
+    "kind": "variable",
+    "name": "data",
+    "memberof": "lib/data/index.js",
+    "static": true,
+    "longname": "lib/data/index.js~data",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/data/index.js",
+    "importStyle": null,
+    "description": "another handy-dandy index",
+    "lineNumber": 6,
+    "type": {
+      "nullable": null,
+      "types": [
+        "{base:Loki,TileMaps:TileMaps,TileSets:TileSets}"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 114,
     "kind": "file",
     "name": "lib/dbg.js",
-    "content": "/**\n * [debug](https://www.npmjs.com/package/debug) provides our output\n * @memberof pixeldeck\n * @private\n */\nconst dbg = module.exports = require('debug')(require('../package.json').name)\n\n\n",
+    "content": "/**\n * [debug](https://www.npmjs.com/package/debug) provides our output\n * @memberof pixeldeck\n * @private\n */\n// eslint-disable-next-line no-unused-vars\nconst dbg = module.exports = require('debug')(require('../package.json').name)\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/dbg.js",
     "access": "public",
@@ -1871,7 +1969,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 111,
+    "__docId__": 115,
     "kind": "variable",
     "name": "dbg",
     "memberof": "lib/dbg.js",
@@ -1882,7 +1980,7 @@
     "importPath": "pixeldeck/lib/dbg.js",
     "importStyle": null,
     "description": "[debug](https://www.npmjs.com/package/debug) provides our output",
-    "lineNumber": 6,
+    "lineNumber": 7,
     "type": {
       "types": [
         "*"
@@ -1890,10 +1988,10 @@
     }
   },
   {
-    "__docId__": 112,
+    "__docId__": 116,
     "kind": "file",
     "name": "lib/evt/Restart.js",
-    "content": "module.exports = Restart\nconst dbg = require('../dbg').extend('Reset()')\n/**\n * @fires Restarting\n * @fires Restarted\n */\nasync function Restart(){\n  const evt = require('../evt')\n  evt.emit('Restarting')\n  dbg('Restarting...')\n  await require('./Stop')()\n  const moduleDir = require('path').resolve(__dirname,'../../')\n\n  require('.').emit('Resetting')\n  Object.keys(require.cache).forEach((key)=>{\n    if(key.startsWith(moduleDir)){\n\n      delete require.cache[key]\n    }\n  })\n  await require('./Start')()\n  evt.emit('Restarted')\n  dbg('Restarted')\n}\ndbg('loaded')",
+    "content": "module.exports = Restart\n/** @ignore */\nconst dbg = require('../dbg').extend('Reset()')\n/**\n * Restart\n * @fires Restarting\n * @fires Restarted\n */\nasync function Restart () {\n  const evt = require('../evt')\n  evt.emit('Restarting')\n  dbg('Restarting...')\n  await require('./Stop')()\n  const moduleDir = require('path').resolve(__dirname, '../../')\n\n  require('.').emit('Resetting')\n  Object.keys(require.cache).forEach((key) => {\n    if (key.startsWith(moduleDir)) {\n      delete require.cache[key]\n    }\n  })\n  await require('./Start')()\n  evt.emit('Restarted')\n  dbg('Restarted')\n}\ndbg('loaded')\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/evt/Restart.js",
     "access": "public",
@@ -1901,7 +1999,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 113,
+    "__docId__": 117,
     "kind": "variable",
     "name": "dbg",
     "memberof": "lib/evt/Restart.js",
@@ -1912,17 +2010,16 @@
     "importPath": "pixeldeck/lib/evt/Restart.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 2,
-    "undocument": true,
+    "lineNumber": 3,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 114,
+    "__docId__": 118,
     "kind": "function",
     "name": "Restart",
     "memberof": "lib/evt/Restart.js",
@@ -1934,8 +2031,8 @@
     "export": false,
     "importPath": "pixeldeck/lib/evt/Restart.js",
     "importStyle": null,
-    "description": "",
-    "lineNumber": 7,
+    "description": "Restart",
+    "lineNumber": 9,
     "unknown": [
       {
         "tagName": "@fires",
@@ -1950,10 +2047,10 @@
     "return": null
   },
   {
-    "__docId__": 115,
+    "__docId__": 119,
     "kind": "file",
     "name": "lib/evt/Start.js",
-    "content": "const dbg = require('../dbg').extend('Start')\nmodule.exports = Start\n/**\n * Start the service, meaning:\n * 0) Open databases\n * 1) Open Http services.\n * @fires Starting\n * @fires Started\n */\nasync function Start () {\n  const evt = require('../evt')\n  evt.emit('Starting')\n  const dbg = require('../dbg').extend('Start')\n  const cfg = require('../cfg')\n  const server = require('../server')\n  await server.listen(cfg.server.port, cfg.server.address)\n  dbg('listening', server.address())\n  if (cfg.interactive) {\n    const repl = require('../repl')\n    repl()\n    require('../arch').defineRequires(require('path').resolve(__dirname,'..'), repl.server.context, 'arch', 'data', 'service', 'cfg', 'repl', 'server')\n  }\n  evt.emit('Start')\n}\ndbg('loaded')",
+    "content": "/** @ignore */\nconst dbg = require('../dbg').extend('Start')\nmodule.exports = Start\n/**\n * Start the service, meaning:\n * 0) Open databases\n * 1) Open Http services.\n * @fires Starting\n * @fires Started\n */\nasync function Start () {\n  const evt = require('../evt')\n  evt.emit('Starting')\n  const dbg = require('../dbg').extend('Start')\n  const cfg = require('../cfg')\n  const server = require('../server')\n  await server.listen(cfg.server.port, cfg.server.address)\n  dbg('listening', server.address())\n  if (cfg.interactive) {\n    const repl = require('../../ARCHIVES/repl')\n    repl()\n    require('../arch').defineRequires(require('path').resolve(__dirname, '..'), repl.server.context, 'arch', 'data', 'service', 'cfg', 'repl', 'server')\n  }\n  evt.emit('Start')\n}\ndbg('loaded')\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/evt/Start.js",
     "access": "public",
@@ -1961,7 +2058,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 116,
+    "__docId__": 120,
     "kind": "variable",
     "name": "dbg",
     "memberof": "lib/evt/Start.js",
@@ -1972,17 +2069,16 @@
     "importPath": "pixeldeck/lib/evt/Start.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 1,
-    "undocument": true,
+    "lineNumber": 2,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 117,
+    "__docId__": 121,
     "kind": "function",
     "name": "Start",
     "memberof": "lib/evt/Start.js",
@@ -1995,7 +2091,7 @@
     "importPath": "pixeldeck/lib/evt/Start.js",
     "importStyle": null,
     "description": "Start the service, meaning:\n0) Open databases\n1) Open Http services.",
-    "lineNumber": 10,
+    "lineNumber": 11,
     "unknown": [
       {
         "tagName": "@fires",
@@ -2010,10 +2106,10 @@
     "return": null
   },
   {
-    "__docId__": 118,
+    "__docId__": 122,
     "kind": "file",
     "name": "lib/evt/Stop.js",
-    "content": "module.exports = Stop\n/**\n * @fires Stopping\n * @fires Stopped\n */\nasync function Stop(){\n  const evt = require('../evt')\n  const dbg = require('../dbg').extend('Stop()')\n  evt.emit('Stopping')\n  return Promise.resolve().finally(()=>{\n     return require('../server').close((err)=>{\n        if(err){dbg('server close error: %o',err)}\n        else{dbg('server closed')}\n     })\n  }).finally(()=>{\n    dbg('db stopping')\n    require('../data/base').close(function(){\n      dbg('db stopped')\n    })\n  }).finally(()=>{\n    dbg('repl stopping')\n    require('../repl').close(function(){\n      dbg('repl stopped')\n    })\n  }).finally(()=>{\n    evt.emit('Stopped')\n  })\n}",
+    "content": "module.exports = Stop\n/**\n * @emits Stopping\n * @fires Stopped\n */\nasync function Stop () {\n  const evt = require('../evt')\n  const dbg = require('../dbg').extend('Stop()')\n  evt.emit('Stopping')\n  return Promise.resolve().finally(() => {\n    return require('../server').close((err) => {\n      if (err) { dbg('server close error: %o', err) } else { dbg('server closed') }\n    })\n  }).finally(() => {\n    dbg('db stopping')\n    require('../data/base').close(function () {\n      dbg('db stopped')\n    })\n  }).finally(() => {\n    dbg('repl stopping')\n    require('../../ARCHIVES/repl').close(function () {\n      dbg('repl stopped')\n    })\n  }).finally(() => {\n    evt.emit('Stopped')\n  })\n}\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/evt/Stop.js",
     "access": "public",
@@ -2021,7 +2117,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 119,
+    "__docId__": 123,
     "kind": "function",
     "name": "Stop",
     "memberof": "lib/evt/Stop.js",
@@ -2038,11 +2134,15 @@
     "unknown": [
       {
         "tagName": "@fires",
-        "tagValue": "Stopping"
-      },
-      {
-        "tagName": "@fires",
         "tagValue": "Stopped"
+      }
+    ],
+    "emits": [
+      {
+        "types": [
+          "*"
+        ],
+        "description": "Stopping"
       }
     ],
     "params": [],
@@ -2053,10 +2153,10 @@
     }
   },
   {
-    "__docId__": 120,
+    "__docId__": 124,
     "kind": "file",
     "name": "lib/evt/index.js",
-    "content": "const events = require('events')\n\nconst evt = module.exports = new events.EventEmitter()\nconst dbg = require('../dbg').extend('evt')\nconst arch = require('../arch')\narch.defineRequires(__dirname,evt,'Start','Restart','Stop')\nevt.on('Loaded',()=>dbg('Loaded'))\nevt.on('Started',()=>dbg('Start'))\nevt.on('Starting',()=>dbg('Starting'))\nevt.on('Restarting',()=>dbg('Restarting'))\nevt.on('Restarted',()=>dbg('Restart'))\nevt.on('Stopping',()=>dbg('Stopping'))\nevt.on('Stopped',()=>dbg('Stop'))\ndbg('loaded')",
+    "content": "/** @ignore */\nconst dbg = require('../dbg').extend('evt')\n/** @ignore */\nconst events = require('events')\n/**\n * [EventEmitter offical documentation](https://nodejs.org/docs/latest-v10.x/api/events.html#events_class_eventemitter)\n */\nconst EventEmitter = events.EventEmitter\n/**\n * testing\n * @extends {EventEmitter}\n */\nclass EvtHub extends EventEmitter {\n  /**\n   * Make one\n   */\n  constructor () {\n    super(...arguments)\n    this.on('Loaded', () => dbg('Loaded'))\n    this.on('Started', () => dbg('Start'))\n    this.on('Starting', () => dbg('Starting'))\n    this.on('Restarting', () => dbg('Restarting'))\n    this.on('Restarted', () => dbg('Restart'))\n    this.on('Stopping', () => dbg('Stopping'))\n    this.on('Stopped', () => dbg('Stop'))\n  }\n\n  /** @ignore */\n  get Start () { return require('./Start') }\n  /** @ignore */\n  get Restart () { return require('./Restart') }\n  /** @ignore */\n  get Stop () { return require('./Stop') }\n}\n/**\n * @type {EvtHub}\n * instance of event hub\n */\n// eslint-disable-next-line no-unused-vars\nconst evt = module.exports = new EvtHub()\ndbg('loaded')\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/evt/index.js",
     "access": "public",
@@ -2064,49 +2164,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 121,
-    "kind": "variable",
-    "name": "events",
-    "memberof": "lib/evt/index.js",
-    "static": true,
-    "longname": "lib/evt/index.js~events",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/evt/index.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 122,
-    "kind": "variable",
-    "name": "evt",
-    "memberof": "lib/evt/index.js",
-    "static": true,
-    "longname": "lib/evt/index.js~evt",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/evt/index.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 3,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 123,
+    "__docId__": 125,
     "kind": "variable",
     "name": "dbg",
     "memberof": "lib/evt/index.js",
@@ -2117,41 +2175,168 @@
     "importPath": "pixeldeck/lib/evt/index.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 4,
-    "undocument": true,
+    "lineNumber": 2,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 124,
+    "__docId__": 126,
     "kind": "variable",
-    "name": "arch",
+    "name": "events",
     "memberof": "lib/evt/index.js",
     "static": true,
-    "longname": "lib/evt/index.js~arch",
+    "longname": "lib/evt/index.js~events",
     "access": "public",
     "export": false,
     "importPath": "pixeldeck/lib/evt/index.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 5,
-    "undocument": true,
+    "lineNumber": 4,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 125,
+    "__docId__": 127,
+    "kind": "variable",
+    "name": "EventEmitter",
+    "memberof": "lib/evt/index.js",
+    "static": true,
+    "longname": "lib/evt/index.js~EventEmitter",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/evt/index.js",
+    "importStyle": null,
+    "description": "[EventEmitter offical documentation](https://nodejs.org/docs/latest-v10.x/api/events.html#events_class_eventemitter)",
+    "lineNumber": 8,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 128,
+    "kind": "class",
+    "name": "EvtHub",
+    "memberof": "lib/evt/index.js",
+    "static": true,
+    "longname": "lib/evt/index.js~EvtHub",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/evt/index.js",
+    "importStyle": null,
+    "description": "testing",
+    "lineNumber": 13,
+    "interface": false,
+    "extends": [
+      "EventEmitter"
+    ]
+  },
+  {
+    "__docId__": 129,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "lib/evt/index.js~EvtHub",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/evt/index.js~EvtHub#constructor",
+    "access": "public",
+    "description": "Make one",
+    "lineNumber": 17
+  },
+  {
+    "__docId__": 130,
+    "kind": "get",
+    "name": "Start",
+    "memberof": "lib/evt/index.js~EvtHub",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/evt/index.js~EvtHub#Start",
+    "access": "public",
+    "description": null,
+    "lineNumber": 29,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 131,
+    "kind": "get",
+    "name": "Restart",
+    "memberof": "lib/evt/index.js~EvtHub",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/evt/index.js~EvtHub#Restart",
+    "access": "public",
+    "description": null,
+    "lineNumber": 31,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 132,
+    "kind": "get",
+    "name": "Stop",
+    "memberof": "lib/evt/index.js~EvtHub",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "lib/evt/index.js~EvtHub#Stop",
+    "access": "public",
+    "description": null,
+    "lineNumber": 33,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 133,
+    "kind": "variable",
+    "name": "evt",
+    "memberof": "lib/evt/index.js",
+    "static": true,
+    "longname": "lib/evt/index.js~evt",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/evt/index.js",
+    "importStyle": null,
+    "description": "",
+    "lineNumber": 40,
+    "type": {
+      "nullable": null,
+      "types": [
+        "EvtHub"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 134,
     "kind": "file",
     "name": "lib/index.js",
-    "content": "/**\n * Pixeldeck library\n * @name pixeldeck\n * @public\n */\nconst pixeldeck = module.exports = {\n  get service () { return require('./service') },\n  //direct app link?\n  get cfg () {\n    return require('./cfg')\n  },\n  get data () {\n    return require('./data')\n  },\n  get dbg () {\n    return require('./dbg')\n  },\n  get evt () {\n    return require('./evt')\n  },\n  get repl () {\n    return require('./repl')\n  },\n  get server () {\n    return require('./server')\n  },\n}\n",
+    "content": "/**\n\n * Pixeldeck library\n * @name pixeldeck\n * @public\n * @type {{service:service,cfg:cfg,data:data,dbg:dbg,evt:evt,repl:repl,server:server}}\n * ``\n */\n// eslint-disable-next-line no-unused-vars\nconst pixeldeck = module.exports = {\n  get service () { return require('./service') },\n  // direct app link?\n  get cfg () {\n    return require('./cfg')\n  },\n  get data () {\n    return require('./data')\n  },\n  get dbg () {\n    return require('./dbg')\n  },\n  get evt () {\n    return require('./evt')\n  },\n  get repl () {\n    return require('./UI/repl')\n  },\n  get server () {\n    return require('./server')\n  }\n}\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/index.js",
     "access": "public",
@@ -2159,7 +2344,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 126,
+    "__docId__": 135,
     "kind": "variable",
     "name": "pixeldeck",
     "memberof": "lib/index.js",
@@ -2169,7 +2354,40 @@
     "export": false,
     "importPath": "pixeldeck",
     "importStyle": null,
-    "description": "Pixeldeck library",
+    "description": "\nPixeldeck library",
+    "lineNumber": 10,
+    "type": {
+      "nullable": null,
+      "types": [
+        "{service:service,cfg:cfg,data:data,dbg:dbg,evt:evt,repl:repl,server:server}"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 136,
+    "kind": "file",
+    "name": "lib/server.js",
+    "content": "/**\n * @name server\n * @desc [Node.js http.Server](https://nodejs.org/docs/latest-v10.x/api/http.html#http_class_http_server) instance for our [indexed express application](./index.js.html).\n */\n// eslint-disable-next-line no-unused-vars\nconst server = module.exports = require('http').createServer(require('./service'))\n",
+    "static": true,
+    "longname": "/home/badquanta/Projects/pixeldeck/lib/server.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 137,
+    "kind": "variable",
+    "name": "server",
+    "memberof": "lib/server.js",
+    "static": true,
+    "longname": "lib/server.js~server",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/server.js",
+    "importStyle": null,
+    "description": "[Node.js http.Server](https://nodejs.org/docs/latest-v10.x/api/http.html#http_class_http_server) instance for our [indexed express application](./index.js.html).",
     "lineNumber": 6,
     "type": {
       "types": [
@@ -2178,315 +2396,10 @@
     }
   },
   {
-    "__docId__": 127,
-    "kind": "file",
-    "name": "lib/repl.js",
-    "content": "module.exports = repl\nrepl.close = replClose\nrepl.log = replLog\nconst cfg = require('./cfg')\nconst Repl = require('repl')\n//const streamBuffers = require('stream-buffers')\n//const outBuffer = new streamBuffers.WritableStreamBuffer()\n//const inBuffer = new streamBuffers.ReadableStreamBuffer()\n//process.stdout.pipe(outBuffer)\n//inBuffer.pipe(process.stdin)\nconst dbg = require('./dbg').extend('repl')\n/**\n\n * @param {*} opts\n * @param  {...any} args\n * @returns {repl.REPLServer}\n */\nfunction repl (opts = {}, ...args) {\n  if (!cfg.interactive) {\n    dbg('INTERACTIVE REPL DISABLED')\n    return\n  }\n  if (repl.server && !repl.closing) {\n    dbg('repl server already started')\n    return repl.server\n  }\n  const finalReplOpts = Object.assign({}, opts, cfg.replOpts)\n  dbg('starting repl(%o , %O)', opts, ...args)\n  repl.server = Repl.start(\n    finalReplOpts, ...args\n  )\n  repl.server.once('close', function () {\n    dbg('closing....')\n    repl.closing = true;\n    require('./evt/Stop')()\n  });\n}\nasync function replClose () {\n  dbg('repl close requested')\n  clearTimeout(timeoutId)\n  return new Promise((res, rej) => {\n    if (!repl.server) {\n      dbg('no repl server running')\n      return res()\n    } else {\n\n      dbg('commanding repl server close')\n      repl.server.close()\n      return res()\n    }\n  })\n}\nlet timeoutId = null;\nconst seconds = 1000;\nconst suspendTimeout = 1 * seconds;\nfunction suspendRepl () {\n  const alreadyTimedout = timeoutId != null\n  if (timeoutId) {\n    //dbg('already paused')\n    clearTimeout(timeoutId)\n  }\n  timeoutId = setTimeout(restoreRepl, suspendTimeout)\n\n  //dbg('pausing')\n // process.stdout.write('\\n')\n  process.stdin.pause()\n  if (repl.server) {\n    repl.server.pause()\n    //repl.server.clearLine()\n    //repl.server.clearBufferedCommand()\n  }\n\n}\n\n\n\nfunction restoreRepl () {\n  timeoutId = null;\n  process.stdin.resume()\n  //dbg('resuming')\n  if (repl.server && repl.server.paused) {\n    repl.server.prompt()\n  }\n}\n\nconst oldstdoutwrite = console.log.bind(console)\n//process.stdout.write = replLog\nrequire('debug').log = replLog\nfunction replLog () {\n  if(!timeoutId)suspendRepl()\n  oldstdoutwrite(...arguments)\n\n}",
-    "static": true,
-    "longname": "/home/badquanta/Projects/pixeldeck/lib/repl.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 128,
-    "kind": "variable",
-    "name": "cfg",
-    "memberof": "lib/repl.js",
-    "static": true,
-    "longname": "lib/repl.js~cfg",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 129,
-    "kind": "variable",
-    "name": "Repl",
-    "memberof": "lib/repl.js",
-    "static": true,
-    "longname": "lib/repl.js~Repl",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 5,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 130,
-    "kind": "variable",
-    "name": "dbg",
-    "memberof": "lib/repl.js",
-    "static": true,
-    "longname": "lib/repl.js~dbg",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 11,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 131,
-    "kind": "function",
-    "name": "repl",
-    "memberof": "lib/repl.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/repl.js~repl",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": "",
-    "lineNumber": 18,
-    "unknown": [
-      {
-        "tagName": "@returns",
-        "tagValue": "{repl.REPLServer}"
-      }
-    ],
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "*"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "opts",
-        "description": ""
-      },
-      {
-        "nullable": null,
-        "types": [
-          "...any"
-        ],
-        "spread": true,
-        "optional": false,
-        "name": "args",
-        "description": ""
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "repl.REPLServer"
-      ],
-      "spread": false,
-      "description": ""
-    }
-  },
-  {
-    "__docId__": 132,
-    "kind": "function",
-    "name": "replClose",
-    "memberof": "lib/repl.js",
-    "generator": false,
-    "async": true,
-    "static": true,
-    "longname": "lib/repl.js~replClose",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 38,
-    "undocument": true,
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 133,
-    "kind": "variable",
-    "name": "timeoutId",
-    "memberof": "lib/repl.js",
-    "static": true,
-    "longname": "lib/repl.js~timeoutId",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 53,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 134,
-    "kind": "variable",
-    "name": "seconds",
-    "memberof": "lib/repl.js",
-    "static": true,
-    "longname": "lib/repl.js~seconds",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 54,
-    "undocument": true,
-    "type": {
-      "types": [
-        "number"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 135,
-    "kind": "variable",
-    "name": "suspendTimeout",
-    "memberof": "lib/repl.js",
-    "static": true,
-    "longname": "lib/repl.js~suspendTimeout",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 55,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 136,
-    "kind": "function",
-    "name": "suspendRepl",
-    "memberof": "lib/repl.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/repl.js~suspendRepl",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 56,
-    "undocument": true,
-    "params": [],
-    "return": null,
-    "ignore": true
-  },
-  {
-    "__docId__": 137,
-    "kind": "function",
-    "name": "restoreRepl",
-    "memberof": "lib/repl.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/repl.js~restoreRepl",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 77,
-    "undocument": true,
-    "params": [],
-    "return": null,
-    "ignore": true
-  },
-  {
     "__docId__": 138,
-    "kind": "variable",
-    "name": "oldstdoutwrite",
-    "memberof": "lib/repl.js",
-    "static": true,
-    "longname": "lib/repl.js~oldstdoutwrite",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 86,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 139,
-    "kind": "function",
-    "name": "replLog",
-    "memberof": "lib/repl.js",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "lib/repl.js~replLog",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/repl.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 89,
-    "undocument": true,
-    "params": [],
-    "return": null,
-    "ignore": true
-  },
-  {
-    "__docId__": 140,
-    "kind": "file",
-    "name": "lib/server.js",
-    "content": "/**\n * @name server\n * @desc [Node.js http.Server](https://nodejs.org/docs/latest-v10.x/api/http.html#http_class_http_server) instance for our [indexed express application](./index.js.html).\n */\nmodule.exports = require('http').createServer(require('./service'))\n",
-    "static": true,
-    "longname": "/home/badquanta/Projects/pixeldeck/lib/server.js",
-    "access": "public",
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 141,
     "kind": "file",
     "name": "lib/service/app.js",
-    "content": "const express = require('express')\n// TODO: Express App settings?\n/**\n * @description\n *    pixeldeck uses [express.js v4](http://expressjs.com/en/4x/api.html) as the remote holoemition router.\n */\nconst app = module.exports = express()\nconst cfg = require('../cfg')\napp.set('view engine', 'pug')\napp.set('views', cfg.viewsDir)\nObject.assign(app.locals, cfg.locals)\napp.locals.dbg = require('../dbg').extend('VIEW')\n",
+    "content": "/**\n * http://expressjs.com/en/4x/api.html\n */\nconst Express = require('express')\n// TODO: Express App settings?\n/**\n * @desc\n *    pixeldeck uses [express.js v4](http://expressjs.com/en/4x/api.html) as the remote holoemition router.\n * @type {Express}\n */\nconst app = module.exports = Express()\n/** @ignore */\nconst cfg = require('../cfg')\napp.set('view engine', 'pug')\napp.set('views', cfg.viewsDir)\nObject.assign(app.locals, cfg.locals)\napp.locals.dbg = require('../dbg').extend('VIEW')\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/service/app.js",
     "access": "public",
@@ -2494,28 +2407,26 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 142,
+    "__docId__": 139,
     "kind": "variable",
-    "name": "express",
+    "name": "Express",
     "memberof": "lib/service/app.js",
     "static": true,
-    "longname": "lib/service/app.js~express",
+    "longname": "lib/service/app.js~Express",
     "access": "public",
     "export": false,
     "importPath": "pixeldeck/lib/service/app.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 1,
-    "undocument": true,
+    "description": "http://expressjs.com/en/4x/api.html",
+    "lineNumber": 4,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 143,
+    "__docId__": 140,
     "kind": "variable",
     "name": "app",
     "memberof": "lib/service/app.js",
@@ -2525,22 +2436,19 @@
     "export": false,
     "importPath": "pixeldeck/lib/service/app.js",
     "importStyle": null,
-    "description": "",
-    "lineNumber": 7,
-    "unknown": [
-      {
-        "tagName": "@description",
-        "tagValue": "   pixeldeck uses [express.js v4](http://expressjs.com/en/4x/api.html) as the remote holoemition router."
-      }
-    ],
+    "description": "   pixeldeck uses [express.js v4](http://expressjs.com/en/4x/api.html) as the remote holoemition router.",
+    "lineNumber": 11,
     "type": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Express"
+      ],
+      "spread": false,
+      "description": null
     }
   },
   {
-    "__docId__": 144,
+    "__docId__": 141,
     "kind": "variable",
     "name": "cfg",
     "memberof": "lib/service/app.js",
@@ -2551,20 +2459,19 @@
     "importPath": "pixeldeck/lib/service/app.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 8,
-    "undocument": true,
+    "lineNumber": 13,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 145,
+    "__docId__": 142,
     "kind": "file",
     "name": "lib/service/getRoot.js",
-    "content": "module.exports = getRoot\n/**\n *\n * @param {*} req\n * @param {*} res\n */\nfunction getRoot (req, res) {\n  res.render('main')\n}",
+    "content": "module.exports = getRoot\n/**\n *\n * @param {*} req\n * @param {*} res\n */\nfunction getRoot (req, res) {\n  res.render('main')\n}\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/service/getRoot.js",
     "access": "public",
@@ -2572,7 +2479,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 146,
+    "__docId__": 143,
     "kind": "function",
     "name": "getRoot",
     "memberof": "lib/service/getRoot.js",
@@ -2611,10 +2518,10 @@
     "return": null
   },
   {
-    "__docId__": 147,
+    "__docId__": 144,
     "kind": "file",
     "name": "lib/service/getTileMapHtml.js",
-    "content": "module.exports = [/\\/(.*)\\.tm\\.html/, getTileMapHtml]\nconst dbg = require('../dbg').extend('getTileMapHtml')\nconst TileMaps = require('../data/TileMaps')\nfunction getTileMapHtml (req, res, next) {\n  const tileMapPath = res.locals.tileMapPath = req.path.replace('.html', '.svg')\n  res.locals.tileMap = TileMaps.findOrLoad(req.path)\n  dbg('getTileMapHtml', !!res.locals.tileMap)\n  return res.render('tileMap/html')\n}",
+    "content": "module.exports = [/\\/(.*)\\.tm\\.html/, getTileMapHtml]\n/** @ignore */\nconst dbg = require('../dbg').extend('getTileMapHtml')\n/** @ignore */\nconst TileMaps = require('../data/TileMaps')\n/**\n *\n * @param {request} req\n * @param {response} res\n * @param {next} next\n */\nfunction getTileMapHtml (req, res, next) {\n  res.locals.tileMap = TileMaps.findOrLoad(req.path)\n  dbg('getTileMapHtml', !!res.locals.tileMap)\n  return res.render('tileMap/html')\n}\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/service/getTileMapHtml.js",
     "access": "public",
@@ -2622,7 +2529,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 148,
+    "__docId__": 145,
     "kind": "variable",
     "name": "dbg",
     "memberof": "lib/service/getTileMapHtml.js",
@@ -2633,17 +2540,16 @@
     "importPath": "pixeldeck/lib/service/getTileMapHtml.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 2,
-    "undocument": true,
+    "lineNumber": 3,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 149,
+    "__docId__": 146,
     "kind": "variable",
     "name": "TileMaps",
     "memberof": "lib/service/getTileMapHtml.js",
@@ -2654,17 +2560,16 @@
     "importPath": "pixeldeck/lib/service/getTileMapHtml.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 3,
-    "undocument": true,
+    "lineNumber": 5,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 150,
+    "__docId__": 147,
     "kind": "function",
     "name": "getTileMapHtml",
     "memberof": "lib/service/getTileMapHtml.js",
@@ -2676,41 +2581,51 @@
     "export": false,
     "importPath": "pixeldeck/lib/service/getTileMapHtml.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
+    "description": "",
+    "lineNumber": 12,
     "params": [
       {
+        "nullable": null,
+        "types": [
+          "request"
+        ],
+        "spread": false,
+        "optional": false,
         "name": "req",
-        "types": [
-          "*"
-        ]
+        "description": ""
       },
       {
+        "nullable": null,
+        "types": [
+          "response"
+        ],
+        "spread": false,
+        "optional": false,
         "name": "res",
-        "types": [
-          "*"
-        ]
+        "description": ""
       },
       {
-        "name": "next",
+        "nullable": null,
         "types": [
-          "*"
-        ]
+          "next"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "next",
+        "description": ""
       }
     ],
     "return": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 151,
+    "__docId__": 148,
     "kind": "file",
     "name": "lib/service/getTileMapSvg.js",
-    "content": "module.exports = getTileMapSvg\nconst path = require('path')\nconst dbg = require('../dbg').extend('getTileMapSvg')\nconst cfg = require('../cfg')\n/**\n * Route handler for `tm.svg` files.\n * @param {*} req\n * @param {*} res\n * @param {*} next\n */\nfunction getTileMapSvg (req, res, next) {\n  dbg('get tileMap', req.path)\n\n  const TileMaps = require('../data/TileMaps')\n  let tileMap = TileMaps.find({path:req.path})\n  dbg('lookup:', tileMap)\n  if (!tileMap) {\n    dbg('loading from json...')\n    tileMap = TileMaps.readFromSync(req.path)\n    dbg('json:%O',tileMap)\n  } else {\n    dbg('lookup success')\n  }\n  res.locals.tileMap = tileMap\n  res.locals.doctype = 'svg'\n  res.locals.pretty = true\n  res.type('svg')\n  res.render('tileMap/svg')\n  dbg('%o rendered', req.path)\n}",
+    "content": "module.exports = getTileMapSvg\n/** @ignore */\nconst dbg = require('../dbg').extend('getTileMapSvg')\n/**\n * Route handler for `tm.svg` files.\n * @param {*} req\n * @param {*} res\n * @param {*} next\n */\nfunction getTileMapSvg (req, res, next) {\n  dbg('get tileMap', req.path)\n\n  const TileMaps = require('../data/TileMaps')\n  let tileMap = TileMaps.find({ path: req.path })\n  dbg('lookup:', tileMap)\n  if (!tileMap) {\n    dbg('loading from json...')\n    tileMap = TileMaps.readFromSync(req.path)\n    dbg('json:%O', tileMap)\n  } else {\n    dbg('lookup success')\n  }\n  res.locals.tileMap = tileMap\n  res.locals.doctype = 'svg'\n  res.locals.pretty = true\n  res.type('svg')\n  res.render('tileMap/svg')\n  dbg('%o rendered', req.path)\n}\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/service/getTileMapSvg.js",
     "access": "public",
@@ -2718,28 +2633,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 152,
-    "kind": "variable",
-    "name": "path",
-    "memberof": "lib/service/getTileMapSvg.js",
-    "static": true,
-    "longname": "lib/service/getTileMapSvg.js~path",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/service/getTileMapSvg.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 2,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 153,
+    "__docId__": 149,
     "kind": "variable",
     "name": "dbg",
     "memberof": "lib/service/getTileMapSvg.js",
@@ -2751,37 +2645,15 @@
     "importStyle": null,
     "description": null,
     "lineNumber": 3,
-    "undocument": true,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 154,
-    "kind": "variable",
-    "name": "cfg",
-    "memberof": "lib/service/getTileMapSvg.js",
-    "static": true,
-    "longname": "lib/service/getTileMapSvg.js~cfg",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/service/getTileMapSvg.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 155,
+    "__docId__": 150,
     "kind": "function",
     "name": "getTileMapSvg",
     "memberof": "lib/service/getTileMapSvg.js",
@@ -2794,7 +2666,7 @@
     "importPath": "pixeldeck/lib/service/getTileMapSvg.js",
     "importStyle": null,
     "description": "Route handler for `tm.svg` files.",
-    "lineNumber": 11,
+    "lineNumber": 10,
     "params": [
       {
         "nullable": null,
@@ -2830,10 +2702,10 @@
     "return": null
   },
   {
-    "__docId__": 156,
+    "__docId__": 151,
     "kind": "file",
     "name": "lib/service/getTileSetSvg.js",
-    "content": "module.exports = getTileSetSvg\n\nconst dbg = require('../dbg').extend('getTileSetSvg')\nconst dataUri = require('datauri')\nconst path = require('path')\nconst cfg = require('../cfg')\nconst fs = require('fs')\nconst TileSets = require('../data/TileSets')\nlet loadedImages = getTileSetSvg.loadedImages = {}\n/**\n *\n * @param {*} req\n * @param {*} res\n * @param {*} next\n */\nfunction getTileSetSvg (req, res, next) {\n  dbg('rendering %o...', req.path)\n  const tileset = res.locals.tileset = TileSets.forPath(req.path)\n\n\n\n  res.locals.doctype = 'svg'\n  res.locals.pretty = true\n  res.type('svg')\n  res.render('tileSet')\n\n  dbg('%o rendered.', req.path)\n}",
+    "content": "module.exports = getTileSetSvg\n/** @ignore */\nconst dbg = require('../dbg').extend('getTileSetSvg')\n/** @ignore */\nconst TileSets = require('../data/TileSets')\n\n/**\n *\n * @param {*} req\n * @param {*} res\n * @param {*} next\n */\nfunction getTileSetSvg (req, res, next) {\n  dbg('rendering %o...', req.path)\n  const tileSet = res.locals.tileSet = TileSets.findOrLoad(req.path)\n  dbg('tileSet', !!tileSet)\n  res.locals.doctype = 'svg'\n  res.locals.pretty = true\n  res.type('svg')\n  res.render('tileSet/svg')\n\n  dbg('%o rendered.', req.path)\n}\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/service/getTileSetSvg.js",
     "access": "public",
@@ -2841,7 +2713,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 157,
+    "__docId__": 152,
     "kind": "variable",
     "name": "dbg",
     "memberof": "lib/service/getTileSetSvg.js",
@@ -2853,100 +2725,15 @@
     "importStyle": null,
     "description": null,
     "lineNumber": 3,
-    "undocument": true,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 158,
-    "kind": "variable",
-    "name": "dataUri",
-    "memberof": "lib/service/getTileSetSvg.js",
-    "static": true,
-    "longname": "lib/service/getTileSetSvg.js~dataUri",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/service/getTileSetSvg.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 4,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 159,
-    "kind": "variable",
-    "name": "path",
-    "memberof": "lib/service/getTileSetSvg.js",
-    "static": true,
-    "longname": "lib/service/getTileSetSvg.js~path",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/service/getTileSetSvg.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 5,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 160,
-    "kind": "variable",
-    "name": "cfg",
-    "memberof": "lib/service/getTileSetSvg.js",
-    "static": true,
-    "longname": "lib/service/getTileSetSvg.js~cfg",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/service/getTileSetSvg.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 6,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 161,
-    "kind": "variable",
-    "name": "fs",
-    "memberof": "lib/service/getTileSetSvg.js",
-    "static": true,
-    "longname": "lib/service/getTileSetSvg.js~fs",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/service/getTileSetSvg.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 7,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 162,
+    "__docId__": 153,
     "kind": "variable",
     "name": "TileSets",
     "memberof": "lib/service/getTileSetSvg.js",
@@ -2957,38 +2744,16 @@
     "importPath": "pixeldeck/lib/service/getTileSetSvg.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 8,
-    "undocument": true,
+    "lineNumber": 5,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 163,
-    "kind": "variable",
-    "name": "loadedImages",
-    "memberof": "lib/service/getTileSetSvg.js",
-    "static": true,
-    "longname": "lib/service/getTileSetSvg.js~loadedImages",
-    "access": "public",
-    "export": false,
-    "importPath": "pixeldeck/lib/service/getTileSetSvg.js",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
-    "type": {
-      "types": [
-        "*"
-      ]
-    },
-    "ignore": true
-  },
-  {
-    "__docId__": 164,
+    "__docId__": 154,
     "kind": "function",
     "name": "getTileSetSvg",
     "memberof": "lib/service/getTileSetSvg.js",
@@ -3001,7 +2766,7 @@
     "importPath": "pixeldeck/lib/service/getTileSetSvg.js",
     "importStyle": null,
     "description": "",
-    "lineNumber": 16,
+    "lineNumber": 13,
     "params": [
       {
         "nullable": null,
@@ -3037,10 +2802,10 @@
     "return": null
   },
   {
-    "__docId__": 165,
+    "__docId__": 155,
     "kind": "file",
     "name": "lib/service/index.js",
-    "content": "\n/**\n * map [app](#app) handlers to routes\n */\nlet index = module.exports = require('./app')\nindex.get(/\\/(.*)\\.ts\\.svg/, require('./getTileSetSvg'))\nindex.get(/\\/(.*)\\.tm\\.svg/, require('./getTileMapSvg'))\nindex.get(...require('./getTileMapHtml'))\nindex.get('/', require('./getRoot'))",
+    "content": "\n/**\n * map [app](#app) handlers to routes\n * @alias service\n * @type {app}\n */\nconst index = module.exports = require('./app')\nindex.get(/\\/(.*)\\.ts\\.svg/, require('./getTileSetSvg'))\nindex.get(/\\/(.*)\\.tm\\.svg/, require('./getTileMapSvg'))\nindex.get(...require('./getTileMapHtml'))\nindex.get('/', require('./getRoot'))\n",
     "static": true,
     "longname": "/home/badquanta/Projects/pixeldeck/lib/service/index.js",
     "access": "public",
@@ -3048,7 +2813,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 166,
+    "__docId__": 156,
     "kind": "variable",
     "name": "index",
     "memberof": "lib/service/index.js",
@@ -3059,7 +2824,46 @@
     "importPath": "pixeldeck/lib/service/index.js",
     "importStyle": null,
     "description": "map [app](#app) handlers to routes",
-    "lineNumber": 5,
+    "lineNumber": 7,
+    "unknown": [
+      {
+        "tagName": "@alias",
+        "tagValue": "service"
+      }
+    ],
+    "type": {
+      "nullable": null,
+      "types": [
+        "app"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 157,
+    "kind": "file",
+    "name": "lib/ui/Start.js",
+    "content": "module.exports = Start\n/**\n * https://nodejs.org/docs/latest-v10.x/api/repl.html\n * @private\n */\nconst Repl = require('repl')\n/** @ignore */\nconst dbg = require('../dbg').extend('ui:Start')\n/** @ignore */\nconst evt = require('../evt')\n/**\n * Start the user interface\n * @emits {evt} uiStarting\n * @emits {evt} uiStarted\n * @todo Debug more events\n */\nasync function Start (opts = {}) {\n  const cfg = require('../cfg')\n  if (!cfg.interactive) {\n    dbg('User Interface Disabled')\n    return Promise.resolve(null)\n  }\n  const ui = require('.')\n  if (!ui.REPLServer && ui.starting) {\n    dbg('User Interface Already Starting...')\n  } else {\n    evt.emit('uiStarting')\n    dbg('Promising to start user interface...')\n    ui.starting = new Promise(function (resolve, reject) {\n      const finalReplOpts = Object.assign({}, opts, cfg.replOpts)\n      dbg('starting repl(%o)', finalReplOpts)\n      ui.REPLServer = Repl.start(finalReplOpts)\n      ui.REPLServer.once('close', function () {\n        dbg('on REPLServer close, closing pixeldeck too')\n        require('../evt/Stop')()\n      })\n      evt.emit('uiStarted')\n      return resolve(ui)\n    })\n  }\n  return ui.starting\n}\n",
+    "static": true,
+    "longname": "/home/badquanta/Projects/pixeldeck/lib/ui/Start.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 158,
+    "kind": "variable",
+    "name": "Repl",
+    "memberof": "lib/ui/Start.js",
+    "static": true,
+    "longname": "lib/ui/Start.js~Repl",
+    "access": "private",
+    "export": false,
+    "importPath": "pixeldeck/lib/ui/Start.js",
+    "importStyle": null,
+    "description": "https://nodejs.org/docs/latest-v10.x/api/repl.html",
+    "lineNumber": 6,
     "type": {
       "types": [
         "*"
@@ -3067,101 +2871,213 @@
     }
   },
   {
-    "__docId__": 167,
-    "kind": "file",
-    "name": "lib/ui.js",
-    "content": "const cfg = require('./cfg')\nconst ui = module.exports = { blessed, tty: unimplemented, stdio: unimplemented }\n\nif (ui[cfg.ui]) { ui.manager = ui[cfg.ui]() } else {\n  throw new Error(`Unkown UI: ${cfg.ui}`)\n}\nfunction blessed () {\n\n  var blessed = require('blessed');\n\n  // Create a screen object.\n  var screen = blessed.screen({\n    smartCSR: true\n  });\n\n  screen.title = 'my window title';\n\n  // Create a box perfectly centered horizontally and vertically.\n  var box = blessed.box({\n    top: 'center',\n    left: 'center',\n    width: '50%',\n    height: '50%',\n    content: 'Hello {bold}world{/bold}!',\n    tags: true,\n    border: {\n      type: 'line'\n    },\n    style: {\n      fg: 'white',\n      bg: 'magenta',\n      border: {\n        fg: '#f0f0f0'\n      },\n      hover: {\n        bg: 'green'\n      }\n    }\n  });\n  const dbg = new blessed.log({ parent: screen, left: 0, top: 0, height: 5, width: 10 })\n  dbg.show(true)\n  require('debug').log = dbg.log.bind(dbg)\n  const stream = require('stream')\n  const replTerm = require('term.js')()\n  const repl = require('./repl')\n  //process.stdout.unpipe(repl.outputStream)\n  //repl.inputStream.unpipe(process.stdin)\n\n  const replUi = new blessed.terminal({\n    parent: screen, terminal: replTerm, handler: function () {\n      repl.write(...arguments)\n\n    }\n  })\n\n\n\n\n\n\n  const konsole = new blessed.log({ parent: screen })\n  // Append our box to the screen.\n  screen.append(box);\n  //console.log = konsole.log.bind(konsole)\n\n  // Add a png icon to the box\n  var icon = blessed.image({\n    parent: box,\n    top: 0,\n    left: 0,\n    type: 'ansi',\n    width: 'shrink',\n    height: 'shrink',\n    file: __dirname + '/my-program-icon.png',\n    search: false\n  });\n\n  // If our box is clicked, change the content.\n  box.on('click', function (data) {\n    box.setContent('{center}Some different {red-fg}content{/red-fg}.{/center}');\n\n    screen.program.clear();\n    screen.render();\n  });\n\n  // If box is focused, handle `enter`/`return` and give us some more content.\n  box.key('enter', function (ch, key) {\n    box.setContent('{right}Even different {black-fg}content{/black-fg}.{/right}\\n');\n    box.setLine(1, 'bar');\n    box.insertLine(1, 'foo');\n    screen.render();\n  });\n\n\n\n  // Quit on Escape, q, or Control-C.\n  screen.key(['escape', 'q', 'C-c'], function (ch, key) {\n    return require('./close')()\n  });\n\n  // Focus our element.\n  box.focus();\n\n  // Render the screen.\n  screen.render();\n\n  return {\n    close () {\n      screen.quit()\n    }\n  }\n}\n\nfunction unimplemented () {\n  throw new Error('Not implemented', arguments.callee.name)\n}",
+    "__docId__": 159,
+    "kind": "variable",
+    "name": "dbg",
+    "memberof": "lib/ui/Start.js",
     "static": true,
-    "longname": "/home/badquanta/Projects/pixeldeck/lib/ui.js",
+    "longname": "lib/ui/Start.js~dbg",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/ui/Start.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 160,
+    "kind": "variable",
+    "name": "evt",
+    "memberof": "lib/ui/Start.js",
+    "static": true,
+    "longname": "lib/ui/Start.js~evt",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/ui/Start.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "ignore": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 161,
+    "kind": "function",
+    "name": "Start",
+    "memberof": "lib/ui/Start.js",
+    "generator": false,
+    "async": true,
+    "static": true,
+    "longname": "lib/ui/Start.js~Start",
+    "access": "public",
+    "export": false,
+    "importPath": "pixeldeck/lib/ui/Start.js",
+    "importStyle": null,
+    "description": "Start the user interface",
+    "lineNumber": 17,
+    "todo": [
+      "Debug more events"
+    ],
+    "emits": [
+      {
+        "types": [
+          "evt"
+        ],
+        "description": "uiStarting"
+      },
+      {
+        "types": [
+          "evt"
+        ],
+        "description": "uiStarted"
+      }
+    ],
+    "params": [
+      {
+        "name": "opts",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "file",
+    "name": "lib/ui/Stop.js",
+    "content": "module.exports = Stop\n/** @ignore */\nconst dbg = require('../dbg').extend('ui:Stop')\n/** @ignore */\nconst evt = require('../evt')\n/**\n * Stop REPLServer\n * @emits {evt} uiStopping\n * @emits {evt} uiStopped\n */\nasync function Stop () {\n  const ui = require('./')\n  if (!ui.starting) {\n    dbg('ui has not yet been started')\n    return false\n  }\n  evt.emit('uiStopping')\n  dbg('repl close requested, clearing reissue prompt timeout', ui.timeoutId)\n  clearTimeout(ui.timeoutId)\n  dbg('commanding repl server close')\n  const server = (await ui.starting).REPLServer\n  server.close()\n  return true\n}\n",
+    "static": true,
+    "longname": "/home/badquanta/Projects/pixeldeck/lib/ui/Stop.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 168,
+    "__docId__": 163,
     "kind": "variable",
-    "name": "cfg",
-    "memberof": "lib/ui.js",
+    "name": "dbg",
+    "memberof": "lib/ui/Stop.js",
     "static": true,
-    "longname": "lib/ui.js~cfg",
+    "longname": "lib/ui/Stop.js~dbg",
     "access": "public",
     "export": false,
-    "importPath": "pixeldeck/lib/ui.js",
+    "importPath": "pixeldeck/lib/ui/Stop.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 1,
-    "undocument": true,
+    "lineNumber": 3,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 169,
+    "__docId__": 164,
     "kind": "variable",
-    "name": "ui",
-    "memberof": "lib/ui.js",
+    "name": "evt",
+    "memberof": "lib/ui/Stop.js",
     "static": true,
-    "longname": "lib/ui.js~ui",
+    "longname": "lib/ui/Stop.js~evt",
     "access": "public",
     "export": false,
-    "importPath": "pixeldeck/lib/ui.js",
+    "importPath": "pixeldeck/lib/ui/Stop.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 2,
-    "undocument": true,
+    "lineNumber": 5,
+    "ignore": true,
     "type": {
       "types": [
         "*"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 170,
+    "__docId__": 165,
     "kind": "function",
-    "name": "blessed",
-    "memberof": "lib/ui.js",
+    "name": "Stop",
+    "memberof": "lib/ui/Stop.js",
     "generator": false,
-    "async": false,
+    "async": true,
     "static": true,
-    "longname": "lib/ui.js~blessed",
+    "longname": "lib/ui/Stop.js~Stop",
     "access": "public",
     "export": false,
-    "importPath": "pixeldeck/lib/ui.js",
+    "importPath": "pixeldeck/lib/ui/Stop.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 7,
-    "undocument": true,
+    "description": "Stop REPLServer",
+    "lineNumber": 11,
+    "emits": [
+      {
+        "types": [
+          "evt"
+        ],
+        "description": "uiStopping"
+      },
+      {
+        "types": [
+          "evt"
+        ],
+        "description": "uiStopped"
+      }
+    ],
     "params": [],
     "return": {
       "types": [
-        "{\"close\": function}"
+        "boolean"
       ]
-    },
-    "ignore": true
+    }
   },
   {
-    "__docId__": 171,
-    "kind": "function",
-    "name": "unimplemented",
-    "memberof": "lib/ui.js",
-    "generator": false,
-    "async": false,
+    "__docId__": 166,
+    "kind": "file",
+    "name": "lib/ui/index.js",
+    "content": "/**\n * repl module\n * @type {function}\n\n */\n// eslint-disable-next-line no-unused-vars\nconst repl = module.exports = {\n  get Start () { return require('./Start') },\n  get Stop () { return require('./Stop') }\n}\n",
     "static": true,
-    "longname": "lib/ui.js~unimplemented",
+    "longname": "/home/badquanta/Projects/pixeldeck/lib/ui/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 167,
+    "kind": "variable",
+    "name": "repl",
+    "memberof": "lib/ui/index.js",
+    "static": true,
+    "longname": "lib/ui/index.js~repl",
     "access": "public",
     "export": false,
-    "importPath": "pixeldeck/lib/ui.js",
+    "importPath": "pixeldeck/lib/ui/index.js",
     "importStyle": null,
-    "description": null,
-    "lineNumber": 114,
-    "undocument": true,
-    "params": [],
-    "return": null,
-    "ignore": true
+    "description": "repl module",
+    "lineNumber": 7,
+    "type": {
+      "nullable": null,
+      "types": [
+        "function"
+      ],
+      "spread": false,
+      "description": null
+    }
   },
   {
     "kind": "index",
@@ -3173,7 +3089,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"pixeldeck\",\n  \"version\": \"0.0.1\",\n  \"main\": \"lib/index.js\",\n  \"description\": \"A 2d virtual environment\",\n  \"homepage\": \"https://badquanta.github.io/pixeldeck/\",\n  \"bugs\": {\n    \"url\": \"https://github.com/badquanta/pixeldeck/labels/bug\"\n  },\n  \"keywords\": [\n    \"multiplayer\",\n    \"game-engine\",\n    \"2d\",\n    \"web-browser\",\n    \"web-service\"\n  ],\n  \"directories\": {\n    \"lib\": \"lib/\",\n    \"bin\": \"bin/\",\n    \"man\": \"man/\",\n    \"doc\": \"docs/\",\n    \"test\": \"test/\",\n    \"res\": \"res/\",\n    \"config\": \"config/\"\n  },\n  \"files\": [\n    \"README.md\",\n    \"LICENSE.md\",\n    \"package.json\"\n  ],\n  \"bin\": {\n    \"pixeldeck\": \"./bin/pixeldeck.js\"\n  },\n  \"man\": [\n    \"man/pixeldeck.1\"\n  ],\n  \"scripts\": {\n    \"test\": \"DEBUG=pixeldeck* mocha\",\n    \"diagnostics\": \"nodemon --exec npm -- run test\",\n    \"start\": \"DEBUG=\\\"*\\\" bin/pixeldeck.js\",\n    \"start-watch\": \"DEBUG='*' nodemon --exec npm start\",\n    \"docs\": \"npm run doc-html && npm run doc-man\",\n    \"cover\": \"npx nyc mocha | tee ./docs/COVERAGE.TXT\",\n    \"doc-html\": \"./node_modules/.bin/esdoc\",\n    \"doc-man\": \"./scripts/updateMan.js ./docs/pixeldeck.md\",\n    \"docs-watch\": \"nodemon --exec npm run docs\"\n  },\n  \"os\": [\n    \"linux\",\n    \"!win32\",\n    \"!win64\",\n    \"!darwin\"\n  ],\n  \"author\": \"BadQuanta\",\n  \"license\": \"GPL-3.0\",\n  \"nodemonConfig\": {\n    \"verbose\": true,\n    \"watch\": [\n      \"*\"\n    ],\n    \"ignore\": [\n      \"*.db.json\",\n      \"docs/*\",\n      \"man/*\"\n    ],\n    \"ext\": \"js,md,json\",\n    \"delay\": \"2500\"\n  },\n  \"nyc\": {\n    \"include\": [\n      \"lib/*\",\n      \"scripts/*\",\n      \"bin/*\"\n    ],\n    \"exclude\": [\n      \"ARCHIVES/*\",\n      \"docs/*\"\n    ],\n    \"skip-full\": true,\n    \"reporter\": [\n      \"html\",\n      \"text\",\n      \"text-summary\"\n    ],\n    \"report-dir\": \"docs/coverage\",\n    \"all\": true\n  },\n  \"dependencies\": {\n    \"blessed\": \"^0.1.81\",\n    \"chai\": \"^4.2.0\",\n    \"config\": \"^3.2.2\",\n    \"datauri\": \"^2.0.0\",\n    \"debug\": \"^4.1.1\",\n    \"express\": \"^4.17.1\",\n    \"jstransformer-markdown-it\": \"^2.1.0\",\n    \"lokijs\": \"^1.5.7\",\n    \"mocha\": \"^6.2.1\",\n    \"pug\": \"^2.0.4\",\n    \"socket.io\": \"^2.3.0\"\n  },\n  \"devDependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"jsdoc\": \"^3.6.3\",\n    \"nodemon\": \"^1.19.3\",\n    \"nyc\": \"^14.1.1\",\n    \"remark-man\": \"^6.0.0\",\n    \"remark-parse\": \"^7.0.1\",\n    \"should\": \"^13.2.3\",\n    \"supertest\": \"^4.0.2\",\n    \"to-vfile\": \"^6.0.0\",\n    \"unified\": \"^8.4.0\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"pixeldeck\",\n  \"version\": \"0.0.1\",\n  \"main\": \"lib/index.js\",\n  \"description\": \"A 2d virtual environment\",\n  \"homepage\": \"https://badquanta.github.io/pixeldeck/\",\n  \"bugs\": {\n    \"url\": \"https://github.com/badquanta/pixeldeck/labels/bug\"\n  },\n  \"keywords\": [\n    \"multiplayer\",\n    \"game-engine\",\n    \"2d\",\n    \"web-browser\",\n    \"web-service\"\n  ],\n  \"directories\": {\n    \"lib\": \"lib/\",\n    \"bin\": \"bin/\",\n    \"man\": \"man/\",\n    \"doc\": \"docs/\",\n    \"test\": \"test/\",\n    \"res\": \"res/\",\n    \"config\": \"config/\"\n  },\n  \"files\": [\n    \"README.md\",\n    \"LICENSE.md\",\n    \"package.json\"\n  ],\n  \"bin\": {\n    \"pixeldeck\": \"./bin/pixeldeck.js\"\n  },\n  \"man\": [\n    \"man/pixeldeck.1\"\n  ],\n  \"scripts\": {\n    \"test\": \"DEBUG=pixeldeck* mocha\",\n    \"diagnostics\": \"nodemon --exec npm -- run test\",\n    \"start\": \"DEBUG=\\\"*\\\" bin/pixeldeck.js\",\n    \"start-watch\": \"DEBUG='*' nodemon --exec npm start\",\n    \"docs\": \"npm run esdoc && npm run jsdoc && npm run doc-man && npm run cover\",\n    \"cover\": \"npx nyc mocha | tee ./docs/COVERAGE.TXT\",\n    \"esdoc\": \"./node_modules/.bin/esdoc\",\n    \"jsdoc\": \"./node_modules/.bin/jsdoc -c ./jsdoc.conf.json\",\n    \"doc-man\": \"./scripts/updateMan.js ./docs/pixeldeck.md\",\n    \"developer\": \"DEBUG='pixeldeck*,$DEBUG' nodemon --exec npm run docs\"\n  },\n  \"os\": [\n    \"linux\",\n    \"!win32\",\n    \"!win64\",\n    \"!darwin\"\n  ],\n  \"author\": \"BadQuanta\",\n  \"license\": \"GPL-3.0\",\n  \"nodemonConfig\": {\n    \"verbose\": true,\n    \"watch\": [\n      \"*\"\n    ],\n    \"ignore\": [\n      \"*.db.json\",\n      \"docs/*\",\n      \"man/*\"\n    ],\n    \"ext\": \"js,md,json\",\n    \"delay\": \"1000\"\n  },\n  \"dependencies\": {\n    \"blessed\": \"^0.1.81\",\n    \"chai\": \"^4.2.0\",\n    \"config\": \"^3.2.3\",\n    \"datauri\": \"^2.0.0\",\n    \"debug\": \"^4.1.1\",\n    \"express\": \"^4.17.1\",\n    \"jstransformer-markdown-it\": \"^2.1.0\",\n    \"lokijs\": \"^1.5.7\",\n    \"mocha\": \"^6.2.1\",\n    \"pug\": \"^2.0.4\",\n    \"socket.io\": \"^2.3.0\"\n  },\n  \"devDependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^6.5.1\",\n    \"eslint-config-standard\": \"^14.1.0\",\n    \"eslint-plugin-import\": \"^2.18.2\",\n    \"eslint-plugin-node\": \"^10.0.0\",\n    \"eslint-plugin-promise\": \"^4.2.1\",\n    \"eslint-plugin-standard\": \"^4.0.1\",\n    \"jsdoc\": \"^3.6.3\",\n    \"nodemon\": \"^1.19.3\",\n    \"nyc\": \"^14.1.1\",\n    \"remark-man\": \"^6.0.0\",\n    \"remark-parse\": \"^7.0.1\",\n    \"should\": \"^13.2.3\",\n    \"supertest\": \"^4.0.2\",\n    \"to-vfile\": \"^6.0.0\",\n    \"unified\": \"^8.4.1\"\n  }\n}\n",
     "longname": "/home/badquanta/Projects/pixeldeck/package.json",
     "name": "package.json",
     "static": true,

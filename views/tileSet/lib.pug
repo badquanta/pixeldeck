@@ -1,0 +1,17 @@
+mixin TileSet(tileSet)
+  script#json(type="text/json")=tileSet.json
+
+  - let cnt = 1;
+  - let x = 0, y = 0
+
+  while y < parseInt(tileSet.imageheight)
+    while x < parseInt(tileSet.imagewidth)
+      - let tileInfo = tileSet.tiles.find((tile)=>{ return tile.id===cnt})
+      = `<!--${x},${y} -->`
+      = `<!-- ${JSON.stringify(tileInfo)} -->`
+      view(id=`${cnt}` width=tileSet.tilewidth height=tileSet.tileheight viewBox=`${x} ${y} ${tileSet.tilewidth} ${tileSet.tileheight}` data=tileInfo)
+      - cnt++
+      - x+=tileSet.tilewidth
+    - x=0
+    - y+=tileSet.tileheight
+  image(xlink:href=tileSet.imageDataUrl x="0" y="0" width=tileSet.imagewidth height=tileSet.imageheight )
