@@ -96,6 +96,12 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "pixeldeck~pixeldeck",
+    "variable/index.html#static-variable-pixeldeck",
+    "<span>pixeldeck</span> <span class=\"search-result-import-path\">pixeldeck</span>",
+    "variable"
+  ],
+  [
     "pixeldeck/lib/repl.js~repl",
     "function/index.html#static-function-repl",
     "<span>repl</span> <span class=\"search-result-import-path\">pixeldeck/lib/repl.js</span>",
@@ -591,6 +597,12 @@ window.esdocSearchIndex = [
     "lib/evt/index.js",
     "file/lib/evt/index.js.html",
     "lib/evt/index.js",
+    "file"
+  ],
+  [
+    "lib/index.js",
+    "file/lib/index.js.html",
+    "lib/index.js",
     "file"
   ],
   [

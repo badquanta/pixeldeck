@@ -41,9 +41,9 @@
     "start-watch": "DEBUG='*' nodemon --exec npm start",
     "docs": "npm run doc-html && npm run doc-man",
     "cover": "npx nyc mocha | tee ./docs/COVERAGE.TXT",
-    "doc-html": "npx jsdoc -c jsdoc.conf.json",
+    "doc-html": "./node_modules/.bin/esdoc",
     "doc-man": "./scripts/updateMan.js ./docs/pixeldeck.md",
-    "docs-watch": "nodemon --exec npm -- run docs"
+    "docs-watch": "nodemon --exec npm run docs"
   },
   "os": [
     "linux",
@@ -53,35 +53,38 @@
   ],
   "author": "BadQuanta",
   "license": "GPL-3.0",
-  "nodemon":{
+  "nodemonConfig": {
     "verbose": true,
     "watch": [
-
+      "*"
     ],
     "ignore": [
       "*.db.json",
-      "docs/pixeldeck",
-      "man/"
+      "docs/*",
+      "man/*"
     ],
-    "ext":"js,md,json",
-    "delay": "1000"
+    "ext": "js,md,json",
+    "delay": "2500"
   },
-  "nyc":{
-    "include":[
+  "nyc": {
+    "include": [
       "lib/*",
       "scripts/*",
       "bin/*"
     ],
-    "exclude":[
+    "exclude": [
       "ARCHIVES/*",
       "docs/*"
     ],
     "skip-full": true,
-    "reporter": ["html","text","text-summary"],
+    "reporter": [
+      "html",
+      "text",
+      "text-summary"
+    ],
     "report-dir": "docs/coverage",
     "all": true
   },
-
   "dependencies": {
     "blessed": "^0.1.81",
     "chai": "^4.2.0",
@@ -96,6 +99,8 @@
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
     "jsdoc": "^3.6.3",
     "nodemon": "^1.19.3",
     "nyc": "^14.1.1",

@@ -1,7 +1,7 @@
 {
-  "coverage": "39.6%",
-  "expectCount": 101,
-  "actualCount": 40,
+  "coverage": "40.19%",
+  "expectCount": 102,
+  "actualCount": 41,
   "files": {
     "lib/arch.js": {
       "expectCount": 1,
@@ -95,6 +95,11 @@
         4,
         5
       ]
+    },
+    "lib/index.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
     },
     "lib/repl.js": {
       "expectCount": 12,

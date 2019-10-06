@@ -55,17 +55,31 @@
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
  * Pixeldeck library
  * @name pixeldeck
+ * @public
  */
-const pixeldeck = Object.defineProperties(module.exports,{
-  service:{get:()=&gt;require(&apos;./service&apos;)},
+const pixeldeck = module.exports = {
+  get service () { return require(&apos;./service&apos;) },
   //direct app link?
-  cfg:{get:()=&gt;require(&apos;./cfg&apos;)},
-  data:{get:()=&gt;require(&apos;./data&apos;)},
-  dbg:{get:()=&gt;require(&apos;./dbg&apos;)},
-  evt:{get:()=&gt;require(&apos;./evt&apos;)},
-  repl:{get:()=&gt;require(&apos;./repl&apos;)},
-  server:{get:()=&gt;require(&apos;./server&apos;)},
-})</code></pre>
+  get cfg () {
+    return require(&apos;./cfg&apos;)
+  },
+  get data () {
+    return require(&apos;./data&apos;)
+  },
+  get dbg () {
+    return require(&apos;./dbg&apos;)
+  },
+  get evt () {
+    return require(&apos;./evt&apos;)
+  },
+  get repl () {
+    return require(&apos;./repl&apos;)
+  },
+  get server () {
+    return require(&apos;./server&apos;)
+  },
+}
+</code></pre>
 
 </div>
 

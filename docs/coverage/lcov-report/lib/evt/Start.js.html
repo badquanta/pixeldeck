@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>12/15</span>
+        <span class='fraction'>0/15</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>1/2</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>0/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">80% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>12/15</span>
+        <span class='fraction'>0/15</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -69,8 +69,9 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -78,50 +79,52 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span></td><td class="text"><pre class="prettyprint lang-js">const dbg = require('../dbg').extend('Start')
-module.exports = Start
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const dbg = <span class="cstat-no" title="statement not covered" >require('../dbg').extend('Start')</span>
+<span class="cstat-no" title="statement not covered" >module.exports = Start</span>
 /**
  * Start the service, meaning:
  * 0) Open databases
  * 1) Open Http services.
- *
+ * @fires Starting
+ * @fires Started
  */
-async function Start () {
-  const evt = require('../evt')
-  evt.emit('Starting')
-  const dbg = require('../dbg').extend('Start')
-  const cfg = require('../cfg')
-  const server = require('../server')
-  await server.listen(cfg.port, cfg.address)
-  dbg('listening', server.address())
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (cfg.interactive) {
+async function <span class="fstat-no" title="function not covered" >Start </span>() {
+  const evt = <span class="cstat-no" title="statement not covered" >require('../evt')</span>
+<span class="cstat-no" title="statement not covered" >  evt.emit('Starting')</span>
+  const dbg = <span class="cstat-no" title="statement not covered" >require('../dbg').extend('Start')</span>
+  const cfg = <span class="cstat-no" title="statement not covered" >require('../cfg')</span>
+  const server = <span class="cstat-no" title="statement not covered" >require('../server')</span>
+<span class="cstat-no" title="statement not covered" >  await server.listen(cfg.server.port, cfg.server.address)</span>
+<span class="cstat-no" title="statement not covered" >  dbg('listening', server.address())</span>
+<span class="cstat-no" title="statement not covered" >  if (cfg.interactive) {</span>
     const repl = <span class="cstat-no" title="statement not covered" >require('../repl')</span>
 <span class="cstat-no" title="statement not covered" >    repl()</span>
-<span class="cstat-no" title="statement not covered" >    require('../arch').defineRequires(__dirname, repl.server.context, 'arch', 'data', 'service', 'cfg', 'repl', 'server')</span>
+<span class="cstat-no" title="statement not covered" >    require('../arch').defineRequires(require('path').resolve(__dirname,'..'), repl.server.context, 'arch', 'data', 'service', 'cfg', 'repl', 'server')</span>
   }
-  evt.emit('Start')
+<span class="cstat-no" title="statement not covered" >  evt.emit('Start')</span>
 }
-dbg('loaded')</pre></td></tr>
+<span class="cstat-no" title="statement not covered" >dbg('loaded')</span></pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Oct 03 2019 01:01:56 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Oct 05 2019 21:35:18 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>
