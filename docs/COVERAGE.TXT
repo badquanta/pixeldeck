@@ -2,7 +2,7 @@
 
   data
     base
-      ✓ should be ok (186ms)
+      ✓ should be ok (193ms)
     TileMaps
       ✓ should be ok
       ✓ should save to db
@@ -20,10 +20,10 @@
     ✓ has property server
 
   pixeldeck/
-    ✓ responds with 200 (677ms)
-    ✓ can give us a tileSet (2031ms)
-    ✓ can give us a tilemap svg (363ms)
-    ✓ can give us a tilemap html (367ms)
+    ✓ responds with 200 (738ms)
+    ✓ can give us a tileSet (1938ms)
+    ✓ can give us a tilemap svg (384ms)
+    ✓ can give us a tilemap html (359ms)
 
   start
     ✓ should work
