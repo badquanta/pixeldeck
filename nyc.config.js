@@ -10,10 +10,10 @@ module.exports = {
   ],
   'skip-full': true,
   reporter: [
-    'html',
+    'lcov',
     'text',
     'text-summary'
   ],
-  'report-dir': 'docs/coverage',
+  'report-dir': './docs/coverage',
   all: true
 }
