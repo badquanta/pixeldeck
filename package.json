@@ -40,7 +40,7 @@
     "start": "DEBUG=\"*\" bin/pixeldeck.js",
     "start-watch": "DEBUG='*' nodemon --exec npm start",
     "docs": "npm run jsdoc && npm run doc-man && npm run cover",
-    "cover": "npx nyc mocha | tee ./docs/COVERAGE.TXT",
+    "cover": "NODE_ENV=test npx nyc mocha | tee ./docs/COVERAGE.TXT",
     "esdoc": "./node_modules/.bin/esdoc",
     "jsdoc": "./node_modules/.bin/jsdoc -c ./jsdoc.conf.json",
     "doc-man": "./scripts/updateMan.js ./docs/pixeldeck.md",
