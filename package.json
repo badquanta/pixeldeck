@@ -45,7 +45,7 @@
     "esdoc": "./node_modules/.bin/esdoc",
     "jsdoc": "./node_modules/.bin/jsdoc -c ./jsdoc.conf.json",
     "doc-man": "./scripts/updateMan.js ./docs/pixeldeck.md",
-    "developer": "DEBUG='pixeldeck*' nodemon --exec npm run docs"
+    "developer": "nodemon --exec npm run docs"
   },
   "os": [
     "linux",

@@ -1,6 +1,10 @@
 const test = require('./')
 
 describe('data', function () {
+  this.afterEach(function () {
+    test.pixeldeck.data.TileMaps.collection.clear()
+    test.pixeldeck.data.TileSets.collection.clear()
+  })
   describe('base', function () {
     it('should be ok', function () {
       test.expect(test.pixeldeck.data.base).to.be.ok
@@ -34,10 +38,11 @@ describe('data', function () {
       ].forEach((key) => {
         test.expect(set[key]).to.not.be.undefined
       })
+      //so we excercise the constructor else:
+      const set2 = new TileSets(set.record)
     })
 
     it('should save to db', function () {
-
       const TileSets = test.pixeldeck.data.TileSets
       test.expect(TileSets.collection.count()).to.eql(0)
       const set = new TileSets({ path: '/one/two/three' })
