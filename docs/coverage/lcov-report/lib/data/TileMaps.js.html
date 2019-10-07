@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">73.91% </span>
+        <span class="strong">72.73% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>17/23</span>
+        <span class='fraction'>16/22</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">64.71% </span>
+        <span class="strong">62.5% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>11/17</span>
+        <span class='fraction'>10/16</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">73.91% </span>
+        <span class="strong">72.73% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>17/23</span>
+        <span class='fraction'>16/22</span>
       </div>
     </div>
     <p class="quiet">
@@ -101,34 +101,18 @@
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
 <a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L56'></a><a href='#L56'>56</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -166,76 +150,74 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict'
 &nbsp;
 /** @ignore */
 const base = require('./base')
 /** @ignore */
 const _Model = require('./_Model')
-/** @ignore */
-const arch = require('../arch')
+&nbsp;
 /** @ignore */
 const dbg = require('../dbg').extend('data:TileMaps')
 /**
  * Object Relational Model Root for `TileMaps` loki collection.
- *
- * @class TileMaps
- * @extends _Model
+ * @memberof pixeldeck.data
  */
 class TileMaps extends _Model {
-  /**
-   * Maek a tilemap from json.
-   */
-  constructor (json) {
-    super(json)
-&nbsp;
-  }
   /** @type {number}  */
-  get height () { return this.record['height'] }
+  get height () { return this.record.height }
   /** @type {boolean} */
-  get infinite () { return this.record['infinite'] }
+  get infinite () { return this.record.infinite }
   /** @type {Array} */
-  get layers () { return this.record['layers'] }
+  get layers () { return this.record.layers }
   /** @type {number}  */
-  get nextlayerid () { return this.record['nextlayerid'] }
+  get nextlayerid () { return this.record.nextlayerid }
   /** @type {number}  */
-  get nextobjectid () { return this.record['nextobjectid'] }
+  get nextobjectid () { return this.record.nextobjectid }
   /** @type {string}  */
-<span class="fstat-no" title="function not covered" >  ge</span>t orientation () { <span class="cstat-no" title="statement not covered" >return this.record['orientation'] </span>}
+<span class="fstat-no" title="function not covered" >  ge</span>t orientation () { <span class="cstat-no" title="statement not covered" >return this.record.orientation </span>}
   /** @type {string} */
-<span class="fstat-no" title="function not covered" >  ge</span>t renderorder () { <span class="cstat-no" title="statement not covered" >return this.record['renderorder'] </span>}
+<span class="fstat-no" title="function not covered" >  ge</span>t renderorder () { <span class="cstat-no" title="statement not covered" >return this.record.renderorder </span>}
   /** @type {number} */
-<span class="fstat-no" title="function not covered" >  ge</span>t tiledversion () { <span class="cstat-no" title="statement not covered" >return this.record['tiledversion'] </span>}
+<span class="fstat-no" title="function not covered" >  ge</span>t tiledversion () { <span class="cstat-no" title="statement not covered" >return this.record.tiledversion </span>}
   /** @type {number} */
-  get tileheight () { return this.record['tileheight'] }
-  /** @type {Array&lt;TileSet&gt;}*/
-  get tilesets () { return this.record['tilesets'] }
+  get tileheight () { return this.record.tileheight }
+  /** @type {Array&lt;TileSet&gt;} */
+  get tilesets () { return this.record.tilesets }
   /** @type {number} */
-  get tilewidth () { return this.record['tilewidth'] }
+  get tilewidth () { return this.record.tilewidth }
   /** @type {string} */
-  get type () { return this.record['type'] }
+  get type () { return this.record.type }
   /** @type {string} */
-<span class="fstat-no" title="function not covered" >  ge</span>t version () { <span class="cstat-no" title="statement not covered" >return this.record['version'] </span>}
+<span class="fstat-no" title="function not covered" >  ge</span>t version () { <span class="cstat-no" title="statement not covered" >return this.record.version </span>}
   /** @type {number} */
-  get width () { return this.record['width'] }
+  get width () { return this.record.width }
   /** @type {string} */
-<span class="fstat-no" title="function not covered" >  ge</span>t path () { <span class="cstat-no" title="statement not covered" >return this.record['path'] </span>}
+<span class="fstat-no" title="function not covered" >  ge</span>t path () { <span class="cstat-no" title="statement not covered" >return this.record.path </span>}
   /** @type {Object}
    *  @todo document better
    **/
-<span class="fstat-no" title="function not covered" >  ge</span>t meta () { <span class="cstat-no" title="statement not covered" >return this.record['meta'] </span>}
+<span class="fstat-no" title="function not covered" >  ge</span>t meta () { <span class="cstat-no" title="statement not covered" >return this.record.meta </span>}
 }
-TileMaps.collection = base.addCollection('TileMaps', {})
+TileMaps.collection = base.addCollection('TileMaps', {
+  autoupdate: true,
+&nbsp;
+})
 module.exports = TileMaps
+dbg('loaded')
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 06 2019 01:39:45 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 06 2019 23:56:21 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

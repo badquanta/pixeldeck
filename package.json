@@ -35,11 +35,11 @@
     "man/pixeldeck.1"
   ],
   "scripts": {
-    "test": "DEBUG=pixeldeck* mocha",
+    "test": "DEBUG=pixeldeck* mocha -b",
     "diagnostics": "nodemon --exec npm -- run test",
     "start": "DEBUG=\"*\" bin/pixeldeck.js",
     "start-watch": "DEBUG='*' nodemon --exec npm start",
-    "docs": "npm run esdoc && npm run jsdoc && npm run doc-man && npm run cover",
+    "docs": "npm run jsdoc && npm run doc-man && npm run cover",
     "cover": "npx nyc mocha | tee ./docs/COVERAGE.TXT",
     "esdoc": "./node_modules/.bin/esdoc",
     "jsdoc": "./node_modules/.bin/jsdoc -c ./jsdoc.conf.json",
@@ -57,7 +57,12 @@
   "nodemonConfig": {
     "verbose": true,
     "watch": [
-      "*"
+      "lib/*",
+      "test/*",
+      "package.json",
+      "jsdoc.conf.json",
+      ".eslintrc.js",
+      "README.md"
     ],
     "ignore": [
       "*.db.json",
@@ -85,6 +90,7 @@
     "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^6.5.1",
     "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",

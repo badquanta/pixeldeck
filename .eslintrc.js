@@ -3,7 +3,8 @@ module.exports = {
     browser: true,
     commonjs: true,
     es6: true,
-    node: true
+    node: true,
+    mocha: true
   },
   extends: [
     'standard'
@@ -12,9 +13,14 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
+  plugins: [
+    "chai-friendly"
+  ],
   parserOptions: {
     ecmaVersion: 2018
   },
   rules: {
+    "no-unused-expressions": 0,
+    "chai-friendly/no-unused-expressions": 0
   }
 }

@@ -1,19 +1,19 @@
-{
-  "include": [
-    "lib/*",
-    "scripts/*",
-    "bin/*"
+module.exports = {
+  include: [
+    'lib/*',
+    'scripts/*',
+    'bin/*'
   ],
-  "exclude": [
-    "ARCHIVES/*",
-    "docs/*"
+  exclude: [
+    'ARCHIVES/*',
+    'docs/*'
   ],
-  "skip-full": true,
-  "reporter": [
-    "html",
-    "text",
-    "text-summary"
+  'skip-full': true,
+  reporter: [
+    'html',
+    'text',
+    'text-summary'
   ],
-  "report-dir": "docs/coverage",
-  "all": true
+  'report-dir': 'docs/coverage',
+  all: true
 }

@@ -70,47 +70,52 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >module.exports = Restart</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >module.exports = Restart</span>
+/** @ignore */
 const dbg = <span class="cstat-no" title="statement not covered" >require('../dbg').extend('Reset()')</span>
 /**
+ * Restart
  * @fires Restarting
  * @fires Restarted
  */
-async function <span class="fstat-no" title="function not covered" >Restart(</span>){
+async function <span class="fstat-no" title="function not covered" >Restart </span>() {
   const evt = <span class="cstat-no" title="statement not covered" >require('../evt')</span>
 <span class="cstat-no" title="statement not covered" >  evt.emit('Restarting')</span>
 <span class="cstat-no" title="statement not covered" >  dbg('Restarting...')</span>
 <span class="cstat-no" title="statement not covered" >  await require('./Stop')()</span>
-  const moduleDir = <span class="cstat-no" title="statement not covered" >require('path').resolve(__dirname,'../../')</span>
+  const moduleDir = <span class="cstat-no" title="statement not covered" >require('path').resolve(__dirname, '../../')</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  require('.').emit('Resetting')</span>
-<span class="cstat-no" title="statement not covered" >  Object.keys(require.cache).forEach(<span class="fstat-no" title="function not covered" >(k</span>ey)=&gt;{</span>
-<span class="cstat-no" title="statement not covered" >    if(key.startsWith(moduleDir)){</span>
-&nbsp;
+<span class="cstat-no" title="statement not covered" >  Object.keys(require.cache).forEach(<span class="fstat-no" title="function not covered" >(k</span>ey) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    if (key.startsWith(moduleDir)) {</span>
 <span class="cstat-no" title="statement not covered" >      delete require.cache[key]</span>
     }
   })
@@ -118,13 +123,14 @@ async function <span class="fstat-no" title="function not covered" >Restart(</sp
 <span class="cstat-no" title="statement not covered" >  evt.emit('Restarted')</span>
 <span class="cstat-no" title="statement not covered" >  dbg('Restarted')</span>
 }
-<span class="cstat-no" title="statement not covered" >dbg('loaded')</span></pre></td></tr>
+<span class="cstat-no" title="statement not covered" >dbg('loaded')</span>
+&nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 06 2019 01:53:26 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 06 2019 12:08:45 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

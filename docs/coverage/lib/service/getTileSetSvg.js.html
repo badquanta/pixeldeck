@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>8/16</span>
+        <span class='fraction'>11/11</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,21 +30,21 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/1</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>8/16</span>
+        <span class='fraction'>11/11</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -70,8 +70,19 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -81,53 +92,39 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">module.exports = getTileSetSvg
-&nbsp;
+/** @ignore */
 const dbg = require('../dbg').extend('getTileSetSvg')
-const dataUri = require('datauri')
-const path = require('path')
-const cfg = require('../cfg')
-const fs = require('fs')
-const TileSets = require('../data/TileSets')
-let loadedImages = getTileSetSvg.loadedImages = {}
+/** @ignore */
+const data = require('../data')
+&nbsp;
 /**
- *
+ * Handler for '/*.ts.svg'
  * @param {*} req
  * @param {*} res
  * @param {*} next
+ * @memberof pixeldeck.service
  */
-function <span class="fstat-no" title="function not covered" >getTileSetSvg </span>(req, res, next) {
-<span class="cstat-no" title="statement not covered" >  dbg('rendering %o...', req.path)</span>
-  const tileSet = <span class="cstat-no" title="statement not covered" >res.locals.tileSet = TileSets.findOrLoad(req.path)</span>
-<span class="cstat-no" title="statement not covered" >  dbg('tileSet',!!tileSet)</span>
-<span class="cstat-no" title="statement not covered" >  res.locals.doctype = 'svg'</span>
-<span class="cstat-no" title="statement not covered" >  res.locals.pretty = true</span>
-<span class="cstat-no" title="statement not covered" >  res.type('svg')</span>
-<span class="cstat-no" title="statement not covered" >  res.render('tileSet/svg')</span>
+function getTileSetSvg (req, res, next) {
+  dbg('rendering %o...', req.path)
+  const tileSet = res.locals.tileSet = data.TileSets.findOrLoad(req.path)
+  dbg('tileSet', !!tileSet)
+  res.locals.doctype = 'svg'
+  res.locals.pretty = true
+  res.type('svg')
+  res.render('tileSet/svg')
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  dbg('%o rendered.', req.path)</span>
-}</pre></td></tr>
+  dbg('%o rendered.', req.path)
+}
+&nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 06 2019 01:53:26 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 06 2019 23:56:21 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>
