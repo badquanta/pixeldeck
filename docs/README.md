@@ -8,6 +8,8 @@
 ### API Documentation:
 * [0.0.1](./pixeldeck/0.0.1/index.html)
 
+![CoverageSVG](https://badquanta.github.io/pixeldeck/coverage.svg)
+
 ## Developer's Blog
 
 I'll try to share current struggles and progress below:

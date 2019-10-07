@@ -16,9 +16,9 @@
     ✓ has property server
 
   pixeldeck/
-    ✓ responds with 200 (653ms)
-    ✓ can give us a tileSet (2003ms)
-    ✓ can give us a tilemap (374ms)
+    ✓ responds with 200 (743ms)
+    ✓ can give us a tileSet (2064ms)
+    ✓ can give us a tilemap (390ms)
 
   start
     ✓ should work

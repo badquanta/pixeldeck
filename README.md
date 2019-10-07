@@ -6,6 +6,10 @@
 [coverage](https://badquanta.github.io/pixeldeck/coverage/index.html)
  ...
 
+![CoverageSVG](https://badquanta.github.io/pixeldeck/coverage.svg)
+
+
+
 ---
 
 ### About:
