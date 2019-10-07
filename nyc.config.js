@@ -10,6 +10,7 @@ module.exports = {
   ],
   'skip-full': true,
   reporter: [
+    'html',
     'lcov',
     'text',
     'text-summary'

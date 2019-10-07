@@ -14,6 +14,17 @@ describe('data', function () {
   describe('TileMaps', function () {
     it('should be ok', function () {
       test.expect(test.pixeldeck.data.TileMaps).to.be.ok
+      const set = test.pixeldeck.data.TileMaps.findOrLoad('test/test4.json')
+      test.expect(set).to.be.ok;
+      [
+        'height', 'width', 'infinite',
+        'layers', 'nextlayerid', 'nextobjectid',
+        'orientation', 'renderorder', 'tiledversion',
+        'tileheight', 'tilewidth', 'path',
+        'meta', 'type', 'version'
+      ].forEach((key) => {
+        test.expect(set[key]).to.not.be.undefined
+      })
     })
 
     it('should save to db', function () {
@@ -38,11 +49,14 @@ describe('data', function () {
       ].forEach((key) => {
         test.expect(set[key]).to.not.be.undefined
       })
-      //so we excercise the constructor else:
+      // so we excercise the constructor else:
       const set2 = new TileSets(set.record)
+      // another constructor else
+      const set3 = TileSets.findOrLoad({ path: set.path })
+      test.expect(set2.record).to.eql(set3.record)
     })
 
-    it('should save to db', function () {
+    it('should also save to db', function () {
       const TileSets = test.pixeldeck.data.TileSets
       test.expect(TileSets.collection.count()).to.eql(0)
       const set = new TileSets({ path: '/one/two/three' })
@@ -53,6 +67,13 @@ describe('data', function () {
       const set3 = new TileSets({ path: '/one/two/four' })
       test.expect(TileSets.collection.count()).to.eql(2)
       test.expect(set3.type).to.be.undefined
+      set3.save()
+    })
+
+    it('should throw an err if path is bogus', function () {
+      test.expect(() => {
+        test.pixeldeck.data.TileSets.findOrLoad('/some/bogus/path')
+      }).to.throw()
     })
   })
 })
