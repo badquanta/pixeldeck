@@ -14,6 +14,23 @@
 
 I'll try to share current struggles and progress below:
 
+## Monday October 7th, @12:49am U.S.A./PST
+
+This past week has been focused on documentation, coverage, and refactoring.
+I spent way too much time on documentation; switching between `esdoc` and `jsdoc`.
+I've decided to stick with `jsdoc` for now.
+
+As one can see with the coverage badge above I've made some progress on testing; but it is far from good.
+Just the bare minimum to reach roughly 50% coverage of code.
+
+The major components that will not be testing until later revisions (0.2.0+) include the command line and repl/user interfaces.
+
+The refactoring includes almost complete re-writes of entire systems; mostly mirroring existing code but removing some duplication.  The views have been, and will continue to be refactored in major ways.  I may move away from using the PUG extend feature in lue of possibly composing everything via included mixin libraries.
+
+As for raw functionality the only new things are support for group layers and support for objects; far from complete support but rendering of test4 works but without animations.
+
+---
+
 ## Monday September 30th, @02:25pm U.S.A./PST
 This started with making [Tiled](https://www.mapeditor.org/) tilesets & tilemaps, and using Node & Pug to convert the JSON files it produced into SVG files.
 
