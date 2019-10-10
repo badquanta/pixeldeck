@@ -1,14 +1,14 @@
 
 
 mixin Layers(theseLayers)
-  - dbg('mixin layers')
+  // dbg('mixin layers')
   g.layers(id=theseLayers.id name=theseLayers.name)
     each thisLayer in theseLayers
       +Layer(thisLayer)
   //End of Layers
 
 mixin Layer(thisLayer)
-  - dbg('mixin layer',thisLayer.type)
+  // dbg('mixin layer',thisLayer.type)
   case thisLayer.type
     when 'tilelayer'
       +TileLayer(thisLayer)
@@ -21,7 +21,7 @@ mixin Layer(thisLayer)
   //End of Layer
 
 mixin ObjectGroupLayer(thisLayer)
-  - dbg('mixin objectgrouplayer')
+  // dbg('mixin objectgrouplayer')
   g.objects.group.layer(id=thisLayer.id name=thisLayer.name)
     each obj in thisLayer.objects
       g.object(
@@ -35,7 +35,7 @@ mixin ObjectGroupLayer(thisLayer)
 
 
 mixin GroupLayer(group)
-  - dbg('mixin grouplayer')
+  // dbg('mixin grouplayer')
   g.group.layers(id=group.id name=group.name)
     +Layers(group.layers)
   //End of GroupLayer
@@ -50,7 +50,7 @@ mixin TileImage(thisData, x=0,y=0, tw=tileMap.tilewidth,th=tileMap.tileheight)
   -   let id = (tid -tileset.firstgid)+1
   -    return `${tileset.source.replace('.json','.ts.svg')}#${id}`
   -  }
-  //- dbg('mixin tileimage')
+  //// dbg('mixin tileimage')
   image.tile(
     xlink:href=getTidUrl(thisData)
     x=x y=y
@@ -67,22 +67,22 @@ mixin TileData(thisData, w=tileMap.width, h=tileMap.height, tw=tileMap.tilewidth
   - function getY(idx, w = tileMap.width, th = tileMap.tileheight){
   -   return Math.floor((idx)/w ) * th
   - }
-  - dbg('mixin tiledata')
+  // dbg('mixin tiledata')
   each item, idx in thisData
     if item!=0
       +TileImage(item, getX(idx,w),getY(idx,w),tw,th)
   //End of TileData
 
 mixin TileLayer(thisLayer)
-  - dbg('mixin tilelayer')
+  // dbg('mixin tilelayer')
   g.layer.tiles(id=thisLayer.id name=thisLayer.name)
     if thisLayer.chunks
-      - dbg('tilelayer has chunks')
+      // dbg('tilelayer has chunks')
       each chunk in thisLayer.chunks
         g.chunk(transform=`translate(${chunk.x*tileMap.tilewidth} ${chunk.y*tileMap.tileheight})`)
           +TileData(chunk.data, chunk.width, chunk.height)
     else if thisLayer.data
-      - dbg('tilelayer has data')
+      // dbg('tilelayer has data')
       +TileData(thisLayer.data)
     else
       h1 Unknown layer data:
@@ -90,7 +90,7 @@ mixin TileLayer(thisLayer)
   //End of TileLayer
 
 mixin TileMap(thisMap)
-  - dbg('mixin TileMap')
+  // dbg('mixin TileMap')
   g.map(infinite=thisMap.infinite nextlayerid=thisMap.nextlayerid nextobjectid=thisMap.nextobjectid type=thisMap.type)
     +Layers(thisMap.layers)
   //End of TileMap

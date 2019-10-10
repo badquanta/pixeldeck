@@ -77,7 +77,10 @@ there are really so many, so check out [package.json](./package.json) if you rea
 
   1) [express](http://expressjs.com/en/4x/api.html) used for server http server to javascript api handling
   2) [lokijs](https://github.com/techfort/LokiJS) I'm using this to provide an `isomorphic database` that will run identically on the client & the server. It also should support synchronizing changes between the client & server. This concept has yet to be prototyped.
-  3) [#TODO mocha](https://mochajs.org/), along with libraries like [#TODO supertest](#TODO), [#TODO chai](#TODO), [#TODO approvals](#TODO) and others
+  3) [#TODO mocha](https://mochajs.org/), along with libraries like 
+    1) [#TODO supertest](#TODO)
+    2) [#TODO chai](#TODO)
+    3) [#TODO approvals](#TODO) and others
   4) [pug](https://pugjs.org/) is an excellent tool for XML generation, and utilized her for `SVG` and `HTML` templates.
   5) [#TODO socket.io](https://socket.io/) Not yet really utilized; but intended to be the backbone of `loki database` synchronization.
   6) [jsdoc](https://jsdoc.app/) generates our excellent documentation.
