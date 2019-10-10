@@ -52,27 +52,27 @@
                  "tileid":1
                 }],
          "id":0,
-         "type":"human"
+         "type":"south"
         }, 
         {
          "id":1,
-         "type":"human"
+         "type":"south"
         }, 
         {
          "id":2,
-         "type":"human"
+         "type":"south"
         }, 
         {
          "id":3,
-         "type":"human"
+         "type":"south"
         }, 
         {
          "id":4,
-         "type":"human"
+         "type":"south"
         }, 
         {
          "id":5,
-         "type":"human"
+         "type":"south"
         }, 
         {
          "animation":[
@@ -93,19 +93,27 @@
                  "tileid":9
                 }],
          "id":6,
-         "type":"human"
+         "type":"south"
         }, 
         {
          "id":7,
-         "type":"human"
+         "type":"south"
         }, 
         {
          "id":8,
-         "type":"human"
+         "type":"south"
         }, 
         {
          "id":9,
-         "type":"human"
+         "type":"south"
+        }, 
+        {
+         "id":10,
+         "type":"south"
+        }, 
+        {
+         "id":11,
+         "type":"south"
         }, 
         {
          "animation":[

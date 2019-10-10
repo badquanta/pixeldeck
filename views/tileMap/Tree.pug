@@ -1,0 +1,116 @@
+mixin DDs(obj, ...keys)
+  details
+    summary properties...
+    each key in keys
+      .property
+        strong=key
+        | =
+        em=JSON.stringify(obj[key])
+        | ,&nbsp;
+  block
+
+mixin LayersTree(theseLayers)
+  details
+    summary #{theseLayers.length} layers
+    ol.layers(id=theseLayers.id name=theseLayers.name)
+      each thisLayer in theseLayers
+        li
+          +LayerTree(thisLayer)
+  //End of Layers
+
+mixin LayerTree(thisLayer)
+  details
+    summary #{thisLayer.type} "#{thisLayer.name}"
+    +DDs(thisLayer, 'name','height','id','opacity','startx','starty','visible','width','x','y')
+    case thisLayer.type
+      when 'tilelayer'
+        +TileLayerTree(thisLayer)
+      when 'group'
+        +GroupLayerTree(thisLayer)
+      when 'objectgroup'
+        +ObjectGroupLayerTree(thisLayer)
+      default
+        = `Unknown tile layer type: ${thisLayer.type}`
+  //End of Layer
+
+mixin ObjectGroupLayerTree(thisLayer)
+  details
+    summary #{thisLayer.length} objects...
+    ol.objects.group.layer(id=thisLayer.id name=thisLayer.name)
+      each obj in thisLayer.objects
+        li.object(
+          id=obj.id
+          name=obj.name
+          type=obj.type
+          )
+          = obj.name
+          +DDs(obj,'gid','height','id','rotation','type','visible','width','x','y')
+          //+TileImage(obj.gid, 0, 0, obj.width, obj.height)
+    //End of ObjectGroupLayer
+
+
+mixin GroupLayerTree(group)
+  div.group.layers(id=group.id name=group.name)
+    | Group
+    +LayersTree(group.layers)
+    //End of GroupLayer
+
+    //mixin TileImage(thisData, x=0,y=0, tw=tileMap.tilewidth,th=tileMap.tileheight)
+      - const revTilesets = tileMap.tilesets.slice().reverse()
+      - function getTidUrl(tid){
+      -   let tileset = revTilesets.find(function(ts,idx){
+      -     return ts.firstgid <= tid
+      -   })
+      -   if( tid < tileset.firstgid )throw new Error(`TID: ${tid} ${JSON.stringify(tileset)}`)
+      -   let id = (tid -tileset.firstgid)+1
+      -    return `${tileset.source.replace('.json','.ts.svg')}#${id}`
+      -  }
+      //- dbg('mixin tileimage')
+      image.tile(
+        xlink:href=getTidUrl(thisData)
+        x=x y=y
+        width=tw height=th
+      )
+
+mixin TileDataTree(thisData, w=tileMap.width, h=tileMap.height, tw=tileMap.tilewidth,th=tileMap.tileheight)
+  pre.data
+    =JSON.stringify(thisData)
+    //End of TileData
+
+mixin TileLayerTree(thisLayer)
+  details.layer.tiles(id=thisLayer.id name=thisLayer.name)
+    summary Tiles
+
+    if thisLayer.chunks
+      each chunk in thisLayer.chunks
+        details.chunk
+          summary chunk@ #{chunk.x},#{chunk.y} #{chunk.height}x#{chunk.width}
+          +TileDataTree(chunk.data, chunk.width, chunk.height)
+    else if thisLayer.data
+
+      +TileDataTree(thisLayer.data)
+
+    else
+      h1 Unknown layer data:
+      div
+        pre=JSON.stringify(thisLayer)
+  //End of TileLayerTree
+
+
+
+
+mixin TileMapTree(thisMap)
+  .container-fluid(infinite=thisMap.infinite nextlayerid=thisMap.nextlayerid nextobjectid=thisMap.nextobjectid type=thisMap.type)
+    h3 Map
+    +DDs(thisMap,'width','height','infinite','nextlayerid','nextobjectid','orientation','renderorder','tiledversion','tileheight','tilewidth','type','tilesets','version')
+      dt
+        +LayersTree(thisMap.layers)
+
+
+  //End of TileMapTree
+
+
+
+
+
+

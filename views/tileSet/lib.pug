@@ -6,10 +6,23 @@ mixin TileSet(tileSet)
 
   while y < parseInt(tileSet.imageheight)
     while x < parseInt(tileSet.imagewidth)
-      - let tileInfo = tileSet.tiles.find((tile)=>{ return tile.id===cnt})
-      = `<!--${x},${y} -->`
-      = `<!-- ${JSON.stringify(tileInfo)} -->`
-      view(id=`${cnt}` width=tileSet.tilewidth height=tileSet.tileheight viewBox=`${x} ${y} ${tileSet.tilewidth} ${tileSet.tileheight}` data=tileInfo)
+      - let tileInfo = tileSet.tiles.find((tile)=>{ return tile.id===cnt-1})
+      //-= `<!--${x},${y} -->`
+      //-= `<!-- ${JSON.stringify(tileInfo)} -->`
+      view(id=`${cnt}` width=tileSet.tilewidth height=tileSet.tileheight viewBox=`${x} ${y} ${tileSet.tilewidth} ${tileSet.tileheight}`)
+        if tileInfo
+          // Tile Info
+          if tileInfo.animation
+            // Animation
+            - duration = tileInfo.animation.reduce((a,b)=>{return a+parseInt(b.duration)},0)
+            - let boxValues = tileInfo.animation.map(function (anime){
+              - let tx1 = Math.floor(anime.tileid % (tileSet.imagewidth / tileSet.tilewidth))*tileSet.tilewidth
+              - let ty1 = Math.floor(anime.tileid / (tileSet.imagewidth / tileSet.tilewidth))*tileSet.tileheight
+              //- `<!-- anime.tiled = ${anime.tileid} @ ${tx1},${ty1} -->`
+              - return `${tx1} ${ty1} ${tileSet.tilewidth} ${tileSet.tileheight}`
+            - }).join('; ')
+            animate(attributeName="viewBox" values=boxValues begin="0s" dur="1s" fill="freeze")
+            //animate(attributeName="viewBox" values="0 0 600 400; 250 180 300 200" begin="2s" dur="0.2s" fill="freeze")
       - cnt++
       - x+=tileSet.tilewidth
     - x=0

@@ -1,11 +1,63 @@
 extends ../type/HTML
 include .svg
-include .html
+include ./Tree
 block MAIN
-  h5=tileMapPath
-  aside.tree
-    +TileMapTree(tileMap)
+  .container-fluid
+    .row
+      .col-xs-12.col-sm-4.col-lg-4.map
+        +TileMapTree(tileMap)
+      .col-xs-12.col-sm-8.col-lg-8(style="position: static;")
+        svg(width='100%' height='100%' style="position: absolute;" focusable="true" tabindex="0")
+          +TileMap(tileMap)
+        //embed(src=tileMapPath)
+  style.
+    body {background-color: grey}
+    g.object {
+      transition: transform 0.2s;
+    }
 
-  svg(width='100%' height='100%')
-    +TileMap(tileMap)
-  //embed(src=tileMapPath)
+  script.
+    console.log("Hello, I'm grabbing a player and attaching to window.player")
+    window.player = {
+      $el: $('g[name="southStand"]'),
+      get translation(){
+        let transform = this.$el.attr('transform')
+        let translateRegExp = /translate\((-?\d+) (-?\d+)\)/
+        let matches = transform.match(translateRegExp) || [0, 0 , 0]
+        let values = matches.map((arg)=>parseInt(arg))
+        //console.log(transform, matches, values)
+        return values.slice(1)
+      },
+      set translation(val){
+        return this.$el.attr('transform',`translate(${val[0]} ${val[1]})`)
+      },
+      get X(){return this.translation[0]},
+      set X(v){this.translation=[v,this.Y];return v},
+      get Y(){return this.translation[1]},
+      set Y(v){this.translation=[this.X,v];return v}
+    }
+    const STEP_SIZE = 32;
+    $('svg').keydown(function(e) {
+      switch(e.which) {
+        case 37: // left
+          console.log('left')
+          window.player.X -= STEP_SIZE
+          break;
+        case 38: // up
+          console.log('up')
+          window.player.Y -= STEP_SIZE
+          break;
+        case 39: // right
+          console.log('right')
+          window.player.X += STEP_SIZE
+          break;
+        case 40: // down
+          console.log('down')
+          window.player.Y += STEP_SIZE
+          break;
+
+        default: return; // exit this handler for other keys
+      }
+      if(e.which>=37 && e.which <= 40) e.preventDefault(); // prevent the default action (scroll / move caret)
+
+    });

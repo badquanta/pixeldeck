@@ -37,8 +37,8 @@
   "scripts": {
     "test": "NODE_ENV=test DEBUG=pixeldeck* mocha -b",
     "diagnostics": "nodemon --exec npm -- run test",
-    "start": "DEBUG=\"*\" bin/pixeldeck.js",
-    "start-watch": "DEBUG='*' nodemon --exec npm start",
+    "start": "DEBUG=\"pixeldeck*\" bin/pixeldeck.js",
+    "start-watch": "nodemon --exec npm start",
     "docs": "npm run jsdoc && npm run doc-man && npm run cover",
     "cover": "NODE_ENV=test npx nyc mocha | tee ./docs/COVERAGE.TXT; npm run cover-badge",
     "cover-badge": "npx lcov-badge-generator ./docs/coverage/lcov.info -o ./docs/coverage.svg",
@@ -84,11 +84,10 @@
     "lokijs": "^1.5.7",
     "mocha": "^6.2.1",
     "pug": "^2.0.4",
+    "pug-sass-filter": "^1.0.2",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
-    "esdoc": "^1.1.0",
-    "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^6.5.1",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-chai-friendly": "^0.4.1",

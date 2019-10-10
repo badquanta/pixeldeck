@@ -1,12 +1,42 @@
 - title = title || "PixelDeck"
-html
+<!doctype html>
+html(lang="en")
   head
+    // Bootstrap Recommends:
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    // Bootstrap deps:
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous")
+    // theme
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous")
     title
       block HEAD_TITLE
         = title
   body
-    span TODO: HTML Mixins; maybe the SVG ones too.
-    header
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          button.btn.btn-primary.navbar-toggle(type='button' data-toggle='collapse' data-target='#navbar-fixed-top')
+            span.glyphicon.glyphicon-menu-hamburger PixelDeck
+          div#navbar-fixed-top.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.active
+                a(href="/") Home
+              li
+                a(href="/TileSets/") List TileSets
+              li
+                a(href="/TileMaps/") List TileMaps
+              li.dropdown
+                a(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false").dropdown-toggle Test Maps
+                ul.dropdown-menu
+                  -var tests = 1
+                  while tests <= 4
+                    li
+                      a(href=`/test/test${tests}.tm.html`)=`test${tests}`
+                    -tests++
+    .container-fluid
+      .starter-template
       // pre block BODY_HEADER
       block BODY_HEADER
         // default block BODY_HEADER
@@ -16,21 +46,16 @@ html
             = title
             // end default block BODY_HEADER_TITLE
         span TODO: Better header?
-      nav
-        a(href="/") Home
-        -var tests = 1
-        while tests <= 4
-          a(href=`/test/test${tests}.tm.html`)=`test${tests}`
-          -tests++
+
       // post block BODY_HEADER
-    main
-      // pre block MAIN
-      block MAIN
-        // default block MAIN
-        p Hello world.
-      // post block MAIN
-    footer
-      // pre block BODY_FOOTER
-      block BODY_FOOTER
-        // default block BODY_FOOTER
-        span TODO: Better footer?
+      main
+        // pre block MAIN
+        block MAIN
+          // default block MAIN
+          p Hello world.
+        // post block MAIN
+      footer
+        // pre block BODY_FOOTER
+        block BODY_FOOTER
+          // default block BODY_FOOTER
+          span TODO: Better footer?

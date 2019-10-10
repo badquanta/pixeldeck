@@ -1,0 +1,14 @@
+extend ./type/HTML
+
+block MAIN
+  h1 TileMaps
+  table#TileMaps
+    each key in Object.keys(tileMaps[0] || {})
+      tr
+        th=key
+    each tileMap in tileMaps
+      tr
+        each field in Object.keys(tileMaps[0]||field)
+          td=tileMap[field]
+
+

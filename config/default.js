@@ -15,7 +15,8 @@ const defs = module.exports = {
     autoload: true,
     autosave: true,
     autosaveInterval: 1000,
-    serializationMethod: "pretty"
+    serializationMethod: "pretty",
+    persistenceMethod: "fs-storage"
   },
   env: "development",
   replOpts: {
