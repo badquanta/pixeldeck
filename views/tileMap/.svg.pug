@@ -41,21 +41,22 @@ mixin GroupLayer(group)
   //End of GroupLayer
 
 mixin TileImage(thisData, x=0,y=0, tw=tileMap.tilewidth,th=tileMap.tileheight)
-  - const revTilesets = tileMap.tilesets.slice().reverse()
+  - const revTilesets = tileMap.TileSets.slice().reverse()
   - function getTidUrl(tid){
   -   let tileset = revTilesets.find(function(ts,idx){
   -     return ts.firstgid <= tid
   -   })
   -   if( tid < tileset.firstgid )throw new Error(`TID: ${tid} ${JSON.stringify(tileset)}`)
   -   let id = (tid -tileset.firstgid)+1
-  -    return `${tileset.source.replace('.json','.ts.svg')}#${id}`
+  -    return `#${tileset.name?tileset.name:JSON.stringify(Object.keys(tileset))}-${id}`
   -  }
-  //// dbg('mixin tileimage')
-  image.tile(
+  //-// dbg('mixin tileimage')
+  use(href=getTidUrl(thisData) x=x y=y)
+  //-image.tile(
     xlink:href=getTidUrl(thisData)
     x=x y=y
     width=tw height=th
-  )
+    )
 
 mixin TileData(thisData, w=tileMap.width, h=tileMap.height, tw=tileMap.tilewidth,th=tileMap.tileheight)
 

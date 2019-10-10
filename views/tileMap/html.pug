@@ -12,9 +12,9 @@ block MAIN
           if embedTileSets
             // embed the TileSets instead..
             include ../tileSet/lib
-            each tileSet in tileMap.TileSets
-              +TileSet(tileSet)
-          
+            defs
+              each tileSet in tileMap.TileSets
+                +TileSet(tileSet)
         //embed(src=tileMapPath)
   style.
     body {background-color: grey}
