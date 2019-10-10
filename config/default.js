@@ -27,6 +27,6 @@ const defs = module.exports = {
   },
   server: {
     port: 4444,
-    address: '::'
+    address: '0.0.0.0'
   }
 }
