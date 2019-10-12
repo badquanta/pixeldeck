@@ -14,7 +14,7 @@ describe('data', function () {
   describe('TileMaps', function () {
     it('should be ok', function () {
       test.expect(test.pixeldeck.data.TileMaps).to.be.ok
-      const set = test.pixeldeck.data.TileMaps.findOrLoad('test/test4.json')
+      const set = test.pixeldeck.data.TileMaps.findOrLoad({ path: 'test/test4.json' })
       test.expect(set).to.be.ok;
       [
         'height', 'width', 'infinite',
@@ -38,7 +38,7 @@ describe('data', function () {
   describe('TileSets', function () {
     it('works', function () {
       const TileSets = test.pixeldeck.data.TileSets
-      const set = TileSets.findOrLoad('/tilesets/lpc-terrains/terrain-v7.json')
+      const set = TileSets.findOrLoad({ path: '/tilesets/lpc-terrains/terrain-v7.json' })
       test.expect(set).to.be.ok;
       [
         'columns', 'image', 'imageheight',
@@ -72,7 +72,7 @@ describe('data', function () {
 
     it('should throw an err if path is bogus', function () {
       test.expect(() => {
-        test.pixeldeck.data.TileSets.findOrLoad('/some/bogus/path')
+        test.pixeldeck.data.TileSets.findOrLoad({ path: '/some/bogus/path' })
       }).to.throw()
     })
   })
