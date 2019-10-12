@@ -1,0 +1,21 @@
+nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          button.btn.btn-primary.navbar-toggle(type='button' data-toggle='collapse' data-target='#navbar-fixed-top')
+            span.glyphicon.glyphicon-menu-hamburger PixelDeck
+          div#navbar-fixed-top.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li.active
+                a(href="/") Home
+              li
+                a(href="/TileSets/") List TileSets
+              li
+                a(href="/TileMaps/") List TileMaps
+              li.dropdown
+                a(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false").dropdown-toggle Test Maps
+                ul.dropdown-menu
+                  -var tests = 1
+                  while tests <= 4
+                    li
+                      a(href=`/test/test${tests}.tm.html`)=`test${tests}`
+                    -tests++

@@ -1,0 +1,7 @@
+extends ../type/HTML
+block MAIN
+  h1 TileSet:
+  details
+    summary Data
+    pre=JSON.stringify(tileSet,undefined,'  ')
+  include ./svg

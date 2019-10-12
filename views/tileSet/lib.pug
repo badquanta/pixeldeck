@@ -10,7 +10,7 @@ mixin TileSet(tileSet)
       //-= `<!--${x},${y} -->`
       //-= `<!-- ${JSON.stringify(tileInfo)} -->`
       g(id=`${tileSet.name}-${cnt}`)
-        image(href=tileSet._tileDataUrls[cnt-1])
+        image(href=tileSet._tileDataUrls[cnt-1], x=x y=y)
       //-view(id=`${cnt}` width=tileSet.tilewidth height=tileSet.tileheight viewBox=`${x} ${y} ${tileSet.tilewidth} ${tileSet.tileheight}`)
         if tileInfo
           // Tile Info
@@ -29,4 +29,4 @@ mixin TileSet(tileSet)
       - x+=tileSet.tilewidth
     - x=0
     - y+=tileSet.tileheight
-  image(xlink:href=tileSet.imageDataUrl x="0" y="0" width=tileSet.imagewidth height=tileSet.imageheight )
+  //-image(xlink:href=tileSet.imageDataUrl x="0" y="0" width=tileSet.imagewidth height=tileSet.imageheight )
