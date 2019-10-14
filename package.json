@@ -83,7 +83,6 @@
     "jimp": "^0.8.4",
     "jstransformer-markdown-it": "^2.1.0",
     "knex": "^0.19.5",
-    "lokijs": "^1.5.7",
     "mocha": "^6.2.1",
     "objection": "^1.6.11",
     "pug": "^2.0.4",

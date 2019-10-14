@@ -1,79 +1,50 @@
 const test = require('./')
 
-describe('data', function () {
-  this.afterEach(function () {
-    test.pixeldeck.data.TileMaps.collection.clear()
-    test.pixeldeck.data.TileSets.collection.clear()
-  })
-  describe('base', function () {
-    it('should be ok', function () {
-      test.expect(test.pixeldeck.data.base).to.be.ok
-    })
+describe('pixeldeck.data', () => {
+
+  afterEach(test.pixeldeck.data.base.stop)
+  before(async () => { await test.pixeldeck.data.createTables() })
+  it('should be ok', () => { test.expect(test.pixeldeck.data).to.be.ok })
+
+  describe('.base', () => {
+    it('should be ok', () => { test.expect(test.pixeldeck.data.base).to.be.ok })
   })
 
-  describe('TileMaps', function () {
-    it('should be ok', function () {
-      test.expect(test.pixeldeck.data.TileMaps).to.be.ok
-      const set = test.pixeldeck.data.TileMaps.findOrLoad({ path: 'test/test4.json' })
-      test.expect(set).to.be.ok;
-      [
-        'height', 'width', 'infinite',
-        'layers', 'nextlayerid', 'nextobjectid',
-        'orientation', 'renderorder', 'tiledversion',
-        'tileheight', 'tilewidth', 'path',
-        'meta', 'type', 'version'
-      ].forEach((key) => {
-        test.expect(set[key]).to.not.be.undefined
+  describe('.Model', () => {
+
+    beforeEach(() => { this.Model = test.pixeldeck.data.Model })
+    it('should be ok', () => { test.expect(this.Model).to.be.ok })
+
+    it('allows me to insert', async () => {
+      this.inserted = await this.Model.query().insertGraph({
+        id: 1
       })
-    })
-
-    it('should save to db', function () {
-      const TileMaps = test.pixeldeck.data.TileMaps
-      test.expect(TileMaps.collection.count()).to.eql(0)
-      const map = new TileMaps()
-      test.expect(TileMaps.collection.count()).to.eql(1)
+      return test.expect(this.inserted).to.be.ok
     })
   })
 
-  describe('TileSets', function () {
-    it('works', function () {
-      const TileSets = test.pixeldeck.data.TileSets
-      const set = TileSets.findOrLoad({ path: '/tilesets/lpc-terrains/terrain-v7.json' })
-      test.expect(set).to.be.ok;
-      [
-        'columns', 'image', 'imageheight',
-        'imagewidth', 'margin', 'name',
-        'spacing', 'terrains', 'tilecount',
-        'tileheight', 'tiles', 'type',
-        'version'
-      ].forEach((key) => {
-        test.expect(set[key]).to.not.be.undefined
+  describe('.TiledSet', () => {
+    beforeEach(() => { this.TiledSet = test.pixeldeck.data.TiledSet })
+    it('should be ok', () => { test.expect(this.TiledSet).to.be.ok })
+    it('should let me make one', () => { test.expect(new this.TiledSet()).to.be.ok })
+    it('allows me to insert one', async () => {
+      this.inserted = await this.TiledSet.query().insertGraph({
+        firstGid: 12
       })
-      // so we excercise the constructor else:
-      const set2 = new TileSets(set.record)
-      // another constructor else
-      const set3 = TileSets.findOrLoad({ path: set.path })
-      test.expect(set2.record).to.eql(set3.record)
+      return test.expect(this.inserted).to.be.ok
     })
-
-    it('should also save to db', function () {
-      const TileSets = test.pixeldeck.data.TileSets
-      test.expect(TileSets.collection.count()).to.eql(0)
-      const set = new TileSets({ path: '/one/two/three' })
-      test.expect(TileSets.collection.count()).to.eql(1)
-      const set2 = new TileSets({ path: '/one/two/three' })
-      test.expect(TileSets.collection.count()).to.eql(1)
-      test.expect(set).to.eql(set2)
-      const set3 = new TileSets({ path: '/one/two/four' })
-      test.expect(TileSets.collection.count()).to.eql(2)
-      test.expect(set3.type).to.be.undefined
-      set3.save()
-    })
-
-    it('should throw an err if path is bogus', function () {
-      test.expect(() => {
-        test.pixeldeck.data.TileSets.findOrLoad({ path: '/some/bogus/path' })
-      }).to.throw()
-    })
+    it('should let me find one that I made', async () => {
+      const tiledSet = await this.TiledSet.query().insertGraph({
+        firstGid: 12
+      })
+      test.expect(tiledSet).to.be.ok
+      const tiledSets = await this.TiledSet.query().where({
+        firstGid: 12
+      })
+      return test.expect(tiledSets.length).to.be.greaterThan(0)
+    }).timeout(5000)
   })
-})
+
+  // Todo: TiledMap.. etc
+}).timeout(100000)
+

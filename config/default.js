@@ -10,6 +10,18 @@ const defs = module.exports = {
     cache: false,
     compileDebug: true
   },
+  knex: {
+    client: 'sqlite3',
+    useNullAsDefault: true,
+    connection: {
+      filename: './example.db'
+    },
+    pool: {
+      afterCreate: (conn, cb) => {
+        conn.run('PRAGMA foreign_keys = ON', cb);
+      }
+    }
+  },
   dbName: `${package.name}.db.json`,
   dbOpts: {
     autoload: true,
