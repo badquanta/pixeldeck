@@ -76,25 +76,24 @@ describe('pixeldeck.models', function () {
   describe('.TiledProperties', function () {
     beforeEach(function () { this.TiledProperties = test.pixeldeck.models.TiledProperties })
     it('should be ok', function () { test.expect(this.TiledProperties).to.be.ok })
-    it('should allow me to insert one', async function () {
-      const inserted = await this.TiledProperties.query().insertGraph({
-
-      })
+    it('can be inserted', async function () {
+      const inserted = await this.TiledProperties.query().insertGraph({})
       return test.expect(inserted).to.be.ok
     })
   })
 
   describe('.TiledLayer', function () {
-    beforeEach(function () { this.TiledLayer = test.pixeldeck.models.TiledLayer })
-    it('should be ok', function () { test.expect(this.TiledLayer).to.be.ok })
+    let TiledLayer
+    beforeEach(function () { TiledLayer = require('../lib/models/TiledLayer') })
+    it('should be ok', function () { test.expect(TiledLayer).to.be.ok })
     it('should allow me to insert one', async function () {
-      const inserted = await this.TiledLayer.query().insertGraph({
+      const inserted = await TiledLayer.query().insertGraph({
 
       })
       return test.expect(inserted).to.be.ok
     })
-    it('should allow me to insert one with child layer:', async function () {
-      const inserted = await this.TiledLayer.query().insertGraph({
+    it('can insert layers:', async function () {
+      const inserted = await TiledLayer.query().insertGraph({
         name: 'Test With Child',
         layers: [
           { name: 'Test With Parent' }
@@ -102,10 +101,25 @@ describe('pixeldeck.models', function () {
       })
       return test.expect(inserted).to.be.ok
     })
+    it('can insert with objects', async function () {
+      const inserted = await TiledLayer.query().insertGraph({
+        name: 'Test with Child Object',
+        objects: [
+          { name: 'First Child Object' }
+        ]
+      })
+      return test.expect(inserted).to.be.ok
+    })
+    it('can insert with properties', async function () {
+      const inserted = await TiledLayer.query().insertGraph({
+        name: 'Test with Child Property',
+        properties: [
+          { name: 'firstProp', value: 'firstValue', type: 'firstType' }
+        ]
+      })
+      return test.expect(inserted).to.be.ok
+    })
   })
-
-
-
 
   // Todo: TiledMap.. etc
 }).timeout(100000)

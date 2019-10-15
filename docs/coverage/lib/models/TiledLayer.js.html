@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">13.64% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/22</span>
+        <span class='fraction'>0/22</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>0/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">13.64% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/22</span>
+        <span class='fraction'>0/22</span>
       </div>
     </div>
     <p class="quiet">
@@ -128,16 +128,9 @@
 <a name='L80'></a><a href='#L80'>80</a>
 <a name='L81'></a><a href='#L81'>81</a>
 <a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a>
-<a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a>
-<a name='L87'></a><a href='#L87'>87</a>
-<a name='L88'></a><a href='#L88'>88</a>
-<a name='L89'></a><a href='#L89'>89</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L83'></a><a href='#L83'>83</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -167,14 +160,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -221,20 +208,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
- *
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @see {@link https://docs.mapeditor.org/en/stable/reference/json-map-format/#layer}
  */
-const data = require('../data')
-class TiledMapLayer extends data.Model {
+class TiledLayer extends require('./Model') {
   /**
    *
    * @param {*} table
    */
 <span class="fstat-no" title="function not covered" >  st</span>atic async createSchemaOn (table) {
 <span class="cstat-no" title="statement not covered" >    this.dbg('createSchemaOn')</span>
-<span class="cstat-no" title="statement not covered" >    table = await super.createSchemaOn(table)</span>
-<span class="cstat-no" title="statement not covered" >    table.integer('TiledMapLayerUuid')</span>
+<span class="cstat-no" title="statement not covered" >    super.createSchemaOn(table)</span>
+<span class="cstat-no" title="statement not covered" >    table.integer('TiledLayerUuid')</span>
     // TODO: table.array('data')
 <span class="cstat-no" title="statement not covered" >    table.string('draworder')</span>
 <span class="cstat-no" title="statement not covered" >    table.string('encoding')</span>
@@ -254,69 +241,64 @@ class TiledMapLayer extends data.Model {
 <span class="cstat-no" title="statement not covered" >    return table</span>
   }
 &nbsp;
-  /**
-   *
-   */
-<span class="fstat-no" title="function not covered" >  st</span>atic get jsonSchema () {
-<span class="cstat-no" title="statement not covered" >    return Object.assign({}, super.jsonSchema, {</span>
-      type: 'object',
-      required: ['type'],
-      properties: {
-        // The Layer this Layer belongs to in a "group" layer.
-        TiledMapLayerUuid: { type: 'string', description: "for group type layers, the uuid of the layer this layer belongs too." },
-        // TODO : chunks: { type: 'array', description: 'Array of chunks (optional). tilelayer only.' }, compression: { type: 'string', description: 'zlib, gzip or empty (default). tilelayer only.' },
-        data: { type: 'array'/*TODO: or 'string'*/, description: 'Array of unsigned int (GIDs) or base64-encoded data. tilelayer only.' },
-        draworder: { type: 'string', description: 'topdown (default) or index. objectgroup only.' },
-        encoding: { type: 'string', description: 'csv (default) or base64`. ``tilelayer only.' },
-        height: { type: 'number', description: 'Row count. Same as map height for fixed-size maps.' },
-        id: { type: 'number', description: 'Incremental id - unique across all layers' },
-        image: { type: 'string', description: 'Image used by this layer. imagelayer only.' },
-        //TODO: Layers layers: { type: 'array', description: 'Array of layers. group on' },
-        name: { type: 'string', description: 'Name assigned to this layer' },
-        objects: { type: 'object', description: 'Array of objects. objectgroup only.' },
-        offsetx: { type: 'double', description: 'Horizontal layer offset in pixels (default: 0)' },
-        offsety: { type: 'double', description: 'Vertical layer offset in pixels (default: 0)' },
-        opacity: { type: 'double', description: 'Value between 0 and 1' },
-        properties: { type: 'array', description: 'A list of properties (name, value, type).' },
-        transparentcolor: { type: 'string', description: 'Hex-formatted color (#RRGGBB) (optional, imagelayer only' },
-        type: { type: 'string', description: 'tilelayer, objectgroup, imagelayer or group' },
-        visible: { type: 'bool', description: 'Whether layer is shown or hidden in editor' },
-        width: { type: 'number', description: 'Column count. Same as map width for fixed-size maps.' },
-        x: { type: 'number', description: 'Horizontal layer offset in tiles. Always 0.' },
-        y: { type: 'number', description: 'Vertical layer offset in tiles. Always 0.' }
-      }
+<span class="fstat-no" title="function not covered" >  st</span>atic get jsonSchemaProperties () {
+    const props = <span class="cstat-no" title="statement not covered" >{}</span>
+<span class="cstat-no" title="statement not covered" >    return Object.assign(props, super.jsonSchemaProperties, {</span>
+      // The Layer this Layer belongs to in a 'group' layer.
+      TiledLayerUuid: { type: 'number', description: 'for group type layers, the uuid of the layer this layer belongs too.' },
+      // TODO : chunks: { type: 'array', description: 'Array of chunks (optional). tilelayer only.' }, compression: { type: 'string', description: 'zlib, gzip or empty (default). tilelayer only.' },
+      data: { type: 'array'/* TODO: or 'string' */, description: 'Array of unsigned int (GIDs) or base64-encoded data. tilelayer only.' },
+      draworder: { type: 'string', description: 'topdown (default) or index. objectgroup only.' },
+      encoding: { type: 'string', description: 'csv (default) or base64`. ``tilelayer only.' },
+      height: { type: 'number', description: 'Row count. Same as map height for fixed-size maps.' },
+      id: { type: 'number', description: 'Incremental id - unique across all layers' },
+      image: { type: 'string', description: 'Image used by this layer. imagelayer only.' },
+      // TODO: Layers layers: { type: 'array', description: 'Array of layers. group on' },
+      name: { type: 'string', description: 'Name assigned to this layer' },
+      objects: { type: 'object', description: 'Array of objects. objectgroup only.' },
+      offsetx: { type: 'double', description: 'Horizontal layer offset in pixels (default: 0)' },
+      offsety: { type: 'double', description: 'Vertical layer offset in pixels (default: 0)' },
+      opacity: { type: 'double', description: 'Value between 0 and 1' },
+      properties: { type: 'array', description: 'A list of properties (name, value, type).' },
+      transparentcolor: { type: 'string', description: 'Hex-formatted color (#RRGGBB) (optional, imagelayer only' },
+      type: { type: 'string', description: 'tilelayer, objectgroup, imagelayer or group' },
+      visible: { type: 'bool', description: 'Whether layer is shown or hidden in editor' },
+      width: { type: 'number', description: 'Column count. Same as map width for fixed-size maps.' },
+      x: { type: 'number', description: 'Horizontal layer offset in tiles. Always 0.' },
+      y: { type: 'number', description: 'Vertical layer offset in tiles. Always 0.' }
     })
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  st</span>atic get relationMappings () {
 <span class="cstat-no" title="statement not covered" >    return {</span>
       layers: {
-        relation: data.Model.HasManyRelation,
-        modelClass: 'TiledMapLayer',
+        relation: require('./Model').HasManyRelation,
+        modelClass: TiledLayer,
         join: {
-          from: 'TiledMapLayer.uuid',
-          to: 'TiledMapLayer.TiledMapLayerUuid'
+          from: 'TiledLayer.uuid',
+          to: 'TiledLayer.TiledLayerUuid'
         }
       },
       chunks: {
-        relation: data.Model.HasManyRelation,
-        modelClass: 'TiledMapLayerChunk',
+        relation: require('./Model').HasManyRelation,
+        modelClass: 'TiledLayerChunk',
         join: {
-          from: 'TiledMapLayer.uuid',
-          to: 'TiledMapLayerChunk.TiledMapLayerUuid',
+          from: 'TiledLayer.uuid',
+          to: 'TiledLayerChunk.TiledLayerUuid'
         }
       }
     }
   }
 }
-module.exports = TiledMapLayer
-TiledMapLayer.dbg('loaded')</pre></td></tr>
+<span class="cstat-no" title="statement not covered" >module.exports = TiledLayer</span>
+<span class="cstat-no" title="statement not covered" >TiledLayer.dbg('loaded')</span>
+&nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 14 2019 21:01:29 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 14 2019 23:48:28 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>
