@@ -31,21 +31,47 @@
  * @type {object}
  * @namespace pixeldeck.arch
  */
-const arch = module.exports = {
-  // TODO: maybe fs?
+const arch = (module.exports = {
   /**
    * the `path` module is used a lot.
    * Nodejs [Path docs](https://nodejs.org/docs/latest-v10.x/api/path.html)
    * @memberof pixeldeck.arch
    **/
-  get Path () { return require('path') },
+  get Path () {
+    return require('path')
+  },
   /**
    * the `fs` module is used a lot.
    * Nodejs [fs docs](https://nodejs.org/docs/latest-v10.x/api/fs.html)
    * @memberof pixeldeck.arch
    *
    **/
-  get Fs () { return require('fs') },
+  get Fs () {
+    return require('fs')
+  },
+  /**
+   * the `util` module is used a lot.
+   * Nodejs [util docs](https://nodejs.org/docs/latest-v10.x/api/util.html)
+   * @memberof pixeldeck.arch
+   *
+   **/
+  get Util () {
+    return require('util')
+  },
+  /**
+   * the `rw` library lets me use stdin and stdout like files
+   */
+  get Rw () {
+    return require('rw')
+  },
+  /** Get a promisify-ed Rw.readFile */
+  get readFile () {
+    return this.Util.promisify(this.Rw.readFile)
+  },
+  /** Get a promisify-ed Rw.writeFile */
+  get writeFile () {
+    return this.Util.promisify(this.Rw.writeFile)
+  },
   /**
    * define automated requires on `target`.
    * each `name` in `names` are defined as properties on `target`
@@ -55,40 +81,55 @@ const arch = module.exports = {
    *
    */
   defineRequires (dirname, target, ...names) {
-    return Object.defineProperties(target, names.reduce((obj, name) => {
-      obj[name] = { get: () => require(arch.Path.resolve(dirname, name)) }
-      return obj
-    }, {}))
+    return Object.defineProperties(
+      target,
+      names.reduce((obj, name) => {
+        obj[name] = { get: () => require(arch.Path.resolve(dirname, name)) }
+        return obj
+      }, {})
+    )
   },
   /**
    * Convert any path into a resource path, optionally changing the extension
+   * This will search the following paths:
+   * 1) None: just try not modifying aPath's directory
+   * 2) "configured" resource directory.
+   * 3) "current working directory" as reported by node.
+   * @todo "current working directory" may need to be scrapped so that client/server side works the same.
    * @param {string} aPath
    * @param {string} replacementExt (optional), giving '' strips off any extension
    * @memberof pixeldeck.arch
    */
   getResPathFor (aPath, replacementExt = null) {
-    let resPath = arch.Path.join(require('./cfg').resDir, aPath)
+    let resPath = aPath
     if (replacementExt) {
       while (arch.Path.extname(resPath) !== '') {
         resPath = resPath.replace(arch.Path.extname(resPath), '')
       }
       resPath += replacementExt
     }
-    return resPath
+    let testPath = resPath
+    const searchPaths = [require('./cfg').resDir, process.cwd(), '']
+    while (!arch.Fs.existsSync(testPath)) {
+      if (searchPaths.length) {
+        testPath = arch.Path.resolve(arch.Path.join(searchPaths.shift(), resPath))
+      } else throw new Error('search paths exhausted for:' + resPath)
+    }
+    return testPath
   },
   /**
- * take all inputs and turn them into a single clean query object
- * @param {...object} arguments one or more input objects to clean of sub-objects and return as one query.
- * __note__ order of president follows argument order. #1 overrides #0, etc.
- * @return {object} single object with all non object properties copied onto it.
- * @memberof pixeldeck.arch
- **/
+   * take all inputs and turn them into a single clean query object
+   * @param {...object} arguments one or more input objects to clean of sub-objects and return as one query.
+   * __note__ order of president follows argument order. #1 overrides #0, etc.
+   * @return {object} single object with all non object properties copied onto it.
+   * @memberof pixeldeck.arch
+   **/
   cleanQuery () {
     const query = {}
     for (const arg of arguments) {
       switch (typeof arg) {
         case 'object':
-          Object.keys(arg).forEach((key) => {
+          Object.keys(arg).forEach(key => {
             if (typeof arg[key] !== 'object') {
               query[key] = arg[key]
             }
@@ -103,7 +144,7 @@ const arch = module.exports = {
     }
     return query
   }
-}
+})
 </code></pre>
         </article>
     </section>
@@ -114,13 +155,13 @@ const arch = module.exports = {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Externals</h3><ul><li><a href="external-Express.html">Express</a></li><li><a href="external-httpServer.html">httpServer</a></li><li><a href="external-LokiJs.html">LokiJs</a></li><li><a href="external-Repl.html">Repl</a></li></ul><h3>Namespaces</h3><ul><li><a href="pixeldeck.html">pixeldeck</a></li><li><a href="pixeldeck.arch.html">arch</a></li><li><a href="pixeldeck.cfg.html">cfg</a></li><li><a href="pixeldeck.data.html">data</a></li><li><a href="pixeldeck.data.base.html">base</a></li><li><a href="pixeldeck.server.html">server</a></li><li><a href="pixeldeck.service.html">service</a></li><li><a href="pixeldeck.ui.html">ui</a></li></ul><h3>Classes</h3><ul><li><a href="pixeldeck.data._Model.html">_Model</a></li><li><a href="pixeldeck.data.base.BaseLoading.html">BaseLoading</a></li><li><a href="pixeldeck.data.TileMaps.html">TileMaps</a></li><li><a href="pixeldeck.data.TileSets.html">TileSets</a></li></ul><h3>Events</h3><ul><li><a href="pixeldeck.data.base.html#event:close">close</a></li><li><a href="pixeldeck.server.html#.event:uiStarted">uiStarted</a></li><li><a href="pixeldeck.server.html#.event:uiStarting">uiStarting</a></li><li><a href="pixeldeck.server.html#.event:uiStopped">uiStopped</a></li><li><a href="pixeldeck.server.html#.event:uiStopping">uiStopping</a></li><li><a href="pixeldeck.server.html#event:Loaded">Loaded</a></li><li><a href="pixeldeck.server.html#event:Resetting">Resetting</a></li><li><a href="pixeldeck.server.html#event:Restarted">Restarted</a></li><li><a href="pixeldeck.server.html#event:Restarting">Restarting</a></li><li><a href="pixeldeck.server.html#event:Saved">Saved</a></li><li><a href="pixeldeck.server.html#event:Started">Started</a></li><li><a href="pixeldeck.server.html#event:Starting">Starting</a></li><li><a href="pixeldeck.server.html#event:Stopped">Stopped</a></li><li><a href="pixeldeck.server.html#event:Stopping">Stopping</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Externals</h3><ul><li><a href="external-Express.html">Express</a></li><li><a href="external-httpServer.html">httpServer</a></li><li><a href="external-LokiJs.html">LokiJs</a></li><li><a href="external-Repl.html">Repl</a></li></ul><h3>Namespaces</h3><ul><li><a href="pixeldeck.html">pixeldeck</a></li><li><a href="pixeldeck.arch.html">arch</a></li><li><a href="pixeldeck.cfg.html">cfg</a></li><li><a href="pixeldeck.data.html">data</a></li><li><a href="pixeldeck.data.base.html">base</a></li><li><a href="pixeldeck.server.html">server</a></li><li><a href="pixeldeck.service.html">service</a></li><li><a href="pixeldeck.ui.html">ui</a></li></ul><h3>Classes</h3><ul><li><a href="-_MakeCmd.html">_MakeCmd</a></li><li><a href="MakeMap.html">MakeMap</a></li><li><a href="pixeldeck.data._Model.html">_Model</a></li><li><a href="pixeldeck.data.base.BaseLoading.html">BaseLoading</a></li><li><a href="pixeldeck.data.TileMaps.html">TileMaps</a></li><li><a href="pixeldeck.data.TileSets.html">TileSets</a></li><li><a href="TileMap.html">TileMap</a></li></ul><h3>Events</h3><ul><li><a href="pixeldeck.data.base.html#event:close">close</a></li><li><a href="pixeldeck.server.html#.event:uiStarted">uiStarted</a></li><li><a href="pixeldeck.server.html#.event:uiStarting">uiStarting</a></li><li><a href="pixeldeck.server.html#.event:uiStopped">uiStopped</a></li><li><a href="pixeldeck.server.html#.event:uiStopping">uiStopping</a></li><li><a href="pixeldeck.server.html#event:Loaded">Loaded</a></li><li><a href="pixeldeck.server.html#event:Resetting">Resetting</a></li><li><a href="pixeldeck.server.html#event:Restarted">Restarted</a></li><li><a href="pixeldeck.server.html#event:Restarting">Restarting</a></li><li><a href="pixeldeck.server.html#event:Saved">Saved</a></li><li><a href="pixeldeck.server.html#event:Started">Started</a></li><li><a href="pixeldeck.server.html#event:Starting">Starting</a></li><li><a href="pixeldeck.server.html#event:Stopped">Stopped</a></li><li><a href="pixeldeck.server.html#event:Stopping">Stopping</a></li></ul><h3>Global</h3><ul><li><a href="global.html#data">data</a></li><li><a href="global.html#dbg">dbg</a></li><li><a href="global.html#mkMap">mkMap</a></li><li><a href="global.html#usedBy">usedBy</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Oct 09 2019 18:39:21 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Oct 14 2019 17:45:20 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

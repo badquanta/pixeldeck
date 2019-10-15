@@ -24,7 +24,7 @@ mixin LayerTree(thisLayer)
     +DDs(thisLayer, 'name','height','id','opacity','startx','starty','visible','width','x','y')
     case thisLayer.type
       when 'tilelayer'
-        +TileLayerTree(thisLayer)
+        +TiledLayerTree(thisLayer)
       when 'group'
         +GroupLayerTree(thisLayer)
       when 'objectgroup'
@@ -77,7 +77,7 @@ mixin TileDataTree(thisData, w=tileMap.width, h=tileMap.height, tw=tileMap.tilew
     =JSON.stringify(thisData)
     //End of TileData
 
-mixin TileLayerTree(thisLayer)
+mixin TiledLayerTree(thisLayer)
   details.layer.tiles(id=thisLayer.id name=thisLayer.name)
     summary Tiles
 
@@ -94,12 +94,12 @@ mixin TileLayerTree(thisLayer)
       h1 Unknown layer data:
       div
         pre=JSON.stringify(thisLayer)
-  //End of TileLayerTree
+  //End of TiledLayerTree
 
 
 
 
-mixin TileMapTree(thisMap)
+mixin TiledMapTree(thisMap)
   .container-fluid(infinite=thisMap.infinite nextlayerid=thisMap.nextlayerid nextobjectid=thisMap.nextobjectid type=thisMap.type)
     h3 Map
     +DDs(thisMap,'width','height','infinite','nextlayerid','nextobjectid','orientation','renderorder','tiledversion','tileheight','tilewidth','type','tilesets','version')
@@ -107,7 +107,7 @@ mixin TileMapTree(thisMap)
         +LayersTree(thisMap.layers)
 
 
-  //End of TileMapTree
+  //End of TiledMapTree
 
 
 

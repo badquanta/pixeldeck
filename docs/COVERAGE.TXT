@@ -6,7 +6,7 @@
     TileMaps
       ✓ should be ok
       ✓ should save to db
-    TileSets
+    TiledSets
       ✓ works
       ✓ should also save to db
       ✓ should throw an err if path is bogus

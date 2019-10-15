@@ -13,7 +13,7 @@ describe('pixeldeck (AKA: lib/index.js)', function () {
   propertyWorks('service')
   propertyWorks('cfg')
   propertyWorks('dbg')
-  propertyWorks('data')
+  propertyWorks('models')
   propertyWorks('ui')
   propertyWorks('server')
 

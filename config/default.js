@@ -14,27 +14,16 @@ const defs = module.exports = {
     client: 'sqlite3',
     useNullAsDefault: true,
     connection: {
-      filename: './example.db'
+      filename: './dev.db'
+
     },
-    pool: {
-      afterCreate: (conn, cb) => {
-        conn.run('PRAGMA foreign_keys = ON', cb);
-      }
-    }
-  },
-  dbName: `${package.name}.db.json`,
-  dbOpts: {
-    autoload: true,
-    autosave: true,
-    autosaveInterval: 1000,
-    serializationMethod: "pretty",
-    persistenceMethod: "fs-storage"
+    asyncStackTraces: true
   },
   env: "development",
   replOpts: {
     get prompt () { return `${defs.name}:${defs.env}>_` }
   },
-  get interactive() {
+  get interactive () {
     return !(process.env.INTERACTIVE && process.env.INTERACTIVE.match(/false/))
   },
   server: {

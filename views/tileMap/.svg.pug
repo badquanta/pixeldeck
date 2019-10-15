@@ -11,7 +11,7 @@ mixin Layer(thisLayer)
   // dbg('mixin layer',thisLayer.type)
   case thisLayer.type
     when 'tilelayer'
-      +TileLayer(thisLayer)
+      +TiledLayer(thisLayer)
     when 'group'
       +GroupLayer(thisLayer)
     when 'objectgroup'
@@ -41,7 +41,7 @@ mixin GroupLayer(group)
   //End of GroupLayer
 
 mixin TileImage(thisData, x=0,y=0, tw=tileMap.tilewidth,th=tileMap.tileheight)
-  - const revTilesets = tileMap.TileSets.slice().reverse()
+  - const revTilesets = tileMap.TiledSets.slice().reverse()
   - function getTidUrl(tid){
   -   let tileset = revTilesets.find(function(ts,idx){
   -     return ts.firstgid <= tid
@@ -74,7 +74,7 @@ mixin TileData(thisData, w=tileMap.width, h=tileMap.height, tw=tileMap.tilewidth
       +TileImage(item, getX(idx,w),getY(idx,w),tw,th)
   //End of TileData
 
-mixin TileLayer(thisLayer)
+mixin TiledLayer(thisLayer)
   // dbg('mixin tilelayer')
   g.layer.tiles(id=thisLayer.id name=thisLayer.name)
     if thisLayer.chunks
@@ -88,13 +88,13 @@ mixin TileLayer(thisLayer)
     else
       h1 Unknown layer data:
       pre=JSON.stringify(thisLayer)
-  //End of TileLayer
+  //End of TiledLayer
 
-mixin TileMap(thisMap)
-  // dbg('mixin TileMap')
+mixin TiledMap(thisMap)
+  // dbg('mixin TiledMap')
   g.map(infinite=thisMap.infinite nextlayerid=thisMap.nextlayerid nextobjectid=thisMap.nextobjectid type=thisMap.type)
     +Layers(thisMap.layers)
-  //End of TileMap
+  //End of TiledMap
 
 
 

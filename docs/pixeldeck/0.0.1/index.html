@@ -110,7 +110,10 @@
 <ol>
 <li><a href="http://expressjs.com/en/4x/api.html">express</a> used for server http server to javascript api handling</li>
 <li><a href="https://github.com/techfort/LokiJS">lokijs</a> I'm using this to provide an <code>isomorphic database</code> that will run identically on the client &amp; the server. It also should support synchronizing changes between the client &amp; server. This concept has yet to be prototyped.</li>
-<li><a href="https://mochajs.org/">#TODO mocha</a>, along with libraries like <a href="#TODO">#TODO supertest</a>, <a href="#TODO">#TODO chai</a>, <a href="#TODO">#TODO approvals</a> and others</li>
+<li><a href="https://mochajs.org/">#TODO mocha</a>, along with libraries like</li>
+<li><a href="#TODO">#TODO supertest</a></li>
+<li><a href="#TODO">#TODO chai</a></li>
+<li><a href="#TODO">#TODO approvals</a> and others</li>
 <li><a href="https://pugjs.org/">pug</a> is an excellent tool for XML generation, and utilized her for <code>SVG</code> and <code>HTML</code> templates.</li>
 <li><a href="https://socket.io/">#TODO socket.io</a> Not yet really utilized; but intended to be the backbone of <code>loki database</code> synchronization.</li>
 <li><a href="https://jsdoc.app/">jsdoc</a> generates our excellent documentation.</li>
@@ -183,7 +186,7 @@ preshrinkwrap, shrinkwrap, postshrinkwrap: Run by the npm shrinkwrap command.</l
 
 <header>
     
-        <h2>data/base.js</h2>
+        <h2>data/__base.js</h2>
         
     
 </header>
@@ -227,7 +230,7 @@ preshrinkwrap, shrinkwrap, postshrinkwrap: Run by the npm shrinkwrap command.</l
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="data_base.js.html">data/base.js</a>, <a href="data_base.js.html#line1">line 1</a>
+        <a href="data___base.js.html">data/__base.js</a>, <a href="data___base.js.html#line1">line 1</a>
     </li></ul></dd>
     
 
@@ -371,13 +374,13 @@ preshrinkwrap, shrinkwrap, postshrinkwrap: Run by the npm shrinkwrap command.</l
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Externals</h3><ul><li><a href="external-Express.html">Express</a></li><li><a href="external-httpServer.html">httpServer</a></li><li><a href="external-LokiJs.html">LokiJs</a></li><li><a href="external-Repl.html">Repl</a></li></ul><h3>Namespaces</h3><ul><li><a href="pixeldeck.html">pixeldeck</a></li><li><a href="pixeldeck.arch.html">arch</a></li><li><a href="pixeldeck.cfg.html">cfg</a></li><li><a href="pixeldeck.data.html">data</a></li><li><a href="pixeldeck.data.base.html">base</a></li><li><a href="pixeldeck.server.html">server</a></li><li><a href="pixeldeck.service.html">service</a></li><li><a href="pixeldeck.ui.html">ui</a></li></ul><h3>Classes</h3><ul><li><a href="pixeldeck.data._Model.html">_Model</a></li><li><a href="pixeldeck.data.base.BaseLoading.html">BaseLoading</a></li><li><a href="pixeldeck.data.TileMaps.html">TileMaps</a></li><li><a href="pixeldeck.data.TileSets.html">TileSets</a></li></ul><h3>Events</h3><ul><li><a href="pixeldeck.data.base.html#event:close">close</a></li><li><a href="pixeldeck.server.html#.event:uiStarted">uiStarted</a></li><li><a href="pixeldeck.server.html#.event:uiStarting">uiStarting</a></li><li><a href="pixeldeck.server.html#.event:uiStopped">uiStopped</a></li><li><a href="pixeldeck.server.html#.event:uiStopping">uiStopping</a></li><li><a href="pixeldeck.server.html#event:Loaded">Loaded</a></li><li><a href="pixeldeck.server.html#event:Resetting">Resetting</a></li><li><a href="pixeldeck.server.html#event:Restarted">Restarted</a></li><li><a href="pixeldeck.server.html#event:Restarting">Restarting</a></li><li><a href="pixeldeck.server.html#event:Saved">Saved</a></li><li><a href="pixeldeck.server.html#event:Started">Started</a></li><li><a href="pixeldeck.server.html#event:Starting">Starting</a></li><li><a href="pixeldeck.server.html#event:Stopped">Stopped</a></li><li><a href="pixeldeck.server.html#event:Stopping">Stopping</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Externals</h3><ul><li><a href="external-Express.html">Express</a></li><li><a href="external-httpServer.html">httpServer</a></li><li><a href="external-LokiJs.html">LokiJs</a></li><li><a href="external-Repl.html">Repl</a></li></ul><h3>Namespaces</h3><ul><li><a href="pixeldeck.html">pixeldeck</a></li><li><a href="pixeldeck.arch.html">arch</a></li><li><a href="pixeldeck.cfg.html">cfg</a></li><li><a href="pixeldeck.data.html">data</a></li><li><a href="pixeldeck.data.base.html">base</a></li><li><a href="pixeldeck.server.html">server</a></li><li><a href="pixeldeck.service.html">service</a></li><li><a href="pixeldeck.ui.html">ui</a></li></ul><h3>Classes</h3><ul><li><a href="-_MakeCmd.html">_MakeCmd</a></li><li><a href="MakeMap.html">MakeMap</a></li><li><a href="pixeldeck.data._Model.html">_Model</a></li><li><a href="pixeldeck.data.base.BaseLoading.html">BaseLoading</a></li><li><a href="pixeldeck.data.TileMaps.html">TileMaps</a></li><li><a href="pixeldeck.data.TileSets.html">TileSets</a></li><li><a href="TileMap.html">TileMap</a></li></ul><h3>Events</h3><ul><li><a href="pixeldeck.data.base.html#event:close">close</a></li><li><a href="pixeldeck.server.html#.event:uiStarted">uiStarted</a></li><li><a href="pixeldeck.server.html#.event:uiStarting">uiStarting</a></li><li><a href="pixeldeck.server.html#.event:uiStopped">uiStopped</a></li><li><a href="pixeldeck.server.html#.event:uiStopping">uiStopping</a></li><li><a href="pixeldeck.server.html#event:Loaded">Loaded</a></li><li><a href="pixeldeck.server.html#event:Resetting">Resetting</a></li><li><a href="pixeldeck.server.html#event:Restarted">Restarted</a></li><li><a href="pixeldeck.server.html#event:Restarting">Restarting</a></li><li><a href="pixeldeck.server.html#event:Saved">Saved</a></li><li><a href="pixeldeck.server.html#event:Started">Started</a></li><li><a href="pixeldeck.server.html#event:Starting">Starting</a></li><li><a href="pixeldeck.server.html#event:Stopped">Stopped</a></li><li><a href="pixeldeck.server.html#event:Stopping">Stopping</a></li></ul><h3>Global</h3><ul><li><a href="global.html#data">data</a></li><li><a href="global.html#dbg">dbg</a></li><li><a href="global.html#mkMap">mkMap</a></li><li><a href="global.html#usedBy">usedBy</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Oct 09 2019 18:39:21 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Oct 14 2019 17:45:20 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

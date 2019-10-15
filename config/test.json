@@ -4,10 +4,11 @@
     "port": null
   },
   "interactive": false,
-  "dbName": "test",
-  "dbOpts": {
-    "autoload": false,
-    "autosave": false,
-    "serializationMethod":"pretty"
+  "knex": {
+    "client": "sqlite3",
+    "useNullAsDefault": true,
+    "connection": {
+      "filename": "./test.db"
+    }
   }
 }

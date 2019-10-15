@@ -37,7 +37,7 @@
   "scripts": {
     "test": "NODE_ENV=test DEBUG=pixeldeck* mocha -b",
     "diagnostics": "nodemon --exec npm -- run test",
-    "start": "DEBUG=\"pixeldeck*\" bin/pixeldeck.js",
+    "start": "DEBUG=\"$DEBUG,pixeldeck*\" bin/pixeldeck.js",
     "start-watch": "nodemon --exec npm start",
     "docs": "npm run jsdoc && npm run doc-man && npm run cover",
     "cover": "NODE_ENV=test npx nyc mocha | tee ./docs/COVERAGE.TXT; npm run cover-badge",

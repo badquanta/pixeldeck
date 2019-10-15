@@ -5,16 +5,16 @@ block MAIN
   .container-fluid
     .row
       .col-xs-12.col-sm-4.col-lg-4.map
-        +TileMapTree(tileMap)
+        +TiledMapTree(tileMap)
       .col-xs-12.col-sm-8.col-lg-8(style="position: static;")
         svg(width='100%' height='100%' style="position: absolute;" focusable="true" tabindex="0")
-          +TileMap(tileMap)
-          if embedTileSets
-            // embed the TileSets instead..
+          +TiledMap(tileMap)
+          if embedTiledSets
+            // embed the TiledSets instead..
             include ../tileSet/lib
             defs
-              each tileSet in tileMap.TileSets
-                +TileSet(tileSet)
+              each tileSet in tileMap.TiledSets
+                +TiledSet(tileSet)
         //embed(src=tileMapPath)
   style.
     body {background-color: grey}

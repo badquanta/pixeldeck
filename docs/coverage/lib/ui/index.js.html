@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">20.59% </span>
+        <span class="strong">2.94% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/34</span>
+        <span class='fraction'>1/34</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">11.11% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>1/9</span>
+        <span class='fraction'>0/9</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">25% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/4</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">20.59% </span>
+        <span class="strong">2.94% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/34</span>
+        <span class='fraction'>1/34</span>
       </div>
     </div>
     <p class="quiet">
@@ -134,19 +134,19 @@
 <a name='L86'></a><a href='#L86'>86</a>
 <a name='L87'></a><a href='#L87'>87</a>
 <a name='L88'></a><a href='#L88'>88</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -195,9 +195,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -226,14 +226,14 @@ const server = require('../server')
  * @external
  * @see {@link https://nodejs.org/docs/latest-v10.x/api/repl.html#repl_repl_start_options}
  */
-const Repl = require('repl')
-const dbg = require('../dbg').extend('ui')
+const Repl = <span class="cstat-no" title="statement not covered" >require('repl')</span>
+const dbg = <span class="cstat-no" title="statement not covered" >require('../dbg').extend('ui')</span>
 /**
  * Just the module that represents our user interface
  * @namespace pixeldeck.ui
  */
 // eslint-disable-next-line no-unused-vars
-const ui = module.exports = {
+const ui = <span class="cstat-no" title="statement not covered" >module.exports = {</span>
   /**
    * start the ui
    * @param {*} opts
@@ -255,7 +255,7 @@ const ui = module.exports = {
        * before any ui has be created
        * @event pixeldeck.server.uiStarting
        **/
-<span class="cstat-no" title="statement not covered" >      server.emit('uiStarting')</span>
+<span class="cstat-no" title="statement not covered" >      process.emit('pixeldeck:uiStarting')</span>
 <span class="cstat-no" title="statement not covered" >      dbg('Promising to start user interface...')</span>
 <span class="cstat-no" title="statement not covered" >      ui.starting = new Promise(<span class="fstat-no" title="function not covered" >fu</span>nction (resolve, reject) {</span>
         const finalReplOpts = <span class="cstat-no" title="statement not covered" >Object.assign({}, opts, cfg.replOpts)</span>
@@ -269,7 +269,7 @@ const ui = module.exports = {
          * after ui is ready to use
          * @event pixeldeck.server.uiStarted
          */
-<span class="cstat-no" title="statement not covered" >        server.emit('uiStarted')</span>
+<span class="cstat-no" title="statement not covered" >        process.emit('pixeldeck:uiStarted')</span>
 <span class="cstat-no" title="statement not covered" >        return resolve(ui)</span>
       })
     }
@@ -281,16 +281,16 @@ const ui = module.exports = {
    * @emits 'uiStopped'
    * @memberof pixeldeck.ui
    */
-  async Stop () {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (!ui.starting) {
-      dbg('ui has not yet been started')
-      return false
+<span class="fstat-no" title="function not covered" >  as</span>ync Stop () {
+<span class="cstat-no" title="statement not covered" >    if (!ui.starting) {</span>
+<span class="cstat-no" title="statement not covered" >      dbg('ui has not yet been started')</span>
+<span class="cstat-no" title="statement not covered" >      return false</span>
     }
     /**
      * before ui is deconstructed
      * @event pixeldeck.server.uiStopping
      */
-<span class="cstat-no" title="statement not covered" >    server.emit('uiStopping')</span>
+<span class="cstat-no" title="statement not covered" >    process.emit('pixeldeck:uiStopping')</span>
 <span class="cstat-no" title="statement not covered" >    dbg('repl close requested, clearing reissue prompt timeout', ui.timeoutId)</span>
 <span class="cstat-no" title="statement not covered" >    clearTimeout(ui.timeoutId)</span>
 <span class="cstat-no" title="statement not covered" >    dbg('commanding repl server close')</span>
@@ -302,7 +302,7 @@ const ui = module.exports = {
      * after ui is deconstructed
      * @event pixeldeck.server.uiStopped
      */
-<span class="cstat-no" title="statement not covered" >    server.emit('uiStopped')</span>
+<span class="cstat-no" title="statement not covered" >    process.emit('pixeldeck:uiStopped')</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    return true</span>
   }
@@ -313,7 +313,7 @@ const ui = module.exports = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Oct 13 2019 20:24:35 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 14 2019 21:01:29 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>

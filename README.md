@@ -34,7 +34,7 @@ In general order of addition to repository.  Please [create a new issue](https:/
 
 ---
 
-### TileSets:
+### TiledSets:
 
 ###### Sources:
 
@@ -77,7 +77,7 @@ there are really so many, so check out [package.json](./package.json) if you rea
 
   1) [express](http://expressjs.com/en/4x/api.html) used for server http server to javascript api handling
   2) [lokijs](https://github.com/techfort/LokiJS) I'm using this to provide an `isomorphic database` that will run identically on the client & the server. It also should support synchronizing changes between the client & server. This concept has yet to be prototyped.
-  3) [#TODO mocha](https://mochajs.org/), along with libraries like 
+  3) [#TODO mocha](https://mochajs.org/), along with libraries like
     1) [#TODO supertest](#TODO)
     2) [#TODO chai](#TODO)
     3) [#TODO approvals](#TODO) and others

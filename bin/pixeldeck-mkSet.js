@@ -6,8 +6,8 @@
 const commander = require('commander')
 commander.option('-f, --format <type>', 'Define what format to generate.')
 const fs = require('fs')
-const data = require('../lib/data')
-const TileMaps = data.TileSets
+
+const TiledMaps = require('../lib/models/TiledMap')
 const Path = require('path')
 const pug = require('pug')
 const tileSetViewPaths = {
@@ -32,7 +32,7 @@ async function mkSet () {
   }
   const setJson = JSON.parse(fs.readFileSync(inputFile, 'utf8'))
   setJson.path = inputFile
-  const tileSet = new TileMaps(setJson)
+  const tileSet = new TiledMaps(setJson)
   await tileSet.getTileDataUrls()
 
   const rendered = pug.renderFile(tileSetViewPath, {

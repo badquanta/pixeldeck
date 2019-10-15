@@ -29,10 +29,11 @@
             <pre class="prettyprint source linenums"><code>'use strict'
 
 /** @ignore */
-const base = require('./base')
+const base = require('./__base')
 /** @ignore */
 const _Model = require('./_Model')
-
+/** @ignore */
+const arch = require('../arch')
 /** @ignore */
 const dbg = require('../dbg').extend('data:TileMaps')
 /**
@@ -92,15 +93,26 @@ class TileMaps extends _Model {
 
   /** @type {Array&lt;TileSets>} */
   get TileSets () {
-    const TileSets = require('./TileSets')
-    return this.record.tilesets.map(function (tme) {
-      if (tme.source) {
-        return TileSets.findOne({
-          path: this.record.path
-        })
-      } else {
-        return new TileSets(tme)
-      }
+    if (!this._TileSets) {
+      const TileSets = require('./TileSets')
+      this._TileSets = this.record.tilesets.map((tme) => {
+        if (tme.source) {
+          return Object.assign(TileSets.findOrLoad({
+            path: arch.Path.resolve(arch.Path.dirname(this.record.path), tme.source)
+          }), tme)
+        } else {
+          return new TileSets(tme)
+        }
+      })
+    }
+    return this._TileSets
+  }
+
+  async loadTileSets () {
+    this.dbg('Loading all tile sets...')
+    return Promise.all(this.TileSets.map(a => a.getTileDataUrls())).then((a) => {
+      this.dbg('loaded all tile sets')
+      return a
     })
   }
 
@@ -135,6 +147,14 @@ class TileMaps extends _Model {
   get meta () {
     return this.record.meta
   }
+
+  /**
+   * translate an index to an X,Y coordinate in pixels
+   * @return {[number, number]}
+   */
+  idx2xy (idx, w = this.width, th = this.tileheight) {
+    return [(idx % w) * tileMap.tilewidth, Math.floor(idx / w) * th]
+  }
 }
 TileMaps.collection = base.addCollection('TileMaps', {
   autoupdate: true
@@ -151,13 +171,13 @@ dbg('loaded')
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Externals</h3><ul><li><a href="external-Express.html">Express</a></li><li><a href="external-httpServer.html">httpServer</a></li><li><a href="external-LokiJs.html">LokiJs</a></li><li><a href="external-Repl.html">Repl</a></li></ul><h3>Namespaces</h3><ul><li><a href="pixeldeck.html">pixeldeck</a></li><li><a href="pixeldeck.arch.html">arch</a></li><li><a href="pixeldeck.cfg.html">cfg</a></li><li><a href="pixeldeck.data.html">data</a></li><li><a href="pixeldeck.data.base.html">base</a></li><li><a href="pixeldeck.server.html">server</a></li><li><a href="pixeldeck.service.html">service</a></li><li><a href="pixeldeck.ui.html">ui</a></li></ul><h3>Classes</h3><ul><li><a href="pixeldeck.data._Model.html">_Model</a></li><li><a href="pixeldeck.data.base.BaseLoading.html">BaseLoading</a></li><li><a href="pixeldeck.data.TileMaps.html">TileMaps</a></li><li><a href="pixeldeck.data.TileSets.html">TileSets</a></li></ul><h3>Events</h3><ul><li><a href="pixeldeck.data.base.html#event:close">close</a></li><li><a href="pixeldeck.server.html#.event:uiStarted">uiStarted</a></li><li><a href="pixeldeck.server.html#.event:uiStarting">uiStarting</a></li><li><a href="pixeldeck.server.html#.event:uiStopped">uiStopped</a></li><li><a href="pixeldeck.server.html#.event:uiStopping">uiStopping</a></li><li><a href="pixeldeck.server.html#event:Loaded">Loaded</a></li><li><a href="pixeldeck.server.html#event:Resetting">Resetting</a></li><li><a href="pixeldeck.server.html#event:Restarted">Restarted</a></li><li><a href="pixeldeck.server.html#event:Restarting">Restarting</a></li><li><a href="pixeldeck.server.html#event:Saved">Saved</a></li><li><a href="pixeldeck.server.html#event:Started">Started</a></li><li><a href="pixeldeck.server.html#event:Starting">Starting</a></li><li><a href="pixeldeck.server.html#event:Stopped">Stopped</a></li><li><a href="pixeldeck.server.html#event:Stopping">Stopping</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Externals</h3><ul><li><a href="external-Express.html">Express</a></li><li><a href="external-httpServer.html">httpServer</a></li><li><a href="external-LokiJs.html">LokiJs</a></li><li><a href="external-Repl.html">Repl</a></li></ul><h3>Namespaces</h3><ul><li><a href="pixeldeck.html">pixeldeck</a></li><li><a href="pixeldeck.arch.html">arch</a></li><li><a href="pixeldeck.cfg.html">cfg</a></li><li><a href="pixeldeck.data.html">data</a></li><li><a href="pixeldeck.data.base.html">base</a></li><li><a href="pixeldeck.server.html">server</a></li><li><a href="pixeldeck.service.html">service</a></li><li><a href="pixeldeck.ui.html">ui</a></li></ul><h3>Classes</h3><ul><li><a href="-_MakeCmd.html">_MakeCmd</a></li><li><a href="MakeMap.html">MakeMap</a></li><li><a href="pixeldeck.data._Model.html">_Model</a></li><li><a href="pixeldeck.data.base.BaseLoading.html">BaseLoading</a></li><li><a href="pixeldeck.data.TileMaps.html">TileMaps</a></li><li><a href="pixeldeck.data.TileSets.html">TileSets</a></li><li><a href="TileMap.html">TileMap</a></li></ul><h3>Events</h3><ul><li><a href="pixeldeck.data.base.html#event:close">close</a></li><li><a href="pixeldeck.server.html#.event:uiStarted">uiStarted</a></li><li><a href="pixeldeck.server.html#.event:uiStarting">uiStarting</a></li><li><a href="pixeldeck.server.html#.event:uiStopped">uiStopped</a></li><li><a href="pixeldeck.server.html#.event:uiStopping">uiStopping</a></li><li><a href="pixeldeck.server.html#event:Loaded">Loaded</a></li><li><a href="pixeldeck.server.html#event:Resetting">Resetting</a></li><li><a href="pixeldeck.server.html#event:Restarted">Restarted</a></li><li><a href="pixeldeck.server.html#event:Restarting">Restarting</a></li><li><a href="pixeldeck.server.html#event:Saved">Saved</a></li><li><a href="pixeldeck.server.html#event:Started">Started</a></li><li><a href="pixeldeck.server.html#event:Starting">Starting</a></li><li><a href="pixeldeck.server.html#event:Stopped">Stopped</a></li><li><a href="pixeldeck.server.html#event:Stopping">Stopping</a></li></ul><h3>Global</h3><ul><li><a href="global.html#data">data</a></li><li><a href="global.html#dbg">dbg</a></li><li><a href="global.html#mkMap">mkMap</a></li><li><a href="global.html#usedBy">usedBy</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Oct 09 2019 18:39:21 GMT-0700 (Pacific Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Mon Oct 14 2019 17:45:20 GMT-0700 (Pacific Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

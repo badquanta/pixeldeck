@@ -10,5 +10,5 @@ const test = module.exports = {
   expect: require('chai').expect,
   should: require('should'),
   get server () { return require('../lib/server') },
-  get pixeldeck () { return require('../lib') }
+  get pixeldeck () { return require('../pixeldeck') }
 }

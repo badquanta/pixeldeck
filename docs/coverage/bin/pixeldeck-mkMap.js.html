@@ -173,12 +173,12 @@ async function <span class="fstat-no" title="function not covered" >mkMap </span
   const mapJson = <span class="cstat-no" title="statement not covered" >JSON.parse(fs.readFileSync(inputFile, 'utf8'))</span>
 <span class="cstat-no" title="statement not covered" >  mapJson.path = inputFile</span>
   const tileMap = <span class="cstat-no" title="statement not covered" >new TileMaps(mapJson)</span>
-<span class="cstat-no" title="statement not covered" >  await tileMap.loadTileSets()</span>
+<span class="cstat-no" title="statement not covered" >  await tileMap.loadTiledSets()</span>
   const rendered = <span class="cstat-no" title="statement not covered" >pug.renderFile(tileMapViewPath, {</span>
     filename: tileMapViewPath,
     basedir: viewBasePath,
     tileMap: tileMap,
-    embedTileSets: true
+    embedTiledSets: true
   })
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  if (outputFile) {</span>
