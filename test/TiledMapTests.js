@@ -26,6 +26,7 @@ describe('TiledMap', function () {
     })
 
     it('should insert with layers', async function () {
+      await require('../lib/models/TiledLayer').ensureSchema()
       const created = await TiledMap.query()
         .insertGraph({ layers: [{ name: 'Child Layer of Layer' }] })
       return console.assert(created)
@@ -68,6 +69,38 @@ describe('TiledMap', function () {
       await require('../lib/models/TiledProperties').ensureSchema()
       await require('../lib/models/TiledObject').ensureSchema()
       const created = await TiledMap.query().insertGraph(MapExample)
+      return console.assert(created)
+    })
+  })
+
+  describe('with real data', function () {
+    it('res/test/test1.json', async function () {
+      const test1 = require('../res/test/test1.json')
+      await require('../lib/models/TiledMapUsesSet').ensureSchema()
+      const created = await TiledMap.query().insertGraph(test1)
+      return console.assert(created)
+    })
+
+    it('res/test/test2.json', async function () {
+      const test1 = require('../res/test/test2.json')
+      await require('../lib/models/TiledMapUsesSet').ensureSchema()
+      const created = await TiledMap.query().insertGraph(test1)
+      return console.assert(created)
+    })
+
+    it('res/test/test3.json', async function () {
+      const test1 = require('../res/test/test3.json')
+      await require('../lib/models/TiledMapUsesSet').ensureSchema()
+      await require('../lib/models/TiledChunk').ensureSchema()
+      const created = await TiledMap.query().insertGraph(test1)
+      return console.assert(created)
+    })
+
+    it('res/test/test4.json', async function () {
+      const test1 = require('../res/test/test4.json')
+      await require('../lib/models/TiledMapUsesSet').ensureSchema()
+      await require('../lib/models/TiledChunk').ensureSchema()
+      const created = await TiledMap.query().insertGraph(test1)
       return console.assert(created)
     })
   })
