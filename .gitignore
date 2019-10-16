@@ -5,5 +5,5 @@ ARCHIVES/
 #docs/
 .nyc_output
 .vscode
-example.db
+*.db*
 
