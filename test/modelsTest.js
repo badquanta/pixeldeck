@@ -82,44 +82,6 @@ describe('pixeldeck.models', function () {
     })
   })
 
-  describe('.TiledLayer', function () {
-    let TiledLayer
-    beforeEach(function () { TiledLayer = require('../lib/models/TiledLayer') })
-    it('should be ok', function () { test.expect(TiledLayer).to.be.ok })
-    it('should allow me to insert one', async function () {
-      const inserted = await TiledLayer.query().insertGraph({
-
-      })
-      return test.expect(inserted).to.be.ok
-    })
-    it('can insert layers:', async function () {
-      const inserted = await TiledLayer.query().insertGraph({
-        name: 'Test With Child',
-        layers: [
-          { name: 'Test With Parent' }
-        ]
-      })
-      return test.expect(inserted).to.be.ok
-    })
-    it('can insert with objects', async function () {
-      const inserted = await TiledLayer.query().insertGraph({
-        name: 'Test with Child Object',
-        objects: [
-          { name: 'First Child Object' }
-        ]
-      })
-      return test.expect(inserted).to.be.ok
-    })
-    it('can insert with properties', async function () {
-      const inserted = await TiledLayer.query().insertGraph({
-        name: 'Test with Child Property',
-        properties: [
-          { name: 'firstProp', value: 'firstValue', type: 'firstType' }
-        ]
-      })
-      return test.expect(inserted).to.be.ok
-    })
-  })
 
   // Todo: TiledMap.. etc
 }).timeout(100000)
