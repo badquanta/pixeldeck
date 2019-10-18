@@ -7,7 +7,7 @@
 describe('TiledMap', function () {
   let TiledMap
   after(async function () {
-    await require('../../lib/knex').disknex()
+    await require('../../lib/data').disknex()
   })
   beforeEach(async function () {
     TiledMap = require('../../lib/models/TiledMap')

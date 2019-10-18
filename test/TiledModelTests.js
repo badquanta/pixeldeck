@@ -1,6 +1,6 @@
 describe('TiledModel', function () {
   let TiledModel
-  after(async function () { await require('../lib/knex').disknex() })
+  after(async function () { await require('../lib/data').disknex() })
   beforeEach(async function () {
     TiledModel = require('../lib/models/TiledModel')
     await TiledModel.ensureSchema()

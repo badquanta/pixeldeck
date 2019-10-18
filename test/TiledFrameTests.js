@@ -7,7 +7,7 @@
 describe('TiledFrame', function () {
   let TiledFrame
   after(async function () {
-    await require('../lib/knex').disknex()
+    await require('../lib/data').disknex()
   })
   beforeEach(function () { TiledFrame = require('../lib/models/TiledFrame') })
 

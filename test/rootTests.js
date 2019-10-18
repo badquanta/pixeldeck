@@ -1,26 +1,31 @@
-const test = require('./')
+const supertest = require('supertest')
+
 describe('pixeldeck/', function () {
+  const server = require('../lib/server')
+  // const data = require('../lib/data')
   this.timeout(10000)
-  this.beforeAll(function () {
-    return test.pixeldeck.server.Start()
+  this.beforeAll(async function () {
+    this.agent = supertest.agent(server)
+    await require('../lib/models/TiledFile').ensureSchema()
+    return server.Start()
   })
   this.afterAll(function () {
-    return test.pixeldeck.server.Stop()
+    return server.Stop()
   })
   this.afterEach(function () {
-    return test.pixeldeck.server.Restart()
+    return server.Restart()
   })
   it('responds with 200', function () {
-    return test.agent.get('/').expect(200)
+    return this.agent.get('/').expect(200)
   })
   it('can give us a tileSet', function () {
-    return test.agent.get('/tilesets/lpc-terrains/terrain-map-v7.ts.svg').expect(200)
+    return this.agent.get('/tilesets/lpc-terrains/terrain-map-v7.ts.svg').expect(200)
   })
   it('can give us a tilemap svg', function () {
-    return test.agent.get('/test/test1.tm.svg').expect(200)
+    return this.agent.get('/test/test1.tm.svg').expect(200)
   })
 
   it('can give us a tilemap html', function () {
-    return test.agent.get('/test/test1.tm.html').expect(200)
+    return this.agent.get('/test/test1.tm.html').expect(200)
   })
 })

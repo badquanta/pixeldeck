@@ -37,7 +37,7 @@
   "scripts": {
     "test": "NODE_ENV=test DEBUG=pixeldeck* mocha -b",
     "diagnostics": "nodemon --exec npm -- run test",
-    "start": "DEBUG=\"$DEBUG,pixeldeck*\" bin/pixeldeck.js",
+    "start": "DEBUG=\"$DEBUG,pixeldeck*\" bin/pixeldeck-serve.js",
     "start-watch": "nodemon --exec npm start",
     "docs": "npm run jsdoc && npm run doc-man && npm run cover",
     "cover": "NODE_ENV=test npx nyc mocha | tee ./docs/COVERAGE.TXT; npm run cover-badge",
@@ -84,6 +84,7 @@
     "jstransformer-markdown-it": "^2.1.0",
     "knex": "^0.19.5",
     "mocha": "^6.2.1",
+    "node-gyp": "^6.0.0",
     "objection": "^1.6.11",
     "pug": "^2.0.4",
     "pug-sass-filter": "^1.0.2",

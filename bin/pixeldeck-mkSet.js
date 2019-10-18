@@ -47,8 +47,7 @@ async function mkSet () {
   } else {
     console.log(rendered)
   }
-  data.base.close()
-  return Promise.resolve()
+  return require('../lib/data').disknex()
 }
 
 if (require.main === module) {

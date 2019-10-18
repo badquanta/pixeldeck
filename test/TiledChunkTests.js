@@ -9,7 +9,7 @@ describe('TiledChunk', function () {
   after(async function () {
     //TiledChunk.dropSchema()
 
-    return require('../lib/knex').disknex()
+    return require('../lib/data').disknex()
   })
   beforeEach(function () { TiledChunk = require('../lib/models/TiledChunk') })
 
