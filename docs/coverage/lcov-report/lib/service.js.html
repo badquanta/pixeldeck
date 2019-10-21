@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/14</span>
+        <span class='fraction'>15/15</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -35,16 +35,16 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/14</span>
+        <span class='fraction'>15/15</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -74,11 +74,12 @@
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -87,26 +88,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
  * @see {@link http://expressjs.com/en/4x/api.html|Express 4x API}
  * @external {Express}
  */
-const Express = <span class="cstat-no" title="statement not covered" >require('express')</span>
+const Express = require('express')
 &nbsp;
 /**
  * @desc
@@ -115,28 +117,29 @@ const Express = <span class="cstat-no" title="statement not covered" >require('e
  * @namespace pixeldeck.service
  */
 // TODO: Express App settings?
- const service = <span class="cstat-no" title="statement not covered" >module.exports = Express()</span>
+const service = module.exports = Express()
 /** @ignore */
-const cfg = <span class="cstat-no" title="statement not covered" >require('./cfg')</span>
+const cfg = require('./cfg')
 /** @ignore */
-const dbg = <span class="cstat-no" title="statement not covered" >require('./dbg').extend('service')</span>
-<span class="cstat-no" title="statement not covered" >dbg('configuring')</span>
-<span class="cstat-no" title="statement not covered" >service.set('view engine', 'pug')</span>
-<span class="cstat-no" title="statement not covered" >service.set('views', cfg.viewsDir)</span>
-<span class="cstat-no" title="statement not covered" >Object.assign(service.locals, cfg.locals)</span>
-<span class="cstat-no" title="statement not covered" >service.locals.dbg = require('./dbg').extend('VIEW')</span>
-<span class="cstat-no" title="statement not covered" >service.get(/\/(.*)\.ts\.svg/, require('./service/getTiledSetSvg'))</span>
-<span class="cstat-no" title="statement not covered" >service.get(/\/(.*)\.tm\.svg/, require('./service/getTiledMapSvg'))</span>
-<span class="cstat-no" title="statement not covered" >service.get('/TiledMaps/', require('./service/getTiledMapsList'))</span>
-<span class="cstat-no" title="statement not covered" >service.get(...require('./service/getTiledMapHtml'))</span>
-<span class="cstat-no" title="statement not covered" >service.get('/', require('./service/getRoot'))</span>
+const dbg = require('./dbg').extend('service')
+dbg('configuring')
+service.set('view engine', 'pug')
+service.set('views', cfg.viewsDir)
+Object.assign(service.locals, cfg.locals)
+service.locals.dbg = require('./dbg').extend('VIEW')
+service.get(/\/(.*)\.ts\.svg/, require('./service/getTiledSetSvg'))
+service.get(/\/(.*)\.tm\.svg/, require('./service/getTiledMapSvg'))
+service.get('/TiledMaps/', require('./service/getTiledMapsList'))
+service.get(...require('./service/getTiledMapHtml'))
+service.get('/', require('./service/getRoot'))
+dbg('configured')
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 14 2019 23:48:28 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 21 2019 04:16:57 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../prettify.js"></script>

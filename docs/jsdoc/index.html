@@ -1,0 +1,323 @@
+<!-- start:readme.hbs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>pixeldeck</title>
+		<link rel="icon" type="image/gif" href="favicon.gif"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #cc5500;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #cc5500;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #cc5500;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #cc5500;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.gif","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"pixeldeck","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":false,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
+			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_AFILTER_ENABLED = false;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.gif);">
+					pixeldeck
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="global.html#getModelIndex">getModelIndex</a></li>
+											<li><a href="global.html#modelNames">modelNames</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="-_MakeCmd.html">_MakeCmd</a></li>
+											<li><a href="cli.Cmd.html">cli.Cmd</a></li>
+											<li><a href="cli.MakeSet.html">cli.MakeSet</a></li>
+											<li><a href="cli.Serve.html">cli.Serve</a></li>
+											<li><a href="external-commander.Command.html">external:commander.Command</a></li>
+											<li><a href="MakeMap.html">MakeMap</a></li>
+											<li><a href="mdl.TiledChunk.html">mdl.TiledChunk</a></li>
+											<li><a href="mdl.TiledFile.html">mdl.TiledFile</a></li>
+											<li><a href="mdl.TiledFrame.html">mdl.TiledFrame</a></li>
+											<li><a href="mdl.TiledLayer.html">mdl.TiledLayer</a></li>
+											<li><a href="mdl.TiledMap.html">mdl.TiledMap</a></li>
+											<li><a href="mdl.TiledMapUsesSet.html">mdl.TiledMapUsesSet</a></li>
+											<li><a href="mdl.TiledModel.html">mdl.TiledModel</a></li>
+											<li><a href="mdl.TiledObject.html">mdl.TiledObject</a></li>
+											<li><a href="mdl.TiledPoint.html">mdl.TiledPoint</a></li>
+											<li><a href="mdl.TiledProperties.html">mdl.TiledProperties</a></li>
+											<li><a href="mdl.TiledSet.html">mdl.TiledSet</a></li>
+											<li><a href="mdl.TiledTerrain.html">mdl.TiledTerrain</a></li>
+											<li><a href="mdl.TiledTile.html">mdl.TiledTile</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_external.html" class="dropdown-toggle" data-toggle="dropdown">Externals<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="external-commander.html">commander</a></li>
+											<li><a href="external-config.html">config</a></li>
+											<li><a href="external-Express.html">Express</a></li>
+											<li><a href="external-fs.html">fs</a></li>
+											<li><a href="external-http.html">http</a></li>
+											<li><a href="external-Knex.html">Knex</a></li>
+											<li><a href="external-Objection.html">Objection</a></li>
+											<li><a href="external-Path.html">Path</a></li>
+											<li><a href="external-Repl.html">Repl</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="cli.html">cli</a></li>
+											<li><a href="mdl.html">mdl</a></li>
+											<li><a href="pixeldeck.html">pixeldeck</a></li>
+											<li><a href="pixeldeck.arch.html">pixeldeck.arch</a></li>
+											<li><a href="pixeldeck.cfg.html">pixeldeck.cfg</a></li>
+											<li><a href="pixeldeck.data.html">pixeldeck.data</a></li>
+											<li><a href="pixeldeck.server.html">pixeldeck.server</a></li>
+											<li><a href="pixeldeck.service.html">pixeldeck.service</a></li>
+											<li><a href="pixeldeck.ui.html">pixeldeck.ui</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_tutorial.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="tutorial-getting-started.html">getting-started</a></li>
+									</ul>
+								</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">readme</span>
+				<h1><span class="name">pixeldeck</span></h1>
+				<div class="summary"><p>a virtual pixel environment</p></div>			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-9 main-content">
+		<section class="readme-section">
+			<article><p><a name="top">PixelDeck links:</a></p>
+<p><a href="https://BadQuanta.github.io/pixeldeck/">home</a> |
+<a href="https://github.com/BadQuanta/pixeldeck/">github</a> |
+<a href="https://badquanta.github.io/pixeldeck/pixeldeck/0.0.1/index.html">APIv0.0.1</a> |
+<a href="https://badquanta.github.io/pixeldeck/coverage/index.html">coverage</a>
+...</p>
+<p><img src="https://badquanta.github.io/pixeldeck/coverage.svg" alt="CoverageSVG"></p>
+<hr>
+<h3>About:</h3>
+<p>A work-in-progress environment for 2d games.  Lots of goals.</p>
+<p><a href="https://badquanta.github.io/pixeldeck/imgs/Screenshot01.png"><img src="https://badquanta.github.io/pixeldeck/imgs/Screenshot01.thumbnail.png" alt="Screenshot" title="Screenshot"></a></p>
+<hr>
+<h3>License:</h3>
+<p>The license is the G.N.U. G.P.L. for everything within the <a href="https://github.com/BadQuanta/pixeldeck">repository</a> this <a href="./README.md">README</a> and/or <a href="./LICENSE.md">LICENSE</a> were found.</p>
+<hr>
+<h3>Credits:</h3>
+<p>In general order of addition to repository.  Please <a href="https://github.com/badquanta/pixeldeck/issues/new">create a new issue</a> if there is a missing credit and/or something is incorrect or incomplete.</p>
+<hr>
+<h3>TiledSets:</h3>
+<h6>Sources:</h6>
+<ul>
+<li>From <a href="">bluecarrot16</a> <a href="https://opengameart.org/content/lpc-terrains">lpc-terrains</a></li>
+</ul>
+<hr>
+<h6>characters</h6>
+<ul>
+<li>TODO:
+<ul>
+<li>[ ] cat</li>
+<li>[ ] dog</li>
+<li>[ ] rat</li>
+<li>[ ] bird</li>
+<li>[ ] tree</li>
+<li>[ ] grass/flower/tree?</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h6>objects</h6>
+<ul>
+<li>[ ] TODO: Objects</li>
+<li>[ ] ground/floor/bridge/etc...</li>
+<li>[ ] walls/doors/windows</li>
+<li>[ ] NPC
+<ul>
+<li>[ ] Server NPCs</li>
+<li>[ ] Client NPCs</li>
+</ul>
+</li>
+<li>[ ] Players
+<ul>
+<li>[ ] Multi player w/ Server</li>
+<li>[ ] Single player
+<ul>
+<li>[ ] with Server</li>
+<li>[ ] without Server</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h6>javascript libraries:</h6>
+<p>there are really so many, so check out <a href="./package.json">package.json</a> if you really want to see just the top level dependencies.  Here are the top 10 highlights (so var...)</p>
+<ol>
+<li><a href="http://expressjs.com/en/4x/api.html">express</a> used for server http server to javascript api handling</li>
+<li><a href="https://github.com/techfort/LokiJS">lokijs</a> I'm using this to provide an <code>isomorphic database</code> that will run identically on the client &amp; the server. It also should support synchronizing changes between the client &amp; server. This concept has yet to be prototyped.</li>
+<li><a href="https://mochajs.org/">#TODO mocha</a>, along with libraries like</li>
+<li><a href="#TODO">#TODO supertest</a></li>
+<li><a href="#TODO">#TODO chai</a></li>
+<li><a href="#TODO">#TODO approvals</a> and others</li>
+<li><a href="https://pugjs.org/">pug</a> is an excellent tool for XML generation, and utilized her for <code>SVG</code> and <code>HTML</code> templates.</li>
+<li><a href="https://socket.io/">#TODO socket.io</a> Not yet really utilized; but intended to be the backbone of <code>loki database</code> synchronization.</li>
+<li><a href="https://jsdoc.app/">jsdoc</a> generates our excellent documentation.</li>
+<li><a href="#TODO">nodemon</a> TODO:</li>
+<li><a href="#TODO">nyc</a> TODO:</li>
+<li><a href="#TODO">config</a> TODO:</li>
+</ol>
+<hr>
+<p><a name="TODO"> </a></p>
+<h6>TODOs</h6>
+<p>things I need to get done:</p>
+<ul>
+<li>
+<p>[x] a lot...</p>
+</li>
+<li>
+<p>[ ] give due credit</p>
+</li>
+<li>
+<p>[ ] pacjage.json <a href="https://docs.npmjs.com/misc/config">config</a></p>
+</li>
+<li>
+<p>[ ] rewview package.json <a href="https://docs.npmjs.com/misc/scripts">scripts</a></p>
+<ol>
+<li><code>prepublish:</code> <em>generate docs?</em></li>
+<li><code>prepare:</code> something</li>
+<li><strong>(publish)</strong>
+<code>prepublishOnly</code>: Run BEFORE the package is prepared and packed, ONLY on publish. (See below.)</li>
+<li><strong>(pack| publish)</strong>
+<ol>
+<li><code>prepack</code>: run BEFORE a tarball is packed when installing git dependencies</li>
+<li><code>postpack:</code> Run AFTER the tarball has been generated and moved to its final destination.</li>
+</ol>
+</li>
+<li><strong>publish</strong>
+<ol>
+<li><code>publish, postpublish:</code> Run AFTER the package is published.</li>
+</ol>
+</li>
+<li><strong>install</strong> <code>preinstall:</code> Run BEFORE the package is installed
+install, postinstall: Run AFTER the package is installed.</li>
+<li><strong>install</strong> <code>preuninstall, uninstall:</code> Run BEFORE the package is uninstalled.</li>
+<li>postuninstall: Run AFTER the package is uninstalled.</li>
+<li>preversion: Run BEFORE bumping the package version.</li>
+<li>version: Run AFTER bumping the package version, but BEFORE commit.</li>
+<li>postversion: Run AFTER bumping the package version, and AFTER commit.
+pretest, test, posttest: Run by the npm test command.
+prestop, stop, poststop: Run by the npm stop command.
+prestart, start, poststart: Run by the npm start command.
+prerestart, restart, postrestart: Run by the npm restart command. Note: npm restart will run the stop and start scripts if no restart script is provided.
+preshrinkwrap, shrinkwrap, postshrinkwrap: Run by the npm shrinkwrap command.</li>
+</ol>
+</li>
+<li>
+<p>[ ] version 0.0.1</p>
+</li>
+</ul>
+<p>back to <a href="#top">#top</a>?</p></article>
+		</section>
+			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
+		</div>
+	</div>
+	<footer>
+				<div class="footer-option">pixeldeck</div>
+				<div class="copyright">GPL-3.0</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on 2019-10-21 @ 04:17 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>
+<!-- end:readme.hbs -->

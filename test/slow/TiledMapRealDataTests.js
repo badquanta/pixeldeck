@@ -10,7 +10,7 @@ describe('TiledMap', function () {
     await require('../../lib/data').disknex()
   })
   beforeEach(async function () {
-    TiledMap = require('../../lib/models/TiledMap')
+    TiledMap = require('../../lib/mdl/TiledMap')
     await TiledMap.ensureSchema()
   })
   describe('with real data', function () {

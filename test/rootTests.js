@@ -6,7 +6,6 @@ describe('pixeldeck/', function () {
   this.timeout(10000)
   this.beforeAll(async function () {
     this.agent = supertest.agent(server)
-    await require('../lib/models/TiledFile').ensureSchema()
     return server.Start()
   })
   this.afterAll(function () {

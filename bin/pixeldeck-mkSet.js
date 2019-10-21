@@ -1,13 +1,9 @@
 #!/usr/bin/env node
+const MakeSet = require('../lib/cli/MakeSet')
+const makeSet = new MakeSet()
+if (require.main === module) { makeSet.main() }
 
-/**
- * https://www.npmjs.com/package/commander
- */
-const commander = require('commander')
-commander.option('-f, --format <type>', 'Define what format to generate.')
-const fs = require('fs')
-
-const TiledMaps = require('../lib/models/TiledMap')
+const TiledMaps = require('../lib/mdl/TiledMap')
 const Path = require('path')
 const pug = require('pug')
 const tileSetViewPaths = {
@@ -18,13 +14,13 @@ const tileSetViewPaths = {
 const viewBasePath = Path.resolve(__dirname, '../views')
 
 async function mkSet () {
-  commander.parse(process.argv)
+  this.parse(process.argv)
 
-  const inputFile = commander.args.shift()
-  const outputFile = commander.args.shift()
+  const inputFile = this.args.shift()
+  const outputFile = this.args.shift()
   let outputFormat = Path.extname(outputFile).slice(1)
   if (!outputFormat || (outputFormat === '')) {
-    outputFormat = commander.format
+    outputFormat = this.format
   }
   const tileSetViewPath = tileSetViewPaths[outputFormat]
   if (!tileSetViewPath) {

@@ -9,7 +9,7 @@ describe('TiledLayer', function () {
   after(async function () {
     await require('../lib/data').disknex()
   })
-  beforeEach(function () { TiledLayer = require('../lib/models/TiledLayer') })
+  beforeEach(function () { TiledLayer = require('../lib/mdl/TiledLayer') })
 
   it('should be ok', function () { console.assert(TiledLayer) })
 
@@ -31,7 +31,7 @@ describe('TiledLayer', function () {
     })
 
     it('should insert with objects', async function () {
-      await require('../lib/models/TiledObject').ensureSchema()
+      await require('../lib/mdl/TiledObject').ensureSchema()
       const created = await TiledLayer.query().insertGraph(
         { objects: [{ name: 'Child object of layer' }] }
       )
@@ -39,7 +39,7 @@ describe('TiledLayer', function () {
     })
 
     it('should insert with properties', async function () {
-      await require('../lib/models/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
       const created = await TiledLayer.query().insertGraph(
         { properties: [{ name: 'Child property of layer', value: 'property value of child proeprty of layer', type: 'some type' }] }
       )
@@ -65,8 +65,8 @@ describe('TiledLayer', function () {
         'x': 0,
         'y': 0
       }
-      await require('../lib/models/TiledProperties').ensureSchema()
-      await require('../lib/models/TiledObject').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledObject').ensureSchema()
       const created = await TiledLayer.query().insertGraph(ObjLayerExample)
       return console.assert(created)
     })
@@ -89,8 +89,8 @@ describe('TiledLayer', function () {
         'x': 0,
         'y': 0
       }
-      await require('../lib/models/TiledProperties').ensureSchema()
-      await require('../lib/models/TiledObject').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledObject').ensureSchema()
       const created = await TiledLayer.query().insertGraph(TilelayerExample)
       return console.assert(created)
     })

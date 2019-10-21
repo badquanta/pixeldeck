@@ -1,0 +1,19488 @@
+window.lunrData = {
+  "index": {
+    "version": "1.0.0",
+    "fields": [
+      {
+        "name": "longname",
+        "boost": 1000
+      },
+      {
+        "name": "name",
+        "boost": 500
+      },
+      {
+        "name": "tags",
+        "boost": 300
+      },
+      {
+        "name": "kind",
+        "boost": 110
+      },
+      {
+        "name": "title",
+        "boost": 100
+      },
+      {
+        "name": "summary",
+        "boost": 70
+      },
+      {
+        "name": "description",
+        "boost": 50
+      },
+      {
+        "name": "body",
+        "boost": 1
+      }
+    ],
+    "ref": "id",
+    "tokenizer": "default",
+    "documentStore": {
+      "store": {
+        "index.html": [
+          "environ",
+          "index",
+          "pixel",
+          "pixeldeck",
+          "readm",
+          "virtual"
+        ],
+        "global.html": [
+          "document",
+          "global"
+        ],
+        "undefined": [
+          "get",
+          "start",
+          "tutori"
+        ],
+        "list_tutorial.html": [
+          "avail",
+          "list",
+          "list:tutori",
+          "tutori"
+        ],
+        "list_class.html": [
+          "class",
+          "document",
+          "list",
+          "list:class"
+        ],
+        "list_external.html": [
+          "document",
+          "extern",
+          "list",
+          "list:extern",
+          "member"
+        ],
+        "list_namespace.html": [
+          "document",
+          "list",
+          "list:namespac",
+          "namespac"
+        ],
+        "external-commander.Command.html": [
+          "class",
+          "command",
+          "commander.command",
+          "external:commander.command"
+        ],
+        "cli.Cmd.html": [
+          "abstract",
+          "async",
+          "class",
+          "cli",
+          "cli.cmd",
+          "cli~cmd",
+          "cmd",
+          "implement",
+          "lt;abstract&gt",
+          "main",
+          "pixeldeck"
+        ],
+        "cli.Cmd.html#.dbg": [
+          "class",
+          "cli.cmd.dbg",
+          "cmd.dbg",
+          "dbg",
+          "debugg",
+          "lt;static&gt",
+          "member"
+        ],
+        "cli.Cmd.html#dbg": [
+          "cli.cmd#dbg",
+          "cmd#dbg",
+          "dbg",
+          "debugg",
+          "instanc",
+          "member"
+        ],
+        "cli.Cmd.html#main": [
+          "abstract&gt",
+          "cli.cmd#main",
+          "cmd#main",
+          "command",
+          "function",
+          "lt;async",
+          "main",
+          "start"
+        ],
+        "cli.MakeSet.html": [
+          "async",
+          "class",
+          "cli.makeset",
+          "cli~makeset",
+          "main",
+          "makeset"
+        ],
+        "cli.MakeSet.html#main": [
+          "cli.makeset#main",
+          "function",
+          "lt;async&gt",
+          "main",
+          "makeset#main"
+        ],
+        "cli.Serve.html": [
+          "async",
+          "class",
+          "cli",
+          "cli.serv",
+          "cli~serv",
+          "main",
+          "serv"
+        ],
+        "cli.Serve.html#dbg": [
+          "cli.serve#dbg",
+          "dbg",
+          "debugg",
+          "instanc",
+          "member",
+          "serve#dbg"
+        ],
+        "cli.Serve.html#main": [
+          "cli.serve#main",
+          "command",
+          "function",
+          "lt;async&gt",
+          "main",
+          "serve#main",
+          "start"
+        ],
+        "-_MakeCmd.html": [
+          "_makecmd",
+          "class",
+          "command",
+          "creat",
+          "gener",
+          "make"
+        ],
+        "mdl.TiledChunk.html": [
+          "class",
+          "format/#chunk",
+          "https://docs.mapeditor.org/en/stable/reference/json",
+          "map",
+          "mdl.tiledchunk",
+          "tiledchunk"
+        ],
+        "mdl.TiledChunk.html#dbg": [
+          "dbg",
+          "debugg",
+          "instanc",
+          "mdl.tiledchunk#dbg",
+          "member",
+          "return",
+          "tiledchunk#dbg"
+        ],
+        "mdl.TiledChunk.html#uuid": [
+          "mdl.primarykey",
+          "mdl.tiledchunk#uuid",
+          "member",
+          "tiledchunk#uuid",
+          "uuid"
+        ],
+        "mdl.TiledChunk.html#.createSchemaOn": [
+          "createschemaon",
+          "defin",
+          "function",
+          "lt;async",
+          "mdl.tiledchunk.createschemaon",
+          "persist",
+          "properti",
+          "static&gt",
+          "tabl",
+          "tiledchunk.createschemaon"
+        ],
+        "mdl.TiledChunk.html#render": [
+          "function",
+          "lt;async&gt",
+          "mdl.tiledchunk#rend",
+          "render",
+          "tiledchunk#rend",
+          "tri"
+        ],
+        "mdl.TiledFile.html": [
+          "cach",
+          "class",
+          "data",
+          "databas",
+          "file",
+          "import",
+          "inform",
+          "mdl.tiledfil",
+          "repres",
+          "tiledfil",
+          "us"
+        ],
+        "mdl.TiledFile.html#.resourceSearchPaths": [
+          "array.&lt;string&gt",
+          "directori",
+          "given",
+          "list",
+          "lt;static&gt",
+          "mdl.tiledfile.resourcesearchpath",
+          "member",
+          "path",
+          "resourcesearchpath",
+          "search",
+          "tiledfile.findresourcepathfor(path",
+          "tiledfile.resourcesearchpath"
+        ],
+        "mdl.TiledFile.html#exists": [
+          "exist",
+          "file",
+          "find",
+          "mdl.tiledfile#exist",
+          "member",
+          "resourcepath",
+          "tiledfile#exist"
+        ],
+        "mdl.TiledFile.html#dbg": [
+          "dbg",
+          "debugg",
+          "instanc",
+          "mdl.tiledfile#dbg",
+          "member",
+          "return",
+          "tiledfile#dbg"
+        ],
+        "mdl.TiledFile.html#uuid": [
+          "mdl.primarykey",
+          "mdl.tiledfile#uuid",
+          "member",
+          "tiledfile#uuid",
+          "uuid"
+        ],
+        "mdl.TiledFile.html#.findResourcePathFor": [
+          "absolut",
+          "exist",
+          "file",
+          "findresourcepathfor",
+          "first",
+          "function",
+          "lt;static&gt",
+          "mdl.tiledfile.findresourcepathfor",
+          "path",
+          "resourcesearchpath",
+          "return",
+          "tiledfile.findresourcepathfor",
+          "tiledfile.resourcesearchpath",
+          "us",
+          "within"
+        ],
+        "mdl.TiledFile.html#getStat": [
+          "function",
+          "getstat",
+          "lt;async&gt",
+          "mdl.tiledfile#getstat",
+          "tiledfile#getstat"
+        ],
+        "mdl.TiledFile.html#.createSchemaOn": [
+          "createschemaon",
+          "function",
+          "lt;async",
+          "mdl.tiledfile.createschemaon",
+          "static&gt",
+          "tabl",
+          "tiledfile.createschemaon"
+        ],
+        "mdl.TiledFile.html#render": [
+          "function",
+          "lt;async&gt",
+          "mdl.tiledfile#rend",
+          "render",
+          "tiledfile#rend",
+          "tri"
+        ],
+        "mdl.TiledFrame.html": [
+          "class",
+          "collect",
+          "frame",
+          "mdl.tiledfram",
+          "mdl.tiledtile#anim",
+          "on",
+          "tiledfram"
+        ],
+        "mdl.TiledFrame.html#dbg": [
+          "dbg",
+          "debugg",
+          "instanc",
+          "mdl.tiledframe#dbg",
+          "member",
+          "return",
+          "tiledframe#dbg"
+        ],
+        "mdl.TiledFrame.html#uuid": [
+          "mdl.primarykey",
+          "mdl.tiledframe#uuid",
+          "member",
+          "tiledframe#uuid",
+          "uuid"
+        ],
+        "mdl.TiledFrame.html#render": [
+          "function",
+          "lt;async&gt",
+          "mdl.tiledframe#rend",
+          "render",
+          "tiledframe#rend",
+          "tri"
+        ],
+        "mdl.TiledLayer.html": [
+          "class",
+          "format/#lay",
+          "https://docs.mapeditor.org/en/stable/reference/json",
+          "map",
+          "mdl.tiledlay",
+          "object",
+          "represent",
+          "tiledlay"
+        ],
+        "mdl.TiledLayer.html#.relationMappings": [
+          "between",
+          "defin",
+          "lt;static&gt",
+          "mani",
+          "mdl.tiledchunk",
+          "mdl.tiledlay",
+          "mdl.tiledlayer.relationmap",
+          "mdl.tiledobject",
+          "mdl.tiledproperti",
+          "member",
+          "relationmap",
+          "relationship",
+          "tiledlayer.relationmap"
+        ],
+        "mdl.TiledLayer.html#dbg": [
+          "dbg",
+          "debugg",
+          "instanc",
+          "mdl.tiledlayer#dbg",
+          "member",
+          "return",
+          "tiledlayer#dbg"
+        ],
+        "mdl.TiledLayer.html#uuid": [
+          "mdl.primarykey",
+          "mdl.tiledlayer#uuid",
+          "member",
+          "tiledlayer#uuid",
+          "uuid"
+        ],
+        "mdl.TiledLayer.html#.createSchemaOn": [
+          "createschemaon",
+          "function",
+          "lt;async",
+          "mdl.tiledlayer.createschemaon",
+          "static&gt",
+          "tabl",
+          "tiledlayer.createschemaon"
+        ],
+        "mdl.TiledLayer.html#render": [
+          "function",
+          "lt;async&gt",
+          "mdl.tiledlayer#rend",
+          "render",
+          "tiledlayer#rend",
+          "tri"
+        ],
+        "mdl.TiledMap.html": [
+          "class",
+          "mdl.tiledmap",
+          "tiledmap"
+        ],
+        "mdl.TiledMap.html#.jsonSchema": [
+          "data.model",
+          "extend",
+          "jsonschema",
+          "lt;static&gt",
+          "mdl.tiledmap.jsonschema",
+          "member",
+          "schema",
+          "tiledmap.jsonschema"
+        ],
+        "mdl.TiledMap.html#.relationMappings": [
+          "between",
+          "defin",
+          "lt;static&gt",
+          "mani",
+          "mdl.tiledlay",
+          "mdl.tiledmap.relationmap",
+          "mdl.tiledmapusesset",
+          "mdl.tiledproperti",
+          "mdl.tiledset",
+          "member",
+          "relationmap",
+          "relationship",
+          "tiledmap.relationmap"
+        ],
+        "mdl.TiledMap.html#dbg": [
+          "dbg",
+          "debugg",
+          "instanc",
+          "mdl.tiledmap#dbg",
+          "member",
+          "return",
+          "tiledmap#dbg"
+        ],
+        "mdl.TiledMap.html#uuid": [
+          "mdl.primarykey",
+          "mdl.tiledmap#uuid",
+          "member",
+          "tiledmap#uuid",
+          "uuid"
+        ],
+        "mdl.TiledMap.html#.createSchemaOn": [
+          "createschemaon",
+          "function",
+          "lt;async",
+          "mdl.tiledmap.createschemaon",
+          "static&gt",
+          "tiledmap.createschemaon"
+        ],
+        "mdl.TiledMap.html#.beforeEnsureSchema": [
+          "beforeensureschema",
+          "function",
+          "lt;async",
+          "mdl.tiledmap.beforeensureschema",
+          "static&gt",
+          "tiledmap.beforeensureschema"
+        ],
+        "mdl.TiledMap.html#render": [
+          "function",
+          "lt;async&gt",
+          "mdl.tiledmap#rend",
+          "render",
+          "tiledmap#rend",
+          "tri"
+        ],
+        "mdl.TiledMapUsesSet.html": [
+          "class",
+          "mdl.tiledmapusesset",
+          "need",
+          "tiledmap",
+          "tiledmapusesset",
+          "tiledset"
+        ],
+        "mdl.TiledMapUsesSet.html#.jsonSchemaProperties": [
+          "extend",
+          "jsonschemaproperti",
+          "lt;static&gt",
+          "mdl.tiledmapusesset.jsonschemaproperti",
+          "member",
+          "model",
+          "object",
+          "schemaproperti",
+          "tiledmapusesset.jsonschemaproperti"
+        ],
+        "mdl.TiledMapUsesSet.html#.relationMappings": [
+          "defin",
+          "lt;static&gt",
+          "mdl.tiledmapusesset.relationmap",
+          "member",
+          "relat",
+          "relationmap",
+          "tiledmapusesset.relationmap"
+        ],
+        "mdl.TiledMapUsesSet.html#dbg": [
+          "dbg",
+          "debugg",
+          "instanc",
+          "mdl.tiledmapusesset#dbg",
+          "member",
+          "return",
+          "tiledmapusesset#dbg"
+        ],
+        "mdl.TiledMapUsesSet.html#uuid": [
+          "mdl.primarykey",
+          "mdl.tiledmapusesset#uuid",
+          "member",
+          "tiledmapusesset#uuid",
+          "uuid"
+        ],
+        "mdl.TiledMapUsesSet.html#render": [
+          "function",
+          "lt;async&gt",
+          "mdl.tiledmapusesset#rend",
+          "render",
+          "tiledmapusesset#rend",
+          "tri"
+        ],
+        "mdl.TiledModel.html": [
+          "class",
+          "mdl.tiledmodel",
+          "tiledmodel"
+        ],
+        "mdl.TiledModel.html#.dbg": [
+          "class",
+          "dbg",
+          "debugg",
+          "lt;static&gt",
+          "mdl.tiledmodel.dbg",
+          "member",
+          "return",
+          "tiledmodel.dbg"
+        ],
+        "mdl.TiledModel.html#dbg": [
+          "dbg",
+          "debugg",
+          "instanc",
+          "mdl.tiledmodel#dbg",
+          "member",
+          "return",
+          "tiledmodel#dbg"
+        ],
+        "mdl.TiledModel.html#.idColumn": [
+          "class'",
+          "column",
+          "defin",
+          "global",
+          "id",
+          "idcolumn",
+          "lt;static&gt",
+          "mdl.tiledmodel.idcolumn",
+          "member",
+          "model",
+          "tiledmodel.idcolumn",
+          "uuid"
+        ],
+        "mdl.TiledModel.html#.tableName": [
+          "class",
+          "class'",
+          "lt;static&gt",
+          "mdl.tiledmodel.tablenam",
+          "member",
+          "name",
+          "tabl",
+          "tablenam",
+          "tiledmodel.tablenam"
+        ],
+        "mdl.TiledModel.html#.jsonSchemaRequired": [
+          "anyth",
+          "class",
+          "defin",
+          "jsonschemarequir",
+          "lt;abstract",
+          "mdl.tiledmodel.jsonschemarequir",
+          "member",
+          "overridden",
+          "requir",
+          "static&gt",
+          "tiledmodel.jsonschemarequir"
+        ],
+        "mdl.TiledModel.html#.jsonSchemaProperties": [
+          "class",
+          "defin",
+          "extend",
+          "jsonschemaproperti",
+          "lt;abstract",
+          "mdl.tiledmodel.jsonschemaproperti",
+          "member",
+          "properti",
+          "static&gt",
+          "tiledmodel.jsonschemaproperti"
+        ],
+        "mdl.TiledModel.html#.jsonSchema": [
+          "jsonschema",
+          "lt;abstract",
+          "mdl.tiledmodel.jsonschema",
+          "member",
+          "static&gt",
+          "tiledmodel.jsonschema"
+        ],
+        "mdl.TiledModel.html#uuid": [
+          "mdl.primarykey",
+          "mdl.tiledmodel#uuid",
+          "member",
+          "tiledmodel#uuid",
+          "uuid"
+        ],
+        "mdl.TiledModel.html#.createSchemaOn": [
+          "abstract",
+          "createschemaon",
+          "function",
+          "lt;async",
+          "mdl.tiledmodel.createschemaon",
+          "static&gt",
+          "tabl",
+          "tiledmodel.createschemaon"
+        ],
+        "mdl.TiledModel.html#.ensureAllSchemas": [
+          "allmodel",
+          "ensur",
+          "ensureallschema",
+          "exist",
+          "function",
+          "knex",
+          "lt;async",
+          "mdl.tiledmodel.ensureallschema",
+          "schema",
+          "static&gt",
+          "tiledmodel.ensureallschema"
+        ],
+        "mdl.TiledModel.html#.ensureSchema": [
+          "defin",
+          "ensur",
+          "ensureschema",
+          "function",
+          "knex",
+          "lt;async",
+          "mdl.tiledmodel.ensureschema",
+          "model",
+          "static&gt",
+          "tabl",
+          "tiledmodel.ensureschema"
+        ],
+        "mdl.TiledModel.html#.afterEnsureSchema": [
+          "afterensureschema",
+          "function",
+          "lt;async",
+          "mdl.tiledmodel.afterensureschema",
+          "static&gt",
+          "tiledmodel.afterensureschema"
+        ],
+        "mdl.TiledModel.html#.createSchema": [
+          "creat",
+          "createschema",
+          "function",
+          "lt;async",
+          "mdl.tiledmodel.createschema",
+          "model'",
+          "schema",
+          "static&gt",
+          "tiledmodel.createschema"
+        ],
+        "mdl.TiledModel.html#.dropSchema": [
+          "drop",
+          "dropschema",
+          "function",
+          "knex",
+          "lt;async",
+          "mdl.tiledmodel.dropschema",
+          "schema",
+          "static&gt",
+          "tiledmodel.dropschema"
+        ],
+        "mdl.TiledModel.html#render": [
+          "function",
+          "lt;async&gt",
+          "mdl.tiledmodel#rend",
+          "render",
+          "tiledmodel#rend",
+          "tri"
+        ],
+        "mdl.TiledObject.html": [
+          "class",
+          "mdl.tiledobject",
+          "tiledobject"
+        ],
+        "mdl.TiledObject.html#.jsonSchemaProperties": [
+          "extend",
+          "jsonschemaproperti",
+          "lt;static&gt",
+          "mdl.tiledobject.jsonschemaproperti",
+          "member",
+          "model",
+          "schemaproperti",
+          "tiledobject.jsonschemaproperti"
+        ],
+        "mdl.TiledObject.html#.relationMappings": [
+          "defin",
+          "lt;static&gt",
+          "map",
+          "mdl.tiledobject.relationmap",
+          "member",
+          "relat",
+          "relationmap",
+          "tiledobject.relationmap"
+        ],
+        "mdl.TiledObject.html#.createSchemaOn": [
+          "createschemaon",
+          "function",
+          "lt;async",
+          "mdl.tiledobject.createschemaon",
+          "static&gt",
+          "tiledobject.createschemaon"
+        ],
+        "mdl.TiledPoint.html": [
+          "class",
+          "mdl.tiledpoint",
+          "tiledpoint"
+        ],
+        "mdl.TiledPoint.html#dbg": [
+          "dbg",
+          "debugg",
+          "instanc",
+          "mdl.tiledpoint#dbg",
+          "member",
+          "return",
+          "tiledpoint#dbg"
+        ],
+        "mdl.TiledPoint.html#uuid": [
+          "mdl.primarykey",
+          "mdl.tiledpoint#uuid",
+          "member",
+          "tiledpoint#uuid",
+          "uuid"
+        ],
+        "mdl.TiledPoint.html#.createSchemaOn": [
+          "builder",
+          "createschemaon",
+          "defin",
+          "function",
+          "knex.schemabuild",
+          "lt;async",
+          "mdl.tiledpoint.createschemaon",
+          "schema",
+          "schma",
+          "static&gt",
+          "tiledpoint.createschemaon"
+        ],
+        "mdl.TiledPoint.html#render": [
+          "function",
+          "lt;async&gt",
+          "mdl.tiledpoint#rend",
+          "render",
+          "tiledpoint#rend",
+          "tri"
+        ],
+        "mdl.TiledProperties.html": [
+          "between",
+          "class",
+          "differ",
+          "kind",
+          "let",
+          "mani",
+          "mdl.tiledproperti",
+          "properti",
+          "relationship",
+          "repres",
+          "thing",
+          "tile",
+          "tiledproperti"
+        ],
+        "mdl.TiledProperties.html#.jsonSchemaProperties": [
+          "jsonschemaproperti",
+          "lt;static&gt",
+          "mdl.tiledproperties.jsonschemaproperti",
+          "member",
+          "tiledproperties.jsonschemaproperti"
+        ],
+        "mdl.TiledProperties.html#dbg": [
+          "dbg",
+          "debugg",
+          "instanc",
+          "mdl.tiledproperties#dbg",
+          "member",
+          "return",
+          "tiledproperties#dbg"
+        ],
+        "mdl.TiledProperties.html#uuid": [
+          "mdl.primarykey",
+          "mdl.tiledproperties#uuid",
+          "member",
+          "tiledproperties#uuid",
+          "uuid"
+        ],
+        "mdl.TiledProperties.html#.createSchemaOn": [
+          "createschemaon",
+          "defin",
+          "function",
+          "lt;async",
+          "mdl.tiledproperties.createschemaon",
+          "properti",
+          "static&gt",
+          "tabl",
+          "tiledproperties.createschemaon"
+        ],
+        "mdl.TiledProperties.html#render": [
+          "function",
+          "lt;async&gt",
+          "mdl.tiledproperties#rend",
+          "render",
+          "tiledproperties#rend",
+          "tri"
+        ],
+        "mdl.TiledSet.html": [
+          "class",
+          "format/#tileset",
+          "https://doc.mapeditor.org/en/stable/reference/json",
+          "map",
+          "mdl.tiledset",
+          "tiledset"
+        ],
+        "mdl.TiledSet.html#columns": [
+          "column",
+          "defin",
+          "integ",
+          "length",
+          "mdl.tiledset#column",
+          "member",
+          "row",
+          "tiledset#column"
+        ],
+        "mdl.TiledSet.html#firstgid": [
+          "firstgid",
+          "mdl.tiledgid",
+          "mdl.tiledset#firstgid",
+          "member",
+          "tiledset#firstgid"
+        ],
+        "mdl.TiledSet.html#grid": [
+          "grid",
+          "mdl.tiledset#grid",
+          "member",
+          "string",
+          "tiledset#grid"
+        ],
+        "mdl.TiledSet.html#image": [
+          "imag",
+          "mdl.tiledset#imag",
+          "member",
+          "string",
+          "tiledset#imag"
+        ],
+        "mdl.TiledSet.html#imageheight": [
+          "imageheight",
+          "integ",
+          "mdl.tiledset#imageheight",
+          "member",
+          "tiledset#imageheight"
+        ],
+        "mdl.TiledSet.html#imagewidth": [
+          "imagewidth",
+          "integ",
+          "mdl.tiledset#imagewidth",
+          "member",
+          "tiledset#imagewidth"
+        ],
+        "mdl.TiledSet.html#margin": [
+          "integ",
+          "margin",
+          "mdl.tiledset#margin",
+          "member",
+          "tiledset#margin"
+        ],
+        "mdl.TiledSet.html#name": [
+          "mdl.tiledset#nam",
+          "member",
+          "name",
+          "string",
+          "tiledset#nam"
+        ],
+        "mdl.TiledSet.html#spacing": [
+          "integ",
+          "mdl.tiledset#spac",
+          "member",
+          "space",
+          "tiledset#spac"
+        ],
+        "mdl.TiledSet.html#tilecount": [
+          "integ",
+          "mdl.tiledset#tilecount",
+          "member",
+          "tilecount",
+          "tiledset#tilecount"
+        ],
+        "mdl.TiledSet.html#tileheight": [
+          "integ",
+          "mdl.tiledset#tileheight",
+          "member",
+          "tiledset#tileheight",
+          "tileheight"
+        ],
+        "mdl.TiledSet.html#tileoffset": [
+          "mdl.tiledset#tileoffset",
+          "member",
+          "string",
+          "tiledset#tileoffset",
+          "tileoffset"
+        ],
+        "mdl.TiledSet.html#tilewidth": [
+          "integ",
+          "mdl.tiledset#tilewidth",
+          "member",
+          "tiledset#tilewidth",
+          "tilewidth"
+        ],
+        "mdl.TiledSet.html#transparentcolor": [
+          "mdl.tiledset#transparentcolor",
+          "member",
+          "string",
+          "tiledset#transparentcolor",
+          "transparentcolor"
+        ],
+        "mdl.TiledSet.html#type": [
+          "mdl.tiledset#typ",
+          "member",
+          "string",
+          "tiledset#typ",
+          "type"
+        ],
+        "mdl.TiledSet.html#wangsets": [
+          "mdl.tiledset#wangset",
+          "member",
+          "string",
+          "tiledset#wangset",
+          "wangset"
+        ],
+        "mdl.TiledSet.html#tiledversion": [
+          "mdl.tiledset#tiledvers",
+          "member",
+          "string",
+          "tiledset#tiledvers",
+          "tiledvers"
+        ],
+        "mdl.TiledSet.html#version": [
+          "mdl.tiledset#vers",
+          "member",
+          "string",
+          "tiledset#vers",
+          "version"
+        ],
+        "mdl.TiledSet.html#.jsonSchemaProperties": [
+          "extend",
+          "jsonschemaproperti",
+          "lt;static&gt",
+          "mdl.tiledset.jsonschemaproperti",
+          "member",
+          "model",
+          "schemaproperti",
+          "tiledset.jsonschemaproperti"
+        ],
+        "mdl.TiledSet.html#.jsonSchemaRequired": [
+          "exampl",
+          "jsonschemarequir",
+          "lt;static&gt",
+          "mdl.tiledset.jsonschemarequir",
+          "member",
+          "model'",
+          "on",
+          "overrid",
+          "return",
+          "schemarequir",
+          "tiledset.jsonschemarequir"
+        ],
+        "mdl.TiledSet.html#.relationMappings": [
+          "defin",
+          "lt;static&gt",
+          "mdl.tiledset.relationmap",
+          "member",
+          "relationmap",
+          "tiledset.relationmap"
+        ],
+        "mdl.TiledSet.html#dbg": [
+          "dbg",
+          "debugg",
+          "instanc",
+          "mdl.tiledset#dbg",
+          "member",
+          "return",
+          "tiledset#dbg"
+        ],
+        "mdl.TiledSet.html#uuid": [
+          "mdl.primarykey",
+          "mdl.tiledset#uuid",
+          "member",
+          "tiledset#uuid",
+          "uuid"
+        ],
+        "mdl.TiledSet.html#.createSchemaOn": [
+          "createschemaon",
+          "definit",
+          "extend",
+          "function",
+          "lt;async",
+          "mdl.tiledset.createschemaon",
+          "model",
+          "static&gt",
+          "tabl",
+          "tiledset.createschemaon"
+        ],
+        "mdl.TiledSet.html#render": [
+          "function",
+          "lt;async&gt",
+          "mdl.tiledset#rend",
+          "render",
+          "tiledset#rend",
+          "tri"
+        ],
+        "mdl.TiledTerrain.html": [
+          "class",
+          "mdl.tiledterrain",
+          "tiledterrain"
+        ],
+        "mdl.TiledTile.html": [
+          "class",
+          "mdl.tiledtil",
+          "tiledtil"
+        ],
+        "mdl.TiledTile.html#TiledSetUuid": [
+          "foreignkey",
+          "link",
+          "mdl.tiledtile#tiledsetuuid",
+          "member",
+          "particular",
+          "set",
+          "tiledsetuuid",
+          "tiledtile#tiledsetuuid"
+        ],
+        "mdl.TiledTile.html#id": [
+          "id",
+          "integ",
+          "mdl.tiledset",
+          "mdl.tiledtile#id",
+          "member",
+          "tiledtile#id",
+          "uniqu"
+        ],
+        "mdl.TiledTile.html#imageheight": [
+          "height",
+          "imag",
+          "imageheight",
+          "integ",
+          "mdl.tiledset~imag",
+          "mdl.tiledtile#imageheight",
+          "member",
+          "specifi",
+          "tiledtile#imageheight"
+        ],
+        "mdl.TiledTile.html#imagewidth": [
+          "imagewidth",
+          "mdl.tiledtile#imagewidth",
+          "member",
+          "tiledtile#imagewidth"
+        ],
+        "mdl.TiledTile.html#objectgroupUuid": [
+          "mdl.tiledtile#objectgroupuuid",
+          "member",
+          "objectgroupuuid",
+          "tiledtile#objectgroupuuid"
+        ],
+        "mdl.TiledTile.html#terrain": [
+          "mdl.tiledtile#terrain",
+          "member",
+          "terrain",
+          "tiledtile#terrain"
+        ],
+        "mdl.TiledTile.html#type": [
+          "mdl.tiledtile#typ",
+          "member",
+          "tiledtile#typ",
+          "type"
+        ],
+        "mdl.TiledTile.html#probability": [
+          "mdl.tiledtile#prob",
+          "member",
+          "probabl",
+          "tiledtile#prob"
+        ],
+        "mdl.TiledTile.html#dbg": [
+          "dbg",
+          "debugg",
+          "instanc",
+          "mdl.tiledtile#dbg",
+          "member",
+          "return",
+          "tiledtile#dbg"
+        ],
+        "mdl.TiledTile.html#uuid": [
+          "mdl.primarykey",
+          "mdl.tiledtile#uuid",
+          "member",
+          "tiledtile#uuid",
+          "uuid"
+        ],
+        "mdl.TiledTile.html#image": [
+          "imag",
+          "mdl.tiledtile#imag",
+          "member",
+          "string",
+          "tiledtile#imag"
+        ],
+        "mdl.TiledTile.html#render": [
+          "function",
+          "lt;async&gt",
+          "mdl.tiledtile#rend",
+          "render",
+          "tiledtile#rend",
+          "tri"
+        ],
+        "MakeMap.html": [
+          "class",
+          "convert",
+          "file",
+          "json",
+          "makemap",
+          "pixeldeck'",
+          "svg",
+          "tile",
+          "tiledmap",
+          "version"
+        ],
+        "external-config.html": [
+          "config",
+          "extern",
+          "external:config",
+          "pixeldeck.cfg",
+          "us"
+        ],
+        "external-commander.html": [
+          "argument",
+          "command",
+          "extern",
+          "external:command",
+          "featur",
+          "https://github.com/tj/commander.js/wiki",
+          "https://www.npmjs.com/package/command",
+          "line",
+          "parser",
+          "plu",
+          "provid"
+        ],
+        "external-Path.html": [
+          "extern",
+          "external:path",
+          "path"
+        ],
+        "external-fs.html": [
+          "extern",
+          "external:f",
+          "fs"
+        ],
+        "external-Knex.html": [
+          "databas",
+          "extern",
+          "external:knex",
+          "interfac",
+          "knex",
+          "layer",
+          "provid"
+        ],
+        "external-Objection.html": [
+          "basi",
+          "data",
+          "extern",
+          "external:object",
+          "modul",
+          "object",
+          "provid",
+          "represent",
+          "tile"
+        ],
+        "external-http.html": [
+          "extern",
+          "external:http",
+          "http",
+          "node",
+          "provid",
+          "support"
+        ],
+        "external-Express.html": [
+          "express",
+          "extern",
+          "external:express"
+        ],
+        "external-Repl.html": [
+          "extern",
+          "external:repl",
+          "repl"
+        ],
+        "pixeldeck.arch.html": [
+          "arch",
+          "namespac",
+          "pixeldeck.arch",
+          "stuff",
+          "util"
+        ],
+        "pixeldeck.arch.html#.Path": [
+          "arch.path",
+          "doc",
+          "lot",
+          "lt;static&gt",
+          "member",
+          "modul",
+          "nodej",
+          "path",
+          "pixeldeck.arch.path",
+          "us"
+        ],
+        "pixeldeck.arch.html#.Fs": [
+          "arch.f",
+          "doc",
+          "fs",
+          "lot",
+          "lt;static&gt",
+          "member",
+          "modul",
+          "nodej",
+          "pixeldeck.arch.f",
+          "us"
+        ],
+        "pixeldeck.arch.html#.Util": [
+          "arch.util",
+          "doc",
+          "lot",
+          "lt;static&gt",
+          "member",
+          "modul",
+          "nodej",
+          "pixeldeck.arch.util",
+          "us",
+          "util"
+        ],
+        "pixeldeck.arch.html#.defineRequires": [
+          "arch.definerequir",
+          "autom",
+          "defin",
+          "definerequir",
+          "dirnam",
+          "each",
+          "function",
+          "lt;static&gt",
+          "modul",
+          "name",
+          "path",
+          "pixeldeck.arch.definerequir",
+          "properti",
+          "read",
+          "requir",
+          "same",
+          "target",
+          "within"
+        ],
+        "pixeldeck.arch.html#.getResPathFor": [
+          "apath",
+          "apath'",
+          "arch.getrespathfor",
+          "chang",
+          "configur",
+          "convert",
+          "current",
+          "directori",
+          "extens",
+          "follow",
+          "function",
+          "getrespathfor",
+          "lt;static&gt",
+          "modifi",
+          "node",
+          "none",
+          "option",
+          "path",
+          "pixeldeck.arch.getrespathfor",
+          "replacementext",
+          "report",
+          "resourc",
+          "search",
+          "tri",
+          "work"
+        ],
+        "pixeldeck.arch.html#.cleanQuery": [
+          "arch.cleanqueri",
+          "argument",
+          "clean",
+          "cleanqueri",
+          "function",
+          "input",
+          "lt;static&gt",
+          "object",
+          "pixeldeck.arch.cleanqueri",
+          "queri",
+          "singl",
+          "take",
+          "turn"
+        ],
+        "pixeldeck.cfg.html": [
+          "cfg",
+          "configur",
+          "external:config",
+          "load",
+          "namespac",
+          "npm",
+          "packag",
+          "pixeldeck.cfg",
+          "runtim",
+          "us"
+        ],
+        "cli.html": [
+          "cli",
+          "command",
+          "index",
+          "interfac",
+          "line",
+          "namespac"
+        ],
+        "cli.html#.MakeMap": [
+          "cli.makemap",
+          "function",
+          "html/svg",
+          "lt;async",
+          "makemap",
+          "map",
+          "option",
+          "render",
+          "static&gt",
+          "string",
+          "tilemap"
+        ],
+        "pixeldeck.data.html": [
+          "data",
+          "namespac",
+          "pixeldeck.data"
+        ],
+        "pixeldeck.data.html#.disknex": [
+          "data.disknex",
+          "disconnect",
+          "disknex",
+          "function",
+          "knex",
+          "lt;static&gt",
+          "pixeldeck.data.disknex"
+        ],
+        "pixeldeck.html": [
+          "index",
+          "librari",
+          "namespac",
+          "pixeldeck"
+        ],
+        "mdl.html": [
+          "class",
+          "demand",
+          "each",
+          "mdl",
+          "model",
+          "name",
+          "namespac",
+          "object",
+          "requir",
+          "util"
+        ],
+        "mdl.html#.ALL": [
+          "array",
+          "array.&lt;mdl.tiledmodel&gt",
+          "class",
+          "gener",
+          "lt;static&gt",
+          "mdl.all",
+          "member",
+          "model",
+          "name",
+          "requir"
+        ],
+        "mdl.html#.models.ensureAllSchemas": [
+          "ensureallschema",
+          "function",
+          "lt;static&gt",
+          "mdl.models.ensureallschema",
+          "models.ensureallschema"
+        ],
+        "mdl.html#.models.dropAllSchemas": [
+          "dropallschema",
+          "function",
+          "lt;static&gt",
+          "mdl.models.dropallschema",
+          "models.dropallschema"
+        ],
+        "mdl.html#.TiledGid": [
+          "actual",
+          "between",
+          "differ",
+          "each",
+          "firstgid",
+          "gid",
+          "integ",
+          "isn't",
+          "last",
+          "map",
+          "mdl.tiledgid",
+          "need",
+          "note",
+          "over",
+          "particular",
+          "start",
+          "those",
+          "through",
+          "tiledgid",
+          "tiledmap",
+          "tiledmapusesset",
+          "tiledset",
+          "tiledtil",
+          "tileset",
+          "typedef",
+          "uniqu",
+          "us",
+          "valu",
+          "within"
+        ],
+        "mdl.html#.primaryKey": [
+          "auto",
+          "each",
+          "increment",
+          "integ",
+          "mdl.primarykey",
+          "primarykey",
+          "tabl",
+          "typedef"
+        ],
+        "pixeldeck.server.html": [
+          "http",
+          "instanc",
+          "namespac",
+          "pixeldeck.serv",
+          "server",
+          "servic"
+        ],
+        "pixeldeck.server.html#.Restart": [
+          "function",
+          "lt;async",
+          "pixeldeck.server.restart",
+          "restart",
+          "server.restart",
+          "static&gt"
+        ],
+        "pixeldeck.server.html#.Start": [
+          "function",
+          "lt;async",
+          "pixeldeck.server.start",
+          "server.start",
+          "servic",
+          "start",
+          "static&gt"
+        ],
+        "pixeldeck.server.html#.Stop": [
+          "function",
+          "halt",
+          "lt;async",
+          "pixeldeck",
+          "pixeldeck.server.stop",
+          "server.stop",
+          "servic",
+          "static&gt",
+          "stop",
+          "variou"
+        ],
+        "pixeldeck.service.html": [
+          "4",
+          "emit",
+          "express",
+          "http",
+          "namespac",
+          "pixel",
+          "pixeldeck",
+          "pixeldeck.servic",
+          "rout",
+          "server",
+          "servic",
+          "us",
+          "via"
+        ],
+        "pixeldeck.service.html#.getRoot": [
+          "function",
+          "getroot",
+          "handler",
+          "lt;static&gt",
+          "pixeldeck.service.getroot",
+          "re",
+          "req",
+          "request",
+          "root",
+          "service.getroot"
+        ],
+        "pixeldeck.service.html#.getTiledMapHtml": [
+          "function",
+          "gettiledmaphtml",
+          "handler",
+          "lt;async",
+          "next",
+          "pixeldeck.service.gettiledmaphtml",
+          "re",
+          "req",
+          "service.gettiledmaphtml",
+          "static&gt",
+          "tm.html"
+        ],
+        "pixeldeck.service.html#.getTiledMapSvg": [
+          "file",
+          "function",
+          "gettiledmapsvg",
+          "handler",
+          "lt;static&gt",
+          "next",
+          "pixeldeck.service.gettiledmapsvg",
+          "re",
+          "req",
+          "rout",
+          "service.gettiledmapsvg",
+          "tm.svg"
+        ],
+        "pixeldeck.service.html#.getTiledSetSvg": [
+          "function",
+          "gettiledsetsvg",
+          "handler",
+          "lt;static&gt",
+          "next",
+          "pixeldeck.service.gettiledsetsvg",
+          "re",
+          "req",
+          "service.gettiledsetsvg",
+          "ts.svg"
+        ],
+        "pixeldeck.ui.html": [
+          "interfac",
+          "modul",
+          "namespac",
+          "pixeldeck.ui",
+          "repres",
+          "ui",
+          "user"
+        ],
+        "pixeldeck.ui.html#.Start": [
+          "function",
+          "lt;static&gt",
+          "opt",
+          "pixeldeck.ui.start",
+          "start",
+          "ui",
+          "ui.start"
+        ],
+        "pixeldeck.ui.html#.Stop": [
+          "function",
+          "lt;static&gt",
+          "pixeldeck.ui.stop",
+          "stop",
+          "ui",
+          "ui.stop"
+        ]
+      },
+      "length": 168
+    },
+    "tokenStore": {
+      "root": {
+        "4": {
+          "docs": {
+            "pixeldeck.service.html": {
+              "ref": "pixeldeck.service.html",
+              "tf": 5
+            }
+          }
+        },
+        "docs": {},
+        "e": {
+          "docs": {},
+          "n": {
+            "docs": {},
+            "v": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "index.html": {
+                          "ref": "index.html",
+                          "tf": 23.333333333333332
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "mdl.TiledModel.html#.ensureAllSchemas": {
+                      "ref": "mdl.TiledModel.html#.ensureAllSchemas",
+                      "tf": 16.666666666666664
+                    },
+                    "mdl.TiledModel.html#.ensureSchema": {
+                      "ref": "mdl.TiledModel.html#.ensureSchema",
+                      "tf": 12.5
+                    }
+                  },
+                  "e": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "l": {
+                        "docs": {},
+                        "l": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "h": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "m": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {
+                                        "mdl.TiledModel.html#.ensureAllSchemas": {
+                                          "ref": "mdl.TiledModel.html#.ensureAllSchemas",
+                                          "tf": 620
+                                        },
+                                        "mdl.html#.models.ensureAllSchemas": {
+                                          "ref": "mdl.html#.models.ensureAllSchemas",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "s": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "h": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "m": {
+                              "docs": {},
+                              "a": {
+                                "docs": {
+                                  "mdl.TiledModel.html#.ensureSchema": {
+                                    "ref": "mdl.TiledModel.html#.ensureSchema",
+                                    "tf": 625
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "x": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "list_external.html": {
+                        "ref": "list_external.html",
+                        "tf": 623.3333333333334
+                      },
+                      "external-config.html": {
+                        "ref": "external-config.html",
+                        "tf": 110
+                      },
+                      "external-commander.html": {
+                        "ref": "external-commander.html",
+                        "tf": 110
+                      },
+                      "external-Path.html": {
+                        "ref": "external-Path.html",
+                        "tf": 110
+                      },
+                      "external-fs.html": {
+                        "ref": "external-fs.html",
+                        "tf": 110
+                      },
+                      "external-Knex.html": {
+                        "ref": "external-Knex.html",
+                        "tf": 110
+                      },
+                      "external-Objection.html": {
+                        "ref": "external-Objection.html",
+                        "tf": 110
+                      },
+                      "external-http.html": {
+                        "ref": "external-http.html",
+                        "tf": 110
+                      },
+                      "external-Express.html": {
+                        "ref": "external-Express.html",
+                        "tf": 110
+                      },
+                      "external-Repl.html": {
+                        "ref": "external-Repl.html",
+                        "tf": 110
+                      }
+                    },
+                    "a": {
+                      "docs": {},
+                      "l": {
+                        "docs": {},
+                        ":": {
+                          "docs": {},
+                          "c": {
+                            "docs": {},
+                            "o": {
+                              "docs": {},
+                              "m": {
+                                "docs": {},
+                                "m": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "n": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {
+                                          "external-commander.html": {
+                                            "ref": "external-commander.html",
+                                            "tf": 1300
+                                          }
+                                        },
+                                        "e": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            ".": {
+                                              "docs": {},
+                                              "c": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "m": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {},
+                                                          "d": {
+                                                            "docs": {
+                                                              "external-commander.Command.html": {
+                                                                "ref": "external-commander.Command.html",
+                                                                "tf": 1150
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "n": {
+                                "docs": {},
+                                "f": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "g": {
+                                      "docs": {
+                                        "external-config.html": {
+                                          "ref": "external-config.html",
+                                          "tf": 1300
+                                        },
+                                        "pixeldeck.cfg.html": {
+                                          "ref": "pixeldeck.cfg.html",
+                                          "tf": 7.142857142857142
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "p": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "t": {
+                                "docs": {},
+                                "h": {
+                                  "docs": {
+                                    "external-Path.html": {
+                                      "ref": "external-Path.html",
+                                      "tf": 1300
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "f": {
+                            "docs": {
+                              "external-fs.html": {
+                                "ref": "external-fs.html",
+                                "tf": 1300
+                              }
+                            }
+                          },
+                          "k": {
+                            "docs": {},
+                            "n": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "x": {
+                                  "docs": {
+                                    "external-Knex.html": {
+                                      "ref": "external-Knex.html",
+                                      "tf": 1300
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "o": {
+                            "docs": {},
+                            "b": {
+                              "docs": {},
+                              "j": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "c": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {
+                                        "external-Objection.html": {
+                                          "ref": "external-Objection.html",
+                                          "tf": 1300
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "h": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "t": {
+                                "docs": {},
+                                "p": {
+                                  "docs": {
+                                    "external-http.html": {
+                                      "ref": "external-http.html",
+                                      "tf": 1300
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "e": {
+                            "docs": {},
+                            "x": {
+                              "docs": {},
+                              "p": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {
+                                          "external-Express.html": {
+                                            "ref": "external-Express.html",
+                                            "tf": 1300
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "r": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "p": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {
+                                    "external-Repl.html": {
+                                      "ref": "external-Repl.html",
+                                      "tf": 1300
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "n": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "mdl.TiledMap.html#.jsonSchema": {
+                        "ref": "mdl.TiledMap.html#.jsonSchema",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledMapUsesSet.html#.jsonSchemaProperties": {
+                        "ref": "mdl.TiledMapUsesSet.html#.jsonSchemaProperties",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledModel.html#.jsonSchemaProperties": {
+                        "ref": "mdl.TiledModel.html#.jsonSchemaProperties",
+                        "tf": 10
+                      },
+                      "mdl.TiledObject.html#.jsonSchemaProperties": {
+                        "ref": "mdl.TiledObject.html#.jsonSchemaProperties",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledSet.html#.jsonSchemaProperties": {
+                        "ref": "mdl.TiledSet.html#.jsonSchemaProperties",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledSet.html#.createSchemaOn": {
+                        "ref": "mdl.TiledSet.html#.createSchemaOn",
+                        "tf": 12.5
+                      }
+                    }
+                  },
+                  "s": {
+                    "docs": {
+                      "pixeldeck.arch.html#.getResPathFor": {
+                        "ref": "pixeldeck.arch.html#.getResPathFor",
+                        "tf": 2.1739130434782608
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "i": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "mdl.TiledFile.html#exists": {
+                      "ref": "mdl.TiledFile.html#exists",
+                      "tf": 712.5
+                    },
+                    "mdl.TiledFile.html#.findResourcePathFor": {
+                      "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                      "tf": 5
+                    },
+                    "mdl.TiledModel.html#.ensureAllSchemas": {
+                      "ref": "mdl.TiledModel.html#.ensureAllSchemas",
+                      "tf": 16.666666666666664
+                    }
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "p": {
+                  "docs": {},
+                  "l": {
+                    "docs": {
+                      "mdl.TiledSet.html#.jsonSchemaRequired": {
+                        "ref": "mdl.TiledSet.html#.jsonSchemaRequired",
+                        "tf": 8.333333333333332
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "p": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "s": {
+                      "docs": {
+                        "external-Express.html": {
+                          "ref": "external-Express.html",
+                          "tf": 600
+                        },
+                        "pixeldeck.service.html": {
+                          "ref": "pixeldeck.service.html",
+                          "tf": 5
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "c": {
+              "docs": {},
+              "h": {
+                "docs": {
+                  "pixeldeck.arch.html#.defineRequires": {
+                    "ref": "pixeldeck.arch.html#.defineRequires",
+                    "tf": 2.5
+                  },
+                  "mdl.html": {
+                    "ref": "mdl.html",
+                    "tf": 6.25
+                  },
+                  "mdl.html#.TiledGid": {
+                    "ref": "mdl.html#.TiledGid",
+                    "tf": 4.838709677419355
+                  },
+                  "mdl.html#.primaryKey": {
+                    "ref": "mdl.html#.primaryKey",
+                    "tf": 10
+                  }
+                }
+              }
+            }
+          },
+          "m": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "pixeldeck.service.html": {
+                    "ref": "pixeldeck.service.html",
+                    "tf": 5
+                  }
+                }
+              }
+            }
+          }
+        },
+        "i": {
+          "docs": {},
+          "n": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "x": {
+                  "docs": {
+                    "index.html": {
+                      "ref": "index.html",
+                      "tf": 1300
+                    },
+                    "cli.html": {
+                      "ref": "cli.html",
+                      "tf": 12.5
+                    },
+                    "pixeldeck.html": {
+                      "ref": "pixeldeck.html",
+                      "tf": 25
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "c": {
+                      "docs": {
+                        "cli.Cmd.html#dbg": {
+                          "ref": "cli.Cmd.html#dbg",
+                          "tf": 25
+                        },
+                        "cli.Serve.html#dbg": {
+                          "ref": "cli.Serve.html#dbg",
+                          "tf": 25
+                        },
+                        "mdl.TiledChunk.html#dbg": {
+                          "ref": "mdl.TiledChunk.html#dbg",
+                          "tf": 16.666666666666664
+                        },
+                        "mdl.TiledFile.html#dbg": {
+                          "ref": "mdl.TiledFile.html#dbg",
+                          "tf": 16.666666666666664
+                        },
+                        "mdl.TiledFrame.html#dbg": {
+                          "ref": "mdl.TiledFrame.html#dbg",
+                          "tf": 16.666666666666664
+                        },
+                        "mdl.TiledLayer.html#dbg": {
+                          "ref": "mdl.TiledLayer.html#dbg",
+                          "tf": 16.666666666666664
+                        },
+                        "mdl.TiledMap.html#dbg": {
+                          "ref": "mdl.TiledMap.html#dbg",
+                          "tf": 16.666666666666664
+                        },
+                        "mdl.TiledMapUsesSet.html#dbg": {
+                          "ref": "mdl.TiledMapUsesSet.html#dbg",
+                          "tf": 16.666666666666664
+                        },
+                        "mdl.TiledModel.html#dbg": {
+                          "ref": "mdl.TiledModel.html#dbg",
+                          "tf": 16.666666666666664
+                        },
+                        "mdl.TiledPoint.html#dbg": {
+                          "ref": "mdl.TiledPoint.html#dbg",
+                          "tf": 16.666666666666664
+                        },
+                        "mdl.TiledProperties.html#dbg": {
+                          "ref": "mdl.TiledProperties.html#dbg",
+                          "tf": 16.666666666666664
+                        },
+                        "mdl.TiledSet.html#dbg": {
+                          "ref": "mdl.TiledSet.html#dbg",
+                          "tf": 16.666666666666664
+                        },
+                        "mdl.TiledTile.html#dbg": {
+                          "ref": "mdl.TiledTile.html#dbg",
+                          "tf": 16.666666666666664
+                        },
+                        "pixeldeck.server.html": {
+                          "ref": "pixeldeck.server.html",
+                          "tf": 12.5
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "f": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "m": {
+                    "docs": {
+                      "mdl.TiledFile.html": {
+                        "ref": "mdl.TiledFile.html",
+                        "tf": 6.25
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "g": {
+                  "docs": {
+                    "mdl.TiledSet.html#columns": {
+                      "ref": "mdl.TiledSet.html#columns",
+                      "tf": 50
+                    },
+                    "mdl.TiledSet.html#imageheight": {
+                      "ref": "mdl.TiledSet.html#imageheight",
+                      "tf": 50
+                    },
+                    "mdl.TiledSet.html#imagewidth": {
+                      "ref": "mdl.TiledSet.html#imagewidth",
+                      "tf": 50
+                    },
+                    "mdl.TiledSet.html#margin": {
+                      "ref": "mdl.TiledSet.html#margin",
+                      "tf": 50
+                    },
+                    "mdl.TiledSet.html#spacing": {
+                      "ref": "mdl.TiledSet.html#spacing",
+                      "tf": 50
+                    },
+                    "mdl.TiledSet.html#tilecount": {
+                      "ref": "mdl.TiledSet.html#tilecount",
+                      "tf": 50
+                    },
+                    "mdl.TiledSet.html#tileheight": {
+                      "ref": "mdl.TiledSet.html#tileheight",
+                      "tf": 50
+                    },
+                    "mdl.TiledSet.html#tilewidth": {
+                      "ref": "mdl.TiledSet.html#tilewidth",
+                      "tf": 50
+                    },
+                    "mdl.TiledTile.html#id": {
+                      "ref": "mdl.TiledTile.html#id",
+                      "tf": 50
+                    },
+                    "mdl.TiledTile.html#imageheight": {
+                      "ref": "mdl.TiledTile.html#imageheight",
+                      "tf": 50
+                    },
+                    "mdl.html#.TiledGid": {
+                      "ref": "mdl.html#.TiledGid",
+                      "tf": 1.6129032258064515
+                    },
+                    "mdl.html#.primaryKey": {
+                      "ref": "mdl.html#.primaryKey",
+                      "tf": 10
+                    }
+                  }
+                },
+                "r": {
+                  "docs": {},
+                  "f": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "c": {
+                        "docs": {
+                          "external-Knex.html": {
+                            "ref": "external-Knex.html",
+                            "tf": 10
+                          },
+                          "cli.html": {
+                            "ref": "cli.html",
+                            "tf": 12.5
+                          },
+                          "pixeldeck.ui.html": {
+                            "ref": "pixeldeck.ui.html",
+                            "tf": 12.5
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "p": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "pixeldeck.arch.html#.cleanQuery": {
+                      "ref": "pixeldeck.arch.html#.cleanQuery",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
+            },
+            "c": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "m": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "n": {
+                        "docs": {},
+                        "t": {
+                          "docs": {
+                            "mdl.html#.primaryKey": {
+                              "ref": "mdl.html#.primaryKey",
+                              "tf": 10
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "m": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "m": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "n": {
+                        "docs": {},
+                        "t": {
+                          "docs": {
+                            "cli.Cmd.html": {
+                              "ref": "cli.Cmd.html",
+                              "tf": 12.5
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "mdl.TiledFile.html": {
+                        "ref": "mdl.TiledFile.html",
+                        "tf": 6.25
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "g": {
+                "docs": {
+                  "mdl.TiledSet.html#image": {
+                    "ref": "mdl.TiledSet.html#image",
+                    "tf": 650
+                  },
+                  "mdl.TiledTile.html#imageheight": {
+                    "ref": "mdl.TiledTile.html#imageheight",
+                    "tf": 12.5
+                  },
+                  "mdl.TiledTile.html#image": {
+                    "ref": "mdl.TiledTile.html#image",
+                    "tf": 650
+                  }
+                },
+                "e": {
+                  "docs": {},
+                  "h": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "i": {
+                        "docs": {},
+                        "g": {
+                          "docs": {},
+                          "h": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "mdl.TiledSet.html#imageheight": {
+                                  "ref": "mdl.TiledSet.html#imageheight",
+                                  "tf": 650
+                                },
+                                "mdl.TiledTile.html#imageheight": {
+                                  "ref": "mdl.TiledTile.html#imageheight",
+                                  "tf": 650
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "w": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "t": {
+                          "docs": {},
+                          "h": {
+                            "docs": {
+                              "mdl.TiledSet.html#imagewidth": {
+                                "ref": "mdl.TiledSet.html#imagewidth",
+                                "tf": 650
+                              },
+                              "mdl.TiledTile.html#imagewidth": {
+                                "ref": "mdl.TiledTile.html#imagewidth",
+                                "tf": 700
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "d": {
+            "docs": {
+              "mdl.TiledModel.html#.idColumn": {
+                "ref": "mdl.TiledModel.html#.idColumn",
+                "tf": 7.142857142857142
+              },
+              "mdl.TiledTile.html#id": {
+                "ref": "mdl.TiledTile.html#id",
+                "tf": 666.6666666666666
+              }
+            },
+            "c": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "u": {
+                    "docs": {},
+                    "m": {
+                      "docs": {},
+                      "n": {
+                        "docs": {
+                          "mdl.TiledModel.html#.idColumn": {
+                            "ref": "mdl.TiledModel.html#.idColumn",
+                            "tf": 650
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "s": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "'": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "mdl.html#.TiledGid": {
+                      "ref": "mdl.html#.TiledGid",
+                      "tf": 1.6129032258064515
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "p": {
+          "docs": {},
+          "i": {
+            "docs": {},
+            "x": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "index.html": {
+                      "ref": "index.html",
+                      "tf": 23.333333333333332
+                    },
+                    "pixeldeck.service.html": {
+                      "ref": "pixeldeck.service.html",
+                      "tf": 5
+                    }
+                  },
+                  "d": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "k": {
+                          "docs": {
+                            "index.html": {
+                              "ref": "index.html",
+                              "tf": 600
+                            },
+                            "cli.Cmd.html": {
+                              "ref": "cli.Cmd.html",
+                              "tf": 12.5
+                            },
+                            "pixeldeck.html": {
+                              "ref": "pixeldeck.html",
+                              "tf": 1900
+                            },
+                            "pixeldeck.server.html#.Stop": {
+                              "ref": "pixeldeck.server.html#.Stop",
+                              "tf": 12.5
+                            },
+                            "pixeldeck.service.html": {
+                              "ref": "pixeldeck.service.html",
+                              "tf": 5
+                            }
+                          },
+                          "'": {
+                            "docs": {
+                              "MakeMap.html": {
+                                "ref": "MakeMap.html",
+                                "tf": 5.555555555555555
+                              }
+                            }
+                          },
+                          ".": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "f": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {
+                                    "external-config.html": {
+                                      "ref": "external-config.html",
+                                      "tf": 25
+                                    },
+                                    "pixeldeck.cfg.html": {
+                                      "ref": "pixeldeck.cfg.html",
+                                      "tf": 1250
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "a": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "h": {
+                                    "docs": {
+                                      "pixeldeck.arch.html": {
+                                        "ref": "pixeldeck.arch.html",
+                                        "tf": 1250
+                                      }
+                                    },
+                                    ".": {
+                                      "docs": {},
+                                      "p": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "h": {
+                                              "docs": {
+                                                "pixeldeck.arch.html#.Path": {
+                                                  "ref": "pixeldeck.arch.html#.Path",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "f": {
+                                        "docs": {
+                                          "pixeldeck.arch.html#.Fs": {
+                                            "ref": "pixeldeck.arch.html#.Fs",
+                                            "tf": 1100
+                                          }
+                                        }
+                                      },
+                                      "u": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "l": {
+                                              "docs": {
+                                                "pixeldeck.arch.html#.Util": {
+                                                  "ref": "pixeldeck.arch.html#.Util",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "d": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "f": {
+                                            "docs": {},
+                                            "i": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "q": {
+                                                        "docs": {},
+                                                        "u": {
+                                                          "docs": {},
+                                                          "i": {
+                                                            "docs": {},
+                                                            "r": {
+                                                              "docs": {
+                                                                "pixeldeck.arch.html#.defineRequires": {
+                                                                  "ref": "pixeldeck.arch.html#.defineRequires",
+                                                                  "tf": 1100
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "g": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "r": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "p": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {},
+                                                      "t": {
+                                                        "docs": {},
+                                                        "h": {
+                                                          "docs": {},
+                                                          "f": {
+                                                            "docs": {},
+                                                            "o": {
+                                                              "docs": {},
+                                                              "r": {
+                                                                "docs": {
+                                                                  "pixeldeck.arch.html#.getResPathFor": {
+                                                                    "ref": "pixeldeck.arch.html#.getResPathFor",
+                                                                    "tf": 1100
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "c": {
+                                        "docs": {},
+                                        "l": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "q": {
+                                                  "docs": {},
+                                                  "u": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "r": {
+                                                        "docs": {},
+                                                        "i": {
+                                                          "docs": {
+                                                            "pixeldeck.arch.html#.cleanQuery": {
+                                                              "ref": "pixeldeck.arch.html#.cleanQuery",
+                                                              "tf": 1100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "d": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "t": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {
+                                      "pixeldeck.data.html": {
+                                        "ref": "pixeldeck.data.html",
+                                        "tf": 1250
+                                      }
+                                    },
+                                    ".": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "k": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "x": {
+                                                    "docs": {
+                                                      "pixeldeck.data.html#.disknex": {
+                                                        "ref": "pixeldeck.data.html#.disknex",
+                                                        "tf": 1100
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "s": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "v": {
+                                    "docs": {
+                                      "pixeldeck.server.html": {
+                                        "ref": "pixeldeck.server.html",
+                                        "tf": 1250
+                                      }
+                                    },
+                                    "e": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        ".": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "s": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "a": {
+                                                    "docs": {},
+                                                    "r": {
+                                                      "docs": {},
+                                                      "t": {
+                                                        "docs": {
+                                                          "pixeldeck.server.html#.Restart": {
+                                                            "ref": "pixeldeck.server.html#.Restart",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "s": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {},
+                                                "r": {
+                                                  "docs": {},
+                                                  "t": {
+                                                    "docs": {
+                                                      "pixeldeck.server.html#.Start": {
+                                                        "ref": "pixeldeck.server.html#.Start",
+                                                        "tf": 1100
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "o": {
+                                                "docs": {},
+                                                "p": {
+                                                  "docs": {
+                                                    "pixeldeck.server.html#.Stop": {
+                                                      "ref": "pixeldeck.server.html#.Stop",
+                                                      "tf": 1100
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "i": {
+                                      "docs": {},
+                                      "c": {
+                                        "docs": {
+                                          "pixeldeck.service.html": {
+                                            "ref": "pixeldeck.service.html",
+                                            "tf": 1250
+                                          }
+                                        },
+                                        "e": {
+                                          "docs": {},
+                                          ".": {
+                                            "docs": {},
+                                            "g": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "o": {
+                                                        "docs": {},
+                                                        "t": {
+                                                          "docs": {
+                                                            "pixeldeck.service.html#.getRoot": {
+                                                              "ref": "pixeldeck.service.html#.getRoot",
+                                                              "tf": 1100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "t": {
+                                                    "docs": {},
+                                                    "i": {
+                                                      "docs": {},
+                                                      "l": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "d": {
+                                                            "docs": {},
+                                                            "m": {
+                                                              "docs": {},
+                                                              "a": {
+                                                                "docs": {},
+                                                                "p": {
+                                                                  "docs": {},
+                                                                  "h": {
+                                                                    "docs": {},
+                                                                    "t": {
+                                                                      "docs": {},
+                                                                      "m": {
+                                                                        "docs": {},
+                                                                        "l": {
+                                                                          "docs": {
+                                                                            "pixeldeck.service.html#.getTiledMapHtml": {
+                                                                              "ref": "pixeldeck.service.html#.getTiledMapHtml",
+                                                                              "tf": 1100
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "s": {
+                                                                    "docs": {},
+                                                                    "v": {
+                                                                      "docs": {},
+                                                                      "g": {
+                                                                        "docs": {
+                                                                          "pixeldeck.service.html#.getTiledMapSvg": {
+                                                                            "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                                                                            "tf": 1100
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "s": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "t": {
+                                                                  "docs": {},
+                                                                  "s": {
+                                                                    "docs": {},
+                                                                    "v": {
+                                                                      "docs": {},
+                                                                      "g": {
+                                                                        "docs": {
+                                                                          "pixeldeck.service.html#.getTiledSetSvg": {
+                                                                            "ref": "pixeldeck.service.html#.getTiledSetSvg",
+                                                                            "tf": 1100
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "u": {
+                              "docs": {},
+                              "i": {
+                                "docs": {
+                                  "pixeldeck.ui.html": {
+                                    "ref": "pixeldeck.ui.html",
+                                    "tf": 1250
+                                  }
+                                },
+                                ".": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {
+                                              "pixeldeck.ui.html#.Start": {
+                                                "ref": "pixeldeck.ui.html#.Start",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "o": {
+                                        "docs": {},
+                                        "p": {
+                                          "docs": {
+                                            "pixeldeck.ui.html#.Stop": {
+                                              "ref": "pixeldeck.ui.html#.Stop",
+                                              "tf": 1100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "mdl.TiledChunk.html#.createSchemaOn": {
+                          "ref": "mdl.TiledChunk.html#.createSchemaOn",
+                          "tf": 12.5
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "i": {
+                        "docs": {
+                          "mdl.TiledChunk.html#.createSchemaOn": {
+                            "ref": "mdl.TiledChunk.html#.createSchemaOn",
+                            "tf": 12.5
+                          },
+                          "mdl.TiledModel.html#.jsonSchemaProperties": {
+                            "ref": "mdl.TiledModel.html#.jsonSchemaProperties",
+                            "tf": 10
+                          },
+                          "mdl.TiledProperties.html": {
+                            "ref": "mdl.TiledProperties.html",
+                            "tf": 3.125
+                          },
+                          "mdl.TiledProperties.html#.createSchemaOn": {
+                            "ref": "mdl.TiledProperties.html#.createSchemaOn",
+                            "tf": 16.666666666666664
+                          },
+                          "pixeldeck.arch.html#.defineRequires": {
+                            "ref": "pixeldeck.arch.html#.defineRequires",
+                            "tf": 5
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "b": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "b": {
+                    "docs": {},
+                    "l": {
+                      "docs": {
+                        "mdl.TiledTile.html#probability": {
+                          "ref": "mdl.TiledTile.html#probability",
+                          "tf": 700
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "v": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "external-commander.html": {
+                        "ref": "external-commander.html",
+                        "tf": 5
+                      },
+                      "external-Knex.html": {
+                        "ref": "external-Knex.html",
+                        "tf": 10
+                      },
+                      "external-Objection.html": {
+                        "ref": "external-Objection.html",
+                        "tf": 8.333333333333332
+                      },
+                      "external-http.html": {
+                        "ref": "external-http.html",
+                        "tf": 12.5
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "i": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "y": {
+                      "docs": {},
+                      "k": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "y": {
+                            "docs": {
+                              "mdl.html#.primaryKey": {
+                                "ref": "mdl.html#.primaryKey",
+                                "tf": 750
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "h": {
+                "docs": {
+                  "mdl.TiledFile.html#.resourceSearchPaths": {
+                    "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                    "tf": 8.333333333333332
+                  },
+                  "mdl.TiledFile.html#.findResourcePathFor": {
+                    "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                    "tf": 38.33333333333333
+                  },
+                  "external-Path.html": {
+                    "ref": "external-Path.html",
+                    "tf": 600
+                  },
+                  "pixeldeck.arch.html#.Path": {
+                    "ref": "pixeldeck.arch.html#.Path",
+                    "tf": 664.2857142857143
+                  },
+                  "pixeldeck.arch.html#.defineRequires": {
+                    "ref": "pixeldeck.arch.html#.defineRequires",
+                    "tf": 2.5
+                  },
+                  "pixeldeck.arch.html#.getResPathFor": {
+                    "ref": "pixeldeck.arch.html#.getResPathFor",
+                    "tf": 6.521739130434782
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "u": {
+                      "docs": {},
+                      "l": {
+                        "docs": {},
+                        "a": {
+                          "docs": {},
+                          "r": {
+                            "docs": {
+                              "mdl.TiledTile.html#TiledSetUuid": {
+                                "ref": "mdl.TiledTile.html#TiledSetUuid",
+                                "tf": 16.666666666666664
+                              },
+                              "mdl.html#.TiledGid": {
+                                "ref": "mdl.html#.TiledGid",
+                                "tf": 1.6129032258064515
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "s": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "external-commander.html": {
+                        "ref": "external-commander.html",
+                        "tf": 5
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "c": {
+              "docs": {},
+              "k": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "pixeldeck.cfg.html": {
+                        "ref": "pixeldeck.cfg.html",
+                        "tf": 7.142857142857142
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "l": {
+            "docs": {},
+            "u": {
+              "docs": {
+                "external-commander.html": {
+                  "ref": "external-commander.html",
+                  "tf": 5
+                }
+              }
+            }
+          }
+        },
+        "r": {
+          "docs": {},
+          "e": {
+            "docs": {
+              "pixeldeck.service.html#.getRoot": {
+                "ref": "pixeldeck.service.html#.getRoot",
+                "tf": 25
+              },
+              "pixeldeck.service.html#.getTiledMapHtml": {
+                "ref": "pixeldeck.service.html#.getTiledMapHtml",
+                "tf": 16.666666666666664
+              },
+              "pixeldeck.service.html#.getTiledMapSvg": {
+                "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                "tf": 20
+              },
+              "pixeldeck.service.html#.getTiledSetSvg": {
+                "ref": "pixeldeck.service.html#.getTiledSetSvg",
+                "tf": 20
+              }
+            },
+            "a": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "pixeldeck.arch.html#.defineRequires": {
+                    "ref": "pixeldeck.arch.html#.defineRequires",
+                    "tf": 2.5
+                  }
+                },
+                "m": {
+                  "docs": {
+                    "index.html": {
+                      "ref": "index.html",
+                      "tf": 110
+                    }
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "mdl.TiledChunk.html#dbg": {
+                        "ref": "mdl.TiledChunk.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledFile.html#dbg": {
+                        "ref": "mdl.TiledFile.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledFile.html#.findResourcePathFor": {
+                        "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                        "tf": 5
+                      },
+                      "mdl.TiledFrame.html#dbg": {
+                        "ref": "mdl.TiledFrame.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledLayer.html#dbg": {
+                        "ref": "mdl.TiledLayer.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledMap.html#dbg": {
+                        "ref": "mdl.TiledMap.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledMapUsesSet.html#dbg": {
+                        "ref": "mdl.TiledMapUsesSet.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledModel.html#.dbg": {
+                        "ref": "mdl.TiledModel.html#.dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledModel.html#dbg": {
+                        "ref": "mdl.TiledModel.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledPoint.html#dbg": {
+                        "ref": "mdl.TiledPoint.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledProperties.html#dbg": {
+                        "ref": "mdl.TiledProperties.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledSet.html#.jsonSchemaRequired": {
+                        "ref": "mdl.TiledSet.html#.jsonSchemaRequired",
+                        "tf": 8.333333333333332
+                      },
+                      "mdl.TiledSet.html#dbg": {
+                        "ref": "mdl.TiledSet.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledTile.html#dbg": {
+                        "ref": "mdl.TiledTile.html#dbg",
+                        "tf": 16.666666666666664
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "d": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "mdl.TiledChunk.html#render": {
+                        "ref": "mdl.TiledChunk.html#render",
+                        "tf": 675
+                      },
+                      "mdl.TiledFile.html#render": {
+                        "ref": "mdl.TiledFile.html#render",
+                        "tf": 675
+                      },
+                      "mdl.TiledFrame.html#render": {
+                        "ref": "mdl.TiledFrame.html#render",
+                        "tf": 675
+                      },
+                      "mdl.TiledLayer.html#render": {
+                        "ref": "mdl.TiledLayer.html#render",
+                        "tf": 675
+                      },
+                      "mdl.TiledMap.html#render": {
+                        "ref": "mdl.TiledMap.html#render",
+                        "tf": 675
+                      },
+                      "mdl.TiledMapUsesSet.html#render": {
+                        "ref": "mdl.TiledMapUsesSet.html#render",
+                        "tf": 675
+                      },
+                      "mdl.TiledModel.html#render": {
+                        "ref": "mdl.TiledModel.html#render",
+                        "tf": 675
+                      },
+                      "mdl.TiledPoint.html#render": {
+                        "ref": "mdl.TiledPoint.html#render",
+                        "tf": 675
+                      },
+                      "mdl.TiledProperties.html#render": {
+                        "ref": "mdl.TiledProperties.html#render",
+                        "tf": 675
+                      },
+                      "mdl.TiledSet.html#render": {
+                        "ref": "mdl.TiledSet.html#render",
+                        "tf": 675
+                      },
+                      "mdl.TiledTile.html#render": {
+                        "ref": "mdl.TiledTile.html#render",
+                        "tf": 675
+                      },
+                      "cli.html#.MakeMap": {
+                        "ref": "cli.html#.MakeMap",
+                        "tf": 16.666666666666664
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "p": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "s": {
+                    "docs": {
+                      "mdl.TiledFile.html": {
+                        "ref": "mdl.TiledFile.html",
+                        "tf": 6.25
+                      },
+                      "mdl.TiledProperties.html": {
+                        "ref": "mdl.TiledProperties.html",
+                        "tf": 3.125
+                      },
+                      "pixeldeck.ui.html": {
+                        "ref": "pixeldeck.ui.html",
+                        "tf": 12.5
+                      }
+                    },
+                    "e": {
+                      "docs": {},
+                      "n": {
+                        "docs": {},
+                        "t": {
+                          "docs": {
+                            "mdl.TiledLayer.html": {
+                              "ref": "mdl.TiledLayer.html",
+                              "tf": 8.333333333333332
+                            },
+                            "external-Objection.html": {
+                              "ref": "external-Objection.html",
+                              "tf": 8.333333333333332
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "l": {
+                "docs": {
+                  "external-Repl.html": {
+                    "ref": "external-Repl.html",
+                    "tf": 600
+                  }
+                },
+                "a": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "m": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "x": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {
+                                      "pixeldeck.arch.html#.getResPathFor": {
+                                        "ref": "pixeldeck.arch.html#.getResPathFor",
+                                        "tf": 25
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "pixeldeck.arch.html#.getResPathFor": {
+                        "ref": "pixeldeck.arch.html#.getResPathFor",
+                        "tf": 2.1739130434782608
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "c": {
+                      "docs": {
+                        "pixeldeck.arch.html#.getResPathFor": {
+                          "ref": "pixeldeck.arch.html#.getResPathFor",
+                          "tf": 4.3478260869565215
+                        }
+                      },
+                      "e": {
+                        "docs": {},
+                        "s": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "h": {
+                                    "docs": {},
+                                    "p": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "h": {
+                                            "docs": {
+                                              "mdl.TiledFile.html#.resourceSearchPaths": {
+                                                "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                                                "tf": 633.3333333333334
+                                              },
+                                              "mdl.TiledFile.html#.findResourcePathFor": {
+                                                "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                                                "tf": 5
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "p": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "h": {
+                                "docs": {
+                                  "mdl.TiledFile.html#exists": {
+                                    "ref": "mdl.TiledFile.html#exists",
+                                    "tf": 12.5
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "t": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "pixeldeck.server.html#.Restart": {
+                          "ref": "pixeldeck.server.html#.Restart",
+                          "tf": 683.3333333333334
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "mdl.TiledMapUsesSet.html#.relationMappings": {
+                      "ref": "mdl.TiledMapUsesSet.html#.relationMappings",
+                      "tf": 25
+                    },
+                    "mdl.TiledObject.html#.relationMappings": {
+                      "ref": "mdl.TiledObject.html#.relationMappings",
+                      "tf": 16.666666666666664
+                    }
+                  },
+                  "i": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "n": {
+                        "docs": {},
+                        "m": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "p": {
+                              "docs": {
+                                "mdl.TiledLayer.html#.relationMappings": {
+                                  "ref": "mdl.TiledLayer.html#.relationMappings",
+                                  "tf": 650
+                                },
+                                "mdl.TiledMap.html#.relationMappings": {
+                                  "ref": "mdl.TiledMap.html#.relationMappings",
+                                  "tf": 650
+                                },
+                                "mdl.TiledMapUsesSet.html#.relationMappings": {
+                                  "ref": "mdl.TiledMapUsesSet.html#.relationMappings",
+                                  "tf": 650
+                                },
+                                "mdl.TiledObject.html#.relationMappings": {
+                                  "ref": "mdl.TiledObject.html#.relationMappings",
+                                  "tf": 650
+                                },
+                                "mdl.TiledSet.html#.relationMappings": {
+                                  "ref": "mdl.TiledSet.html#.relationMappings",
+                                  "tf": 650
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "s": {
+                          "docs": {},
+                          "h": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "p": {
+                                "docs": {
+                                  "mdl.TiledLayer.html#.relationMappings": {
+                                    "ref": "mdl.TiledLayer.html#.relationMappings",
+                                    "tf": 4.545454545454546
+                                  },
+                                  "mdl.TiledMap.html#.relationMappings": {
+                                    "ref": "mdl.TiledMap.html#.relationMappings",
+                                    "tf": 4.545454545454546
+                                  },
+                                  "mdl.TiledProperties.html": {
+                                    "ref": "mdl.TiledProperties.html",
+                                    "tf": 3.125
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "q": {
+              "docs": {
+                "pixeldeck.service.html#.getRoot": {
+                  "ref": "pixeldeck.service.html#.getRoot",
+                  "tf": 25
+                },
+                "pixeldeck.service.html#.getTiledMapHtml": {
+                  "ref": "pixeldeck.service.html#.getTiledMapHtml",
+                  "tf": 16.666666666666664
+                },
+                "pixeldeck.service.html#.getTiledMapSvg": {
+                  "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                  "tf": 20
+                },
+                "pixeldeck.service.html#.getTiledSetSvg": {
+                  "ref": "pixeldeck.service.html#.getTiledSetSvg",
+                  "tf": 20
+                }
+              },
+              "u": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "mdl.TiledModel.html#.jsonSchemaRequired": {
+                        "ref": "mdl.TiledModel.html#.jsonSchemaRequired",
+                        "tf": 16.666666666666664
+                      },
+                      "pixeldeck.arch.html#.defineRequires": {
+                        "ref": "pixeldeck.arch.html#.defineRequires",
+                        "tf": 5
+                      },
+                      "mdl.html": {
+                        "ref": "mdl.html",
+                        "tf": 6.25
+                      },
+                      "mdl.html#.ALL": {
+                        "ref": "mdl.html#.ALL",
+                        "tf": 8.333333333333332
+                      }
+                    }
+                  }
+                },
+                "e": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "pixeldeck.service.html#.getRoot": {
+                          "ref": "pixeldeck.service.html#.getRoot",
+                          "tf": 16.666666666666664
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "w": {
+              "docs": {
+                "mdl.TiledSet.html#columns": {
+                  "ref": "mdl.TiledSet.html#columns",
+                  "tf": 16.666666666666664
+                }
+              }
+            },
+            "u": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "pixeldeck.service.html": {
+                    "ref": "pixeldeck.service.html",
+                    "tf": 5
+                  },
+                  "pixeldeck.service.html#.getTiledMapSvg": {
+                    "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                    "tf": 12.5
+                  }
+                }
+              }
+            },
+            "o": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "pixeldeck.service.html#.getRoot": {
+                    "ref": "pixeldeck.service.html#.getRoot",
+                    "tf": 16.666666666666664
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "m": {
+                    "docs": {
+                      "pixeldeck.cfg.html": {
+                        "ref": "pixeldeck.cfg.html",
+                        "tf": 7.142857142857142
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "v": {
+          "docs": {},
+          "i": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "l": {
+                      "docs": {
+                        "index.html": {
+                          "ref": "index.html",
+                          "tf": 23.333333333333332
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {
+                "pixeldeck.service.html": {
+                  "ref": "pixeldeck.service.html",
+                  "tf": 5
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "mdl.TiledSet.html#version": {
+                          "ref": "mdl.TiledSet.html#version",
+                          "tf": 650
+                        },
+                        "MakeMap.html": {
+                          "ref": "MakeMap.html",
+                          "tf": 5.555555555555555
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "u": {
+                "docs": {
+                  "mdl.html#.TiledGid": {
+                    "ref": "mdl.html#.TiledGid",
+                    "tf": 1.6129032258064515
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "u": {
+                    "docs": {
+                      "pixeldeck.server.html#.Stop": {
+                        "ref": "pixeldeck.server.html#.Stop",
+                        "tf": 12.5
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "docs": {},
+          "o": {
+            "docs": {},
+            "c": {
+              "docs": {
+                "pixeldeck.arch.html#.Path": {
+                  "ref": "pixeldeck.arch.html#.Path",
+                  "tf": 7.142857142857142
+                },
+                "pixeldeck.arch.html#.Fs": {
+                  "ref": "pixeldeck.arch.html#.Fs",
+                  "tf": 7.142857142857142
+                },
+                "pixeldeck.arch.html#.Util": {
+                  "ref": "pixeldeck.arch.html#.Util",
+                  "tf": 7.142857142857142
+                }
+              },
+              "u": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "t": {
+                        "docs": {
+                          "global.html": {
+                            "ref": "global.html",
+                            "tf": 35
+                          },
+                          "list_class.html": {
+                            "ref": "list_class.html",
+                            "tf": 35
+                          },
+                          "list_external.html": {
+                            "ref": "list_external.html",
+                            "tf": 23.333333333333332
+                          },
+                          "list_namespace.html": {
+                            "ref": "list_namespace.html",
+                            "tf": 35
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "b": {
+            "docs": {},
+            "g": {
+              "docs": {
+                "cli.Cmd.html#.dbg": {
+                  "ref": "cli.Cmd.html#.dbg",
+                  "tf": 650
+                },
+                "cli.Cmd.html#dbg": {
+                  "ref": "cli.Cmd.html#dbg",
+                  "tf": 700
+                },
+                "cli.Serve.html#dbg": {
+                  "ref": "cli.Serve.html#dbg",
+                  "tf": 700
+                },
+                "mdl.TiledChunk.html#dbg": {
+                  "ref": "mdl.TiledChunk.html#dbg",
+                  "tf": 700
+                },
+                "mdl.TiledFile.html#dbg": {
+                  "ref": "mdl.TiledFile.html#dbg",
+                  "tf": 700
+                },
+                "mdl.TiledFrame.html#dbg": {
+                  "ref": "mdl.TiledFrame.html#dbg",
+                  "tf": 700
+                },
+                "mdl.TiledLayer.html#dbg": {
+                  "ref": "mdl.TiledLayer.html#dbg",
+                  "tf": 700
+                },
+                "mdl.TiledMap.html#dbg": {
+                  "ref": "mdl.TiledMap.html#dbg",
+                  "tf": 700
+                },
+                "mdl.TiledMapUsesSet.html#dbg": {
+                  "ref": "mdl.TiledMapUsesSet.html#dbg",
+                  "tf": 700
+                },
+                "mdl.TiledModel.html#.dbg": {
+                  "ref": "mdl.TiledModel.html#.dbg",
+                  "tf": 650
+                },
+                "mdl.TiledModel.html#dbg": {
+                  "ref": "mdl.TiledModel.html#dbg",
+                  "tf": 700
+                },
+                "mdl.TiledPoint.html#dbg": {
+                  "ref": "mdl.TiledPoint.html#dbg",
+                  "tf": 700
+                },
+                "mdl.TiledProperties.html#dbg": {
+                  "ref": "mdl.TiledProperties.html#dbg",
+                  "tf": 700
+                },
+                "mdl.TiledSet.html#dbg": {
+                  "ref": "mdl.TiledSet.html#dbg",
+                  "tf": 700
+                },
+                "mdl.TiledTile.html#dbg": {
+                  "ref": "mdl.TiledTile.html#dbg",
+                  "tf": 700
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "b": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "g": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "cli.Cmd.html#.dbg": {
+                        "ref": "cli.Cmd.html#.dbg",
+                        "tf": 25
+                      },
+                      "cli.Cmd.html#dbg": {
+                        "ref": "cli.Cmd.html#dbg",
+                        "tf": 25
+                      },
+                      "cli.Serve.html#dbg": {
+                        "ref": "cli.Serve.html#dbg",
+                        "tf": 25
+                      },
+                      "mdl.TiledChunk.html#dbg": {
+                        "ref": "mdl.TiledChunk.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledFile.html#dbg": {
+                        "ref": "mdl.TiledFile.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledFrame.html#dbg": {
+                        "ref": "mdl.TiledFrame.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledLayer.html#dbg": {
+                        "ref": "mdl.TiledLayer.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledMap.html#dbg": {
+                        "ref": "mdl.TiledMap.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledMapUsesSet.html#dbg": {
+                        "ref": "mdl.TiledMapUsesSet.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledModel.html#.dbg": {
+                        "ref": "mdl.TiledModel.html#.dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledModel.html#dbg": {
+                        "ref": "mdl.TiledModel.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledPoint.html#dbg": {
+                        "ref": "mdl.TiledPoint.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledProperties.html#dbg": {
+                        "ref": "mdl.TiledProperties.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledSet.html#dbg": {
+                        "ref": "mdl.TiledSet.html#dbg",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledTile.html#dbg": {
+                        "ref": "mdl.TiledTile.html#dbg",
+                        "tf": 16.666666666666664
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "f": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "n": {
+                  "docs": {
+                    "mdl.TiledChunk.html#.createSchemaOn": {
+                      "ref": "mdl.TiledChunk.html#.createSchemaOn",
+                      "tf": 12.5
+                    },
+                    "mdl.TiledLayer.html#.relationMappings": {
+                      "ref": "mdl.TiledLayer.html#.relationMappings",
+                      "tf": 4.545454545454546
+                    },
+                    "mdl.TiledMap.html#.relationMappings": {
+                      "ref": "mdl.TiledMap.html#.relationMappings",
+                      "tf": 4.545454545454546
+                    },
+                    "mdl.TiledMapUsesSet.html#.relationMappings": {
+                      "ref": "mdl.TiledMapUsesSet.html#.relationMappings",
+                      "tf": 25
+                    },
+                    "mdl.TiledModel.html#.idColumn": {
+                      "ref": "mdl.TiledModel.html#.idColumn",
+                      "tf": 7.142857142857142
+                    },
+                    "mdl.TiledModel.html#.jsonSchemaRequired": {
+                      "ref": "mdl.TiledModel.html#.jsonSchemaRequired",
+                      "tf": 8.333333333333332
+                    },
+                    "mdl.TiledModel.html#.jsonSchemaProperties": {
+                      "ref": "mdl.TiledModel.html#.jsonSchemaProperties",
+                      "tf": 20
+                    },
+                    "mdl.TiledModel.html#.ensureSchema": {
+                      "ref": "mdl.TiledModel.html#.ensureSchema",
+                      "tf": 12.5
+                    },
+                    "mdl.TiledObject.html#.relationMappings": {
+                      "ref": "mdl.TiledObject.html#.relationMappings",
+                      "tf": 16.666666666666664
+                    },
+                    "mdl.TiledPoint.html#.createSchemaOn": {
+                      "ref": "mdl.TiledPoint.html#.createSchemaOn",
+                      "tf": 10
+                    },
+                    "mdl.TiledProperties.html#.createSchemaOn": {
+                      "ref": "mdl.TiledProperties.html#.createSchemaOn",
+                      "tf": 16.666666666666664
+                    },
+                    "mdl.TiledSet.html#columns": {
+                      "ref": "mdl.TiledSet.html#columns",
+                      "tf": 16.666666666666664
+                    },
+                    "mdl.TiledSet.html#.relationMappings": {
+                      "ref": "mdl.TiledSet.html#.relationMappings",
+                      "tf": 25
+                    },
+                    "pixeldeck.arch.html#.defineRequires": {
+                      "ref": "pixeldeck.arch.html#.defineRequires",
+                      "tf": 7.5
+                    }
+                  },
+                  "i": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "mdl.TiledSet.html#.createSchemaOn": {
+                          "ref": "mdl.TiledSet.html#.createSchemaOn",
+                          "tf": 12.5
+                        }
+                      }
+                    }
+                  },
+                  "e": {
+                    "docs": {},
+                    "r": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "q": {
+                          "docs": {},
+                          "u": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "r": {
+                                "docs": {
+                                  "pixeldeck.arch.html#.defineRequires": {
+                                    "ref": "pixeldeck.arch.html#.defineRequires",
+                                    "tf": 650
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "m": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "n": {
+                  "docs": {},
+                  "d": {
+                    "docs": {
+                      "mdl.html": {
+                        "ref": "mdl.html",
+                        "tf": 6.25
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "a": {
+                "docs": {
+                  "mdl.TiledFile.html": {
+                    "ref": "mdl.TiledFile.html",
+                    "tf": 6.25
+                  },
+                  "external-Objection.html": {
+                    "ref": "external-Objection.html",
+                    "tf": 8.333333333333332
+                  },
+                  "pixeldeck.data.html": {
+                    "ref": "pixeldeck.data.html",
+                    "tf": 650
+                  }
+                },
+                "b": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "s": {
+                      "docs": {
+                        "mdl.TiledFile.html": {
+                          "ref": "mdl.TiledFile.html",
+                          "tf": 6.25
+                        },
+                        "external-Knex.html": {
+                          "ref": "external-Knex.html",
+                          "tf": 10
+                        }
+                      }
+                    }
+                  }
+                },
+                ".": {
+                  "docs": {},
+                  "m": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "l": {
+                            "docs": {
+                              "mdl.TiledMap.html#.jsonSchema": {
+                                "ref": "mdl.TiledMap.html#.jsonSchema",
+                                "tf": 16.666666666666664
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "d": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "s": {
+                        "docs": {},
+                        "k": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "x": {
+                                "docs": {
+                                  "pixeldeck.data.html#.disknex": {
+                                    "ref": "pixeldeck.data.html#.disknex",
+                                    "tf": 100
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "i": {
+                          "docs": {
+                            "mdl.TiledFile.html#.resourceSearchPaths": {
+                              "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                              "tf": 8.333333333333332
+                            },
+                            "pixeldeck.arch.html#.getResPathFor": {
+                              "ref": "pixeldeck.arch.html#.getResPathFor",
+                              "tf": 6.521739130434782
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "n": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "m": {
+                    "docs": {
+                      "pixeldeck.arch.html#.defineRequires": {
+                        "ref": "pixeldeck.arch.html#.defineRequires",
+                        "tf": 2.5
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "f": {
+              "docs": {},
+              "f": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "mdl.TiledProperties.html": {
+                        "ref": "mdl.TiledProperties.html",
+                        "tf": 6.25
+                      },
+                      "mdl.html#.TiledGid": {
+                        "ref": "mdl.html#.TiledGid",
+                        "tf": 1.6129032258064515
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "t": {
+                            "docs": {
+                              "pixeldeck.data.html#.disknex": {
+                                "ref": "pixeldeck.data.html#.disknex",
+                                "tf": 25
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "k": {
+                "docs": {},
+                "n": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "x": {
+                      "docs": {
+                        "pixeldeck.data.html#.disknex": {
+                          "ref": "pixeldeck.data.html#.disknex",
+                          "tf": 650
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "p": {
+                "docs": {
+                  "mdl.TiledModel.html#.dropSchema": {
+                    "ref": "mdl.TiledModel.html#.dropSchema",
+                    "tf": 25
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "h": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "m": {
+                          "docs": {},
+                          "a": {
+                            "docs": {
+                              "mdl.TiledModel.html#.dropSchema": {
+                                "ref": "mdl.TiledModel.html#.dropSchema",
+                                "tf": 625
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "a": {
+                  "docs": {},
+                  "l": {
+                    "docs": {},
+                    "l": {
+                      "docs": {},
+                      "s": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "h": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "m": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {
+                                    "mdl.html#.models.dropAllSchemas": {
+                                      "ref": "mdl.html#.models.dropAllSchemas",
+                                      "tf": 100
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "docs": {},
+          "l": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "b": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "l": {
+                    "docs": {
+                      "global.html": {
+                        "ref": "global.html",
+                        "tf": 2045
+                      },
+                      "mdl.TiledModel.html#.idColumn": {
+                        "ref": "mdl.TiledModel.html#.idColumn",
+                        "tf": 7.142857142857142
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "t": {
+              "docs": {
+                "undefined": {
+                  "tf": 950
+                }
+              },
+              "s": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "mdl.TiledFile.html#getStat": {
+                          "ref": "mdl.TiledFile.html#getStat",
+                          "tf": 650
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "p": {
+                      "docs": {},
+                      "a": {
+                        "docs": {},
+                        "t": {
+                          "docs": {},
+                          "h": {
+                            "docs": {},
+                            "f": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {
+                                    "pixeldeck.arch.html#.getResPathFor": {
+                                      "ref": "pixeldeck.arch.html#.getResPathFor",
+                                      "tf": 625
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "o": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "pixeldeck.service.html#.getRoot": {
+                          "ref": "pixeldeck.service.html#.getRoot",
+                          "tf": 625
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "t": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "l": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "m": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "p": {
+                              "docs": {},
+                              "h": {
+                                "docs": {},
+                                "t": {
+                                  "docs": {},
+                                  "m": {
+                                    "docs": {},
+                                    "l": {
+                                      "docs": {
+                                        "pixeldeck.service.html#.getTiledMapHtml": {
+                                          "ref": "pixeldeck.service.html#.getTiledMapHtml",
+                                          "tf": 616.6666666666666
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "s": {
+                                "docs": {},
+                                "v": {
+                                  "docs": {},
+                                  "g": {
+                                    "docs": {
+                                      "pixeldeck.service.html#.getTiledMapSvg": {
+                                        "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                                        "tf": 620
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "s": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "s": {
+                                "docs": {},
+                                "v": {
+                                  "docs": {},
+                                  "g": {
+                                    "docs": {
+                                      "pixeldeck.service.html#.getTiledSetSvg": {
+                                        "ref": "pixeldeck.service.html#.getTiledSetSvg",
+                                        "tf": 620
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "-_MakeCmd.html": {
+                      "ref": "-_MakeCmd.html",
+                      "tf": 12.5
+                    },
+                    "mdl.html#.ALL": {
+                      "ref": "mdl.html#.ALL",
+                      "tf": 8.333333333333332
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "v": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "n": {
+                  "docs": {
+                    "mdl.TiledFile.html#.resourceSearchPaths": {
+                      "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                      "tf": 8.333333333333332
+                    }
+                  }
+                }
+              }
+            },
+            "d": {
+              "docs": {
+                "mdl.html#.TiledGid": {
+                  "ref": "mdl.html#.TiledGid",
+                  "tf": 4.838709677419355
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "mdl.TiledSet.html#grid": {
+                    "ref": "mdl.TiledSet.html#grid",
+                    "tf": 650
+                  }
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "docs": {},
+          "t": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "undefined": {
+                      "tf": 950
+                    },
+                    "cli.Cmd.html#main": {
+                      "ref": "cli.Cmd.html#main",
+                      "tf": 25
+                    },
+                    "cli.Serve.html#main": {
+                      "ref": "cli.Serve.html#main",
+                      "tf": 25
+                    },
+                    "mdl.html#.TiledGid": {
+                      "ref": "mdl.html#.TiledGid",
+                      "tf": 1.6129032258064515
+                    },
+                    "pixeldeck.server.html#.Start": {
+                      "ref": "pixeldeck.server.html#.Start",
+                      "tf": 658.3333333333334
+                    },
+                    "pixeldeck.ui.html#.Start": {
+                      "ref": "pixeldeck.ui.html#.Start",
+                      "tf": 658.3333333333334
+                    }
+                  }
+                }
+              },
+              "t": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "&": {
+                      "docs": {},
+                      "g": {
+                        "docs": {},
+                        "t": {
+                          "docs": {
+                            "mdl.TiledChunk.html#.createSchemaOn": {
+                              "ref": "mdl.TiledChunk.html#.createSchemaOn",
+                              "tf": 33.33333333333333
+                            },
+                            "mdl.TiledFile.html#.createSchemaOn": {
+                              "ref": "mdl.TiledFile.html#.createSchemaOn",
+                              "tf": 25
+                            },
+                            "mdl.TiledLayer.html#.createSchemaOn": {
+                              "ref": "mdl.TiledLayer.html#.createSchemaOn",
+                              "tf": 25
+                            },
+                            "mdl.TiledMap.html#.createSchemaOn": {
+                              "ref": "mdl.TiledMap.html#.createSchemaOn",
+                              "tf": 33.33333333333333
+                            },
+                            "mdl.TiledMap.html#.beforeEnsureSchema": {
+                              "ref": "mdl.TiledMap.html#.beforeEnsureSchema",
+                              "tf": 33.33333333333333
+                            },
+                            "mdl.TiledModel.html#.jsonSchemaRequired": {
+                              "ref": "mdl.TiledModel.html#.jsonSchemaRequired",
+                              "tf": 33.33333333333333
+                            },
+                            "mdl.TiledModel.html#.jsonSchemaProperties": {
+                              "ref": "mdl.TiledModel.html#.jsonSchemaProperties",
+                              "tf": 33.33333333333333
+                            },
+                            "mdl.TiledModel.html#.jsonSchema": {
+                              "ref": "mdl.TiledModel.html#.jsonSchema",
+                              "tf": 33.33333333333333
+                            },
+                            "mdl.TiledModel.html#.createSchemaOn": {
+                              "ref": "mdl.TiledModel.html#.createSchemaOn",
+                              "tf": 20
+                            },
+                            "mdl.TiledModel.html#.ensureAllSchemas": {
+                              "ref": "mdl.TiledModel.html#.ensureAllSchemas",
+                              "tf": 20
+                            },
+                            "mdl.TiledModel.html#.ensureSchema": {
+                              "ref": "mdl.TiledModel.html#.ensureSchema",
+                              "tf": 25
+                            },
+                            "mdl.TiledModel.html#.afterEnsureSchema": {
+                              "ref": "mdl.TiledModel.html#.afterEnsureSchema",
+                              "tf": 33.33333333333333
+                            },
+                            "mdl.TiledModel.html#.createSchema": {
+                              "ref": "mdl.TiledModel.html#.createSchema",
+                              "tf": 33.33333333333333
+                            },
+                            "mdl.TiledModel.html#.dropSchema": {
+                              "ref": "mdl.TiledModel.html#.dropSchema",
+                              "tf": 25
+                            },
+                            "mdl.TiledObject.html#.createSchemaOn": {
+                              "ref": "mdl.TiledObject.html#.createSchemaOn",
+                              "tf": 33.33333333333333
+                            },
+                            "mdl.TiledPoint.html#.createSchemaOn": {
+                              "ref": "mdl.TiledPoint.html#.createSchemaOn",
+                              "tf": 33.33333333333333
+                            },
+                            "mdl.TiledProperties.html#.createSchemaOn": {
+                              "ref": "mdl.TiledProperties.html#.createSchemaOn",
+                              "tf": 33.33333333333333
+                            },
+                            "mdl.TiledSet.html#.createSchemaOn": {
+                              "ref": "mdl.TiledSet.html#.createSchemaOn",
+                              "tf": 25
+                            },
+                            "cli.html#.MakeMap": {
+                              "ref": "cli.html#.MakeMap",
+                              "tf": 16.666666666666664
+                            },
+                            "pixeldeck.server.html#.Restart": {
+                              "ref": "pixeldeck.server.html#.Restart",
+                              "tf": 33.33333333333333
+                            },
+                            "pixeldeck.server.html#.Start": {
+                              "ref": "pixeldeck.server.html#.Start",
+                              "tf": 33.33333333333333
+                            },
+                            "pixeldeck.server.html#.Stop": {
+                              "ref": "pixeldeck.server.html#.Stop",
+                              "tf": 33.33333333333333
+                            },
+                            "pixeldeck.service.html#.getTiledMapHtml": {
+                              "ref": "pixeldeck.service.html#.getTiledMapHtml",
+                              "tf": 16.666666666666664
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "n": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "mdl.TiledSet.html#grid": {
+                        "ref": "mdl.TiledSet.html#grid",
+                        "tf": 50
+                      },
+                      "mdl.TiledSet.html#image": {
+                        "ref": "mdl.TiledSet.html#image",
+                        "tf": 50
+                      },
+                      "mdl.TiledSet.html#name": {
+                        "ref": "mdl.TiledSet.html#name",
+                        "tf": 50
+                      },
+                      "mdl.TiledSet.html#tileoffset": {
+                        "ref": "mdl.TiledSet.html#tileoffset",
+                        "tf": 50
+                      },
+                      "mdl.TiledSet.html#transparentcolor": {
+                        "ref": "mdl.TiledSet.html#transparentcolor",
+                        "tf": 50
+                      },
+                      "mdl.TiledSet.html#type": {
+                        "ref": "mdl.TiledSet.html#type",
+                        "tf": 50
+                      },
+                      "mdl.TiledSet.html#wangsets": {
+                        "ref": "mdl.TiledSet.html#wangsets",
+                        "tf": 50
+                      },
+                      "mdl.TiledSet.html#tiledversion": {
+                        "ref": "mdl.TiledSet.html#tiledversion",
+                        "tf": 50
+                      },
+                      "mdl.TiledSet.html#version": {
+                        "ref": "mdl.TiledSet.html#version",
+                        "tf": 50
+                      },
+                      "mdl.TiledTile.html#image": {
+                        "ref": "mdl.TiledTile.html#image",
+                        "tf": 50
+                      },
+                      "cli.html#.MakeMap": {
+                        "ref": "cli.html#.MakeMap",
+                        "tf": 16.666666666666664
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "u": {
+              "docs": {},
+              "f": {
+                "docs": {},
+                "f": {
+                  "docs": {
+                    "pixeldeck.arch.html": {
+                      "ref": "pixeldeck.arch.html",
+                      "tf": 25
+                    }
+                  }
+                }
+              }
+            },
+            "o": {
+              "docs": {},
+              "p": {
+                "docs": {
+                  "pixeldeck.server.html#.Stop": {
+                    "ref": "pixeldeck.server.html#.Stop",
+                    "tf": 633.3333333333334
+                  },
+                  "pixeldeck.ui.html#.Stop": {
+                    "ref": "pixeldeck.ui.html#.Stop",
+                    "tf": 675
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "v": {
+                "docs": {
+                  "cli.Serve.html": {
+                    "ref": "cli.Serve.html",
+                    "tf": 675
+                  }
+                },
+                "e": {
+                  "docs": {},
+                  "#": {
+                    "docs": {},
+                    "d": {
+                      "docs": {},
+                      "b": {
+                        "docs": {},
+                        "g": {
+                          "docs": {
+                            "cli.Serve.html#dbg": {
+                              "ref": "cli.Serve.html#dbg",
+                              "tf": 100
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "m": {
+                      "docs": {},
+                      "a": {
+                        "docs": {},
+                        "i": {
+                          "docs": {},
+                          "n": {
+                            "docs": {
+                              "cli.Serve.html#main": {
+                                "ref": "cli.Serve.html#main",
+                                "tf": 100
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "r": {
+                    "docs": {
+                      "pixeldeck.server.html": {
+                        "ref": "pixeldeck.server.html",
+                        "tf": 662.5
+                      },
+                      "pixeldeck.service.html": {
+                        "ref": "pixeldeck.service.html",
+                        "tf": 5
+                      }
+                    },
+                    ".": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {
+                                      "pixeldeck.server.html#.Restart": {
+                                        "ref": "pixeldeck.server.html#.Restart",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "s": {
+                        "docs": {},
+                        "t": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "t": {
+                                "docs": {
+                                  "pixeldeck.server.html#.Start": {
+                                    "ref": "pixeldeck.server.html#.Start",
+                                    "tf": 100
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "o": {
+                            "docs": {},
+                            "p": {
+                              "docs": {
+                                "pixeldeck.server.html#.Stop": {
+                                  "ref": "pixeldeck.server.html#.Stop",
+                                  "tf": 100
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "i": {
+                  "docs": {},
+                  "c": {
+                    "docs": {
+                      "pixeldeck.server.html": {
+                        "ref": "pixeldeck.server.html",
+                        "tf": 12.5
+                      },
+                      "pixeldeck.server.html#.Start": {
+                        "ref": "pixeldeck.server.html#.Start",
+                        "tf": 25
+                      },
+                      "pixeldeck.server.html#.Stop": {
+                        "ref": "pixeldeck.server.html#.Stop",
+                        "tf": 12.5
+                      },
+                      "pixeldeck.service.html": {
+                        "ref": "pixeldeck.service.html",
+                        "tf": 650
+                      }
+                    },
+                    "e": {
+                      "docs": {},
+                      ".": {
+                        "docs": {},
+                        "g": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {
+                                        "pixeldeck.service.html#.getRoot": {
+                                          "ref": "pixeldeck.service.html#.getRoot",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "t": {
+                                "docs": {},
+                                "i": {
+                                  "docs": {},
+                                  "l": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {},
+                                        "m": {
+                                          "docs": {},
+                                          "a": {
+                                            "docs": {},
+                                            "p": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "l": {
+                                                      "docs": {
+                                                        "pixeldeck.service.html#.getTiledMapHtml": {
+                                                          "ref": "pixeldeck.service.html#.getTiledMapHtml",
+                                                          "tf": 100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "s": {
+                                                "docs": {},
+                                                "v": {
+                                                  "docs": {},
+                                                  "g": {
+                                                    "docs": {
+                                                      "pixeldeck.service.html#.getTiledMapSvg": {
+                                                        "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                                                        "tf": 100
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "s": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {},
+                                              "s": {
+                                                "docs": {},
+                                                "v": {
+                                                  "docs": {},
+                                                  "g": {
+                                                    "docs": {
+                                                      "pixeldeck.service.html#.getTiledSetSvg": {
+                                                        "ref": "pixeldeck.service.html#.getTiledSetSvg",
+                                                        "tf": 100
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "h": {
+                    "docs": {
+                      "mdl.TiledFile.html#.resourceSearchPaths": {
+                        "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                        "tf": 8.333333333333332
+                      },
+                      "pixeldeck.arch.html#.getResPathFor": {
+                        "ref": "pixeldeck.arch.html#.getResPathFor",
+                        "tf": 2.1739130434782608
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {
+                "mdl.TiledTile.html#TiledSetUuid": {
+                  "ref": "mdl.TiledTile.html#TiledSetUuid",
+                  "tf": 16.666666666666664
+                }
+              }
+            }
+          },
+          "c": {
+            "docs": {},
+            "h": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "a": {
+                    "docs": {
+                      "mdl.TiledMap.html#.jsonSchema": {
+                        "ref": "mdl.TiledMap.html#.jsonSchema",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledModel.html#.ensureAllSchemas": {
+                        "ref": "mdl.TiledModel.html#.ensureAllSchemas",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledModel.html#.createSchema": {
+                        "ref": "mdl.TiledModel.html#.createSchema",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledModel.html#.dropSchema": {
+                        "ref": "mdl.TiledModel.html#.dropSchema",
+                        "tf": 25
+                      },
+                      "mdl.TiledPoint.html#.createSchemaOn": {
+                        "ref": "mdl.TiledPoint.html#.createSchemaOn",
+                        "tf": 10
+                      }
+                    },
+                    "p": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "p": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "t": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {
+                                      "mdl.TiledMapUsesSet.html#.jsonSchemaProperties": {
+                                        "ref": "mdl.TiledMapUsesSet.html#.jsonSchemaProperties",
+                                        "tf": 16.666666666666664
+                                      },
+                                      "mdl.TiledObject.html#.jsonSchemaProperties": {
+                                        "ref": "mdl.TiledObject.html#.jsonSchemaProperties",
+                                        "tf": 16.666666666666664
+                                      },
+                                      "mdl.TiledSet.html#.jsonSchemaProperties": {
+                                        "ref": "mdl.TiledSet.html#.jsonSchemaProperties",
+                                        "tf": 16.666666666666664
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "r": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "q": {
+                          "docs": {},
+                          "u": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "r": {
+                                "docs": {
+                                  "mdl.TiledSet.html#.jsonSchemaRequired": {
+                                    "ref": "mdl.TiledSet.html#.jsonSchemaRequired",
+                                    "tf": 8.333333333333332
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "m": {
+                "docs": {},
+                "a": {
+                  "docs": {
+                    "mdl.TiledPoint.html#.createSchemaOn": {
+                      "ref": "mdl.TiledPoint.html#.createSchemaOn",
+                      "tf": 10
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "p": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "mdl.TiledSet.html#spacing": {
+                      "ref": "mdl.TiledSet.html#spacing",
+                      "tf": 650
+                    }
+                  }
+                }
+              }
+            },
+            "e": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "f": {
+                    "docs": {},
+                    "i": {
+                      "docs": {
+                        "mdl.TiledTile.html#imageheight": {
+                          "ref": "mdl.TiledTile.html#imageheight",
+                          "tf": 12.5
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "v": {
+            "docs": {},
+            "g": {
+              "docs": {
+                "MakeMap.html": {
+                  "ref": "MakeMap.html",
+                  "tf": 5.555555555555555
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "p": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "external-http.html": {
+                          "ref": "external-http.html",
+                          "tf": 12.5
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "pixeldeck.arch.html#.defineRequires": {
+                    "ref": "pixeldeck.arch.html#.defineRequires",
+                    "tf": 2.5
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "pixeldeck.arch.html#.cleanQuery": {
+                      "ref": "pixeldeck.arch.html#.cleanQuery",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "t": {
+          "docs": {},
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "i": {
+                    "docs": {
+                      "undefined": {
+                        "tf": 110
+                      },
+                      "list_tutorial.html": {
+                        "ref": "list_tutorial.html",
+                        "tf": 635
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "n": {
+                "docs": {
+                  "pixeldeck.arch.html#.cleanQuery": {
+                    "ref": "pixeldeck.arch.html#.cleanQuery",
+                    "tf": 7.142857142857142
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "mdl.TiledProperties.html": {
+                    "ref": "mdl.TiledProperties.html",
+                    "tf": 6.25
+                  },
+                  "MakeMap.html": {
+                    "ref": "MakeMap.html",
+                    "tf": 5.555555555555555
+                  },
+                  "external-Objection.html": {
+                    "ref": "external-Objection.html",
+                    "tf": 8.333333333333332
+                  }
+                },
+                "d": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "h": {
+                      "docs": {},
+                      "u": {
+                        "docs": {},
+                        "n": {
+                          "docs": {},
+                          "k": {
+                            "docs": {
+                              "mdl.TiledChunk.html": {
+                                "ref": "mdl.TiledChunk.html",
+                                "tf": 650
+                              }
+                            },
+                            "#": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "b": {
+                                  "docs": {},
+                                  "g": {
+                                    "docs": {
+                                      "mdl.TiledChunk.html#dbg": {
+                                        "ref": "mdl.TiledChunk.html#dbg",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "u": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {
+                                        "mdl.TiledChunk.html#uuid": {
+                                          "ref": "mdl.TiledChunk.html#uuid",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "n": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {
+                                        "mdl.TiledChunk.html#render": {
+                                          "ref": "mdl.TiledChunk.html#render",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            ".": {
+                              "docs": {},
+                              "c": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {},
+                                                      "o": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {
+                                                            "mdl.TiledChunk.html#.createSchemaOn": {
+                                                              "ref": "mdl.TiledChunk.html#.createSchemaOn",
+                                                              "tf": 100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "f": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "l": {
+                        "docs": {
+                          "mdl.TiledFile.html": {
+                            "ref": "mdl.TiledFile.html",
+                            "tf": 650
+                          }
+                        },
+                        "e": {
+                          "docs": {},
+                          ".": {
+                            "docs": {},
+                            "f": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "u": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {},
+                                                "c": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "p": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {},
+                                                        "t": {
+                                                          "docs": {},
+                                                          "h": {
+                                                            "docs": {},
+                                                            "f": {
+                                                              "docs": {},
+                                                              "o": {
+                                                                "docs": {},
+                                                                "r": {
+                                                                  "docs": {
+                                                                    "mdl.TiledFile.html#.findResourcePathFor": {
+                                                                      "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                                                                      "tf": 100
+                                                                    }
+                                                                  },
+                                                                  "(": {
+                                                                    "docs": {},
+                                                                    "p": {
+                                                                      "docs": {},
+                                                                      "a": {
+                                                                        "docs": {},
+                                                                        "t": {
+                                                                          "docs": {},
+                                                                          "h": {
+                                                                            "docs": {
+                                                                              "mdl.TiledFile.html#.resourceSearchPaths": {
+                                                                                "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                                                                                "tf": 8.333333333333332
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "r": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "u": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "s": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {},
+                                                        "p": {
+                                                          "docs": {},
+                                                          "a": {
+                                                            "docs": {},
+                                                            "t": {
+                                                              "docs": {},
+                                                              "h": {
+                                                                "docs": {
+                                                                  "mdl.TiledFile.html#.resourceSearchPaths": {
+                                                                    "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                                                                    "tf": 100
+                                                                  },
+                                                                  "mdl.TiledFile.html#.findResourcePathFor": {
+                                                                    "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                                                                    "tf": 5
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "c": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "c": {
+                                            "docs": {},
+                                            "h": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "m": {
+                                                  "docs": {},
+                                                  "a": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "n": {
+                                                        "docs": {
+                                                          "mdl.TiledFile.html#.createSchemaOn": {
+                                                            "ref": "mdl.TiledFile.html#.createSchemaOn",
+                                                            "tf": 100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "#": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "x": {
+                                "docs": {},
+                                "i": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {
+                                        "mdl.TiledFile.html#exists": {
+                                          "ref": "mdl.TiledFile.html#exists",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "d": {
+                              "docs": {},
+                              "b": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {
+                                    "mdl.TiledFile.html#dbg": {
+                                      "ref": "mdl.TiledFile.html#dbg",
+                                      "tf": 100
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "u": {
+                              "docs": {},
+                              "u": {
+                                "docs": {},
+                                "i": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {
+                                      "mdl.TiledFile.html#uuid": {
+                                        "ref": "mdl.TiledFile.html#uuid",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "g": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "t": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {
+                                            "mdl.TiledFile.html#getStat": {
+                                              "ref": "mdl.TiledFile.html#getStat",
+                                              "tf": 100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "r": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {
+                                      "mdl.TiledFile.html#render": {
+                                        "ref": "mdl.TiledFile.html#render",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "r": {
+                      "docs": {},
+                      "a": {
+                        "docs": {},
+                        "m": {
+                          "docs": {
+                            "mdl.TiledFrame.html": {
+                              "ref": "mdl.TiledFrame.html",
+                              "tf": 650
+                            }
+                          },
+                          "e": {
+                            "docs": {},
+                            "#": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "b": {
+                                  "docs": {},
+                                  "g": {
+                                    "docs": {
+                                      "mdl.TiledFrame.html#dbg": {
+                                        "ref": "mdl.TiledFrame.html#dbg",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "u": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {
+                                        "mdl.TiledFrame.html#uuid": {
+                                          "ref": "mdl.TiledFrame.html#uuid",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "n": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {
+                                        "mdl.TiledFrame.html#render": {
+                                          "ref": "mdl.TiledFrame.html#render",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "l": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "y": {
+                        "docs": {
+                          "mdl.TiledLayer.html": {
+                            "ref": "mdl.TiledLayer.html",
+                            "tf": 658.3333333333334
+                          }
+                        },
+                        "e": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            ".": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "l": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {},
+                                              "m": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "p": {
+                                                    "docs": {
+                                                      "mdl.TiledLayer.html#.relationMappings": {
+                                                        "ref": "mdl.TiledLayer.html#.relationMappings",
+                                                        "tf": 100
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "c": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {},
+                                                      "o": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {
+                                                            "mdl.TiledLayer.html#.createSchemaOn": {
+                                                              "ref": "mdl.TiledLayer.html#.createSchemaOn",
+                                                              "tf": 100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "#": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "b": {
+                                  "docs": {},
+                                  "g": {
+                                    "docs": {
+                                      "mdl.TiledLayer.html#dbg": {
+                                        "ref": "mdl.TiledLayer.html#dbg",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "u": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {
+                                        "mdl.TiledLayer.html#uuid": {
+                                          "ref": "mdl.TiledLayer.html#uuid",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "n": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {
+                                        "mdl.TiledLayer.html#render": {
+                                          "ref": "mdl.TiledLayer.html#render",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "m": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "p": {
+                        "docs": {
+                          "mdl.TiledMap.html": {
+                            "ref": "mdl.TiledMap.html",
+                            "tf": 700
+                          },
+                          "mdl.TiledMapUsesSet.html": {
+                            "ref": "mdl.TiledMapUsesSet.html",
+                            "tf": 16.666666666666664
+                          },
+                          "MakeMap.html": {
+                            "ref": "MakeMap.html",
+                            "tf": 11.11111111111111
+                          },
+                          "mdl.html#.TiledGid": {
+                            "ref": "mdl.html#.TiledGid",
+                            "tf": 1.6129032258064515
+                          }
+                        },
+                        ".": {
+                          "docs": {},
+                          "j": {
+                            "docs": {},
+                            "s": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "c": {
+                                      "docs": {},
+                                      "h": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {
+                                                "mdl.TiledMap.html#.jsonSchema": {
+                                                  "ref": "mdl.TiledMap.html#.jsonSchema",
+                                                  "tf": 100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "r": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "l": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "p": {
+                                                "docs": {
+                                                  "mdl.TiledMap.html#.relationMappings": {
+                                                    "ref": "mdl.TiledMap.html#.relationMappings",
+                                                    "tf": 100
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "c": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {},
+                                          "h": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "m": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {
+                                                        "mdl.TiledMap.html#.createSchemaOn": {
+                                                          "ref": "mdl.TiledMap.html#.createSchemaOn",
+                                                          "tf": 100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "b": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "f": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {},
+                                  "r": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "u": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "m": {
+                                                            "docs": {},
+                                                            "a": {
+                                                              "docs": {
+                                                                "mdl.TiledMap.html#.beforeEnsureSchema": {
+                                                                  "ref": "mdl.TiledMap.html#.beforeEnsureSchema",
+                                                                  "tf": 100
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "#": {
+                          "docs": {},
+                          "d": {
+                            "docs": {},
+                            "b": {
+                              "docs": {},
+                              "g": {
+                                "docs": {
+                                  "mdl.TiledMap.html#dbg": {
+                                    "ref": "mdl.TiledMap.html#dbg",
+                                    "tf": 100
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "u": {
+                            "docs": {},
+                            "u": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "d": {
+                                  "docs": {
+                                    "mdl.TiledMap.html#uuid": {
+                                      "ref": "mdl.TiledMap.html#uuid",
+                                      "tf": 100
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "r": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "n": {
+                                "docs": {},
+                                "d": {
+                                  "docs": {
+                                    "mdl.TiledMap.html#render": {
+                                      "ref": "mdl.TiledMap.html#render",
+                                      "tf": 100
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "u": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "s": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {
+                                        "mdl.TiledMapUsesSet.html": {
+                                          "ref": "mdl.TiledMapUsesSet.html",
+                                          "tf": 650
+                                        },
+                                        "mdl.html#.TiledGid": {
+                                          "ref": "mdl.html#.TiledGid",
+                                          "tf": 3.225806451612903
+                                        }
+                                      },
+                                      ".": {
+                                        "docs": {},
+                                        "j": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "c": {
+                                                    "docs": {},
+                                                    "h": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "m": {
+                                                          "docs": {},
+                                                          "a": {
+                                                            "docs": {},
+                                                            "p": {
+                                                              "docs": {},
+                                                              "r": {
+                                                                "docs": {},
+                                                                "o": {
+                                                                  "docs": {},
+                                                                  "p": {
+                                                                    "docs": {},
+                                                                    "e": {
+                                                                      "docs": {},
+                                                                      "r": {
+                                                                        "docs": {},
+                                                                        "t": {
+                                                                          "docs": {},
+                                                                          "i": {
+                                                                            "docs": {
+                                                                              "mdl.TiledMapUsesSet.html#.jsonSchemaProperties": {
+                                                                                "ref": "mdl.TiledMapUsesSet.html#.jsonSchemaProperties",
+                                                                                "tf": 100
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "r": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "l": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "n": {
+                                                        "docs": {},
+                                                        "m": {
+                                                          "docs": {},
+                                                          "a": {
+                                                            "docs": {},
+                                                            "p": {
+                                                              "docs": {
+                                                                "mdl.TiledMapUsesSet.html#.relationMappings": {
+                                                                  "ref": "mdl.TiledMapUsesSet.html#.relationMappings",
+                                                                  "tf": 100
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "#": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {},
+                                          "b": {
+                                            "docs": {},
+                                            "g": {
+                                              "docs": {
+                                                "mdl.TiledMapUsesSet.html#dbg": {
+                                                  "ref": "mdl.TiledMapUsesSet.html#dbg",
+                                                  "tf": 100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "u": {
+                                          "docs": {},
+                                          "u": {
+                                            "docs": {},
+                                            "i": {
+                                              "docs": {},
+                                              "d": {
+                                                "docs": {
+                                                  "mdl.TiledMapUsesSet.html#uuid": {
+                                                    "ref": "mdl.TiledMapUsesSet.html#uuid",
+                                                    "tf": 100
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "r": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {},
+                                              "d": {
+                                                "docs": {
+                                                  "mdl.TiledMapUsesSet.html#render": {
+                                                    "ref": "mdl.TiledMapUsesSet.html#render",
+                                                    "tf": 100
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "o": {
+                      "docs": {},
+                      "d": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "l": {
+                            "docs": {
+                              "mdl.TiledModel.html": {
+                                "ref": "mdl.TiledModel.html",
+                                "tf": 650
+                              }
+                            },
+                            ".": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "b": {
+                                  "docs": {},
+                                  "g": {
+                                    "docs": {
+                                      "mdl.TiledModel.html#.dbg": {
+                                        "ref": "mdl.TiledModel.html#.dbg",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                },
+                                "r": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "p": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {},
+                                          "h": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "m": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {
+                                                    "mdl.TiledModel.html#.dropSchema": {
+                                                      "ref": "mdl.TiledModel.html#.dropSchema",
+                                                      "tf": 100
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "i": {
+                                "docs": {},
+                                "d": {
+                                  "docs": {},
+                                  "c": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {},
+                                        "u": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {
+                                                "mdl.TiledModel.html#.idColumn": {
+                                                  "ref": "mdl.TiledModel.html#.idColumn",
+                                                  "tf": 100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "t": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "b": {
+                                    "docs": {},
+                                    "l": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "a": {
+                                            "docs": {},
+                                            "m": {
+                                              "docs": {
+                                                "mdl.TiledModel.html#.tableName": {
+                                                  "ref": "mdl.TiledModel.html#.tableName",
+                                                  "tf": 100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "j": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "n": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {},
+                                          "h": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "m": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {
+                                                    "mdl.TiledModel.html#.jsonSchema": {
+                                                      "ref": "mdl.TiledModel.html#.jsonSchema",
+                                                      "tf": 100
+                                                    }
+                                                  },
+                                                  "r": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "q": {
+                                                        "docs": {},
+                                                        "u": {
+                                                          "docs": {},
+                                                          "i": {
+                                                            "docs": {},
+                                                            "r": {
+                                                              "docs": {
+                                                                "mdl.TiledModel.html#.jsonSchemaRequired": {
+                                                                  "ref": "mdl.TiledModel.html#.jsonSchemaRequired",
+                                                                  "tf": 100
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "p": {
+                                                    "docs": {},
+                                                    "r": {
+                                                      "docs": {},
+                                                      "o": {
+                                                        "docs": {},
+                                                        "p": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "r": {
+                                                              "docs": {},
+                                                              "t": {
+                                                                "docs": {},
+                                                                "i": {
+                                                                  "docs": {
+                                                                    "mdl.TiledModel.html#.jsonSchemaProperties": {
+                                                                      "ref": "mdl.TiledModel.html#.jsonSchemaProperties",
+                                                                      "tf": 100
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "c": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {
+                                                        "mdl.TiledModel.html#.createSchema": {
+                                                          "ref": "mdl.TiledModel.html#.createSchema",
+                                                          "tf": 100
+                                                        }
+                                                      },
+                                                      "o": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {
+                                                            "mdl.TiledModel.html#.createSchemaOn": {
+                                                              "ref": "mdl.TiledModel.html#.createSchemaOn",
+                                                              "tf": 100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "e": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "u": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "a": {
+                                            "docs": {},
+                                            "l": {
+                                              "docs": {},
+                                              "l": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "c": {
+                                                    "docs": {},
+                                                    "h": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "m": {
+                                                          "docs": {},
+                                                          "a": {
+                                                            "docs": {
+                                                              "mdl.TiledModel.html#.ensureAllSchemas": {
+                                                                "ref": "mdl.TiledModel.html#.ensureAllSchemas",
+                                                                "tf": 100
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "s": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {
+                                                        "mdl.TiledModel.html#.ensureSchema": {
+                                                          "ref": "mdl.TiledModel.html#.ensureSchema",
+                                                          "tf": 100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "a": {
+                                "docs": {},
+                                "f": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "n": {
+                                            "docs": {},
+                                            "s": {
+                                              "docs": {},
+                                              "u": {
+                                                "docs": {},
+                                                "r": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "docs": {},
+                                                      "c": {
+                                                        "docs": {},
+                                                        "h": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "m": {
+                                                              "docs": {},
+                                                              "a": {
+                                                                "docs": {
+                                                                  "mdl.TiledModel.html#.afterEnsureSchema": {
+                                                                    "ref": "mdl.TiledModel.html#.afterEnsureSchema",
+                                                                    "tf": 100
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "#": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "b": {
+                                  "docs": {},
+                                  "g": {
+                                    "docs": {
+                                      "mdl.TiledModel.html#dbg": {
+                                        "ref": "mdl.TiledModel.html#dbg",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "u": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {
+                                        "mdl.TiledModel.html#uuid": {
+                                          "ref": "mdl.TiledModel.html#uuid",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "n": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {
+                                        "mdl.TiledModel.html#render": {
+                                          "ref": "mdl.TiledModel.html#render",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "s": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "t": {
+                        "docs": {
+                          "mdl.TiledMapUsesSet.html": {
+                            "ref": "mdl.TiledMapUsesSet.html",
+                            "tf": 16.666666666666664
+                          },
+                          "mdl.TiledSet.html": {
+                            "ref": "mdl.TiledSet.html",
+                            "tf": 650
+                          },
+                          "mdl.html#.TiledGid": {
+                            "ref": "mdl.html#.TiledGid",
+                            "tf": 1.6129032258064515
+                          }
+                        },
+                        "#": {
+                          "docs": {},
+                          "c": {
+                            "docs": {},
+                            "o": {
+                              "docs": {},
+                              "l": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "m": {
+                                    "docs": {},
+                                    "n": {
+                                      "docs": {
+                                        "mdl.TiledSet.html#columns": {
+                                          "ref": "mdl.TiledSet.html#columns",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "f": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "g": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {
+                                            "mdl.TiledSet.html#firstgid": {
+                                              "ref": "mdl.TiledSet.html#firstgid",
+                                              "tf": 100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "g": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "d": {
+                                  "docs": {
+                                    "mdl.TiledSet.html#grid": {
+                                      "ref": "mdl.TiledSet.html#grid",
+                                      "tf": 100
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "i": {
+                            "docs": {},
+                            "m": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {
+                                    "mdl.TiledSet.html#image": {
+                                      "ref": "mdl.TiledSet.html#image",
+                                      "tf": 100
+                                    }
+                                  },
+                                  "e": {
+                                    "docs": {},
+                                    "h": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {},
+                                            "h": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {
+                                                  "mdl.TiledSet.html#imageheight": {
+                                                    "ref": "mdl.TiledSet.html#imageheight",
+                                                    "tf": 100
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "w": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "h": {
+                                              "docs": {
+                                                "mdl.TiledSet.html#imagewidth": {
+                                                  "ref": "mdl.TiledSet.html#imagewidth",
+                                                  "tf": 100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "m": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "n": {
+                                      "docs": {
+                                        "mdl.TiledSet.html#margin": {
+                                          "ref": "mdl.TiledSet.html#margin",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "n": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "m": {
+                                "docs": {
+                                  "mdl.TiledSet.html#name": {
+                                    "ref": "mdl.TiledSet.html#name",
+                                    "tf": 100
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "s": {
+                            "docs": {},
+                            "p": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {
+                                    "mdl.TiledSet.html#spacing": {
+                                      "ref": "mdl.TiledSet.html#spacing",
+                                      "tf": 100
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "t": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "l": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "c": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "u": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {
+                                              "mdl.TiledSet.html#tilecount": {
+                                                "ref": "mdl.TiledSet.html#tilecount",
+                                                "tf": 100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "h": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {},
+                                          "h": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {
+                                                "mdl.TiledSet.html#tileheight": {
+                                                  "ref": "mdl.TiledSet.html#tileheight",
+                                                  "tf": 100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "o": {
+                                    "docs": {},
+                                    "f": {
+                                      "docs": {},
+                                      "f": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {
+                                                "mdl.TiledSet.html#tileoffset": {
+                                                  "ref": "mdl.TiledSet.html#tileoffset",
+                                                  "tf": 100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "w": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "h": {
+                                            "docs": {
+                                              "mdl.TiledSet.html#tilewidth": {
+                                                "ref": "mdl.TiledSet.html#tilewidth",
+                                                "tf": 100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "d": {
+                                    "docs": {},
+                                    "v": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {
+                                              "mdl.TiledSet.html#tiledversion": {
+                                                "ref": "mdl.TiledSet.html#tiledversion",
+                                                "tf": 100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "r": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "p": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                "c": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "l": {
+                                                      "docs": {},
+                                                      "o": {
+                                                        "docs": {},
+                                                        "r": {
+                                                          "docs": {
+                                                            "mdl.TiledSet.html#transparentcolor": {
+                                                              "ref": "mdl.TiledSet.html#transparentcolor",
+                                                              "tf": 100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "y": {
+                              "docs": {},
+                              "p": {
+                                "docs": {
+                                  "mdl.TiledSet.html#type": {
+                                    "ref": "mdl.TiledSet.html#type",
+                                    "tf": 100
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "w": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "n": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {
+                                          "mdl.TiledSet.html#wangsets": {
+                                            "ref": "mdl.TiledSet.html#wangsets",
+                                            "tf": 100
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "v": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {
+                                    "mdl.TiledSet.html#version": {
+                                      "ref": "mdl.TiledSet.html#version",
+                                      "tf": 100
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "d": {
+                            "docs": {},
+                            "b": {
+                              "docs": {},
+                              "g": {
+                                "docs": {
+                                  "mdl.TiledSet.html#dbg": {
+                                    "ref": "mdl.TiledSet.html#dbg",
+                                    "tf": 100
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "u": {
+                            "docs": {},
+                            "u": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "d": {
+                                  "docs": {
+                                    "mdl.TiledSet.html#uuid": {
+                                      "ref": "mdl.TiledSet.html#uuid",
+                                      "tf": 100
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "r": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "n": {
+                                "docs": {},
+                                "d": {
+                                  "docs": {
+                                    "mdl.TiledSet.html#render": {
+                                      "ref": "mdl.TiledSet.html#render",
+                                      "tf": 100
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        ".": {
+                          "docs": {},
+                          "j": {
+                            "docs": {},
+                            "s": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "c": {
+                                      "docs": {},
+                                      "h": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "p": {
+                                                "docs": {},
+                                                "r": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "p": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "r": {
+                                                          "docs": {},
+                                                          "t": {
+                                                            "docs": {},
+                                                            "i": {
+                                                              "docs": {
+                                                                "mdl.TiledSet.html#.jsonSchemaProperties": {
+                                                                  "ref": "mdl.TiledSet.html#.jsonSchemaProperties",
+                                                                  "tf": 100
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "r": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "q": {
+                                                    "docs": {},
+                                                    "u": {
+                                                      "docs": {},
+                                                      "i": {
+                                                        "docs": {},
+                                                        "r": {
+                                                          "docs": {
+                                                            "mdl.TiledSet.html#.jsonSchemaRequired": {
+                                                              "ref": "mdl.TiledSet.html#.jsonSchemaRequired",
+                                                              "tf": 100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "r": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "l": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "p": {
+                                                "docs": {
+                                                  "mdl.TiledSet.html#.relationMappings": {
+                                                    "ref": "mdl.TiledSet.html#.relationMappings",
+                                                    "tf": 100
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "c": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {},
+                                          "h": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "m": {
+                                                "docs": {},
+                                                "a": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {
+                                                        "mdl.TiledSet.html#.createSchemaOn": {
+                                                          "ref": "mdl.TiledSet.html#.createSchemaOn",
+                                                          "tf": 100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "u": {
+                          "docs": {},
+                          "u": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "d": {
+                                "docs": {
+                                  "mdl.TiledTile.html#TiledSetUuid": {
+                                    "ref": "mdl.TiledTile.html#TiledSetUuid",
+                                    "tf": 650
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "o": {
+                    "docs": {},
+                    "b": {
+                      "docs": {},
+                      "j": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "c": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "mdl.TiledObject.html": {
+                                  "ref": "mdl.TiledObject.html",
+                                  "tf": 650
+                                }
+                              },
+                              ".": {
+                                "docs": {},
+                                "j": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "c": {
+                                            "docs": {},
+                                            "h": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "m": {
+                                                  "docs": {},
+                                                  "a": {
+                                                    "docs": {},
+                                                    "p": {
+                                                      "docs": {},
+                                                      "r": {
+                                                        "docs": {},
+                                                        "o": {
+                                                          "docs": {},
+                                                          "p": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "r": {
+                                                                "docs": {},
+                                                                "t": {
+                                                                  "docs": {},
+                                                                  "i": {
+                                                                    "docs": {
+                                                                      "mdl.TiledObject.html#.jsonSchemaProperties": {
+                                                                        "ref": "mdl.TiledObject.html#.jsonSchemaProperties",
+                                                                        "tf": 100
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "r": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "l": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "m": {
+                                                  "docs": {},
+                                                  "a": {
+                                                    "docs": {},
+                                                    "p": {
+                                                      "docs": {
+                                                        "mdl.TiledObject.html#.relationMappings": {
+                                                          "ref": "mdl.TiledObject.html#.relationMappings",
+                                                          "tf": 100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "c": {
+                                  "docs": {},
+                                  "r": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "s": {
+                                              "docs": {},
+                                              "c": {
+                                                "docs": {},
+                                                "h": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "m": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {},
+                                                        "o": {
+                                                          "docs": {},
+                                                          "n": {
+                                                            "docs": {
+                                                              "mdl.TiledObject.html#.createSchemaOn": {
+                                                                "ref": "mdl.TiledObject.html#.createSchemaOn",
+                                                                "tf": 100
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "p": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "i": {
+                        "docs": {},
+                        "n": {
+                          "docs": {},
+                          "t": {
+                            "docs": {
+                              "mdl.TiledPoint.html": {
+                                "ref": "mdl.TiledPoint.html",
+                                "tf": 650
+                              }
+                            },
+                            "#": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "b": {
+                                  "docs": {},
+                                  "g": {
+                                    "docs": {
+                                      "mdl.TiledPoint.html#dbg": {
+                                        "ref": "mdl.TiledPoint.html#dbg",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "u": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {
+                                        "mdl.TiledPoint.html#uuid": {
+                                          "ref": "mdl.TiledPoint.html#uuid",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "n": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {
+                                        "mdl.TiledPoint.html#render": {
+                                          "ref": "mdl.TiledPoint.html#render",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            ".": {
+                              "docs": {},
+                              "c": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {},
+                                                      "o": {
+                                                        "docs": {},
+                                                        "n": {
+                                                          "docs": {
+                                                            "mdl.TiledPoint.html#.createSchemaOn": {
+                                                              "ref": "mdl.TiledPoint.html#.createSchemaOn",
+                                                              "tf": 100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "r": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "p": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "t": {
+                                "docs": {},
+                                "i": {
+                                  "docs": {
+                                    "mdl.TiledProperties.html": {
+                                      "ref": "mdl.TiledProperties.html",
+                                      "tf": 650
+                                    }
+                                  },
+                                  "e": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      ".": {
+                                        "docs": {},
+                                        "j": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "c": {
+                                                    "docs": {},
+                                                    "h": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "m": {
+                                                          "docs": {},
+                                                          "a": {
+                                                            "docs": {},
+                                                            "p": {
+                                                              "docs": {},
+                                                              "r": {
+                                                                "docs": {},
+                                                                "o": {
+                                                                  "docs": {},
+                                                                  "p": {
+                                                                    "docs": {},
+                                                                    "e": {
+                                                                      "docs": {},
+                                                                      "r": {
+                                                                        "docs": {},
+                                                                        "t": {
+                                                                          "docs": {},
+                                                                          "i": {
+                                                                            "docs": {
+                                                                              "mdl.TiledProperties.html#.jsonSchemaProperties": {
+                                                                                "ref": "mdl.TiledProperties.html#.jsonSchemaProperties",
+                                                                                "tf": 100
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "c": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "docs": {},
+                                                      "c": {
+                                                        "docs": {},
+                                                        "h": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "m": {
+                                                              "docs": {},
+                                                              "a": {
+                                                                "docs": {},
+                                                                "o": {
+                                                                  "docs": {},
+                                                                  "n": {
+                                                                    "docs": {
+                                                                      "mdl.TiledProperties.html#.createSchemaOn": {
+                                                                        "ref": "mdl.TiledProperties.html#.createSchemaOn",
+                                                                        "tf": 100
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "#": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {},
+                                          "b": {
+                                            "docs": {},
+                                            "g": {
+                                              "docs": {
+                                                "mdl.TiledProperties.html#dbg": {
+                                                  "ref": "mdl.TiledProperties.html#dbg",
+                                                  "tf": 100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "u": {
+                                          "docs": {},
+                                          "u": {
+                                            "docs": {},
+                                            "i": {
+                                              "docs": {},
+                                              "d": {
+                                                "docs": {
+                                                  "mdl.TiledProperties.html#uuid": {
+                                                    "ref": "mdl.TiledProperties.html#uuid",
+                                                    "tf": 100
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "r": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {},
+                                              "d": {
+                                                "docs": {
+                                                  "mdl.TiledProperties.html#render": {
+                                                    "ref": "mdl.TiledProperties.html#render",
+                                                    "tf": 100
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "v": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "s": {
+                          "docs": {
+                            "mdl.TiledSet.html#tiledversion": {
+                              "ref": "mdl.TiledSet.html#tiledversion",
+                              "tf": 650
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "t": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "n": {
+                                "docs": {
+                                  "mdl.TiledTerrain.html": {
+                                    "ref": "mdl.TiledTerrain.html",
+                                    "tf": 650
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "i": {
+                      "docs": {},
+                      "l": {
+                        "docs": {
+                          "mdl.TiledTile.html": {
+                            "ref": "mdl.TiledTile.html",
+                            "tf": 650
+                          },
+                          "mdl.html#.TiledGid": {
+                            "ref": "mdl.html#.TiledGid",
+                            "tf": 1.6129032258064515
+                          }
+                        },
+                        "e": {
+                          "docs": {},
+                          "#": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "u": {
+                                              "docs": {},
+                                              "u": {
+                                                "docs": {},
+                                                "i": {
+                                                  "docs": {},
+                                                  "d": {
+                                                    "docs": {
+                                                      "mdl.TiledTile.html#TiledSetUuid": {
+                                                        "ref": "mdl.TiledTile.html#TiledSetUuid",
+                                                        "tf": 100
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "e": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "r": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {
+                                            "mdl.TiledTile.html#terrain": {
+                                              "ref": "mdl.TiledTile.html#terrain",
+                                              "tf": 100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "y": {
+                                "docs": {},
+                                "p": {
+                                  "docs": {
+                                    "mdl.TiledTile.html#type": {
+                                      "ref": "mdl.TiledTile.html#type",
+                                      "tf": 100
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "i": {
+                              "docs": {},
+                              "d": {
+                                "docs": {
+                                  "mdl.TiledTile.html#id": {
+                                    "ref": "mdl.TiledTile.html#id",
+                                    "tf": 100
+                                  }
+                                }
+                              },
+                              "m": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "g": {
+                                    "docs": {
+                                      "mdl.TiledTile.html#image": {
+                                        "ref": "mdl.TiledTile.html#image",
+                                        "tf": 100
+                                      }
+                                    },
+                                    "e": {
+                                      "docs": {},
+                                      "h": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "g": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {
+                                                    "mdl.TiledTile.html#imageheight": {
+                                                      "ref": "mdl.TiledTile.html#imageheight",
+                                                      "tf": 100
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "w": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "d": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {
+                                                  "mdl.TiledTile.html#imagewidth": {
+                                                    "ref": "mdl.TiledTile.html#imagewidth",
+                                                    "tf": 100
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "o": {
+                              "docs": {},
+                              "b": {
+                                "docs": {},
+                                "j": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "c": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "u": {
+                                                "docs": {},
+                                                "p": {
+                                                  "docs": {},
+                                                  "u": {
+                                                    "docs": {},
+                                                    "u": {
+                                                      "docs": {},
+                                                      "i": {
+                                                        "docs": {},
+                                                        "d": {
+                                                          "docs": {
+                                                            "mdl.TiledTile.html#objectgroupUuid": {
+                                                              "ref": "mdl.TiledTile.html#objectgroupUuid",
+                                                              "tf": 100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "p": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {},
+                                  "b": {
+                                    "docs": {
+                                      "mdl.TiledTile.html#probability": {
+                                        "ref": "mdl.TiledTile.html#probability",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "d": {
+                              "docs": {},
+                              "b": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {
+                                    "mdl.TiledTile.html#dbg": {
+                                      "ref": "mdl.TiledTile.html#dbg",
+                                      "tf": 100
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "u": {
+                              "docs": {},
+                              "u": {
+                                "docs": {},
+                                "i": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {
+                                      "mdl.TiledTile.html#uuid": {
+                                        "ref": "mdl.TiledTile.html#uuid",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "r": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {
+                                      "mdl.TiledTile.html#render": {
+                                        "ref": "mdl.TiledTile.html#render",
+                                        "tf": 100
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "g": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "d": {
+                        "docs": {
+                          "mdl.html#.TiledGid": {
+                            "ref": "mdl.html#.TiledGid",
+                            "tf": 750
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "c": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "u": {
+                      "docs": {},
+                      "n": {
+                        "docs": {},
+                        "t": {
+                          "docs": {
+                            "mdl.TiledSet.html#tilecount": {
+                              "ref": "mdl.TiledSet.html#tilecount",
+                              "tf": 650
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "h": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "g": {
+                        "docs": {},
+                        "h": {
+                          "docs": {},
+                          "t": {
+                            "docs": {
+                              "mdl.TiledSet.html#tileheight": {
+                                "ref": "mdl.TiledSet.html#tileheight",
+                                "tf": 650
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "o": {
+                  "docs": {},
+                  "f": {
+                    "docs": {},
+                    "f": {
+                      "docs": {},
+                      "s": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "t": {
+                            "docs": {
+                              "mdl.TiledSet.html#tileoffset": {
+                                "ref": "mdl.TiledSet.html#tileoffset",
+                                "tf": 650
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "w": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "d": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "h": {
+                          "docs": {
+                            "mdl.TiledSet.html#tilewidth": {
+                              "ref": "mdl.TiledSet.html#tilewidth",
+                              "tf": 650
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "m": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "p": {
+                      "docs": {
+                        "cli.html#.MakeMap": {
+                          "ref": "cli.html#.MakeMap",
+                          "tf": 16.666666666666664
+                        }
+                      }
+                    }
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "mdl.html#.TiledGid": {
+                          "ref": "mdl.html#.TiledGid",
+                          "tf": 1.6129032258064515
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "b": {
+              "docs": {},
+              "l": {
+                "docs": {
+                  "mdl.TiledChunk.html#.createSchemaOn": {
+                    "ref": "mdl.TiledChunk.html#.createSchemaOn",
+                    "tf": 12.5
+                  },
+                  "mdl.TiledFile.html#.createSchemaOn": {
+                    "ref": "mdl.TiledFile.html#.createSchemaOn",
+                    "tf": 25
+                  },
+                  "mdl.TiledLayer.html#.createSchemaOn": {
+                    "ref": "mdl.TiledLayer.html#.createSchemaOn",
+                    "tf": 25
+                  },
+                  "mdl.TiledModel.html#.tableName": {
+                    "ref": "mdl.TiledModel.html#.tableName",
+                    "tf": 10
+                  },
+                  "mdl.TiledModel.html#.createSchemaOn": {
+                    "ref": "mdl.TiledModel.html#.createSchemaOn",
+                    "tf": 20
+                  },
+                  "mdl.TiledModel.html#.ensureSchema": {
+                    "ref": "mdl.TiledModel.html#.ensureSchema",
+                    "tf": 12.5
+                  },
+                  "mdl.TiledProperties.html#.createSchemaOn": {
+                    "ref": "mdl.TiledProperties.html#.createSchemaOn",
+                    "tf": 16.666666666666664
+                  },
+                  "mdl.TiledSet.html#.createSchemaOn": {
+                    "ref": "mdl.TiledSet.html#.createSchemaOn",
+                    "tf": 37.5
+                  },
+                  "mdl.html#.primaryKey": {
+                    "ref": "mdl.html#.primaryKey",
+                    "tf": 10
+                  }
+                },
+                "e": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "m": {
+                        "docs": {
+                          "mdl.TiledModel.html#.tableName": {
+                            "ref": "mdl.TiledModel.html#.tableName",
+                            "tf": 650
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "pixeldeck.arch.html#.defineRequires": {
+                        "ref": "pixeldeck.arch.html#.defineRequires",
+                        "tf": 5
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "k": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "pixeldeck.arch.html#.cleanQuery": {
+                    "ref": "pixeldeck.arch.html#.cleanQuery",
+                    "tf": 7.142857142857142
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "i": {
+              "docs": {
+                "mdl.TiledChunk.html#render": {
+                  "ref": "mdl.TiledChunk.html#render",
+                  "tf": 25
+                },
+                "mdl.TiledFile.html#render": {
+                  "ref": "mdl.TiledFile.html#render",
+                  "tf": 25
+                },
+                "mdl.TiledFrame.html#render": {
+                  "ref": "mdl.TiledFrame.html#render",
+                  "tf": 25
+                },
+                "mdl.TiledLayer.html#render": {
+                  "ref": "mdl.TiledLayer.html#render",
+                  "tf": 25
+                },
+                "mdl.TiledMap.html#render": {
+                  "ref": "mdl.TiledMap.html#render",
+                  "tf": 25
+                },
+                "mdl.TiledMapUsesSet.html#render": {
+                  "ref": "mdl.TiledMapUsesSet.html#render",
+                  "tf": 25
+                },
+                "mdl.TiledModel.html#render": {
+                  "ref": "mdl.TiledModel.html#render",
+                  "tf": 25
+                },
+                "mdl.TiledPoint.html#render": {
+                  "ref": "mdl.TiledPoint.html#render",
+                  "tf": 25
+                },
+                "mdl.TiledProperties.html#render": {
+                  "ref": "mdl.TiledProperties.html#render",
+                  "tf": 25
+                },
+                "mdl.TiledSet.html#render": {
+                  "ref": "mdl.TiledSet.html#render",
+                  "tf": 25
+                },
+                "mdl.TiledTile.html#render": {
+                  "ref": "mdl.TiledTile.html#render",
+                  "tf": 25
+                },
+                "pixeldeck.arch.html#.getResPathFor": {
+                  "ref": "pixeldeck.arch.html#.getResPathFor",
+                  "tf": 2.1739130434782608
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "p": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "c": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {},
+                                  "l": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {
+                                          "mdl.TiledSet.html#transparentcolor": {
+                                            "ref": "mdl.TiledSet.html#transparentcolor",
+                                            "tf": 650
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "g": {
+                  "docs": {
+                    "mdl.TiledProperties.html": {
+                      "ref": "mdl.TiledProperties.html",
+                      "tf": 6.25
+                    }
+                  }
+                }
+              }
+            },
+            "o": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "mdl.html#.TiledGid": {
+                      "ref": "mdl.html#.TiledGid",
+                      "tf": 1.6129032258064515
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "g": {
+                    "docs": {},
+                    "h": {
+                      "docs": {
+                        "mdl.html#.TiledGid": {
+                          "ref": "mdl.html#.TiledGid",
+                          "tf": 1.6129032258064515
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "y": {
+            "docs": {},
+            "p": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "mdl.TiledSet.html#type": {
+                    "ref": "mdl.TiledSet.html#type",
+                    "tf": 650
+                  },
+                  "mdl.TiledTile.html#type": {
+                    "ref": "mdl.TiledTile.html#type",
+                    "tf": 700
+                  }
+                },
+                "d": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "f": {
+                      "docs": {
+                        "mdl.html#.TiledGid": {
+                          "ref": "mdl.html#.TiledGid",
+                          "tf": 110
+                        },
+                        "mdl.html#.primaryKey": {
+                          "ref": "mdl.html#.primaryKey",
+                          "tf": 110
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "mdl.TiledTile.html#terrain": {
+                          "ref": "mdl.TiledTile.html#terrain",
+                          "tf": 700
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "m": {
+            "docs": {},
+            ".": {
+              "docs": {},
+              "h": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "m": {
+                    "docs": {},
+                    "l": {
+                      "docs": {
+                        "pixeldeck.service.html#.getTiledMapHtml": {
+                          "ref": "pixeldeck.service.html#.getTiledMapHtml",
+                          "tf": 25
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "s": {
+                "docs": {},
+                "v": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "pixeldeck.service.html#.getTiledMapSvg": {
+                        "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                        "tf": 12.5
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "s": {
+            "docs": {},
+            ".": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "v": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "pixeldeck.service.html#.getTiledSetSvg": {
+                        "ref": "pixeldeck.service.html#.getTiledSetSvg",
+                        "tf": 25
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "a": {
+          "docs": {},
+          "v": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "list_tutorial.html": {
+                      "ref": "list_tutorial.html",
+                      "tf": 35
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "b": {
+            "docs": {},
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "c": {
+                      "docs": {},
+                      "t": {
+                        "docs": {
+                          "cli.Cmd.html": {
+                            "ref": "cli.Cmd.html",
+                            "tf": 12.833333333333334
+                          },
+                          "mdl.TiledModel.html#.createSchemaOn": {
+                            "ref": "mdl.TiledModel.html#.createSchemaOn",
+                            "tf": 20
+                          }
+                        },
+                        "&": {
+                          "docs": {},
+                          "g": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "cli.Cmd.html#main": {
+                                  "ref": "cli.Cmd.html#main",
+                                  "tf": 33.33333333333333
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "o": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "u": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "mdl.TiledFile.html#.findResourcePathFor": {
+                          "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                          "tf": 5
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "s": {
+            "docs": {},
+            "y": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "c": {
+                  "docs": {
+                    "cli.Cmd.html": {
+                      "ref": "cli.Cmd.html",
+                      "tf": 0.3333333333333333
+                    },
+                    "cli.MakeSet.html": {
+                      "ref": "cli.MakeSet.html",
+                      "tf": 0.5
+                    },
+                    "cli.Serve.html": {
+                      "ref": "cli.Serve.html",
+                      "tf": 0.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "y": {
+                  "docs": {
+                    "mdl.html#.ALL": {
+                      "ref": "mdl.html#.ALL",
+                      "tf": 8.333333333333332
+                    }
+                  },
+                  ".": {
+                    "docs": {},
+                    "&": {
+                      "docs": {},
+                      "l": {
+                        "docs": {},
+                        "t": {
+                          "docs": {},
+                          ";": {
+                            "docs": {},
+                            "s": {
+                              "docs": {},
+                              "t": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "n": {
+                                      "docs": {},
+                                      "g": {
+                                        "docs": {},
+                                        "&": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {
+                                                "mdl.TiledFile.html#.resourceSearchPaths": {
+                                                  "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                                                  "tf": 33.33333333333333
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "m": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  ".": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "l": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {},
+                                              "m": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "d": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "l": {
+                                                        "docs": {},
+                                                        "&": {
+                                                          "docs": {},
+                                                          "g": {
+                                                            "docs": {},
+                                                            "t": {
+                                                              "docs": {
+                                                                "mdl.html#.ALL": {
+                                                                  "ref": "mdl.html#.ALL",
+                                                                  "tf": 50
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "g": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "t": {
+                        "docs": {
+                          "external-commander.html": {
+                            "ref": "external-commander.html",
+                            "tf": 5
+                          },
+                          "pixeldeck.arch.html#.cleanQuery": {
+                            "ref": "pixeldeck.arch.html#.cleanQuery",
+                            "tf": 25
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "c": {
+              "docs": {},
+              "h": {
+                "docs": {
+                  "pixeldeck.arch.html": {
+                    "ref": "pixeldeck.arch.html",
+                    "tf": 650
+                  }
+                },
+                ".": {
+                  "docs": {},
+                  "p": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "h": {
+                          "docs": {
+                            "pixeldeck.arch.html#.Path": {
+                              "ref": "pixeldeck.arch.html#.Path",
+                              "tf": 100
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "f": {
+                    "docs": {
+                      "pixeldeck.arch.html#.Fs": {
+                        "ref": "pixeldeck.arch.html#.Fs",
+                        "tf": 100
+                      }
+                    }
+                  },
+                  "u": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "i": {
+                        "docs": {},
+                        "l": {
+                          "docs": {
+                            "pixeldeck.arch.html#.Util": {
+                              "ref": "pixeldeck.arch.html#.Util",
+                              "tf": 100
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "d": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "f": {
+                        "docs": {},
+                        "i": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "q": {
+                                    "docs": {},
+                                    "u": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {
+                                            "pixeldeck.arch.html#.defineRequires": {
+                                              "ref": "pixeldeck.arch.html#.defineRequires",
+                                              "tf": 100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "g": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "s": {
+                              "docs": {},
+                              "p": {
+                                "docs": {},
+                                "a": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {},
+                                    "h": {
+                                      "docs": {},
+                                      "f": {
+                                        "docs": {},
+                                        "o": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {
+                                              "pixeldeck.arch.html#.getResPathFor": {
+                                                "ref": "pixeldeck.arch.html#.getResPathFor",
+                                                "tf": 100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "c": {
+                    "docs": {},
+                    "l": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "a": {
+                          "docs": {},
+                          "n": {
+                            "docs": {},
+                            "q": {
+                              "docs": {},
+                              "u": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "r": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {
+                                        "pixeldeck.arch.html#.cleanQuery": {
+                                          "ref": "pixeldeck.arch.html#.cleanQuery",
+                                          "tf": 100
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "n": {
+            "docs": {},
+            "y": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "h": {
+                  "docs": {
+                    "mdl.TiledModel.html#.jsonSchemaRequired": {
+                      "ref": "mdl.TiledModel.html#.jsonSchemaRequired",
+                      "tf": 8.333333333333332
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "l": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "d": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "l": {
+                        "docs": {
+                          "mdl.TiledModel.html#.ensureAllSchemas": {
+                            "ref": "mdl.TiledModel.html#.ensureAllSchemas",
+                            "tf": 20
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "f": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "s": {
+                        "docs": {},
+                        "u": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "s": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {},
+                                  "h": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "m": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {
+                                            "mdl.TiledModel.html#.afterEnsureSchema": {
+                                              "ref": "mdl.TiledModel.html#.afterEnsureSchema",
+                                              "tf": 633.3333333333334
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "o": {
+                "docs": {
+                  "mdl.html#.primaryKey": {
+                    "ref": "mdl.html#.primaryKey",
+                    "tf": 10
+                  }
+                },
+                "m": {
+                  "docs": {
+                    "pixeldeck.arch.html#.defineRequires": {
+                      "ref": "pixeldeck.arch.html#.defineRequires",
+                      "tf": 2.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "p": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "h": {
+                  "docs": {
+                    "pixeldeck.arch.html#.getResPathFor": {
+                      "ref": "pixeldeck.arch.html#.getResPathFor",
+                      "tf": 25
+                    }
+                  },
+                  "'": {
+                    "docs": {
+                      "pixeldeck.arch.html#.getResPathFor": {
+                        "ref": "pixeldeck.arch.html#.getResPathFor",
+                        "tf": 2.1739130434782608
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "c": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "l": {
+                    "docs": {
+                      "mdl.html#.TiledGid": {
+                        "ref": "mdl.html#.TiledGid",
+                        "tf": 1.6129032258064515
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "l": {
+          "docs": {},
+          "i": {
+            "docs": {},
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "list_tutorial.html": {
+                    "ref": "list_tutorial.html",
+                    "tf": 110
+                  },
+                  "list_class.html": {
+                    "ref": "list_class.html",
+                    "tf": 110
+                  },
+                  "list_external.html": {
+                    "ref": "list_external.html",
+                    "tf": 110
+                  },
+                  "list_namespace.html": {
+                    "ref": "list_namespace.html",
+                    "tf": 110
+                  },
+                  "mdl.TiledFile.html#.resourceSearchPaths": {
+                    "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                    "tf": 8.333333333333332
+                  }
+                },
+                ":": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "u": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "i": {
+                              "docs": {
+                                "list_tutorial.html": {
+                                  "ref": "list_tutorial.html",
+                                  "tf": 1300
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "c": {
+                    "docs": {},
+                    "l": {
+                      "docs": {},
+                      "a": {
+                        "docs": {},
+                        "s": {
+                          "docs": {},
+                          "s": {
+                            "docs": {
+                              "list_class.html": {
+                                "ref": "list_class.html",
+                                "tf": 1300
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "e": {
+                    "docs": {},
+                    "x": {
+                      "docs": {},
+                      "t": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "n": {
+                              "docs": {
+                                "list_external.html": {
+                                  "ref": "list_external.html",
+                                  "tf": 1300
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "n": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "m": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "p": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "c": {
+                                  "docs": {
+                                    "list_namespace.html": {
+                                      "ref": "list_namespace.html",
+                                      "tf": 1300
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "k": {
+                "docs": {
+                  "mdl.TiledTile.html#TiledSetUuid": {
+                    "ref": "mdl.TiledTile.html#TiledSetUuid",
+                    "tf": 16.666666666666664
+                  }
+                }
+              },
+              "e": {
+                "docs": {
+                  "external-commander.html": {
+                    "ref": "external-commander.html",
+                    "tf": 5
+                  },
+                  "cli.html": {
+                    "ref": "cli.html",
+                    "tf": 12.5
+                  }
+                }
+              }
+            },
+            "b": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "i": {
+                      "docs": {
+                        "pixeldeck.html": {
+                          "ref": "pixeldeck.html",
+                          "tf": 25
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "t": {
+            "docs": {},
+            ";": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "b": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "a": {
+                          "docs": {},
+                          "c": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "mdl.TiledModel.html#.jsonSchemaRequired": {
+                                  "ref": "mdl.TiledModel.html#.jsonSchemaRequired",
+                                  "tf": 33.33333333333333
+                                },
+                                "mdl.TiledModel.html#.jsonSchemaProperties": {
+                                  "ref": "mdl.TiledModel.html#.jsonSchemaProperties",
+                                  "tf": 33.33333333333333
+                                },
+                                "mdl.TiledModel.html#.jsonSchema": {
+                                  "ref": "mdl.TiledModel.html#.jsonSchema",
+                                  "tf": 33.33333333333333
+                                }
+                              },
+                              "&": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {
+                                      "cli.Cmd.html": {
+                                        "ref": "cli.Cmd.html",
+                                        "tf": 50
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "y": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "c": {
+                        "docs": {
+                          "cli.Cmd.html#main": {
+                            "ref": "cli.Cmd.html#main",
+                            "tf": 33.33333333333333
+                          },
+                          "mdl.TiledChunk.html#.createSchemaOn": {
+                            "ref": "mdl.TiledChunk.html#.createSchemaOn",
+                            "tf": 33.33333333333333
+                          },
+                          "mdl.TiledFile.html#.createSchemaOn": {
+                            "ref": "mdl.TiledFile.html#.createSchemaOn",
+                            "tf": 25
+                          },
+                          "mdl.TiledLayer.html#.createSchemaOn": {
+                            "ref": "mdl.TiledLayer.html#.createSchemaOn",
+                            "tf": 25
+                          },
+                          "mdl.TiledMap.html#.createSchemaOn": {
+                            "ref": "mdl.TiledMap.html#.createSchemaOn",
+                            "tf": 33.33333333333333
+                          },
+                          "mdl.TiledMap.html#.beforeEnsureSchema": {
+                            "ref": "mdl.TiledMap.html#.beforeEnsureSchema",
+                            "tf": 33.33333333333333
+                          },
+                          "mdl.TiledModel.html#.createSchemaOn": {
+                            "ref": "mdl.TiledModel.html#.createSchemaOn",
+                            "tf": 20
+                          },
+                          "mdl.TiledModel.html#.ensureAllSchemas": {
+                            "ref": "mdl.TiledModel.html#.ensureAllSchemas",
+                            "tf": 20
+                          },
+                          "mdl.TiledModel.html#.ensureSchema": {
+                            "ref": "mdl.TiledModel.html#.ensureSchema",
+                            "tf": 25
+                          },
+                          "mdl.TiledModel.html#.afterEnsureSchema": {
+                            "ref": "mdl.TiledModel.html#.afterEnsureSchema",
+                            "tf": 33.33333333333333
+                          },
+                          "mdl.TiledModel.html#.createSchema": {
+                            "ref": "mdl.TiledModel.html#.createSchema",
+                            "tf": 33.33333333333333
+                          },
+                          "mdl.TiledModel.html#.dropSchema": {
+                            "ref": "mdl.TiledModel.html#.dropSchema",
+                            "tf": 25
+                          },
+                          "mdl.TiledObject.html#.createSchemaOn": {
+                            "ref": "mdl.TiledObject.html#.createSchemaOn",
+                            "tf": 33.33333333333333
+                          },
+                          "mdl.TiledPoint.html#.createSchemaOn": {
+                            "ref": "mdl.TiledPoint.html#.createSchemaOn",
+                            "tf": 33.33333333333333
+                          },
+                          "mdl.TiledProperties.html#.createSchemaOn": {
+                            "ref": "mdl.TiledProperties.html#.createSchemaOn",
+                            "tf": 33.33333333333333
+                          },
+                          "mdl.TiledSet.html#.createSchemaOn": {
+                            "ref": "mdl.TiledSet.html#.createSchemaOn",
+                            "tf": 25
+                          },
+                          "cli.html#.MakeMap": {
+                            "ref": "cli.html#.MakeMap",
+                            "tf": 16.666666666666664
+                          },
+                          "pixeldeck.server.html#.Restart": {
+                            "ref": "pixeldeck.server.html#.Restart",
+                            "tf": 33.33333333333333
+                          },
+                          "pixeldeck.server.html#.Start": {
+                            "ref": "pixeldeck.server.html#.Start",
+                            "tf": 33.33333333333333
+                          },
+                          "pixeldeck.server.html#.Stop": {
+                            "ref": "pixeldeck.server.html#.Stop",
+                            "tf": 33.33333333333333
+                          },
+                          "pixeldeck.service.html#.getTiledMapHtml": {
+                            "ref": "pixeldeck.service.html#.getTiledMapHtml",
+                            "tf": 16.666666666666664
+                          }
+                        },
+                        "&": {
+                          "docs": {},
+                          "g": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "cli.MakeSet.html#main": {
+                                  "ref": "cli.MakeSet.html#main",
+                                  "tf": 50
+                                },
+                                "cli.Serve.html#main": {
+                                  "ref": "cli.Serve.html#main",
+                                  "tf": 50
+                                },
+                                "mdl.TiledChunk.html#render": {
+                                  "ref": "mdl.TiledChunk.html#render",
+                                  "tf": 50
+                                },
+                                "mdl.TiledFile.html#getStat": {
+                                  "ref": "mdl.TiledFile.html#getStat",
+                                  "tf": 50
+                                },
+                                "mdl.TiledFile.html#render": {
+                                  "ref": "mdl.TiledFile.html#render",
+                                  "tf": 50
+                                },
+                                "mdl.TiledFrame.html#render": {
+                                  "ref": "mdl.TiledFrame.html#render",
+                                  "tf": 50
+                                },
+                                "mdl.TiledLayer.html#render": {
+                                  "ref": "mdl.TiledLayer.html#render",
+                                  "tf": 50
+                                },
+                                "mdl.TiledMap.html#render": {
+                                  "ref": "mdl.TiledMap.html#render",
+                                  "tf": 50
+                                },
+                                "mdl.TiledMapUsesSet.html#render": {
+                                  "ref": "mdl.TiledMapUsesSet.html#render",
+                                  "tf": 50
+                                },
+                                "mdl.TiledModel.html#render": {
+                                  "ref": "mdl.TiledModel.html#render",
+                                  "tf": 50
+                                },
+                                "mdl.TiledPoint.html#render": {
+                                  "ref": "mdl.TiledPoint.html#render",
+                                  "tf": 50
+                                },
+                                "mdl.TiledProperties.html#render": {
+                                  "ref": "mdl.TiledProperties.html#render",
+                                  "tf": 50
+                                },
+                                "mdl.TiledSet.html#render": {
+                                  "ref": "mdl.TiledSet.html#render",
+                                  "tf": 50
+                                },
+                                "mdl.TiledTile.html#render": {
+                                  "ref": "mdl.TiledTile.html#render",
+                                  "tf": 50
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "s": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "t": {
+                      "docs": {},
+                      "i": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "&": {
+                            "docs": {},
+                            "g": {
+                              "docs": {},
+                              "t": {
+                                "docs": {
+                                  "cli.Cmd.html#.dbg": {
+                                    "ref": "cli.Cmd.html#.dbg",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledFile.html#.resourceSearchPaths": {
+                                    "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "mdl.TiledFile.html#.findResourcePathFor": {
+                                    "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "mdl.TiledLayer.html#.relationMappings": {
+                                    "ref": "mdl.TiledLayer.html#.relationMappings",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledMap.html#.jsonSchema": {
+                                    "ref": "mdl.TiledMap.html#.jsonSchema",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledMap.html#.relationMappings": {
+                                    "ref": "mdl.TiledMap.html#.relationMappings",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledMapUsesSet.html#.jsonSchemaProperties": {
+                                    "ref": "mdl.TiledMapUsesSet.html#.jsonSchemaProperties",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "mdl.TiledMapUsesSet.html#.relationMappings": {
+                                    "ref": "mdl.TiledMapUsesSet.html#.relationMappings",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledModel.html#.dbg": {
+                                    "ref": "mdl.TiledModel.html#.dbg",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledModel.html#.idColumn": {
+                                    "ref": "mdl.TiledModel.html#.idColumn",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledModel.html#.tableName": {
+                                    "ref": "mdl.TiledModel.html#.tableName",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledObject.html#.jsonSchemaProperties": {
+                                    "ref": "mdl.TiledObject.html#.jsonSchemaProperties",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledObject.html#.relationMappings": {
+                                    "ref": "mdl.TiledObject.html#.relationMappings",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledProperties.html#.jsonSchemaProperties": {
+                                    "ref": "mdl.TiledProperties.html#.jsonSchemaProperties",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledSet.html#.jsonSchemaProperties": {
+                                    "ref": "mdl.TiledSet.html#.jsonSchemaProperties",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledSet.html#.jsonSchemaRequired": {
+                                    "ref": "mdl.TiledSet.html#.jsonSchemaRequired",
+                                    "tf": 50
+                                  },
+                                  "mdl.TiledSet.html#.relationMappings": {
+                                    "ref": "mdl.TiledSet.html#.relationMappings",
+                                    "tf": 50
+                                  },
+                                  "pixeldeck.arch.html#.Path": {
+                                    "ref": "pixeldeck.arch.html#.Path",
+                                    "tf": 50
+                                  },
+                                  "pixeldeck.arch.html#.Fs": {
+                                    "ref": "pixeldeck.arch.html#.Fs",
+                                    "tf": 50
+                                  },
+                                  "pixeldeck.arch.html#.Util": {
+                                    "ref": "pixeldeck.arch.html#.Util",
+                                    "tf": 50
+                                  },
+                                  "pixeldeck.arch.html#.defineRequires": {
+                                    "ref": "pixeldeck.arch.html#.defineRequires",
+                                    "tf": 50
+                                  },
+                                  "pixeldeck.arch.html#.getResPathFor": {
+                                    "ref": "pixeldeck.arch.html#.getResPathFor",
+                                    "tf": 25
+                                  },
+                                  "pixeldeck.arch.html#.cleanQuery": {
+                                    "ref": "pixeldeck.arch.html#.cleanQuery",
+                                    "tf": 25
+                                  },
+                                  "pixeldeck.data.html#.disknex": {
+                                    "ref": "pixeldeck.data.html#.disknex",
+                                    "tf": 50
+                                  },
+                                  "mdl.html#.ALL": {
+                                    "ref": "mdl.html#.ALL",
+                                    "tf": 50
+                                  },
+                                  "mdl.html#.models.ensureAllSchemas": {
+                                    "ref": "mdl.html#.models.ensureAllSchemas",
+                                    "tf": 50
+                                  },
+                                  "mdl.html#.models.dropAllSchemas": {
+                                    "ref": "mdl.html#.models.dropAllSchemas",
+                                    "tf": 50
+                                  },
+                                  "pixeldeck.service.html#.getRoot": {
+                                    "ref": "pixeldeck.service.html#.getRoot",
+                                    "tf": 25
+                                  },
+                                  "pixeldeck.service.html#.getTiledMapSvg": {
+                                    "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                                    "tf": 20
+                                  },
+                                  "pixeldeck.service.html#.getTiledSetSvg": {
+                                    "ref": "pixeldeck.service.html#.getTiledSetSvg",
+                                    "tf": 20
+                                  },
+                                  "pixeldeck.ui.html#.Start": {
+                                    "ref": "pixeldeck.ui.html#.Start",
+                                    "tf": 33.33333333333333
+                                  },
+                                  "pixeldeck.ui.html#.Stop": {
+                                    "ref": "pixeldeck.ui.html#.Stop",
+                                    "tf": 50
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "t": {
+              "docs": {
+                "mdl.TiledProperties.html": {
+                  "ref": "mdl.TiledProperties.html",
+                  "tf": 3.125
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "h": {
+                    "docs": {
+                      "mdl.TiledSet.html#columns": {
+                        "ref": "mdl.TiledSet.html#columns",
+                        "tf": 16.666666666666664
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "y": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "external-Knex.html": {
+                      "ref": "external-Knex.html",
+                      "tf": 10
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "mdl.html#.TiledGid": {
+                    "ref": "mdl.html#.TiledGid",
+                    "tf": 1.6129032258064515
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "t": {
+              "docs": {
+                "pixeldeck.arch.html#.Path": {
+                  "ref": "pixeldeck.arch.html#.Path",
+                  "tf": 7.142857142857142
+                },
+                "pixeldeck.arch.html#.Fs": {
+                  "ref": "pixeldeck.arch.html#.Fs",
+                  "tf": 7.142857142857142
+                },
+                "pixeldeck.arch.html#.Util": {
+                  "ref": "pixeldeck.arch.html#.Util",
+                  "tf": 7.142857142857142
+                }
+              }
+            },
+            "a": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "pixeldeck.cfg.html": {
+                    "ref": "pixeldeck.cfg.html",
+                    "tf": 7.142857142857142
+                  }
+                }
+              }
+            }
+          }
+        },
+        "c": {
+          "docs": {},
+          "l": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "s": {
+                  "docs": {
+                    "list_class.html": {
+                      "ref": "list_class.html",
+                      "tf": 635
+                    },
+                    "external-commander.Command.html": {
+                      "ref": "external-commander.Command.html",
+                      "tf": 110
+                    },
+                    "cli.Cmd.html": {
+                      "ref": "cli.Cmd.html",
+                      "tf": 110
+                    },
+                    "cli.Cmd.html#.dbg": {
+                      "ref": "cli.Cmd.html#.dbg",
+                      "tf": 25
+                    },
+                    "cli.MakeSet.html": {
+                      "ref": "cli.MakeSet.html",
+                      "tf": 110
+                    },
+                    "cli.Serve.html": {
+                      "ref": "cli.Serve.html",
+                      "tf": 110
+                    },
+                    "-_MakeCmd.html": {
+                      "ref": "-_MakeCmd.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledChunk.html": {
+                      "ref": "mdl.TiledChunk.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledFile.html": {
+                      "ref": "mdl.TiledFile.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledFrame.html": {
+                      "ref": "mdl.TiledFrame.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledLayer.html": {
+                      "ref": "mdl.TiledLayer.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledMap.html": {
+                      "ref": "mdl.TiledMap.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledMapUsesSet.html": {
+                      "ref": "mdl.TiledMapUsesSet.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledModel.html": {
+                      "ref": "mdl.TiledModel.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledModel.html#.dbg": {
+                      "ref": "mdl.TiledModel.html#.dbg",
+                      "tf": 16.666666666666664
+                    },
+                    "mdl.TiledModel.html#.tableName": {
+                      "ref": "mdl.TiledModel.html#.tableName",
+                      "tf": 10
+                    },
+                    "mdl.TiledModel.html#.jsonSchemaRequired": {
+                      "ref": "mdl.TiledModel.html#.jsonSchemaRequired",
+                      "tf": 8.333333333333332
+                    },
+                    "mdl.TiledModel.html#.jsonSchemaProperties": {
+                      "ref": "mdl.TiledModel.html#.jsonSchemaProperties",
+                      "tf": 10
+                    },
+                    "mdl.TiledObject.html": {
+                      "ref": "mdl.TiledObject.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledPoint.html": {
+                      "ref": "mdl.TiledPoint.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledProperties.html": {
+                      "ref": "mdl.TiledProperties.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledSet.html": {
+                      "ref": "mdl.TiledSet.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledTerrain.html": {
+                      "ref": "mdl.TiledTerrain.html",
+                      "tf": 110
+                    },
+                    "mdl.TiledTile.html": {
+                      "ref": "mdl.TiledTile.html",
+                      "tf": 110
+                    },
+                    "MakeMap.html": {
+                      "ref": "MakeMap.html",
+                      "tf": 110
+                    },
+                    "mdl.html": {
+                      "ref": "mdl.html",
+                      "tf": 6.25
+                    },
+                    "mdl.html#.ALL": {
+                      "ref": "mdl.html#.ALL",
+                      "tf": 8.333333333333332
+                    }
+                  },
+                  "'": {
+                    "docs": {
+                      "mdl.TiledModel.html#.idColumn": {
+                        "ref": "mdl.TiledModel.html#.idColumn",
+                        "tf": 7.142857142857142
+                      },
+                      "mdl.TiledModel.html#.tableName": {
+                        "ref": "mdl.TiledModel.html#.tableName",
+                        "tf": 10
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "i": {
+              "docs": {
+                "cli.Cmd.html": {
+                  "ref": "cli.Cmd.html",
+                  "tf": 12.5
+                },
+                "cli.Serve.html": {
+                  "ref": "cli.Serve.html",
+                  "tf": 25
+                },
+                "cli.html": {
+                  "ref": "cli.html",
+                  "tf": 1900
+                }
+              },
+              ".": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "m": {
+                    "docs": {},
+                    "d": {
+                      "docs": {
+                        "cli.Cmd.html": {
+                          "ref": "cli.Cmd.html",
+                          "tf": 1150
+                        }
+                      },
+                      ".": {
+                        "docs": {},
+                        "d": {
+                          "docs": {},
+                          "b": {
+                            "docs": {},
+                            "g": {
+                              "docs": {
+                                "cli.Cmd.html#.dbg": {
+                                  "ref": "cli.Cmd.html#.dbg",
+                                  "tf": 1100
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "#": {
+                        "docs": {},
+                        "d": {
+                          "docs": {},
+                          "b": {
+                            "docs": {},
+                            "g": {
+                              "docs": {
+                                "cli.Cmd.html#dbg": {
+                                  "ref": "cli.Cmd.html#dbg",
+                                  "tf": 1100
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "m": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "n": {
+                                "docs": {
+                                  "cli.Cmd.html#main": {
+                                    "ref": "cli.Cmd.html#main",
+                                    "tf": 1100
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "m": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "k": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "s": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "cli.MakeSet.html": {
+                                  "ref": "cli.MakeSet.html",
+                                  "tf": 1150
+                                }
+                              },
+                              "#": {
+                                "docs": {},
+                                "m": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {
+                                          "cli.MakeSet.html#main": {
+                                            "ref": "cli.MakeSet.html#main",
+                                            "tf": 1100
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "m": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "p": {
+                              "docs": {
+                                "cli.html#.MakeMap": {
+                                  "ref": "cli.html#.MakeMap",
+                                  "tf": 1150
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "r": {
+                      "docs": {},
+                      "v": {
+                        "docs": {
+                          "cli.Serve.html": {
+                            "ref": "cli.Serve.html",
+                            "tf": 1150
+                          }
+                        },
+                        "e": {
+                          "docs": {},
+                          "#": {
+                            "docs": {},
+                            "d": {
+                              "docs": {},
+                              "b": {
+                                "docs": {},
+                                "g": {
+                                  "docs": {
+                                    "cli.Serve.html#dbg": {
+                                      "ref": "cli.Serve.html#dbg",
+                                      "tf": 1100
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "m": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "i": {
+                                  "docs": {},
+                                  "n": {
+                                    "docs": {
+                                      "cli.Serve.html#main": {
+                                        "ref": "cli.Serve.html#main",
+                                        "tf": 1100
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "~": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "m": {
+                    "docs": {},
+                    "d": {
+                      "docs": {
+                        "cli.Cmd.html": {
+                          "ref": "cli.Cmd.html",
+                          "tf": 50
+                        }
+                      }
+                    }
+                  }
+                },
+                "m": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "k": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "s": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "t": {
+                              "docs": {
+                                "cli.MakeSet.html": {
+                                  "ref": "cli.MakeSet.html",
+                                  "tf": 100
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "r": {
+                      "docs": {},
+                      "v": {
+                        "docs": {
+                          "cli.Serve.html": {
+                            "ref": "cli.Serve.html",
+                            "tf": 100
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "e": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "n": {
+                  "docs": {
+                    "pixeldeck.arch.html#.cleanQuery": {
+                      "ref": "pixeldeck.arch.html#.cleanQuery",
+                      "tf": 7.142857142857142
+                    }
+                  },
+                  "q": {
+                    "docs": {},
+                    "u": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "i": {
+                            "docs": {
+                              "pixeldeck.arch.html#.cleanQuery": {
+                                "ref": "pixeldeck.arch.html#.cleanQuery",
+                                "tf": 625
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "d": {
+                      "docs": {
+                        "external-commander.Command.html": {
+                          "ref": "external-commander.Command.html",
+                          "tf": 650
+                        },
+                        "cli.Cmd.html#main": {
+                          "ref": "cli.Cmd.html#main",
+                          "tf": 25
+                        },
+                        "cli.Serve.html#main": {
+                          "ref": "cli.Serve.html#main",
+                          "tf": 25
+                        },
+                        "-_MakeCmd.html": {
+                          "ref": "-_MakeCmd.html",
+                          "tf": 12.5
+                        },
+                        "external-commander.html": {
+                          "ref": "external-commander.html",
+                          "tf": 605
+                        },
+                        "cli.html": {
+                          "ref": "cli.html",
+                          "tf": 12.5
+                        }
+                      },
+                      "e": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          ".": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "m": {
+                                  "docs": {},
+                                  "m": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {
+                                            "external-commander.Command.html": {
+                                              "ref": "external-commander.Command.html",
+                                              "tf": 100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "mdl.TiledFrame.html": {
+                          "ref": "mdl.TiledFrame.html",
+                          "tf": 12.5
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "u": {
+                "docs": {},
+                "m": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "mdl.TiledModel.html#.idColumn": {
+                        "ref": "mdl.TiledModel.html#.idColumn",
+                        "tf": 7.142857142857142
+                      },
+                      "mdl.TiledSet.html#columns": {
+                        "ref": "mdl.TiledSet.html#columns",
+                        "tf": 650
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "v": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "MakeMap.html": {
+                          "ref": "MakeMap.html",
+                          "tf": 5.555555555555555
+                        },
+                        "pixeldeck.arch.html#.getResPathFor": {
+                          "ref": "pixeldeck.arch.html#.getResPathFor",
+                          "tf": 2.1739130434782608
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "f": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "external-config.html": {
+                        "ref": "external-config.html",
+                        "tf": 600
+                      }
+                    },
+                    "u": {
+                      "docs": {},
+                      "r": {
+                        "docs": {
+                          "pixeldeck.arch.html#.getResPathFor": {
+                            "ref": "pixeldeck.arch.html#.getResPathFor",
+                            "tf": 2.1739130434782608
+                          },
+                          "pixeldeck.cfg.html": {
+                            "ref": "pixeldeck.cfg.html",
+                            "tf": 7.142857142857142
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "m": {
+            "docs": {},
+            "d": {
+              "docs": {
+                "cli.Cmd.html": {
+                  "ref": "cli.Cmd.html",
+                  "tf": 650
+                }
+              },
+              ".": {
+                "docs": {},
+                "d": {
+                  "docs": {},
+                  "b": {
+                    "docs": {},
+                    "g": {
+                      "docs": {
+                        "cli.Cmd.html#.dbg": {
+                          "ref": "cli.Cmd.html#.dbg",
+                          "tf": 100
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "#": {
+                "docs": {},
+                "d": {
+                  "docs": {},
+                  "b": {
+                    "docs": {},
+                    "g": {
+                      "docs": {
+                        "cli.Cmd.html#dbg": {
+                          "ref": "cli.Cmd.html#dbg",
+                          "tf": 100
+                        }
+                      }
+                    }
+                  }
+                },
+                "m": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "n": {
+                        "docs": {
+                          "cli.Cmd.html#main": {
+                            "ref": "cli.Cmd.html#main",
+                            "tf": 100
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "a": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "-_MakeCmd.html": {
+                      "ref": "-_MakeCmd.html",
+                      "tf": 12.5
+                    },
+                    "mdl.TiledModel.html#.createSchema": {
+                      "ref": "mdl.TiledModel.html#.createSchema",
+                      "tf": 16.666666666666664
+                    }
+                  },
+                  "e": {
+                    "docs": {},
+                    "s": {
+                      "docs": {},
+                      "c": {
+                        "docs": {},
+                        "h": {
+                          "docs": {},
+                          "e": {
+                            "docs": {},
+                            "m": {
+                              "docs": {},
+                              "a": {
+                                "docs": {
+                                  "mdl.TiledModel.html#.createSchema": {
+                                    "ref": "mdl.TiledModel.html#.createSchema",
+                                    "tf": 633.3333333333334
+                                  }
+                                },
+                                "o": {
+                                  "docs": {},
+                                  "n": {
+                                    "docs": {
+                                      "mdl.TiledChunk.html#.createSchemaOn": {
+                                        "ref": "mdl.TiledChunk.html#.createSchemaOn",
+                                        "tf": 633.3333333333334
+                                      },
+                                      "mdl.TiledFile.html#.createSchemaOn": {
+                                        "ref": "mdl.TiledFile.html#.createSchemaOn",
+                                        "tf": 625
+                                      },
+                                      "mdl.TiledLayer.html#.createSchemaOn": {
+                                        "ref": "mdl.TiledLayer.html#.createSchemaOn",
+                                        "tf": 625
+                                      },
+                                      "mdl.TiledMap.html#.createSchemaOn": {
+                                        "ref": "mdl.TiledMap.html#.createSchemaOn",
+                                        "tf": 633.3333333333334
+                                      },
+                                      "mdl.TiledModel.html#.createSchemaOn": {
+                                        "ref": "mdl.TiledModel.html#.createSchemaOn",
+                                        "tf": 620
+                                      },
+                                      "mdl.TiledObject.html#.createSchemaOn": {
+                                        "ref": "mdl.TiledObject.html#.createSchemaOn",
+                                        "tf": 633.3333333333334
+                                      },
+                                      "mdl.TiledPoint.html#.createSchemaOn": {
+                                        "ref": "mdl.TiledPoint.html#.createSchemaOn",
+                                        "tf": 633.3333333333334
+                                      },
+                                      "mdl.TiledProperties.html#.createSchemaOn": {
+                                        "ref": "mdl.TiledProperties.html#.createSchemaOn",
+                                        "tf": 633.3333333333334
+                                      },
+                                      "mdl.TiledSet.html#.createSchemaOn": {
+                                        "ref": "mdl.TiledSet.html#.createSchemaOn",
+                                        "tf": 625
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "c": {
+              "docs": {},
+              "h": {
+                "docs": {
+                  "mdl.TiledFile.html": {
+                    "ref": "mdl.TiledFile.html",
+                    "tf": 6.25
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "n": {
+                "docs": {},
+                "g": {
+                  "docs": {
+                    "pixeldeck.arch.html#.getResPathFor": {
+                      "ref": "pixeldeck.arch.html#.getResPathFor",
+                      "tf": 2.1739130434782608
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "n": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "pixeldeck.arch.html#.getResPathFor": {
+                          "ref": "pixeldeck.arch.html#.getResPathFor",
+                          "tf": 2.1739130434782608
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "f": {
+            "docs": {},
+            "g": {
+              "docs": {
+                "pixeldeck.cfg.html": {
+                  "ref": "pixeldeck.cfg.html",
+                  "tf": 650
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "docs": {},
+          "e": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "b": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "list_external.html": {
+                        "ref": "list_external.html",
+                        "tf": 23.333333333333332
+                      },
+                      "cli.Cmd.html#.dbg": {
+                        "ref": "cli.Cmd.html#.dbg",
+                        "tf": 110
+                      },
+                      "cli.Cmd.html#dbg": {
+                        "ref": "cli.Cmd.html#dbg",
+                        "tf": 110
+                      },
+                      "cli.Serve.html#dbg": {
+                        "ref": "cli.Serve.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledChunk.html#dbg": {
+                        "ref": "mdl.TiledChunk.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledChunk.html#uuid": {
+                        "ref": "mdl.TiledChunk.html#uuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledFile.html#.resourceSearchPaths": {
+                        "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                        "tf": 110
+                      },
+                      "mdl.TiledFile.html#exists": {
+                        "ref": "mdl.TiledFile.html#exists",
+                        "tf": 110
+                      },
+                      "mdl.TiledFile.html#dbg": {
+                        "ref": "mdl.TiledFile.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledFile.html#uuid": {
+                        "ref": "mdl.TiledFile.html#uuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledFrame.html#dbg": {
+                        "ref": "mdl.TiledFrame.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledFrame.html#uuid": {
+                        "ref": "mdl.TiledFrame.html#uuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledLayer.html#.relationMappings": {
+                        "ref": "mdl.TiledLayer.html#.relationMappings",
+                        "tf": 110
+                      },
+                      "mdl.TiledLayer.html#dbg": {
+                        "ref": "mdl.TiledLayer.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledLayer.html#uuid": {
+                        "ref": "mdl.TiledLayer.html#uuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledMap.html#.jsonSchema": {
+                        "ref": "mdl.TiledMap.html#.jsonSchema",
+                        "tf": 110
+                      },
+                      "mdl.TiledMap.html#.relationMappings": {
+                        "ref": "mdl.TiledMap.html#.relationMappings",
+                        "tf": 110
+                      },
+                      "mdl.TiledMap.html#dbg": {
+                        "ref": "mdl.TiledMap.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledMap.html#uuid": {
+                        "ref": "mdl.TiledMap.html#uuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledMapUsesSet.html#.jsonSchemaProperties": {
+                        "ref": "mdl.TiledMapUsesSet.html#.jsonSchemaProperties",
+                        "tf": 110
+                      },
+                      "mdl.TiledMapUsesSet.html#.relationMappings": {
+                        "ref": "mdl.TiledMapUsesSet.html#.relationMappings",
+                        "tf": 110
+                      },
+                      "mdl.TiledMapUsesSet.html#dbg": {
+                        "ref": "mdl.TiledMapUsesSet.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledMapUsesSet.html#uuid": {
+                        "ref": "mdl.TiledMapUsesSet.html#uuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledModel.html#.dbg": {
+                        "ref": "mdl.TiledModel.html#.dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledModel.html#dbg": {
+                        "ref": "mdl.TiledModel.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledModel.html#.idColumn": {
+                        "ref": "mdl.TiledModel.html#.idColumn",
+                        "tf": 110
+                      },
+                      "mdl.TiledModel.html#.tableName": {
+                        "ref": "mdl.TiledModel.html#.tableName",
+                        "tf": 110
+                      },
+                      "mdl.TiledModel.html#.jsonSchemaRequired": {
+                        "ref": "mdl.TiledModel.html#.jsonSchemaRequired",
+                        "tf": 110
+                      },
+                      "mdl.TiledModel.html#.jsonSchemaProperties": {
+                        "ref": "mdl.TiledModel.html#.jsonSchemaProperties",
+                        "tf": 110
+                      },
+                      "mdl.TiledModel.html#.jsonSchema": {
+                        "ref": "mdl.TiledModel.html#.jsonSchema",
+                        "tf": 110
+                      },
+                      "mdl.TiledModel.html#uuid": {
+                        "ref": "mdl.TiledModel.html#uuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledObject.html#.jsonSchemaProperties": {
+                        "ref": "mdl.TiledObject.html#.jsonSchemaProperties",
+                        "tf": 110
+                      },
+                      "mdl.TiledObject.html#.relationMappings": {
+                        "ref": "mdl.TiledObject.html#.relationMappings",
+                        "tf": 110
+                      },
+                      "mdl.TiledPoint.html#dbg": {
+                        "ref": "mdl.TiledPoint.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledPoint.html#uuid": {
+                        "ref": "mdl.TiledPoint.html#uuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledProperties.html#.jsonSchemaProperties": {
+                        "ref": "mdl.TiledProperties.html#.jsonSchemaProperties",
+                        "tf": 110
+                      },
+                      "mdl.TiledProperties.html#dbg": {
+                        "ref": "mdl.TiledProperties.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledProperties.html#uuid": {
+                        "ref": "mdl.TiledProperties.html#uuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#columns": {
+                        "ref": "mdl.TiledSet.html#columns",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#firstgid": {
+                        "ref": "mdl.TiledSet.html#firstgid",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#grid": {
+                        "ref": "mdl.TiledSet.html#grid",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#image": {
+                        "ref": "mdl.TiledSet.html#image",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#imageheight": {
+                        "ref": "mdl.TiledSet.html#imageheight",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#imagewidth": {
+                        "ref": "mdl.TiledSet.html#imagewidth",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#margin": {
+                        "ref": "mdl.TiledSet.html#margin",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#name": {
+                        "ref": "mdl.TiledSet.html#name",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#spacing": {
+                        "ref": "mdl.TiledSet.html#spacing",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#tilecount": {
+                        "ref": "mdl.TiledSet.html#tilecount",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#tileheight": {
+                        "ref": "mdl.TiledSet.html#tileheight",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#tileoffset": {
+                        "ref": "mdl.TiledSet.html#tileoffset",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#tilewidth": {
+                        "ref": "mdl.TiledSet.html#tilewidth",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#transparentcolor": {
+                        "ref": "mdl.TiledSet.html#transparentcolor",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#type": {
+                        "ref": "mdl.TiledSet.html#type",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#wangsets": {
+                        "ref": "mdl.TiledSet.html#wangsets",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#tiledversion": {
+                        "ref": "mdl.TiledSet.html#tiledversion",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#version": {
+                        "ref": "mdl.TiledSet.html#version",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#.jsonSchemaProperties": {
+                        "ref": "mdl.TiledSet.html#.jsonSchemaProperties",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#.jsonSchemaRequired": {
+                        "ref": "mdl.TiledSet.html#.jsonSchemaRequired",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#.relationMappings": {
+                        "ref": "mdl.TiledSet.html#.relationMappings",
+                        "tf": 135
+                      },
+                      "mdl.TiledSet.html#dbg": {
+                        "ref": "mdl.TiledSet.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledSet.html#uuid": {
+                        "ref": "mdl.TiledSet.html#uuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledTile.html#TiledSetUuid": {
+                        "ref": "mdl.TiledTile.html#TiledSetUuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledTile.html#id": {
+                        "ref": "mdl.TiledTile.html#id",
+                        "tf": 110
+                      },
+                      "mdl.TiledTile.html#imageheight": {
+                        "ref": "mdl.TiledTile.html#imageheight",
+                        "tf": 110
+                      },
+                      "mdl.TiledTile.html#imagewidth": {
+                        "ref": "mdl.TiledTile.html#imagewidth",
+                        "tf": 110
+                      },
+                      "mdl.TiledTile.html#objectgroupUuid": {
+                        "ref": "mdl.TiledTile.html#objectgroupUuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledTile.html#terrain": {
+                        "ref": "mdl.TiledTile.html#terrain",
+                        "tf": 110
+                      },
+                      "mdl.TiledTile.html#type": {
+                        "ref": "mdl.TiledTile.html#type",
+                        "tf": 110
+                      },
+                      "mdl.TiledTile.html#probability": {
+                        "ref": "mdl.TiledTile.html#probability",
+                        "tf": 110
+                      },
+                      "mdl.TiledTile.html#dbg": {
+                        "ref": "mdl.TiledTile.html#dbg",
+                        "tf": 110
+                      },
+                      "mdl.TiledTile.html#uuid": {
+                        "ref": "mdl.TiledTile.html#uuid",
+                        "tf": 110
+                      },
+                      "mdl.TiledTile.html#image": {
+                        "ref": "mdl.TiledTile.html#image",
+                        "tf": 110
+                      },
+                      "pixeldeck.arch.html#.Path": {
+                        "ref": "pixeldeck.arch.html#.Path",
+                        "tf": 110
+                      },
+                      "pixeldeck.arch.html#.Fs": {
+                        "ref": "pixeldeck.arch.html#.Fs",
+                        "tf": 110
+                      },
+                      "pixeldeck.arch.html#.Util": {
+                        "ref": "pixeldeck.arch.html#.Util",
+                        "tf": 110
+                      },
+                      "mdl.html#.ALL": {
+                        "ref": "mdl.html#.ALL",
+                        "tf": 110
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "n": {
+                "docs": {
+                  "cli.Cmd.html": {
+                    "ref": "cli.Cmd.html",
+                    "tf": 0.3333333333333333
+                  },
+                  "cli.Cmd.html#main": {
+                    "ref": "cli.Cmd.html#main",
+                    "tf": 633.3333333333334
+                  },
+                  "cli.MakeSet.html": {
+                    "ref": "cli.MakeSet.html",
+                    "tf": 0.5
+                  },
+                  "cli.MakeSet.html#main": {
+                    "ref": "cli.MakeSet.html#main",
+                    "tf": 650
+                  },
+                  "cli.Serve.html": {
+                    "ref": "cli.Serve.html",
+                    "tf": 0.5
+                  },
+                  "cli.Serve.html#main": {
+                    "ref": "cli.Serve.html#main",
+                    "tf": 650
+                  }
+                }
+              }
+            },
+            "k": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "-_MakeCmd.html": {
+                    "ref": "-_MakeCmd.html",
+                    "tf": 12.5
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "cli.MakeSet.html": {
+                          "ref": "cli.MakeSet.html",
+                          "tf": 650
+                        }
+                      },
+                      "#": {
+                        "docs": {},
+                        "m": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "n": {
+                                "docs": {
+                                  "cli.MakeSet.html#main": {
+                                    "ref": "cli.MakeSet.html#main",
+                                    "tf": 100
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "m": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "p": {
+                      "docs": {
+                        "MakeMap.html": {
+                          "ref": "MakeMap.html",
+                          "tf": 1900
+                        },
+                        "cli.html#.MakeMap": {
+                          "ref": "cli.html#.MakeMap",
+                          "tf": 666.6666666666666
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "p": {
+              "docs": {
+                "mdl.TiledChunk.html": {
+                  "ref": "mdl.TiledChunk.html",
+                  "tf": 16.666666666666664
+                },
+                "mdl.TiledLayer.html": {
+                  "ref": "mdl.TiledLayer.html",
+                  "tf": 8.333333333333332
+                },
+                "mdl.TiledObject.html#.relationMappings": {
+                  "ref": "mdl.TiledObject.html#.relationMappings",
+                  "tf": 16.666666666666664
+                },
+                "mdl.TiledSet.html": {
+                  "ref": "mdl.TiledSet.html",
+                  "tf": 16.666666666666664
+                },
+                "cli.html#.MakeMap": {
+                  "ref": "cli.html#.MakeMap",
+                  "tf": 16.666666666666664
+                },
+                "mdl.html#.TiledGid": {
+                  "ref": "mdl.html#.TiledGid",
+                  "tf": 1.6129032258064515
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "i": {
+                "docs": {
+                  "mdl.TiledLayer.html#.relationMappings": {
+                    "ref": "mdl.TiledLayer.html#.relationMappings",
+                    "tf": 18.181818181818183
+                  },
+                  "mdl.TiledMap.html#.relationMappings": {
+                    "ref": "mdl.TiledMap.html#.relationMappings",
+                    "tf": 18.181818181818183
+                  },
+                  "mdl.TiledProperties.html": {
+                    "ref": "mdl.TiledProperties.html",
+                    "tf": 6.25
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "mdl.TiledSet.html#margin": {
+                        "ref": "mdl.TiledSet.html#margin",
+                        "tf": 650
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "d": {
+            "docs": {},
+            "l": {
+              "docs": {
+                "mdl.html": {
+                  "ref": "mdl.html",
+                  "tf": 1900
+                }
+              },
+              ".": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "l": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "d": {
+                          "docs": {},
+                          "c": {
+                            "docs": {},
+                            "h": {
+                              "docs": {},
+                              "u": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "k": {
+                                    "docs": {
+                                      "mdl.TiledChunk.html": {
+                                        "ref": "mdl.TiledChunk.html",
+                                        "tf": 1250
+                                      },
+                                      "mdl.TiledLayer.html#.relationMappings": {
+                                        "ref": "mdl.TiledLayer.html#.relationMappings",
+                                        "tf": 4.545454545454546
+                                      }
+                                    },
+                                    "#": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {},
+                                        "b": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {
+                                              "mdl.TiledChunk.html#dbg": {
+                                                "ref": "mdl.TiledChunk.html#dbg",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "u": {
+                                        "docs": {},
+                                        "u": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {
+                                                "mdl.TiledChunk.html#uuid": {
+                                                  "ref": "mdl.TiledChunk.html#uuid",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "n": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {
+                                                "mdl.TiledChunk.html#render": {
+                                                  "ref": "mdl.TiledChunk.html#render",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    ".": {
+                                      "docs": {},
+                                      "c": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "m": {
+                                                            "docs": {},
+                                                            "a": {
+                                                              "docs": {},
+                                                              "o": {
+                                                                "docs": {},
+                                                                "n": {
+                                                                  "docs": {
+                                                                    "mdl.TiledChunk.html#.createSchemaOn": {
+                                                                      "ref": "mdl.TiledChunk.html#.createSchemaOn",
+                                                                      "tf": 1100
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "f": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "l": {
+                                "docs": {
+                                  "mdl.TiledFile.html": {
+                                    "ref": "mdl.TiledFile.html",
+                                    "tf": 1250
+                                  }
+                                },
+                                "e": {
+                                  "docs": {},
+                                  ".": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "u": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {},
+                                                "c": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "a": {
+                                                          "docs": {},
+                                                          "r": {
+                                                            "docs": {},
+                                                            "c": {
+                                                              "docs": {},
+                                                              "h": {
+                                                                "docs": {},
+                                                                "p": {
+                                                                  "docs": {},
+                                                                  "a": {
+                                                                    "docs": {},
+                                                                    "t": {
+                                                                      "docs": {},
+                                                                      "h": {
+                                                                        "docs": {
+                                                                          "mdl.TiledFile.html#.resourceSearchPaths": {
+                                                                            "ref": "mdl.TiledFile.html#.resourceSearchPaths",
+                                                                            "tf": 1100
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "f": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "d": {
+                                            "docs": {},
+                                            "r": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "u": {
+                                                      "docs": {},
+                                                      "r": {
+                                                        "docs": {},
+                                                        "c": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "p": {
+                                                              "docs": {},
+                                                              "a": {
+                                                                "docs": {},
+                                                                "t": {
+                                                                  "docs": {},
+                                                                  "h": {
+                                                                    "docs": {},
+                                                                    "f": {
+                                                                      "docs": {},
+                                                                      "o": {
+                                                                        "docs": {},
+                                                                        "r": {
+                                                                          "docs": {
+                                                                            "mdl.TiledFile.html#.findResourcePathFor": {
+                                                                              "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                                                                              "tf": 1100
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "c": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "a": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "c": {
+                                                    "docs": {},
+                                                    "h": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "m": {
+                                                          "docs": {},
+                                                          "a": {
+                                                            "docs": {},
+                                                            "o": {
+                                                              "docs": {},
+                                                              "n": {
+                                                                "docs": {
+                                                                  "mdl.TiledFile.html#.createSchemaOn": {
+                                                                    "ref": "mdl.TiledFile.html#.createSchemaOn",
+                                                                    "tf": 1100
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "#": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "x": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {
+                                                "mdl.TiledFile.html#exists": {
+                                                  "ref": "mdl.TiledFile.html#exists",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "d": {
+                                      "docs": {},
+                                      "b": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {
+                                            "mdl.TiledFile.html#dbg": {
+                                              "ref": "mdl.TiledFile.html#dbg",
+                                              "tf": 1100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "u": {
+                                      "docs": {},
+                                      "u": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "d": {
+                                            "docs": {
+                                              "mdl.TiledFile.html#uuid": {
+                                                "ref": "mdl.TiledFile.html#uuid",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "g": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {
+                                                    "mdl.TiledFile.html#getStat": {
+                                                      "ref": "mdl.TiledFile.html#getStat",
+                                                      "tf": 1100
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "r": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "d": {
+                                            "docs": {
+                                              "mdl.TiledFile.html#render": {
+                                                "ref": "mdl.TiledFile.html#render",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "r": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "m": {
+                                  "docs": {
+                                    "mdl.TiledFrame.html": {
+                                      "ref": "mdl.TiledFrame.html",
+                                      "tf": 1250
+                                    }
+                                  },
+                                  "e": {
+                                    "docs": {},
+                                    "#": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {},
+                                        "b": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {
+                                              "mdl.TiledFrame.html#dbg": {
+                                                "ref": "mdl.TiledFrame.html#dbg",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "u": {
+                                        "docs": {},
+                                        "u": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {
+                                                "mdl.TiledFrame.html#uuid": {
+                                                  "ref": "mdl.TiledFrame.html#uuid",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "n": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {
+                                                "mdl.TiledFrame.html#render": {
+                                                  "ref": "mdl.TiledFrame.html#render",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "t": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "l": {
+                                "docs": {
+                                  "mdl.TiledTile.html": {
+                                    "ref": "mdl.TiledTile.html",
+                                    "tf": 1250
+                                  }
+                                },
+                                "e": {
+                                  "docs": {},
+                                  "#": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {
+                                              "mdl.TiledFrame.html": {
+                                                "ref": "mdl.TiledFrame.html",
+                                                "tf": 12.5
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "t": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "l": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {},
+                                              "s": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "t": {
+                                                    "docs": {},
+                                                    "u": {
+                                                      "docs": {},
+                                                      "u": {
+                                                        "docs": {},
+                                                        "i": {
+                                                          "docs": {},
+                                                          "d": {
+                                                            "docs": {
+                                                              "mdl.TiledTile.html#TiledSetUuid": {
+                                                                "ref": "mdl.TiledTile.html#TiledSetUuid",
+                                                                "tf": 1100
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "e": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "i": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {
+                                                    "mdl.TiledTile.html#terrain": {
+                                                      "ref": "mdl.TiledTile.html#terrain",
+                                                      "tf": 1100
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "y": {
+                                        "docs": {},
+                                        "p": {
+                                          "docs": {
+                                            "mdl.TiledTile.html#type": {
+                                              "ref": "mdl.TiledTile.html#type",
+                                              "tf": 1100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "i": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {
+                                          "mdl.TiledTile.html#id": {
+                                            "ref": "mdl.TiledTile.html#id",
+                                            "tf": 1100
+                                          }
+                                        }
+                                      },
+                                      "m": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {
+                                              "mdl.TiledTile.html#image": {
+                                                "ref": "mdl.TiledTile.html#image",
+                                                "tf": 1100
+                                              }
+                                            },
+                                            "e": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "g": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {},
+                                                        "t": {
+                                                          "docs": {
+                                                            "mdl.TiledTile.html#imageheight": {
+                                                              "ref": "mdl.TiledTile.html#imageheight",
+                                                              "tf": 1100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "w": {
+                                                "docs": {},
+                                                "i": {
+                                                  "docs": {},
+                                                  "d": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {
+                                                          "mdl.TiledTile.html#imagewidth": {
+                                                            "ref": "mdl.TiledTile.html#imagewidth",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "o": {
+                                      "docs": {},
+                                      "b": {
+                                        "docs": {},
+                                        "j": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                "g": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "u": {
+                                                        "docs": {},
+                                                        "p": {
+                                                          "docs": {},
+                                                          "u": {
+                                                            "docs": {},
+                                                            "u": {
+                                                              "docs": {},
+                                                              "i": {
+                                                                "docs": {},
+                                                                "d": {
+                                                                  "docs": {
+                                                                    "mdl.TiledTile.html#objectgroupUuid": {
+                                                                      "ref": "mdl.TiledTile.html#objectgroupUuid",
+                                                                      "tf": 1100
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "p": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "o": {
+                                          "docs": {},
+                                          "b": {
+                                            "docs": {
+                                              "mdl.TiledTile.html#probability": {
+                                                "ref": "mdl.TiledTile.html#probability",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "d": {
+                                      "docs": {},
+                                      "b": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {
+                                            "mdl.TiledTile.html#dbg": {
+                                              "ref": "mdl.TiledTile.html#dbg",
+                                              "tf": 1100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "u": {
+                                      "docs": {},
+                                      "u": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {},
+                                          "d": {
+                                            "docs": {
+                                              "mdl.TiledTile.html#uuid": {
+                                                "ref": "mdl.TiledTile.html#uuid",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "r": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "d": {
+                                            "docs": {
+                                              "mdl.TiledTile.html#render": {
+                                                "ref": "mdl.TiledTile.html#render",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "e": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {
+                                          "mdl.TiledTerrain.html": {
+                                            "ref": "mdl.TiledTerrain.html",
+                                            "tf": 1250
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "l": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "y": {
+                                "docs": {
+                                  "mdl.TiledLayer.html": {
+                                    "ref": "mdl.TiledLayer.html",
+                                    "tf": 1250
+                                  },
+                                  "mdl.TiledLayer.html#.relationMappings": {
+                                    "ref": "mdl.TiledLayer.html#.relationMappings",
+                                    "tf": 4.545454545454546
+                                  },
+                                  "mdl.TiledMap.html#.relationMappings": {
+                                    "ref": "mdl.TiledMap.html#.relationMappings",
+                                    "tf": 4.545454545454546
+                                  }
+                                },
+                                "e": {
+                                  "docs": {},
+                                  "r": {
+                                    "docs": {},
+                                    ".": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "l": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                "i": {
+                                                  "docs": {},
+                                                  "o": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {},
+                                                      "m": {
+                                                        "docs": {},
+                                                        "a": {
+                                                          "docs": {},
+                                                          "p": {
+                                                            "docs": {
+                                                              "mdl.TiledLayer.html#.relationMappings": {
+                                                                "ref": "mdl.TiledLayer.html#.relationMappings",
+                                                                "tf": 1100
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "c": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "m": {
+                                                            "docs": {},
+                                                            "a": {
+                                                              "docs": {},
+                                                              "o": {
+                                                                "docs": {},
+                                                                "n": {
+                                                                  "docs": {
+                                                                    "mdl.TiledLayer.html#.createSchemaOn": {
+                                                                      "ref": "mdl.TiledLayer.html#.createSchemaOn",
+                                                                      "tf": 1100
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "#": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {},
+                                        "b": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {
+                                              "mdl.TiledLayer.html#dbg": {
+                                                "ref": "mdl.TiledLayer.html#dbg",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "u": {
+                                        "docs": {},
+                                        "u": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {
+                                                "mdl.TiledLayer.html#uuid": {
+                                                  "ref": "mdl.TiledLayer.html#uuid",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "n": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {
+                                                "mdl.TiledLayer.html#render": {
+                                                  "ref": "mdl.TiledLayer.html#render",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "o": {
+                            "docs": {},
+                            "b": {
+                              "docs": {},
+                              "j": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "c": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {
+                                        "mdl.TiledLayer.html#.relationMappings": {
+                                          "ref": "mdl.TiledLayer.html#.relationMappings",
+                                          "tf": 4.545454545454546
+                                        },
+                                        "mdl.TiledObject.html": {
+                                          "ref": "mdl.TiledObject.html",
+                                          "tf": 1250
+                                        }
+                                      },
+                                      ".": {
+                                        "docs": {},
+                                        "j": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "n": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "c": {
+                                                    "docs": {},
+                                                    "h": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "m": {
+                                                          "docs": {},
+                                                          "a": {
+                                                            "docs": {},
+                                                            "p": {
+                                                              "docs": {},
+                                                              "r": {
+                                                                "docs": {},
+                                                                "o": {
+                                                                  "docs": {},
+                                                                  "p": {
+                                                                    "docs": {},
+                                                                    "e": {
+                                                                      "docs": {},
+                                                                      "r": {
+                                                                        "docs": {},
+                                                                        "t": {
+                                                                          "docs": {},
+                                                                          "i": {
+                                                                            "docs": {
+                                                                              "mdl.TiledObject.html#.jsonSchemaProperties": {
+                                                                                "ref": "mdl.TiledObject.html#.jsonSchemaProperties",
+                                                                                "tf": 1100
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "r": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "l": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "i": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "n": {
+                                                        "docs": {},
+                                                        "m": {
+                                                          "docs": {},
+                                                          "a": {
+                                                            "docs": {},
+                                                            "p": {
+                                                              "docs": {
+                                                                "mdl.TiledObject.html#.relationMappings": {
+                                                                  "ref": "mdl.TiledObject.html#.relationMappings",
+                                                                  "tf": 1100
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "c": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "docs": {},
+                                                      "c": {
+                                                        "docs": {},
+                                                        "h": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "m": {
+                                                              "docs": {},
+                                                              "a": {
+                                                                "docs": {},
+                                                                "o": {
+                                                                  "docs": {},
+                                                                  "n": {
+                                                                    "docs": {
+                                                                      "mdl.TiledObject.html#.createSchemaOn": {
+                                                                        "ref": "mdl.TiledObject.html#.createSchemaOn",
+                                                                        "tf": 1100
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "p": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "o": {
+                                "docs": {},
+                                "p": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "t": {
+                                        "docs": {},
+                                        "i": {
+                                          "docs": {
+                                            "mdl.TiledLayer.html#.relationMappings": {
+                                              "ref": "mdl.TiledLayer.html#.relationMappings",
+                                              "tf": 4.545454545454546
+                                            },
+                                            "mdl.TiledMap.html#.relationMappings": {
+                                              "ref": "mdl.TiledMap.html#.relationMappings",
+                                              "tf": 4.545454545454546
+                                            },
+                                            "mdl.TiledProperties.html": {
+                                              "ref": "mdl.TiledProperties.html",
+                                              "tf": 1250
+                                            }
+                                          },
+                                          "e": {
+                                            "docs": {},
+                                            "s": {
+                                              "docs": {},
+                                              ".": {
+                                                "docs": {},
+                                                "j": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "n": {
+                                                        "docs": {},
+                                                        "s": {
+                                                          "docs": {},
+                                                          "c": {
+                                                            "docs": {},
+                                                            "h": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "m": {
+                                                                  "docs": {},
+                                                                  "a": {
+                                                                    "docs": {},
+                                                                    "p": {
+                                                                      "docs": {},
+                                                                      "r": {
+                                                                        "docs": {},
+                                                                        "o": {
+                                                                          "docs": {},
+                                                                          "p": {
+                                                                            "docs": {},
+                                                                            "e": {
+                                                                              "docs": {},
+                                                                              "r": {
+                                                                                "docs": {},
+                                                                                "t": {
+                                                                                  "docs": {},
+                                                                                  "i": {
+                                                                                    "docs": {
+                                                                                      "mdl.TiledProperties.html#.jsonSchemaProperties": {
+                                                                                        "ref": "mdl.TiledProperties.html#.jsonSchemaProperties",
+                                                                                        "tf": 1100
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "c": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {},
+                                                        "t": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "s": {
+                                                              "docs": {},
+                                                              "c": {
+                                                                "docs": {},
+                                                                "h": {
+                                                                  "docs": {},
+                                                                  "e": {
+                                                                    "docs": {},
+                                                                    "m": {
+                                                                      "docs": {},
+                                                                      "a": {
+                                                                        "docs": {},
+                                                                        "o": {
+                                                                          "docs": {},
+                                                                          "n": {
+                                                                            "docs": {
+                                                                              "mdl.TiledProperties.html#.createSchemaOn": {
+                                                                                "ref": "mdl.TiledProperties.html#.createSchemaOn",
+                                                                                "tf": 1100
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "#": {
+                                                "docs": {},
+                                                "d": {
+                                                  "docs": {},
+                                                  "b": {
+                                                    "docs": {},
+                                                    "g": {
+                                                      "docs": {
+                                                        "mdl.TiledProperties.html#dbg": {
+                                                          "ref": "mdl.TiledProperties.html#dbg",
+                                                          "tf": 1100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "u": {
+                                                  "docs": {},
+                                                  "u": {
+                                                    "docs": {},
+                                                    "i": {
+                                                      "docs": {},
+                                                      "d": {
+                                                        "docs": {
+                                                          "mdl.TiledProperties.html#uuid": {
+                                                            "ref": "mdl.TiledProperties.html#uuid",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "r": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {},
+                                                      "d": {
+                                                        "docs": {
+                                                          "mdl.TiledProperties.html#render": {
+                                                            "ref": "mdl.TiledProperties.html#render",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "o": {
+                              "docs": {},
+                              "i": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "t": {
+                                    "docs": {
+                                      "mdl.TiledPoint.html": {
+                                        "ref": "mdl.TiledPoint.html",
+                                        "tf": 1250
+                                      }
+                                    },
+                                    "#": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {},
+                                        "b": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {
+                                              "mdl.TiledPoint.html#dbg": {
+                                                "ref": "mdl.TiledPoint.html#dbg",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "u": {
+                                        "docs": {},
+                                        "u": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {
+                                                "mdl.TiledPoint.html#uuid": {
+                                                  "ref": "mdl.TiledPoint.html#uuid",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "n": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {
+                                                "mdl.TiledPoint.html#render": {
+                                                  "ref": "mdl.TiledPoint.html#render",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    ".": {
+                                      "docs": {},
+                                      "c": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "m": {
+                                                            "docs": {},
+                                                            "a": {
+                                                              "docs": {},
+                                                              "o": {
+                                                                "docs": {},
+                                                                "n": {
+                                                                  "docs": {
+                                                                    "mdl.TiledPoint.html#.createSchemaOn": {
+                                                                      "ref": "mdl.TiledPoint.html#.createSchemaOn",
+                                                                      "tf": 1100
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "m": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "p": {
+                                "docs": {
+                                  "mdl.TiledMap.html": {
+                                    "ref": "mdl.TiledMap.html",
+                                    "tf": 1250
+                                  }
+                                },
+                                ".": {
+                                  "docs": {},
+                                  "j": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {
+                                                        "mdl.TiledMap.html#.jsonSchema": {
+                                                          "ref": "mdl.TiledMap.html#.jsonSchema",
+                                                          "tf": 1100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "r": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "i": {
+                                              "docs": {},
+                                              "o": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {},
+                                                      "p": {
+                                                        "docs": {
+                                                          "mdl.TiledMap.html#.relationMappings": {
+                                                            "ref": "mdl.TiledMap.html#.relationMappings",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "c": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "s": {
+                                                "docs": {},
+                                                "c": {
+                                                  "docs": {},
+                                                  "h": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "m": {
+                                                        "docs": {},
+                                                        "a": {
+                                                          "docs": {},
+                                                          "o": {
+                                                            "docs": {},
+                                                            "n": {
+                                                              "docs": {
+                                                                "mdl.TiledMap.html#.createSchemaOn": {
+                                                                  "ref": "mdl.TiledMap.html#.createSchemaOn",
+                                                                  "tf": 1100
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "b": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "f": {
+                                        "docs": {},
+                                        "o": {
+                                          "docs": {},
+                                          "r": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "u": {
+                                                      "docs": {},
+                                                      "r": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "s": {
+                                                            "docs": {},
+                                                            "c": {
+                                                              "docs": {},
+                                                              "h": {
+                                                                "docs": {},
+                                                                "e": {
+                                                                  "docs": {},
+                                                                  "m": {
+                                                                    "docs": {},
+                                                                    "a": {
+                                                                      "docs": {
+                                                                        "mdl.TiledMap.html#.beforeEnsureSchema": {
+                                                                          "ref": "mdl.TiledMap.html#.beforeEnsureSchema",
+                                                                          "tf": 1100
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "u": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "s": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {
+                                                "mdl.TiledMap.html#.relationMappings": {
+                                                  "ref": "mdl.TiledMap.html#.relationMappings",
+                                                  "tf": 4.545454545454546
+                                                },
+                                                "mdl.TiledMapUsesSet.html": {
+                                                  "ref": "mdl.TiledMapUsesSet.html",
+                                                  "tf": 1250
+                                                }
+                                              },
+                                              ".": {
+                                                "docs": {},
+                                                "j": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "n": {
+                                                        "docs": {},
+                                                        "s": {
+                                                          "docs": {},
+                                                          "c": {
+                                                            "docs": {},
+                                                            "h": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "m": {
+                                                                  "docs": {},
+                                                                  "a": {
+                                                                    "docs": {},
+                                                                    "p": {
+                                                                      "docs": {},
+                                                                      "r": {
+                                                                        "docs": {},
+                                                                        "o": {
+                                                                          "docs": {},
+                                                                          "p": {
+                                                                            "docs": {},
+                                                                            "e": {
+                                                                              "docs": {},
+                                                                              "r": {
+                                                                                "docs": {},
+                                                                                "t": {
+                                                                                  "docs": {},
+                                                                                  "i": {
+                                                                                    "docs": {
+                                                                                      "mdl.TiledMapUsesSet.html#.jsonSchemaProperties": {
+                                                                                        "ref": "mdl.TiledMapUsesSet.html#.jsonSchemaProperties",
+                                                                                        "tf": 1100
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "r": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "l": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {},
+                                                        "t": {
+                                                          "docs": {},
+                                                          "i": {
+                                                            "docs": {},
+                                                            "o": {
+                                                              "docs": {},
+                                                              "n": {
+                                                                "docs": {},
+                                                                "m": {
+                                                                  "docs": {},
+                                                                  "a": {
+                                                                    "docs": {},
+                                                                    "p": {
+                                                                      "docs": {
+                                                                        "mdl.TiledMapUsesSet.html#.relationMappings": {
+                                                                          "ref": "mdl.TiledMapUsesSet.html#.relationMappings",
+                                                                          "tf": 1100
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "#": {
+                                                "docs": {},
+                                                "d": {
+                                                  "docs": {},
+                                                  "b": {
+                                                    "docs": {},
+                                                    "g": {
+                                                      "docs": {
+                                                        "mdl.TiledMapUsesSet.html#dbg": {
+                                                          "ref": "mdl.TiledMapUsesSet.html#dbg",
+                                                          "tf": 1100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "u": {
+                                                  "docs": {},
+                                                  "u": {
+                                                    "docs": {},
+                                                    "i": {
+                                                      "docs": {},
+                                                      "d": {
+                                                        "docs": {
+                                                          "mdl.TiledMapUsesSet.html#uuid": {
+                                                            "ref": "mdl.TiledMapUsesSet.html#uuid",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "r": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {},
+                                                      "d": {
+                                                        "docs": {
+                                                          "mdl.TiledMapUsesSet.html#render": {
+                                                            "ref": "mdl.TiledMapUsesSet.html#render",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "#": {
+                                  "docs": {},
+                                  "d": {
+                                    "docs": {},
+                                    "b": {
+                                      "docs": {},
+                                      "g": {
+                                        "docs": {
+                                          "mdl.TiledMap.html#dbg": {
+                                            "ref": "mdl.TiledMap.html#dbg",
+                                            "tf": 1100
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "u": {
+                                    "docs": {},
+                                    "u": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {
+                                            "mdl.TiledMap.html#uuid": {
+                                              "ref": "mdl.TiledMap.html#uuid",
+                                              "tf": 1100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "r": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {
+                                            "mdl.TiledMap.html#render": {
+                                              "ref": "mdl.TiledMap.html#render",
+                                              "tf": 1100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "o": {
+                              "docs": {},
+                              "d": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "l": {
+                                    "docs": {
+                                      "mdl.TiledModel.html": {
+                                        "ref": "mdl.TiledModel.html",
+                                        "tf": 1250
+                                      }
+                                    },
+                                    ".": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {},
+                                        "b": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {
+                                              "mdl.TiledModel.html#.dbg": {
+                                                "ref": "mdl.TiledModel.html#.dbg",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "r": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "p": {
+                                              "docs": {},
+                                              "s": {
+                                                "docs": {},
+                                                "c": {
+                                                  "docs": {},
+                                                  "h": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "m": {
+                                                        "docs": {},
+                                                        "a": {
+                                                          "docs": {
+                                                            "mdl.TiledModel.html#.dropSchema": {
+                                                              "ref": "mdl.TiledModel.html#.dropSchema",
+                                                              "tf": 1100
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "i": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {},
+                                          "c": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "l": {
+                                                "docs": {},
+                                                "u": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {
+                                                        "mdl.TiledModel.html#.idColumn": {
+                                                          "ref": "mdl.TiledModel.html#.idColumn",
+                                                          "tf": 1100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "t": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "b": {
+                                            "docs": {},
+                                            "l": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "a": {
+                                                    "docs": {},
+                                                    "m": {
+                                                      "docs": {
+                                                        "mdl.TiledModel.html#.tableName": {
+                                                          "ref": "mdl.TiledModel.html#.tableName",
+                                                          "tf": 1100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "j": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {},
+                                              "s": {
+                                                "docs": {},
+                                                "c": {
+                                                  "docs": {},
+                                                  "h": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "m": {
+                                                        "docs": {},
+                                                        "a": {
+                                                          "docs": {
+                                                            "mdl.TiledModel.html#.jsonSchema": {
+                                                              "ref": "mdl.TiledModel.html#.jsonSchema",
+                                                              "tf": 1100
+                                                            }
+                                                          },
+                                                          "r": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "q": {
+                                                                "docs": {},
+                                                                "u": {
+                                                                  "docs": {},
+                                                                  "i": {
+                                                                    "docs": {},
+                                                                    "r": {
+                                                                      "docs": {
+                                                                        "mdl.TiledModel.html#.jsonSchemaRequired": {
+                                                                          "ref": "mdl.TiledModel.html#.jsonSchemaRequired",
+                                                                          "tf": 1100
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "p": {
+                                                            "docs": {},
+                                                            "r": {
+                                                              "docs": {},
+                                                              "o": {
+                                                                "docs": {},
+                                                                "p": {
+                                                                  "docs": {},
+                                                                  "e": {
+                                                                    "docs": {},
+                                                                    "r": {
+                                                                      "docs": {},
+                                                                      "t": {
+                                                                        "docs": {},
+                                                                        "i": {
+                                                                          "docs": {
+                                                                            "mdl.TiledModel.html#.jsonSchemaProperties": {
+                                                                              "ref": "mdl.TiledModel.html#.jsonSchemaProperties",
+                                                                              "tf": 1100
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "c": {
+                                        "docs": {},
+                                        "r": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "a": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "m": {
+                                                            "docs": {},
+                                                            "a": {
+                                                              "docs": {
+                                                                "mdl.TiledModel.html#.createSchema": {
+                                                                  "ref": "mdl.TiledModel.html#.createSchema",
+                                                                  "tf": 1100
+                                                                }
+                                                              },
+                                                              "o": {
+                                                                "docs": {},
+                                                                "n": {
+                                                                  "docs": {
+                                                                    "mdl.TiledModel.html#.createSchemaOn": {
+                                                                      "ref": "mdl.TiledModel.html#.createSchemaOn",
+                                                                      "tf": 1100
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "e": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "u": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "a": {
+                                                    "docs": {},
+                                                    "l": {
+                                                      "docs": {},
+                                                      "l": {
+                                                        "docs": {},
+                                                        "s": {
+                                                          "docs": {},
+                                                          "c": {
+                                                            "docs": {},
+                                                            "h": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "m": {
+                                                                  "docs": {},
+                                                                  "a": {
+                                                                    "docs": {
+                                                                      "mdl.TiledModel.html#.ensureAllSchemas": {
+                                                                        "ref": "mdl.TiledModel.html#.ensureAllSchemas",
+                                                                        "tf": 1100
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "s": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "h": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "m": {
+                                                            "docs": {},
+                                                            "a": {
+                                                              "docs": {
+                                                                "mdl.TiledModel.html#.ensureSchema": {
+                                                                  "ref": "mdl.TiledModel.html#.ensureSchema",
+                                                                  "tf": 1100
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "a": {
+                                        "docs": {},
+                                        "f": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "r": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "n": {
+                                                    "docs": {},
+                                                    "s": {
+                                                      "docs": {},
+                                                      "u": {
+                                                        "docs": {},
+                                                        "r": {
+                                                          "docs": {},
+                                                          "e": {
+                                                            "docs": {},
+                                                            "s": {
+                                                              "docs": {},
+                                                              "c": {
+                                                                "docs": {},
+                                                                "h": {
+                                                                  "docs": {},
+                                                                  "e": {
+                                                                    "docs": {},
+                                                                    "m": {
+                                                                      "docs": {},
+                                                                      "a": {
+                                                                        "docs": {
+                                                                          "mdl.TiledModel.html#.afterEnsureSchema": {
+                                                                            "ref": "mdl.TiledModel.html#.afterEnsureSchema",
+                                                                            "tf": 1100
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "#": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {},
+                                        "b": {
+                                          "docs": {},
+                                          "g": {
+                                            "docs": {
+                                              "mdl.TiledModel.html#dbg": {
+                                                "ref": "mdl.TiledModel.html#dbg",
+                                                "tf": 1100
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "u": {
+                                        "docs": {},
+                                        "u": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {
+                                                "mdl.TiledModel.html#uuid": {
+                                                  "ref": "mdl.TiledModel.html#uuid",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "n": {
+                                            "docs": {},
+                                            "d": {
+                                              "docs": {
+                                                "mdl.TiledModel.html#render": {
+                                                  "ref": "mdl.TiledModel.html#render",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "s": {
+                            "docs": {},
+                            "e": {
+                              "docs": {},
+                              "t": {
+                                "docs": {
+                                  "mdl.TiledMap.html#.relationMappings": {
+                                    "ref": "mdl.TiledMap.html#.relationMappings",
+                                    "tf": 4.545454545454546
+                                  },
+                                  "mdl.TiledSet.html": {
+                                    "ref": "mdl.TiledSet.html",
+                                    "tf": 1250
+                                  },
+                                  "mdl.TiledTile.html#id": {
+                                    "ref": "mdl.TiledTile.html#id",
+                                    "tf": 16.666666666666664
+                                  }
+                                },
+                                "#": {
+                                  "docs": {},
+                                  "c": {
+                                    "docs": {},
+                                    "o": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {},
+                                        "u": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {
+                                                "mdl.TiledSet.html#columns": {
+                                                  "ref": "mdl.TiledSet.html#columns",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "f": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "g": {
+                                              "docs": {},
+                                              "i": {
+                                                "docs": {},
+                                                "d": {
+                                                  "docs": {
+                                                    "mdl.TiledSet.html#firstgid": {
+                                                      "ref": "mdl.TiledSet.html#firstgid",
+                                                      "tf": 1100
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "g": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {
+                                            "mdl.TiledSet.html#grid": {
+                                              "ref": "mdl.TiledSet.html#grid",
+                                              "tf": 1100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "i": {
+                                    "docs": {},
+                                    "m": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {
+                                            "mdl.TiledSet.html#image": {
+                                              "ref": "mdl.TiledSet.html#image",
+                                              "tf": 1100
+                                            }
+                                          },
+                                          "e": {
+                                            "docs": {},
+                                            "h": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "i": {
+                                                  "docs": {},
+                                                  "g": {
+                                                    "docs": {},
+                                                    "h": {
+                                                      "docs": {},
+                                                      "t": {
+                                                        "docs": {
+                                                          "mdl.TiledSet.html#imageheight": {
+                                                            "ref": "mdl.TiledSet.html#imageheight",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "w": {
+                                              "docs": {},
+                                              "i": {
+                                                "docs": {},
+                                                "d": {
+                                                  "docs": {},
+                                                  "t": {
+                                                    "docs": {},
+                                                    "h": {
+                                                      "docs": {
+                                                        "mdl.TiledSet.html#imagewidth": {
+                                                          "ref": "mdl.TiledSet.html#imagewidth",
+                                                          "tf": 1100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "m": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "n": {
+                                              "docs": {
+                                                "mdl.TiledSet.html#margin": {
+                                                  "ref": "mdl.TiledSet.html#margin",
+                                                  "tf": 1100
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "n": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "m": {
+                                        "docs": {
+                                          "mdl.TiledSet.html#name": {
+                                            "ref": "mdl.TiledSet.html#name",
+                                            "tf": 1100
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "s": {
+                                    "docs": {},
+                                    "p": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "c": {
+                                          "docs": {
+                                            "mdl.TiledSet.html#spacing": {
+                                              "ref": "mdl.TiledSet.html#spacing",
+                                              "tf": 1100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "t": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "c": {
+                                            "docs": {},
+                                            "o": {
+                                              "docs": {},
+                                              "u": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "t": {
+                                                    "docs": {
+                                                      "mdl.TiledSet.html#tilecount": {
+                                                        "ref": "mdl.TiledSet.html#tilecount",
+                                                        "tf": 1100
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "h": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "i": {
+                                                "docs": {},
+                                                "g": {
+                                                  "docs": {},
+                                                  "h": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {
+                                                        "mdl.TiledSet.html#tileheight": {
+                                                          "ref": "mdl.TiledSet.html#tileheight",
+                                                          "tf": 1100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "o": {
+                                            "docs": {},
+                                            "f": {
+                                              "docs": {},
+                                              "f": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "t": {
+                                                      "docs": {
+                                                        "mdl.TiledSet.html#tileoffset": {
+                                                          "ref": "mdl.TiledSet.html#tileoffset",
+                                                          "tf": 1100
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "w": {
+                                            "docs": {},
+                                            "i": {
+                                              "docs": {},
+                                              "d": {
+                                                "docs": {},
+                                                "t": {
+                                                  "docs": {},
+                                                  "h": {
+                                                    "docs": {
+                                                      "mdl.TiledSet.html#tilewidth": {
+                                                        "ref": "mdl.TiledSet.html#tilewidth",
+                                                        "tf": 1100
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "d": {
+                                            "docs": {},
+                                            "v": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "r": {
+                                                  "docs": {},
+                                                  "s": {
+                                                    "docs": {
+                                                      "mdl.TiledSet.html#tiledversion": {
+                                                        "ref": "mdl.TiledSet.html#tiledversion",
+                                                        "tf": 1100
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "r": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "p": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {},
+                                                "r": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "n": {
+                                                      "docs": {},
+                                                      "t": {
+                                                        "docs": {},
+                                                        "c": {
+                                                          "docs": {},
+                                                          "o": {
+                                                            "docs": {},
+                                                            "l": {
+                                                              "docs": {},
+                                                              "o": {
+                                                                "docs": {},
+                                                                "r": {
+                                                                  "docs": {
+                                                                    "mdl.TiledSet.html#transparentcolor": {
+                                                                      "ref": "mdl.TiledSet.html#transparentcolor",
+                                                                      "tf": 1100
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "y": {
+                                      "docs": {},
+                                      "p": {
+                                        "docs": {
+                                          "mdl.TiledSet.html#type": {
+                                            "ref": "mdl.TiledSet.html#type",
+                                            "tf": 1100
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "w": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {
+                                                  "mdl.TiledSet.html#wangsets": {
+                                                    "ref": "mdl.TiledSet.html#wangsets",
+                                                    "tf": 1100
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "v": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {
+                                            "mdl.TiledSet.html#version": {
+                                              "ref": "mdl.TiledSet.html#version",
+                                              "tf": 1100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "d": {
+                                    "docs": {},
+                                    "b": {
+                                      "docs": {},
+                                      "g": {
+                                        "docs": {
+                                          "mdl.TiledSet.html#dbg": {
+                                            "ref": "mdl.TiledSet.html#dbg",
+                                            "tf": 1100
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "u": {
+                                    "docs": {},
+                                    "u": {
+                                      "docs": {},
+                                      "i": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {
+                                            "mdl.TiledSet.html#uuid": {
+                                              "ref": "mdl.TiledSet.html#uuid",
+                                              "tf": 1100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "r": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "n": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {
+                                            "mdl.TiledSet.html#render": {
+                                              "ref": "mdl.TiledSet.html#render",
+                                              "tf": 1100
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                ".": {
+                                  "docs": {},
+                                  "j": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      "o": {
+                                        "docs": {},
+                                        "n": {
+                                          "docs": {},
+                                          "s": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "h": {
+                                                "docs": {},
+                                                "e": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {},
+                                                      "p": {
+                                                        "docs": {},
+                                                        "r": {
+                                                          "docs": {},
+                                                          "o": {
+                                                            "docs": {},
+                                                            "p": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "r": {
+                                                                  "docs": {},
+                                                                  "t": {
+                                                                    "docs": {},
+                                                                    "i": {
+                                                                      "docs": {
+                                                                        "mdl.TiledSet.html#.jsonSchemaProperties": {
+                                                                          "ref": "mdl.TiledSet.html#.jsonSchemaProperties",
+                                                                          "tf": 1100
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "r": {
+                                                        "docs": {},
+                                                        "e": {
+                                                          "docs": {},
+                                                          "q": {
+                                                            "docs": {},
+                                                            "u": {
+                                                              "docs": {},
+                                                              "i": {
+                                                                "docs": {},
+                                                                "r": {
+                                                                  "docs": {
+                                                                    "mdl.TiledSet.html#.jsonSchemaRequired": {
+                                                                      "ref": "mdl.TiledSet.html#.jsonSchemaRequired",
+                                                                      "tf": 1100
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "r": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "i": {
+                                              "docs": {},
+                                              "o": {
+                                                "docs": {},
+                                                "n": {
+                                                  "docs": {},
+                                                  "m": {
+                                                    "docs": {},
+                                                    "a": {
+                                                      "docs": {},
+                                                      "p": {
+                                                        "docs": {
+                                                          "mdl.TiledSet.html#.relationMappings": {
+                                                            "ref": "mdl.TiledSet.html#.relationMappings",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "c": {
+                                    "docs": {},
+                                    "r": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "a": {
+                                          "docs": {},
+                                          "t": {
+                                            "docs": {},
+                                            "e": {
+                                              "docs": {},
+                                              "s": {
+                                                "docs": {},
+                                                "c": {
+                                                  "docs": {},
+                                                  "h": {
+                                                    "docs": {},
+                                                    "e": {
+                                                      "docs": {},
+                                                      "m": {
+                                                        "docs": {},
+                                                        "a": {
+                                                          "docs": {},
+                                                          "o": {
+                                                            "docs": {},
+                                                            "n": {
+                                                              "docs": {
+                                                                "mdl.TiledSet.html#.createSchemaOn": {
+                                                                  "ref": "mdl.TiledSet.html#.createSchemaOn",
+                                                                  "tf": 1100
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "~": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "m": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "g": {
+                                          "docs": {
+                                            "mdl.TiledTile.html#imageheight": {
+                                              "ref": "mdl.TiledTile.html#imageheight",
+                                              "tf": 12.5
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "g": {
+                            "docs": {},
+                            "i": {
+                              "docs": {},
+                              "d": {
+                                "docs": {
+                                  "mdl.TiledSet.html#firstgid": {
+                                    "ref": "mdl.TiledSet.html#firstgid",
+                                    "tf": 50
+                                  },
+                                  "mdl.html#.TiledGid": {
+                                    "ref": "mdl.html#.TiledGid",
+                                    "tf": 1150
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "p": {
+                  "docs": {},
+                  "r": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "m": {
+                        "docs": {},
+                        "a": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "y": {
+                              "docs": {},
+                              "k": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "y": {
+                                    "docs": {
+                                      "mdl.TiledChunk.html#uuid": {
+                                        "ref": "mdl.TiledChunk.html#uuid",
+                                        "tf": 50
+                                      },
+                                      "mdl.TiledFile.html#uuid": {
+                                        "ref": "mdl.TiledFile.html#uuid",
+                                        "tf": 50
+                                      },
+                                      "mdl.TiledFrame.html#uuid": {
+                                        "ref": "mdl.TiledFrame.html#uuid",
+                                        "tf": 50
+                                      },
+                                      "mdl.TiledLayer.html#uuid": {
+                                        "ref": "mdl.TiledLayer.html#uuid",
+                                        "tf": 50
+                                      },
+                                      "mdl.TiledMap.html#uuid": {
+                                        "ref": "mdl.TiledMap.html#uuid",
+                                        "tf": 50
+                                      },
+                                      "mdl.TiledMapUsesSet.html#uuid": {
+                                        "ref": "mdl.TiledMapUsesSet.html#uuid",
+                                        "tf": 50
+                                      },
+                                      "mdl.TiledModel.html#uuid": {
+                                        "ref": "mdl.TiledModel.html#uuid",
+                                        "tf": 50
+                                      },
+                                      "mdl.TiledPoint.html#uuid": {
+                                        "ref": "mdl.TiledPoint.html#uuid",
+                                        "tf": 50
+                                      },
+                                      "mdl.TiledProperties.html#uuid": {
+                                        "ref": "mdl.TiledProperties.html#uuid",
+                                        "tf": 50
+                                      },
+                                      "mdl.TiledSet.html#uuid": {
+                                        "ref": "mdl.TiledSet.html#uuid",
+                                        "tf": 50
+                                      },
+                                      "mdl.TiledTile.html#uuid": {
+                                        "ref": "mdl.TiledTile.html#uuid",
+                                        "tf": 50
+                                      },
+                                      "mdl.html#.primaryKey": {
+                                        "ref": "mdl.html#.primaryKey",
+                                        "tf": 1150
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "a": {
+                  "docs": {},
+                  "l": {
+                    "docs": {},
+                    "l": {
+                      "docs": {
+                        "mdl.html#.ALL": {
+                          "ref": "mdl.html#.ALL",
+                          "tf": 1300
+                        }
+                      }
+                    }
+                  }
+                },
+                "m": {
+                  "docs": {},
+                  "o": {
+                    "docs": {},
+                    "d": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "l": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            ".": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "s": {
+                                    "docs": {},
+                                    "u": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "a": {
+                                            "docs": {},
+                                            "l": {
+                                              "docs": {},
+                                              "l": {
+                                                "docs": {},
+                                                "s": {
+                                                  "docs": {},
+                                                  "c": {
+                                                    "docs": {},
+                                                    "h": {
+                                                      "docs": {},
+                                                      "e": {
+                                                        "docs": {},
+                                                        "m": {
+                                                          "docs": {},
+                                                          "a": {
+                                                            "docs": {
+                                                              "mdl.html#.models.ensureAllSchemas": {
+                                                                "ref": "mdl.html#.models.ensureAllSchemas",
+                                                                "tf": 1100
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "d": {
+                                "docs": {},
+                                "r": {
+                                  "docs": {},
+                                  "o": {
+                                    "docs": {},
+                                    "p": {
+                                      "docs": {},
+                                      "a": {
+                                        "docs": {},
+                                        "l": {
+                                          "docs": {},
+                                          "l": {
+                                            "docs": {},
+                                            "s": {
+                                              "docs": {},
+                                              "c": {
+                                                "docs": {},
+                                                "h": {
+                                                  "docs": {},
+                                                  "e": {
+                                                    "docs": {},
+                                                    "m": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {
+                                                          "mdl.html#.models.dropAllSchemas": {
+                                                            "ref": "mdl.html#.models.dropAllSchemas",
+                                                            "tf": 1100
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "mdl.TiledMapUsesSet.html#.jsonSchemaProperties": {
+                      "ref": "mdl.TiledMapUsesSet.html#.jsonSchemaProperties",
+                      "tf": 16.666666666666664
+                    },
+                    "mdl.TiledModel.html#.idColumn": {
+                      "ref": "mdl.TiledModel.html#.idColumn",
+                      "tf": 7.142857142857142
+                    },
+                    "mdl.TiledModel.html#.ensureSchema": {
+                      "ref": "mdl.TiledModel.html#.ensureSchema",
+                      "tf": 12.5
+                    },
+                    "mdl.TiledObject.html#.jsonSchemaProperties": {
+                      "ref": "mdl.TiledObject.html#.jsonSchemaProperties",
+                      "tf": 16.666666666666664
+                    },
+                    "mdl.TiledSet.html#.jsonSchemaProperties": {
+                      "ref": "mdl.TiledSet.html#.jsonSchemaProperties",
+                      "tf": 16.666666666666664
+                    },
+                    "mdl.TiledSet.html#.createSchemaOn": {
+                      "ref": "mdl.TiledSet.html#.createSchemaOn",
+                      "tf": 12.5
+                    },
+                    "mdl.html": {
+                      "ref": "mdl.html",
+                      "tf": 6.25
+                    },
+                    "mdl.html#.ALL": {
+                      "ref": "mdl.html#.ALL",
+                      "tf": 8.333333333333332
+                    }
+                  },
+                  "'": {
+                    "docs": {
+                      "mdl.TiledModel.html#.createSchema": {
+                        "ref": "mdl.TiledModel.html#.createSchema",
+                        "tf": 16.666666666666664
+                      },
+                      "mdl.TiledSet.html#.jsonSchemaRequired": {
+                        "ref": "mdl.TiledSet.html#.jsonSchemaRequired",
+                        "tf": 8.333333333333332
+                      }
+                    }
+                  },
+                  "s": {
+                    "docs": {},
+                    ".": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "n": {
+                          "docs": {},
+                          "s": {
+                            "docs": {},
+                            "u": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "e": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "l": {
+                                      "docs": {},
+                                      "l": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          "c": {
+                                            "docs": {},
+                                            "h": {
+                                              "docs": {},
+                                              "e": {
+                                                "docs": {},
+                                                "m": {
+                                                  "docs": {},
+                                                  "a": {
+                                                    "docs": {
+                                                      "mdl.html#.models.ensureAllSchemas": {
+                                                        "ref": "mdl.html#.models.ensureAllSchemas",
+                                                        "tf": 650
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "d": {
+                        "docs": {},
+                        "r": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "p": {
+                              "docs": {},
+                              "a": {
+                                "docs": {},
+                                "l": {
+                                  "docs": {},
+                                  "l": {
+                                    "docs": {},
+                                    "s": {
+                                      "docs": {},
+                                      "c": {
+                                        "docs": {},
+                                        "h": {
+                                          "docs": {},
+                                          "e": {
+                                            "docs": {},
+                                            "m": {
+                                              "docs": {},
+                                              "a": {
+                                                "docs": {
+                                                  "mdl.html#.models.dropAllSchemas": {
+                                                    "ref": "mdl.html#.models.dropAllSchemas",
+                                                    "tf": 650
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "u": {
+                "docs": {},
+                "l": {
+                  "docs": {
+                    "external-Objection.html": {
+                      "ref": "external-Objection.html",
+                      "tf": 8.333333333333332
+                    },
+                    "pixeldeck.arch.html#.Path": {
+                      "ref": "pixeldeck.arch.html#.Path",
+                      "tf": 7.142857142857142
+                    },
+                    "pixeldeck.arch.html#.Fs": {
+                      "ref": "pixeldeck.arch.html#.Fs",
+                      "tf": 7.142857142857142
+                    },
+                    "pixeldeck.arch.html#.Util": {
+                      "ref": "pixeldeck.arch.html#.Util",
+                      "tf": 7.142857142857142
+                    },
+                    "pixeldeck.arch.html#.defineRequires": {
+                      "ref": "pixeldeck.arch.html#.defineRequires",
+                      "tf": 2.5
+                    },
+                    "pixeldeck.ui.html": {
+                      "ref": "pixeldeck.ui.html",
+                      "tf": 12.5
+                    }
+                  }
+                }
+              },
+              "i": {
+                "docs": {},
+                "f": {
+                  "docs": {},
+                  "i": {
+                    "docs": {
+                      "pixeldeck.arch.html#.getResPathFor": {
+                        "ref": "pixeldeck.arch.html#.getResPathFor",
+                        "tf": 2.1739130434782608
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "n": {
+          "docs": {},
+          "a": {
+            "docs": {},
+            "m": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "mdl.TiledModel.html#.tableName": {
+                    "ref": "mdl.TiledModel.html#.tableName",
+                    "tf": 20
+                  },
+                  "mdl.TiledSet.html#name": {
+                    "ref": "mdl.TiledSet.html#name",
+                    "tf": 650
+                  },
+                  "pixeldeck.arch.html#.defineRequires": {
+                    "ref": "pixeldeck.arch.html#.defineRequires",
+                    "tf": 7.5
+                  },
+                  "mdl.html": {
+                    "ref": "mdl.html",
+                    "tf": 6.25
+                  },
+                  "mdl.html#.ALL": {
+                    "ref": "mdl.html#.ALL",
+                    "tf": 8.333333333333332
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "p": {
+                    "docs": {},
+                    "a": {
+                      "docs": {},
+                      "c": {
+                        "docs": {
+                          "list_namespace.html": {
+                            "ref": "list_namespace.html",
+                            "tf": 635
+                          },
+                          "pixeldeck.arch.html": {
+                            "ref": "pixeldeck.arch.html",
+                            "tf": 110
+                          },
+                          "pixeldeck.cfg.html": {
+                            "ref": "pixeldeck.cfg.html",
+                            "tf": 110
+                          },
+                          "cli.html": {
+                            "ref": "cli.html",
+                            "tf": 110
+                          },
+                          "pixeldeck.data.html": {
+                            "ref": "pixeldeck.data.html",
+                            "tf": 110
+                          },
+                          "pixeldeck.html": {
+                            "ref": "pixeldeck.html",
+                            "tf": 110
+                          },
+                          "mdl.html": {
+                            "ref": "mdl.html",
+                            "tf": 110
+                          },
+                          "pixeldeck.server.html": {
+                            "ref": "pixeldeck.server.html",
+                            "tf": 110
+                          },
+                          "pixeldeck.service.html": {
+                            "ref": "pixeldeck.service.html",
+                            "tf": 110
+                          },
+                          "pixeldeck.ui.html": {
+                            "ref": "pixeldeck.ui.html",
+                            "tf": 110
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "mdl.TiledMapUsesSet.html": {
+                    "ref": "mdl.TiledMapUsesSet.html",
+                    "tf": 16.666666666666664
+                  },
+                  "mdl.html#.TiledGid": {
+                    "ref": "mdl.html#.TiledGid",
+                    "tf": 1.6129032258064515
+                  }
+                }
+              }
+            },
+            "x": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "pixeldeck.service.html#.getTiledMapHtml": {
+                    "ref": "pixeldeck.service.html#.getTiledMapHtml",
+                    "tf": 16.666666666666664
+                  },
+                  "pixeldeck.service.html#.getTiledMapSvg": {
+                    "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                    "tf": 20
+                  },
+                  "pixeldeck.service.html#.getTiledSetSvg": {
+                    "ref": "pixeldeck.service.html#.getTiledSetSvg",
+                    "tf": 20
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "d": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "external-http.html": {
+                    "ref": "external-http.html",
+                    "tf": 12.5
+                  },
+                  "pixeldeck.arch.html#.getResPathFor": {
+                    "ref": "pixeldeck.arch.html#.getResPathFor",
+                    "tf": 2.1739130434782608
+                  }
+                },
+                "j": {
+                  "docs": {
+                    "pixeldeck.arch.html#.Path": {
+                      "ref": "pixeldeck.arch.html#.Path",
+                      "tf": 7.142857142857142
+                    },
+                    "pixeldeck.arch.html#.Fs": {
+                      "ref": "pixeldeck.arch.html#.Fs",
+                      "tf": 7.142857142857142
+                    },
+                    "pixeldeck.arch.html#.Util": {
+                      "ref": "pixeldeck.arch.html#.Util",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "pixeldeck.arch.html#.getResPathFor": {
+                    "ref": "pixeldeck.arch.html#.getResPathFor",
+                    "tf": 2.1739130434782608
+                  }
+                }
+              }
+            },
+            "t": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "mdl.html#.TiledGid": {
+                    "ref": "mdl.html#.TiledGid",
+                    "tf": 1.6129032258064515
+                  }
+                }
+              }
+            }
+          },
+          "p": {
+            "docs": {},
+            "m": {
+              "docs": {
+                "pixeldeck.cfg.html": {
+                  "ref": "pixeldeck.cfg.html",
+                  "tf": 7.142857142857142
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "docs": {},
+          "u": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "n": {
+                        "docs": {
+                          "cli.Cmd.html#main": {
+                            "ref": "cli.Cmd.html#main",
+                            "tf": 110
+                          },
+                          "cli.MakeSet.html#main": {
+                            "ref": "cli.MakeSet.html#main",
+                            "tf": 110
+                          },
+                          "cli.Serve.html#main": {
+                            "ref": "cli.Serve.html#main",
+                            "tf": 110
+                          },
+                          "mdl.TiledChunk.html#.createSchemaOn": {
+                            "ref": "mdl.TiledChunk.html#.createSchemaOn",
+                            "tf": 110
+                          },
+                          "mdl.TiledChunk.html#render": {
+                            "ref": "mdl.TiledChunk.html#render",
+                            "tf": 110
+                          },
+                          "mdl.TiledFile.html#.findResourcePathFor": {
+                            "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                            "tf": 110
+                          },
+                          "mdl.TiledFile.html#getStat": {
+                            "ref": "mdl.TiledFile.html#getStat",
+                            "tf": 110
+                          },
+                          "mdl.TiledFile.html#.createSchemaOn": {
+                            "ref": "mdl.TiledFile.html#.createSchemaOn",
+                            "tf": 110
+                          },
+                          "mdl.TiledFile.html#render": {
+                            "ref": "mdl.TiledFile.html#render",
+                            "tf": 110
+                          },
+                          "mdl.TiledFrame.html#render": {
+                            "ref": "mdl.TiledFrame.html#render",
+                            "tf": 110
+                          },
+                          "mdl.TiledLayer.html#.createSchemaOn": {
+                            "ref": "mdl.TiledLayer.html#.createSchemaOn",
+                            "tf": 110
+                          },
+                          "mdl.TiledLayer.html#render": {
+                            "ref": "mdl.TiledLayer.html#render",
+                            "tf": 110
+                          },
+                          "mdl.TiledMap.html#.createSchemaOn": {
+                            "ref": "mdl.TiledMap.html#.createSchemaOn",
+                            "tf": 110
+                          },
+                          "mdl.TiledMap.html#.beforeEnsureSchema": {
+                            "ref": "mdl.TiledMap.html#.beforeEnsureSchema",
+                            "tf": 110
+                          },
+                          "mdl.TiledMap.html#render": {
+                            "ref": "mdl.TiledMap.html#render",
+                            "tf": 110
+                          },
+                          "mdl.TiledMapUsesSet.html#render": {
+                            "ref": "mdl.TiledMapUsesSet.html#render",
+                            "tf": 110
+                          },
+                          "mdl.TiledModel.html#.createSchemaOn": {
+                            "ref": "mdl.TiledModel.html#.createSchemaOn",
+                            "tf": 110
+                          },
+                          "mdl.TiledModel.html#.ensureAllSchemas": {
+                            "ref": "mdl.TiledModel.html#.ensureAllSchemas",
+                            "tf": 110
+                          },
+                          "mdl.TiledModel.html#.ensureSchema": {
+                            "ref": "mdl.TiledModel.html#.ensureSchema",
+                            "tf": 110
+                          },
+                          "mdl.TiledModel.html#.afterEnsureSchema": {
+                            "ref": "mdl.TiledModel.html#.afterEnsureSchema",
+                            "tf": 110
+                          },
+                          "mdl.TiledModel.html#.createSchema": {
+                            "ref": "mdl.TiledModel.html#.createSchema",
+                            "tf": 110
+                          },
+                          "mdl.TiledModel.html#.dropSchema": {
+                            "ref": "mdl.TiledModel.html#.dropSchema",
+                            "tf": 110
+                          },
+                          "mdl.TiledModel.html#render": {
+                            "ref": "mdl.TiledModel.html#render",
+                            "tf": 110
+                          },
+                          "mdl.TiledObject.html#.createSchemaOn": {
+                            "ref": "mdl.TiledObject.html#.createSchemaOn",
+                            "tf": 110
+                          },
+                          "mdl.TiledPoint.html#.createSchemaOn": {
+                            "ref": "mdl.TiledPoint.html#.createSchemaOn",
+                            "tf": 110
+                          },
+                          "mdl.TiledPoint.html#render": {
+                            "ref": "mdl.TiledPoint.html#render",
+                            "tf": 110
+                          },
+                          "mdl.TiledProperties.html#.createSchemaOn": {
+                            "ref": "mdl.TiledProperties.html#.createSchemaOn",
+                            "tf": 110
+                          },
+                          "mdl.TiledProperties.html#render": {
+                            "ref": "mdl.TiledProperties.html#render",
+                            "tf": 110
+                          },
+                          "mdl.TiledSet.html#.createSchemaOn": {
+                            "ref": "mdl.TiledSet.html#.createSchemaOn",
+                            "tf": 110
+                          },
+                          "mdl.TiledSet.html#render": {
+                            "ref": "mdl.TiledSet.html#render",
+                            "tf": 110
+                          },
+                          "mdl.TiledTile.html#render": {
+                            "ref": "mdl.TiledTile.html#render",
+                            "tf": 110
+                          },
+                          "pixeldeck.arch.html#.defineRequires": {
+                            "ref": "pixeldeck.arch.html#.defineRequires",
+                            "tf": 110
+                          },
+                          "pixeldeck.arch.html#.getResPathFor": {
+                            "ref": "pixeldeck.arch.html#.getResPathFor",
+                            "tf": 110
+                          },
+                          "pixeldeck.arch.html#.cleanQuery": {
+                            "ref": "pixeldeck.arch.html#.cleanQuery",
+                            "tf": 110
+                          },
+                          "cli.html#.MakeMap": {
+                            "ref": "cli.html#.MakeMap",
+                            "tf": 110
+                          },
+                          "pixeldeck.data.html#.disknex": {
+                            "ref": "pixeldeck.data.html#.disknex",
+                            "tf": 110
+                          },
+                          "mdl.html#.models.ensureAllSchemas": {
+                            "ref": "mdl.html#.models.ensureAllSchemas",
+                            "tf": 110
+                          },
+                          "mdl.html#.models.dropAllSchemas": {
+                            "ref": "mdl.html#.models.dropAllSchemas",
+                            "tf": 110
+                          },
+                          "pixeldeck.server.html#.Restart": {
+                            "ref": "pixeldeck.server.html#.Restart",
+                            "tf": 110
+                          },
+                          "pixeldeck.server.html#.Start": {
+                            "ref": "pixeldeck.server.html#.Start",
+                            "tf": 110
+                          },
+                          "pixeldeck.server.html#.Stop": {
+                            "ref": "pixeldeck.server.html#.Stop",
+                            "tf": 110
+                          },
+                          "pixeldeck.service.html#.getRoot": {
+                            "ref": "pixeldeck.service.html#.getRoot",
+                            "tf": 110
+                          },
+                          "pixeldeck.service.html#.getTiledMapHtml": {
+                            "ref": "pixeldeck.service.html#.getTiledMapHtml",
+                            "tf": 110
+                          },
+                          "pixeldeck.service.html#.getTiledMapSvg": {
+                            "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                            "tf": 110
+                          },
+                          "pixeldeck.service.html#.getTiledSetSvg": {
+                            "ref": "pixeldeck.service.html#.getTiledSetSvg",
+                            "tf": 110
+                          },
+                          "pixeldeck.ui.html#.Start": {
+                            "ref": "pixeldeck.ui.html#.Start",
+                            "tf": 110
+                          },
+                          "pixeldeck.ui.html#.Stop": {
+                            "ref": "pixeldeck.ui.html#.Stop",
+                            "tf": 110
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "/": {
+                      "docs": {},
+                      "#": {
+                        "docs": {},
+                        "c": {
+                          "docs": {},
+                          "h": {
+                            "docs": {},
+                            "u": {
+                              "docs": {},
+                              "n": {
+                                "docs": {},
+                                "k": {
+                                  "docs": {
+                                    "mdl.TiledChunk.html": {
+                                      "ref": "mdl.TiledChunk.html",
+                                      "tf": 16.666666666666664
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "l": {
+                          "docs": {},
+                          "a": {
+                            "docs": {},
+                            "y": {
+                              "docs": {
+                                "mdl.TiledLayer.html": {
+                                  "ref": "mdl.TiledLayer.html",
+                                  "tf": 8.333333333333332
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "t": {
+                          "docs": {},
+                          "i": {
+                            "docs": {},
+                            "l": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {},
+                                  "e": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {
+                                        "mdl.TiledSet.html": {
+                                          "ref": "mdl.TiledSet.html",
+                                          "tf": 16.666666666666664
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "e": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "g": {
+                    "docs": {},
+                    "n": {
+                      "docs": {},
+                      "k": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "y": {
+                            "docs": {
+                              "mdl.TiledTile.html#TiledSetUuid": {
+                                "ref": "mdl.TiledTile.html#TiledSetUuid",
+                                "tf": 50
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "l": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "w": {
+                    "docs": {
+                      "pixeldeck.arch.html#.getResPathFor": {
+                        "ref": "pixeldeck.arch.html#.getResPathFor",
+                        "tf": 2.1739130434782608
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "mdl.TiledFile.html": {
+                    "ref": "mdl.TiledFile.html",
+                    "tf": 6.25
+                  },
+                  "mdl.TiledFile.html#exists": {
+                    "ref": "mdl.TiledFile.html#exists",
+                    "tf": 12.5
+                  },
+                  "mdl.TiledFile.html#.findResourcePathFor": {
+                    "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                    "tf": 5
+                  },
+                  "MakeMap.html": {
+                    "ref": "MakeMap.html",
+                    "tf": 5.555555555555555
+                  },
+                  "pixeldeck.service.html#.getTiledMapSvg": {
+                    "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                    "tf": 12.5
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "mdl.TiledFile.html#exists": {
+                    "ref": "mdl.TiledFile.html#exists",
+                    "tf": 12.5
+                  }
+                },
+                "r": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "s": {
+                      "docs": {},
+                      "o": {
+                        "docs": {},
+                        "u": {
+                          "docs": {},
+                          "r": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "p": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "t": {
+                                      "docs": {},
+                                      "h": {
+                                        "docs": {},
+                                        "f": {
+                                          "docs": {},
+                                          "o": {
+                                            "docs": {},
+                                            "r": {
+                                              "docs": {
+                                                "mdl.TiledFile.html#.findResourcePathFor": {
+                                                  "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                                                  "tf": 633.3333333333334
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "t": {
+                  "docs": {
+                    "mdl.TiledFile.html#.findResourcePathFor": {
+                      "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                      "tf": 5
+                    }
+                  },
+                  "g": {
+                    "docs": {},
+                    "i": {
+                      "docs": {},
+                      "d": {
+                        "docs": {
+                          "mdl.TiledSet.html#firstgid": {
+                            "ref": "mdl.TiledSet.html#firstgid",
+                            "tf": 650
+                          },
+                          "mdl.html#.TiledGid": {
+                            "ref": "mdl.html#.TiledGid",
+                            "tf": 1.6129032258064515
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "m": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "mdl.TiledFrame.html": {
+                      "ref": "mdl.TiledFrame.html",
+                      "tf": 12.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "u": {
+                  "docs": {},
+                  "r": {
+                    "docs": {
+                      "external-commander.html": {
+                        "ref": "external-commander.html",
+                        "tf": 5
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "s": {
+            "docs": {
+              "external-fs.html": {
+                "ref": "external-fs.html",
+                "tf": 600
+              },
+              "pixeldeck.arch.html#.Fs": {
+                "ref": "pixeldeck.arch.html#.Fs",
+                "tf": 664.2857142857143
+              }
+            }
+          }
+        },
+        "_": {
+          "docs": {},
+          "m": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "k": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "m": {
+                      "docs": {},
+                      "d": {
+                        "docs": {
+                          "-_MakeCmd.html": {
+                            "ref": "-_MakeCmd.html",
+                            "tf": 1900
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "h": {
+          "docs": {},
+          "t": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "p": {
+                "docs": {
+                  "external-http.html": {
+                    "ref": "external-http.html",
+                    "tf": 612.5
+                  },
+                  "pixeldeck.server.html": {
+                    "ref": "pixeldeck.server.html",
+                    "tf": 12.5
+                  },
+                  "pixeldeck.service.html": {
+                    "ref": "pixeldeck.service.html",
+                    "tf": 5
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  ":": {
+                    "docs": {},
+                    "/": {
+                      "docs": {},
+                      "/": {
+                        "docs": {},
+                        "d": {
+                          "docs": {},
+                          "o": {
+                            "docs": {},
+                            "c": {
+                              "docs": {},
+                              "s": {
+                                "docs": {},
+                                ".": {
+                                  "docs": {},
+                                  "m": {
+                                    "docs": {},
+                                    "a": {
+                                      "docs": {},
+                                      "p": {
+                                        "docs": {},
+                                        "e": {
+                                          "docs": {},
+                                          "d": {
+                                            "docs": {},
+                                            "i": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                "o": {
+                                                  "docs": {},
+                                                  "r": {
+                                                    "docs": {},
+                                                    ".": {
+                                                      "docs": {},
+                                                      "o": {
+                                                        "docs": {},
+                                                        "r": {
+                                                          "docs": {},
+                                                          "g": {
+                                                            "docs": {},
+                                                            "/": {
+                                                              "docs": {},
+                                                              "e": {
+                                                                "docs": {},
+                                                                "n": {
+                                                                  "docs": {},
+                                                                  "/": {
+                                                                    "docs": {},
+                                                                    "s": {
+                                                                      "docs": {},
+                                                                      "t": {
+                                                                        "docs": {},
+                                                                        "a": {
+                                                                          "docs": {},
+                                                                          "b": {
+                                                                            "docs": {},
+                                                                            "l": {
+                                                                              "docs": {},
+                                                                              "e": {
+                                                                                "docs": {},
+                                                                                "/": {
+                                                                                  "docs": {},
+                                                                                  "r": {
+                                                                                    "docs": {},
+                                                                                    "e": {
+                                                                                      "docs": {},
+                                                                                      "f": {
+                                                                                        "docs": {},
+                                                                                        "e": {
+                                                                                          "docs": {},
+                                                                                          "r": {
+                                                                                            "docs": {},
+                                                                                            "e": {
+                                                                                              "docs": {},
+                                                                                              "n": {
+                                                                                                "docs": {},
+                                                                                                "c": {
+                                                                                                  "docs": {},
+                                                                                                  "e": {
+                                                                                                    "docs": {},
+                                                                                                    "/": {
+                                                                                                      "docs": {},
+                                                                                                      "j": {
+                                                                                                        "docs": {},
+                                                                                                        "s": {
+                                                                                                          "docs": {},
+                                                                                                          "o": {
+                                                                                                            "docs": {},
+                                                                                                            "n": {
+                                                                                                              "docs": {
+                                                                                                                "mdl.TiledChunk.html": {
+                                                                                                                  "ref": "mdl.TiledChunk.html",
+                                                                                                                  "tf": 16.666666666666664
+                                                                                                                },
+                                                                                                                "mdl.TiledLayer.html": {
+                                                                                                                  "ref": "mdl.TiledLayer.html",
+                                                                                                                  "tf": 8.333333333333332
+                                                                                                                }
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              ".": {
+                                "docs": {},
+                                "m": {
+                                  "docs": {},
+                                  "a": {
+                                    "docs": {},
+                                    "p": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "d": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {},
+                                            "t": {
+                                              "docs": {},
+                                              "o": {
+                                                "docs": {},
+                                                "r": {
+                                                  "docs": {},
+                                                  ".": {
+                                                    "docs": {},
+                                                    "o": {
+                                                      "docs": {},
+                                                      "r": {
+                                                        "docs": {},
+                                                        "g": {
+                                                          "docs": {},
+                                                          "/": {
+                                                            "docs": {},
+                                                            "e": {
+                                                              "docs": {},
+                                                              "n": {
+                                                                "docs": {},
+                                                                "/": {
+                                                                  "docs": {},
+                                                                  "s": {
+                                                                    "docs": {},
+                                                                    "t": {
+                                                                      "docs": {},
+                                                                      "a": {
+                                                                        "docs": {},
+                                                                        "b": {
+                                                                          "docs": {},
+                                                                          "l": {
+                                                                            "docs": {},
+                                                                            "e": {
+                                                                              "docs": {},
+                                                                              "/": {
+                                                                                "docs": {},
+                                                                                "r": {
+                                                                                  "docs": {},
+                                                                                  "e": {
+                                                                                    "docs": {},
+                                                                                    "f": {
+                                                                                      "docs": {},
+                                                                                      "e": {
+                                                                                        "docs": {},
+                                                                                        "r": {
+                                                                                          "docs": {},
+                                                                                          "e": {
+                                                                                            "docs": {},
+                                                                                            "n": {
+                                                                                              "docs": {},
+                                                                                              "c": {
+                                                                                                "docs": {},
+                                                                                                "e": {
+                                                                                                  "docs": {},
+                                                                                                  "/": {
+                                                                                                    "docs": {},
+                                                                                                    "j": {
+                                                                                                      "docs": {},
+                                                                                                      "s": {
+                                                                                                        "docs": {},
+                                                                                                        "o": {
+                                                                                                          "docs": {},
+                                                                                                          "n": {
+                                                                                                            "docs": {
+                                                                                                              "mdl.TiledSet.html": {
+                                                                                                                "ref": "mdl.TiledSet.html",
+                                                                                                                "tf": 16.666666666666664
+                                                                                                              }
+                                                                                                            }
+                                                                                                          }
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "g": {
+                          "docs": {},
+                          "i": {
+                            "docs": {},
+                            "t": {
+                              "docs": {},
+                              "h": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "b": {
+                                    "docs": {},
+                                    ".": {
+                                      "docs": {},
+                                      "c": {
+                                        "docs": {},
+                                        "o": {
+                                          "docs": {},
+                                          "m": {
+                                            "docs": {},
+                                            "/": {
+                                              "docs": {},
+                                              "t": {
+                                                "docs": {},
+                                                "j": {
+                                                  "docs": {},
+                                                  "/": {
+                                                    "docs": {},
+                                                    "c": {
+                                                      "docs": {},
+                                                      "o": {
+                                                        "docs": {},
+                                                        "m": {
+                                                          "docs": {},
+                                                          "m": {
+                                                            "docs": {},
+                                                            "a": {
+                                                              "docs": {},
+                                                              "n": {
+                                                                "docs": {},
+                                                                "d": {
+                                                                  "docs": {},
+                                                                  "e": {
+                                                                    "docs": {},
+                                                                    "r": {
+                                                                      "docs": {},
+                                                                      ".": {
+                                                                        "docs": {},
+                                                                        "j": {
+                                                                          "docs": {},
+                                                                          "s": {
+                                                                            "docs": {},
+                                                                            "/": {
+                                                                              "docs": {},
+                                                                              "w": {
+                                                                                "docs": {},
+                                                                                "i": {
+                                                                                  "docs": {},
+                                                                                  "k": {
+                                                                                    "docs": {},
+                                                                                    "i": {
+                                                                                      "docs": {
+                                                                                        "external-commander.html": {
+                                                                                          "ref": "external-commander.html",
+                                                                                          "tf": 5
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "w": {
+                          "docs": {},
+                          "w": {
+                            "docs": {},
+                            "w": {
+                              "docs": {},
+                              ".": {
+                                "docs": {},
+                                "n": {
+                                  "docs": {},
+                                  "p": {
+                                    "docs": {},
+                                    "m": {
+                                      "docs": {},
+                                      "j": {
+                                        "docs": {},
+                                        "s": {
+                                          "docs": {},
+                                          ".": {
+                                            "docs": {},
+                                            "c": {
+                                              "docs": {},
+                                              "o": {
+                                                "docs": {},
+                                                "m": {
+                                                  "docs": {},
+                                                  "/": {
+                                                    "docs": {},
+                                                    "p": {
+                                                      "docs": {},
+                                                      "a": {
+                                                        "docs": {},
+                                                        "c": {
+                                                          "docs": {},
+                                                          "k": {
+                                                            "docs": {},
+                                                            "a": {
+                                                              "docs": {},
+                                                              "g": {
+                                                                "docs": {},
+                                                                "e": {
+                                                                  "docs": {},
+                                                                  "/": {
+                                                                    "docs": {},
+                                                                    "c": {
+                                                                      "docs": {},
+                                                                      "o": {
+                                                                        "docs": {},
+                                                                        "m": {
+                                                                          "docs": {},
+                                                                          "m": {
+                                                                            "docs": {},
+                                                                            "a": {
+                                                                              "docs": {},
+                                                                              "n": {
+                                                                                "docs": {},
+                                                                                "d": {
+                                                                                  "docs": {
+                                                                                    "external-commander.html": {
+                                                                                      "ref": "external-commander.html",
+                                                                                      "tf": 10
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "m": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "/": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "v": {
+                      "docs": {},
+                      "g": {
+                        "docs": {
+                          "cli.html#.MakeMap": {
+                            "ref": "cli.html#.MakeMap",
+                            "tf": 16.666666666666664
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "h": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "mdl.TiledTile.html#imageheight": {
+                        "ref": "mdl.TiledTile.html#imageheight",
+                        "tf": 12.5
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "l": {
+              "docs": {},
+              "t": {
+                "docs": {
+                  "pixeldeck.server.html#.Stop": {
+                    "ref": "pixeldeck.server.html#.Stop",
+                    "tf": 12.5
+                  }
+                }
+              }
+            },
+            "n": {
+              "docs": {},
+              "d": {
+                "docs": {},
+                "l": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "r": {
+                      "docs": {
+                        "pixeldeck.service.html#.getRoot": {
+                          "ref": "pixeldeck.service.html#.getRoot",
+                          "tf": 16.666666666666664
+                        },
+                        "pixeldeck.service.html#.getTiledMapHtml": {
+                          "ref": "pixeldeck.service.html#.getTiledMapHtml",
+                          "tf": 25
+                        },
+                        "pixeldeck.service.html#.getTiledMapSvg": {
+                          "ref": "pixeldeck.service.html#.getTiledMapSvg",
+                          "tf": 12.5
+                        },
+                        "pixeldeck.service.html#.getTiledSetSvg": {
+                          "ref": "pixeldeck.service.html#.getTiledSetSvg",
+                          "tf": 25
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "u": {
+          "docs": {},
+          "u": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "mdl.TiledChunk.html#uuid": {
+                    "ref": "mdl.TiledChunk.html#uuid",
+                    "tf": 650
+                  },
+                  "mdl.TiledFile.html#uuid": {
+                    "ref": "mdl.TiledFile.html#uuid",
+                    "tf": 650
+                  },
+                  "mdl.TiledFrame.html#uuid": {
+                    "ref": "mdl.TiledFrame.html#uuid",
+                    "tf": 650
+                  },
+                  "mdl.TiledLayer.html#uuid": {
+                    "ref": "mdl.TiledLayer.html#uuid",
+                    "tf": 650
+                  },
+                  "mdl.TiledMap.html#uuid": {
+                    "ref": "mdl.TiledMap.html#uuid",
+                    "tf": 650
+                  },
+                  "mdl.TiledMapUsesSet.html#uuid": {
+                    "ref": "mdl.TiledMapUsesSet.html#uuid",
+                    "tf": 650
+                  },
+                  "mdl.TiledModel.html#.idColumn": {
+                    "ref": "mdl.TiledModel.html#.idColumn",
+                    "tf": 7.142857142857142
+                  },
+                  "mdl.TiledModel.html#uuid": {
+                    "ref": "mdl.TiledModel.html#uuid",
+                    "tf": 650
+                  },
+                  "mdl.TiledPoint.html#uuid": {
+                    "ref": "mdl.TiledPoint.html#uuid",
+                    "tf": 650
+                  },
+                  "mdl.TiledProperties.html#uuid": {
+                    "ref": "mdl.TiledProperties.html#uuid",
+                    "tf": 650
+                  },
+                  "mdl.TiledSet.html#uuid": {
+                    "ref": "mdl.TiledSet.html#uuid",
+                    "tf": 650
+                  },
+                  "mdl.TiledTile.html#uuid": {
+                    "ref": "mdl.TiledTile.html#uuid",
+                    "tf": 650
+                  }
+                }
+              }
+            }
+          },
+          "s": {
+            "docs": {
+              "mdl.TiledFile.html": {
+                "ref": "mdl.TiledFile.html",
+                "tf": 6.25
+              },
+              "mdl.TiledFile.html#.findResourcePathFor": {
+                "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                "tf": 5
+              },
+              "external-config.html": {
+                "ref": "external-config.html",
+                "tf": 25
+              },
+              "pixeldeck.arch.html#.Path": {
+                "ref": "pixeldeck.arch.html#.Path",
+                "tf": 7.142857142857142
+              },
+              "pixeldeck.arch.html#.Fs": {
+                "ref": "pixeldeck.arch.html#.Fs",
+                "tf": 7.142857142857142
+              },
+              "pixeldeck.arch.html#.Util": {
+                "ref": "pixeldeck.arch.html#.Util",
+                "tf": 7.142857142857142
+              },
+              "pixeldeck.cfg.html": {
+                "ref": "pixeldeck.cfg.html",
+                "tf": 7.142857142857142
+              },
+              "mdl.html#.TiledGid": {
+                "ref": "mdl.html#.TiledGid",
+                "tf": 1.6129032258064515
+              },
+              "pixeldeck.service.html": {
+                "ref": "pixeldeck.service.html",
+                "tf": 5
+              }
+            },
+            "e": {
+              "docs": {},
+              "r": {
+                "docs": {
+                  "pixeldeck.ui.html": {
+                    "ref": "pixeldeck.ui.html",
+                    "tf": 12.5
+                  }
+                }
+              }
+            }
+          },
+          "n": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "q": {
+                "docs": {},
+                "u": {
+                  "docs": {
+                    "mdl.TiledTile.html#id": {
+                      "ref": "mdl.TiledTile.html#id",
+                      "tf": 16.666666666666664
+                    },
+                    "mdl.html#.TiledGid": {
+                      "ref": "mdl.html#.TiledGid",
+                      "tf": 1.6129032258064515
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "t": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "l": {
+                "docs": {
+                  "pixeldeck.arch.html": {
+                    "ref": "pixeldeck.arch.html",
+                    "tf": 25
+                  },
+                  "pixeldeck.arch.html#.Util": {
+                    "ref": "pixeldeck.arch.html#.Util",
+                    "tf": 664.2857142857143
+                  },
+                  "mdl.html": {
+                    "ref": "mdl.html",
+                    "tf": 6.25
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {
+              "pixeldeck.ui.html": {
+                "ref": "pixeldeck.ui.html",
+                "tf": 650
+              },
+              "pixeldeck.ui.html#.Start": {
+                "ref": "pixeldeck.ui.html#.Start",
+                "tf": 25
+              },
+              "pixeldeck.ui.html#.Stop": {
+                "ref": "pixeldeck.ui.html#.Stop",
+                "tf": 25
+              }
+            },
+            ".": {
+              "docs": {},
+              "s": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "a": {
+                    "docs": {},
+                    "r": {
+                      "docs": {},
+                      "t": {
+                        "docs": {
+                          "pixeldeck.ui.html#.Start": {
+                            "ref": "pixeldeck.ui.html#.Start",
+                            "tf": 100
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "o": {
+                    "docs": {},
+                    "p": {
+                      "docs": {
+                        "pixeldeck.ui.html#.Stop": {
+                          "ref": "pixeldeck.ui.html#.Stop",
+                          "tf": 100
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "w": {
+          "docs": {},
+          "i": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "h": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "mdl.TiledFile.html#.findResourcePathFor": {
+                        "ref": "mdl.TiledFile.html#.findResourcePathFor",
+                        "tf": 5
+                      },
+                      "pixeldeck.arch.html#.defineRequires": {
+                        "ref": "pixeldeck.arch.html#.defineRequires",
+                        "tf": 2.5
+                      },
+                      "mdl.html#.TiledGid": {
+                        "ref": "mdl.html#.TiledGid",
+                        "tf": 1.6129032258064515
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "s": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "t": {
+                      "docs": {
+                        "mdl.TiledSet.html#wangsets": {
+                          "ref": "mdl.TiledSet.html#wangsets",
+                          "tf": 650
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "k": {
+                "docs": {
+                  "pixeldeck.arch.html#.getResPathFor": {
+                    "ref": "pixeldeck.arch.html#.getResPathFor",
+                    "tf": 2.1739130434782608
+                  }
+                }
+              }
+            }
+          }
+        },
+        "o": {
+          "docs": {},
+          "n": {
+            "docs": {
+              "mdl.TiledFrame.html": {
+                "ref": "mdl.TiledFrame.html",
+                "tf": 12.5
+              },
+              "mdl.TiledSet.html#.jsonSchemaRequired": {
+                "ref": "mdl.TiledSet.html#.jsonSchemaRequired",
+                "tf": 8.333333333333332
+              }
+            }
+          },
+          "b": {
+            "docs": {},
+            "j": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "mdl.TiledLayer.html": {
+                        "ref": "mdl.TiledLayer.html",
+                        "tf": 8.333333333333332
+                      },
+                      "mdl.TiledMapUsesSet.html#.jsonSchemaProperties": {
+                        "ref": "mdl.TiledMapUsesSet.html#.jsonSchemaProperties",
+                        "tf": 33.33333333333333
+                      },
+                      "external-Objection.html": {
+                        "ref": "external-Objection.html",
+                        "tf": 600
+                      },
+                      "pixeldeck.arch.html#.cleanQuery": {
+                        "ref": "pixeldeck.arch.html#.cleanQuery",
+                        "tf": 32.14285714285714
+                      },
+                      "mdl.html": {
+                        "ref": "mdl.html",
+                        "tf": 6.25
+                      }
+                    },
+                    "g": {
+                      "docs": {},
+                      "r": {
+                        "docs": {},
+                        "o": {
+                          "docs": {},
+                          "u": {
+                            "docs": {},
+                            "p": {
+                              "docs": {},
+                              "u": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "d": {
+                                      "docs": {
+                                        "mdl.TiledTile.html#objectgroupUuid": {
+                                          "ref": "mdl.TiledTile.html#objectgroupUuid",
+                                          "tf": 700
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "v": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "r": {
+                "docs": {
+                  "mdl.html#.TiledGid": {
+                    "ref": "mdl.html#.TiledGid",
+                    "tf": 1.6129032258064515
+                  }
+                },
+                "r": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "d": {
+                      "docs": {
+                        "mdl.TiledSet.html#.jsonSchemaRequired": {
+                          "ref": "mdl.TiledSet.html#.jsonSchemaRequired",
+                          "tf": 8.333333333333332
+                        }
+                      },
+                      "d": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "n": {
+                            "docs": {
+                              "mdl.TiledModel.html#.jsonSchemaRequired": {
+                                "ref": "mdl.TiledModel.html#.jsonSchemaRequired",
+                                "tf": 8.333333333333332
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "p": {
+            "docs": {},
+            "t": {
+              "docs": {
+                "pixeldeck.ui.html#.Start": {
+                  "ref": "pixeldeck.ui.html#.Start",
+                  "tf": 33.33333333333333
+                }
+              },
+              "i": {
+                "docs": {},
+                "o": {
+                  "docs": {},
+                  "n": {
+                    "docs": {
+                      "pixeldeck.arch.html#.getResPathFor": {
+                        "ref": "pixeldeck.arch.html#.getResPathFor",
+                        "tf": 2.1739130434782608
+                      },
+                      "cli.html#.MakeMap": {
+                        "ref": "cli.html#.MakeMap",
+                        "tf": 16.666666666666664
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "b": {
+          "docs": {},
+          "e": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "w": {
+                "docs": {},
+                "e": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "mdl.TiledLayer.html#.relationMappings": {
+                          "ref": "mdl.TiledLayer.html#.relationMappings",
+                          "tf": 4.545454545454546
+                        },
+                        "mdl.TiledMap.html#.relationMappings": {
+                          "ref": "mdl.TiledMap.html#.relationMappings",
+                          "tf": 4.545454545454546
+                        },
+                        "mdl.TiledProperties.html": {
+                          "ref": "mdl.TiledProperties.html",
+                          "tf": 3.125
+                        },
+                        "mdl.html#.TiledGid": {
+                          "ref": "mdl.html#.TiledGid",
+                          "tf": 1.6129032258064515
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "f": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "e": {
+                      "docs": {},
+                      "n": {
+                        "docs": {},
+                        "s": {
+                          "docs": {},
+                          "u": {
+                            "docs": {},
+                            "r": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "s": {
+                                  "docs": {},
+                                  "c": {
+                                    "docs": {},
+                                    "h": {
+                                      "docs": {},
+                                      "e": {
+                                        "docs": {},
+                                        "m": {
+                                          "docs": {},
+                                          "a": {
+                                            "docs": {
+                                              "mdl.TiledMap.html#.beforeEnsureSchema": {
+                                                "ref": "mdl.TiledMap.html#.beforeEnsureSchema",
+                                                "tf": 633.3333333333334
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "u": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "d": {
+                  "docs": {},
+                  "e": {
+                    "docs": {},
+                    "r": {
+                      "docs": {
+                        "mdl.TiledPoint.html#.createSchemaOn": {
+                          "ref": "mdl.TiledPoint.html#.createSchemaOn",
+                          "tf": 10
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "s": {
+              "docs": {},
+              "i": {
+                "docs": {
+                  "external-Objection.html": {
+                    "ref": "external-Objection.html",
+                    "tf": 8.333333333333332
+                  }
+                }
+              }
+            }
+          }
+        },
+        "j": {
+          "docs": {},
+          "s": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "n": {
+                "docs": {
+                  "MakeMap.html": {
+                    "ref": "MakeMap.html",
+                    "tf": 5.555555555555555
+                  }
+                },
+                "s": {
+                  "docs": {},
+                  "c": {
+                    "docs": {},
+                    "h": {
+                      "docs": {},
+                      "e": {
+                        "docs": {},
+                        "m": {
+                          "docs": {},
+                          "a": {
+                            "docs": {
+                              "mdl.TiledMap.html#.jsonSchema": {
+                                "ref": "mdl.TiledMap.html#.jsonSchema",
+                                "tf": 650
+                              },
+                              "mdl.TiledModel.html#.jsonSchema": {
+                                "ref": "mdl.TiledModel.html#.jsonSchema",
+                                "tf": 633.3333333333334
+                              }
+                            },
+                            "p": {
+                              "docs": {},
+                              "r": {
+                                "docs": {},
+                                "o": {
+                                  "docs": {},
+                                  "p": {
+                                    "docs": {},
+                                    "e": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {},
+                                        "t": {
+                                          "docs": {},
+                                          "i": {
+                                            "docs": {
+                                              "mdl.TiledMapUsesSet.html#.jsonSchemaProperties": {
+                                                "ref": "mdl.TiledMapUsesSet.html#.jsonSchemaProperties",
+                                                "tf": 633.3333333333334
+                                              },
+                                              "mdl.TiledModel.html#.jsonSchemaProperties": {
+                                                "ref": "mdl.TiledModel.html#.jsonSchemaProperties",
+                                                "tf": 633.3333333333334
+                                              },
+                                              "mdl.TiledObject.html#.jsonSchemaProperties": {
+                                                "ref": "mdl.TiledObject.html#.jsonSchemaProperties",
+                                                "tf": 650
+                                              },
+                                              "mdl.TiledProperties.html#.jsonSchemaProperties": {
+                                                "ref": "mdl.TiledProperties.html#.jsonSchemaProperties",
+                                                "tf": 650
+                                              },
+                                              "mdl.TiledSet.html#.jsonSchemaProperties": {
+                                                "ref": "mdl.TiledSet.html#.jsonSchemaProperties",
+                                                "tf": 650
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "r": {
+                              "docs": {},
+                              "e": {
+                                "docs": {},
+                                "q": {
+                                  "docs": {},
+                                  "u": {
+                                    "docs": {},
+                                    "i": {
+                                      "docs": {},
+                                      "r": {
+                                        "docs": {
+                                          "mdl.TiledModel.html#.jsonSchemaRequired": {
+                                            "ref": "mdl.TiledModel.html#.jsonSchemaRequired",
+                                            "tf": 633.3333333333334
+                                          },
+                                          "mdl.TiledSet.html#.jsonSchemaRequired": {
+                                            "ref": "mdl.TiledSet.html#.jsonSchemaRequired",
+                                            "tf": 650
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "k": {
+          "docs": {},
+          "n": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "x": {
+                "docs": {
+                  "mdl.TiledModel.html#.ensureAllSchemas": {
+                    "ref": "mdl.TiledModel.html#.ensureAllSchemas",
+                    "tf": 20
+                  },
+                  "mdl.TiledModel.html#.ensureSchema": {
+                    "ref": "mdl.TiledModel.html#.ensureSchema",
+                    "tf": 25
+                  },
+                  "mdl.TiledModel.html#.dropSchema": {
+                    "ref": "mdl.TiledModel.html#.dropSchema",
+                    "tf": 25
+                  },
+                  "external-Knex.html": {
+                    "ref": "external-Knex.html",
+                    "tf": 610
+                  },
+                  "pixeldeck.data.html#.disknex": {
+                    "ref": "pixeldeck.data.html#.disknex",
+                    "tf": 25
+                  }
+                },
+                ".": {
+                  "docs": {},
+                  "s": {
+                    "docs": {},
+                    "c": {
+                      "docs": {},
+                      "h": {
+                        "docs": {},
+                        "e": {
+                          "docs": {},
+                          "m": {
+                            "docs": {},
+                            "a": {
+                              "docs": {},
+                              "b": {
+                                "docs": {},
+                                "u": {
+                                  "docs": {},
+                                  "i": {
+                                    "docs": {},
+                                    "l": {
+                                      "docs": {},
+                                      "d": {
+                                        "docs": {
+                                          "mdl.TiledPoint.html#.createSchemaOn": {
+                                            "ref": "mdl.TiledPoint.html#.createSchemaOn",
+                                            "tf": 10
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "d": {
+                "docs": {
+                  "mdl.TiledProperties.html": {
+                    "ref": "mdl.TiledProperties.html",
+                    "tf": 9.375
+                  }
+                }
+              }
+            }
+          }
+        },
+        "q": {
+          "docs": {},
+          "u": {
+            "docs": {},
+            "e": {
+              "docs": {},
+              "r": {
+                "docs": {},
+                "i": {
+                  "docs": {
+                    "pixeldeck.arch.html#.cleanQuery": {
+                      "ref": "pixeldeck.arch.html#.cleanQuery",
+                      "tf": 7.142857142857142
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "length": 1197
+    },
+    "corpusTokens": [
+      "4",
+      "_makecmd",
+      "absolut",
+      "abstract",
+      "abstract&gt",
+      "actual",
+      "afterensureschema",
+      "allmodel",
+      "anyth",
+      "apath",
+      "apath'",
+      "arch",
+      "arch.cleanqueri",
+      "arch.definerequir",
+      "arch.f",
+      "arch.getrespathfor",
+      "arch.path",
+      "arch.util",
+      "argument",
+      "array",
+      "array.&lt;mdl.tiledmodel&gt",
+      "array.&lt;string&gt",
+      "async",
+      "auto",
+      "autom",
+      "avail",
+      "basi",
+      "beforeensureschema",
+      "between",
+      "builder",
+      "cach",
+      "cfg",
+      "chang",
+      "class",
+      "class'",
+      "clean",
+      "cleanqueri",
+      "cli",
+      "cli.cmd",
+      "cli.cmd#dbg",
+      "cli.cmd#main",
+      "cli.cmd.dbg",
+      "cli.makemap",
+      "cli.makeset",
+      "cli.makeset#main",
+      "cli.serv",
+      "cli.serve#dbg",
+      "cli.serve#main",
+      "cli~cmd",
+      "cli~makeset",
+      "cli~serv",
+      "cmd",
+      "cmd#dbg",
+      "cmd#main",
+      "cmd.dbg",
+      "collect",
+      "column",
+      "command",
+      "commander.command",
+      "config",
+      "configur",
+      "convert",
+      "creat",
+      "createschema",
+      "createschemaon",
+      "current",
+      "data",
+      "data.disknex",
+      "data.model",
+      "databas",
+      "dbg",
+      "debugg",
+      "defin",
+      "definerequir",
+      "definit",
+      "demand",
+      "differ",
+      "directori",
+      "dirnam",
+      "disconnect",
+      "disknex",
+      "doc",
+      "document",
+      "drop",
+      "dropallschema",
+      "dropschema",
+      "each",
+      "emit",
+      "ensur",
+      "ensureallschema",
+      "ensureschema",
+      "environ",
+      "exampl",
+      "exist",
+      "express",
+      "extend",
+      "extens",
+      "extern",
+      "external:command",
+      "external:commander.command",
+      "external:config",
+      "external:express",
+      "external:f",
+      "external:http",
+      "external:knex",
+      "external:object",
+      "external:path",
+      "external:repl",
+      "featur",
+      "file",
+      "find",
+      "findresourcepathfor",
+      "first",
+      "firstgid",
+      "follow",
+      "foreignkey",
+      "format/#chunk",
+      "format/#lay",
+      "format/#tileset",
+      "frame",
+      "fs",
+      "function",
+      "gener",
+      "get",
+      "getrespathfor",
+      "getroot",
+      "getstat",
+      "gettiledmaphtml",
+      "gettiledmapsvg",
+      "gettiledsetsvg",
+      "gid",
+      "given",
+      "global",
+      "grid",
+      "halt",
+      "handler",
+      "height",
+      "html/svg",
+      "http",
+      "https://doc.mapeditor.org/en/stable/reference/json",
+      "https://docs.mapeditor.org/en/stable/reference/json",
+      "https://github.com/tj/commander.js/wiki",
+      "https://www.npmjs.com/package/command",
+      "id",
+      "idcolumn",
+      "imag",
+      "imageheight",
+      "imagewidth",
+      "implement",
+      "import",
+      "increment",
+      "index",
+      "inform",
+      "input",
+      "instanc",
+      "integ",
+      "interfac",
+      "isn't",
+      "json",
+      "jsonschema",
+      "jsonschemaproperti",
+      "jsonschemarequir",
+      "kind",
+      "knex",
+      "knex.schemabuild",
+      "last",
+      "layer",
+      "length",
+      "let",
+      "librari",
+      "line",
+      "link",
+      "list",
+      "list:class",
+      "list:extern",
+      "list:namespac",
+      "list:tutori",
+      "load",
+      "lot",
+      "lt;abstract",
+      "lt;abstract&gt",
+      "lt;async",
+      "lt;async&gt",
+      "lt;static&gt",
+      "main",
+      "make",
+      "makemap",
+      "makeset",
+      "makeset#main",
+      "mani",
+      "map",
+      "margin",
+      "mdl",
+      "mdl.all",
+      "mdl.models.dropallschema",
+      "mdl.models.ensureallschema",
+      "mdl.primarykey",
+      "mdl.tiledchunk",
+      "mdl.tiledchunk#dbg",
+      "mdl.tiledchunk#rend",
+      "mdl.tiledchunk#uuid",
+      "mdl.tiledchunk.createschemaon",
+      "mdl.tiledfil",
+      "mdl.tiledfile#dbg",
+      "mdl.tiledfile#exist",
+      "mdl.tiledfile#getstat",
+      "mdl.tiledfile#rend",
+      "mdl.tiledfile#uuid",
+      "mdl.tiledfile.createschemaon",
+      "mdl.tiledfile.findresourcepathfor",
+      "mdl.tiledfile.resourcesearchpath",
+      "mdl.tiledfram",
+      "mdl.tiledframe#dbg",
+      "mdl.tiledframe#rend",
+      "mdl.tiledframe#uuid",
+      "mdl.tiledgid",
+      "mdl.tiledlay",
+      "mdl.tiledlayer#dbg",
+      "mdl.tiledlayer#rend",
+      "mdl.tiledlayer#uuid",
+      "mdl.tiledlayer.createschemaon",
+      "mdl.tiledlayer.relationmap",
+      "mdl.tiledmap",
+      "mdl.tiledmap#dbg",
+      "mdl.tiledmap#rend",
+      "mdl.tiledmap#uuid",
+      "mdl.tiledmap.beforeensureschema",
+      "mdl.tiledmap.createschemaon",
+      "mdl.tiledmap.jsonschema",
+      "mdl.tiledmap.relationmap",
+      "mdl.tiledmapusesset",
+      "mdl.tiledmapusesset#dbg",
+      "mdl.tiledmapusesset#rend",
+      "mdl.tiledmapusesset#uuid",
+      "mdl.tiledmapusesset.jsonschemaproperti",
+      "mdl.tiledmapusesset.relationmap",
+      "mdl.tiledmodel",
+      "mdl.tiledmodel#dbg",
+      "mdl.tiledmodel#rend",
+      "mdl.tiledmodel#uuid",
+      "mdl.tiledmodel.afterensureschema",
+      "mdl.tiledmodel.createschema",
+      "mdl.tiledmodel.createschemaon",
+      "mdl.tiledmodel.dbg",
+      "mdl.tiledmodel.dropschema",
+      "mdl.tiledmodel.ensureallschema",
+      "mdl.tiledmodel.ensureschema",
+      "mdl.tiledmodel.idcolumn",
+      "mdl.tiledmodel.jsonschema",
+      "mdl.tiledmodel.jsonschemaproperti",
+      "mdl.tiledmodel.jsonschemarequir",
+      "mdl.tiledmodel.tablenam",
+      "mdl.tiledobject",
+      "mdl.tiledobject.createschemaon",
+      "mdl.tiledobject.jsonschemaproperti",
+      "mdl.tiledobject.relationmap",
+      "mdl.tiledpoint",
+      "mdl.tiledpoint#dbg",
+      "mdl.tiledpoint#rend",
+      "mdl.tiledpoint#uuid",
+      "mdl.tiledpoint.createschemaon",
+      "mdl.tiledproperti",
+      "mdl.tiledproperties#dbg",
+      "mdl.tiledproperties#rend",
+      "mdl.tiledproperties#uuid",
+      "mdl.tiledproperties.createschemaon",
+      "mdl.tiledproperties.jsonschemaproperti",
+      "mdl.tiledset",
+      "mdl.tiledset#column",
+      "mdl.tiledset#dbg",
+      "mdl.tiledset#firstgid",
+      "mdl.tiledset#grid",
+      "mdl.tiledset#imag",
+      "mdl.tiledset#imageheight",
+      "mdl.tiledset#imagewidth",
+      "mdl.tiledset#margin",
+      "mdl.tiledset#nam",
+      "mdl.tiledset#rend",
+      "mdl.tiledset#spac",
+      "mdl.tiledset#tilecount",
+      "mdl.tiledset#tiledvers",
+      "mdl.tiledset#tileheight",
+      "mdl.tiledset#tileoffset",
+      "mdl.tiledset#tilewidth",
+      "mdl.tiledset#transparentcolor",
+      "mdl.tiledset#typ",
+      "mdl.tiledset#uuid",
+      "mdl.tiledset#vers",
+      "mdl.tiledset#wangset",
+      "mdl.tiledset.createschemaon",
+      "mdl.tiledset.jsonschemaproperti",
+      "mdl.tiledset.jsonschemarequir",
+      "mdl.tiledset.relationmap",
+      "mdl.tiledset~imag",
+      "mdl.tiledterrain",
+      "mdl.tiledtil",
+      "mdl.tiledtile#anim",
+      "mdl.tiledtile#dbg",
+      "mdl.tiledtile#id",
+      "mdl.tiledtile#imag",
+      "mdl.tiledtile#imageheight",
+      "mdl.tiledtile#imagewidth",
+      "mdl.tiledtile#objectgroupuuid",
+      "mdl.tiledtile#prob",
+      "mdl.tiledtile#rend",
+      "mdl.tiledtile#terrain",
+      "mdl.tiledtile#tiledsetuuid",
+      "mdl.tiledtile#typ",
+      "mdl.tiledtile#uuid",
+      "member",
+      "model",
+      "model'",
+      "models.dropallschema",
+      "models.ensureallschema",
+      "modifi",
+      "modul",
+      "name",
+      "namespac",
+      "need",
+      "next",
+      "node",
+      "nodej",
+      "none",
+      "note",
+      "npm",
+      "object",
+      "objectgroupuuid",
+      "on",
+      "opt",
+      "option",
+      "over",
+      "overrid",
+      "overridden",
+      "packag",
+      "parser",
+      "particular",
+      "path",
+      "persist",
+      "pixel",
+      "pixeldeck",
+      "pixeldeck'",
+      "pixeldeck.arch",
+      "pixeldeck.arch.cleanqueri",
+      "pixeldeck.arch.definerequir",
+      "pixeldeck.arch.f",
+      "pixeldeck.arch.getrespathfor",
+      "pixeldeck.arch.path",
+      "pixeldeck.arch.util",
+      "pixeldeck.cfg",
+      "pixeldeck.data",
+      "pixeldeck.data.disknex",
+      "pixeldeck.serv",
+      "pixeldeck.server.restart",
+      "pixeldeck.server.start",
+      "pixeldeck.server.stop",
+      "pixeldeck.servic",
+      "pixeldeck.service.getroot",
+      "pixeldeck.service.gettiledmaphtml",
+      "pixeldeck.service.gettiledmapsvg",
+      "pixeldeck.service.gettiledsetsvg",
+      "pixeldeck.ui",
+      "pixeldeck.ui.start",
+      "pixeldeck.ui.stop",
+      "plu",
+      "primarykey",
+      "probabl",
+      "properti",
+      "provid",
+      "queri",
+      "re",
+      "read",
+      "readm",
+      "relat",
+      "relationmap",
+      "relationship",
+      "render",
+      "repl",
+      "replacementext",
+      "report",
+      "repres",
+      "represent",
+      "req",
+      "request",
+      "requir",
+      "resourc",
+      "resourcepath",
+      "resourcesearchpath",
+      "restart",
+      "return",
+      "root",
+      "rout",
+      "row",
+      "runtim",
+      "same",
+      "schema",
+      "schemaproperti",
+      "schemarequir",
+      "schma",
+      "search",
+      "serv",
+      "serve#dbg",
+      "serve#main",
+      "server",
+      "server.restart",
+      "server.start",
+      "server.stop",
+      "servic",
+      "service.getroot",
+      "service.gettiledmaphtml",
+      "service.gettiledmapsvg",
+      "service.gettiledsetsvg",
+      "set",
+      "singl",
+      "space",
+      "specifi",
+      "start",
+      "static&gt",
+      "stop",
+      "string",
+      "stuff",
+      "support",
+      "svg",
+      "tabl",
+      "tablenam",
+      "take",
+      "target",
+      "terrain",
+      "thing",
+      "those",
+      "through",
+      "tile",
+      "tilecount",
+      "tiledchunk",
+      "tiledchunk#dbg",
+      "tiledchunk#rend",
+      "tiledchunk#uuid",
+      "tiledchunk.createschemaon",
+      "tiledfil",
+      "tiledfile#dbg",
+      "tiledfile#exist",
+      "tiledfile#getstat",
+      "tiledfile#rend",
+      "tiledfile#uuid",
+      "tiledfile.createschemaon",
+      "tiledfile.findresourcepathfor",
+      "tiledfile.findresourcepathfor(path",
+      "tiledfile.resourcesearchpath",
+      "tiledfram",
+      "tiledframe#dbg",
+      "tiledframe#rend",
+      "tiledframe#uuid",
+      "tiledgid",
+      "tiledlay",
+      "tiledlayer#dbg",
+      "tiledlayer#rend",
+      "tiledlayer#uuid",
+      "tiledlayer.createschemaon",
+      "tiledlayer.relationmap",
+      "tiledmap",
+      "tiledmap#dbg",
+      "tiledmap#rend",
+      "tiledmap#uuid",
+      "tiledmap.beforeensureschema",
+      "tiledmap.createschemaon",
+      "tiledmap.jsonschema",
+      "tiledmap.relationmap",
+      "tiledmapusesset",
+      "tiledmapusesset#dbg",
+      "tiledmapusesset#rend",
+      "tiledmapusesset#uuid",
+      "tiledmapusesset.jsonschemaproperti",
+      "tiledmapusesset.relationmap",
+      "tiledmodel",
+      "tiledmodel#dbg",
+      "tiledmodel#rend",
+      "tiledmodel#uuid",
+      "tiledmodel.afterensureschema",
+      "tiledmodel.createschema",
+      "tiledmodel.createschemaon",
+      "tiledmodel.dbg",
+      "tiledmodel.dropschema",
+      "tiledmodel.ensureallschema",
+      "tiledmodel.ensureschema",
+      "tiledmodel.idcolumn",
+      "tiledmodel.jsonschema",
+      "tiledmodel.jsonschemaproperti",
+      "tiledmodel.jsonschemarequir",
+      "tiledmodel.tablenam",
+      "tiledobject",
+      "tiledobject.createschemaon",
+      "tiledobject.jsonschemaproperti",
+      "tiledobject.relationmap",
+      "tiledpoint",
+      "tiledpoint#dbg",
+      "tiledpoint#rend",
+      "tiledpoint#uuid",
+      "tiledpoint.createschemaon",
+      "tiledproperti",
+      "tiledproperties#dbg",
+      "tiledproperties#rend",
+      "tiledproperties#uuid",
+      "tiledproperties.createschemaon",
+      "tiledproperties.jsonschemaproperti",
+      "tiledset",
+      "tiledset#column",
+      "tiledset#dbg",
+      "tiledset#firstgid",
+      "tiledset#grid",
+      "tiledset#imag",
+      "tiledset#imageheight",
+      "tiledset#imagewidth",
+      "tiledset#margin",
+      "tiledset#nam",
+      "tiledset#rend",
+      "tiledset#spac",
+      "tiledset#tilecount",
+      "tiledset#tiledvers",
+      "tiledset#tileheight",
+      "tiledset#tileoffset",
+      "tiledset#tilewidth",
+      "tiledset#transparentcolor",
+      "tiledset#typ",
+      "tiledset#uuid",
+      "tiledset#vers",
+      "tiledset#wangset",
+      "tiledset.createschemaon",
+      "tiledset.jsonschemaproperti",
+      "tiledset.jsonschemarequir",
+      "tiledset.relationmap",
+      "tiledsetuuid",
+      "tiledterrain",
+      "tiledtil",
+      "tiledtile#dbg",
+      "tiledtile#id",
+      "tiledtile#imag",
+      "tiledtile#imageheight",
+      "tiledtile#imagewidth",
+      "tiledtile#objectgroupuuid",
+      "tiledtile#prob",
+      "tiledtile#rend",
+      "tiledtile#terrain",
+      "tiledtile#tiledsetuuid",
+      "tiledtile#typ",
+      "tiledtile#uuid",
+      "tiledvers",
+      "tileheight",
+      "tilemap",
+      "tileoffset",
+      "tileset",
+      "tilewidth",
+      "tm.html",
+      "tm.svg",
+      "transparentcolor",
+      "tri",
+      "ts.svg",
+      "turn",
+      "tutori",
+      "type",
+      "typedef",
+      "ui",
+      "ui.start",
+      "ui.stop",
+      "uniqu",
+      "us",
+      "user",
+      "util",
+      "uuid",
+      "valu",
+      "variou",
+      "version",
+      "via",
+      "virtual",
+      "wangset",
+      "within",
+      "work"
+    ],
+    "pipeline": [
+      "trimmer",
+      "stopWordFilter",
+      "stemmer"
+    ]
+  },
+  "store": {
+    "index.html": {
+      "id": "index.html",
+      "kind": "readme",
+      "title": "pixeldeck",
+      "longname": "index",
+      "name": "pixeldeck",
+      "tags": "index",
+      "summary": "a virtual pixel environment",
+      "description": "",
+      "body": ""
+    },
+    "global.html": {
+      "id": "global.html",
+      "kind": "global",
+      "title": "Globals",
+      "longname": "global",
+      "name": "Globals",
+      "tags": "global",
+      "summary": "All documented globals.",
+      "description": "",
+      "body": ""
+    },
+    "undefined": {
+      "kind": "tutorial",
+      "title": "getting-started",
+      "longname": "getting-started",
+      "name": "getting-started",
+      "tags": "getting-started",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "list_tutorial.html": {
+      "id": "list_tutorial.html",
+      "kind": "list",
+      "title": "Tutorials",
+      "longname": "list:tutorial",
+      "name": "Tutorials",
+      "tags": "list:tutorial",
+      "summary": "All available tutorials.",
+      "description": "",
+      "body": ""
+    },
+    "list_class.html": {
+      "id": "list_class.html",
+      "kind": "list",
+      "title": "Classes",
+      "longname": "list:class",
+      "name": "Classes",
+      "tags": "list:class",
+      "summary": "All documented classes.",
+      "description": "",
+      "body": ""
+    },
+    "list_external.html": {
+      "id": "list_external.html",
+      "kind": "list",
+      "title": "Externals",
+      "longname": "list:external",
+      "name": "Externals",
+      "tags": "list:external",
+      "summary": "All documented external members.",
+      "description": "",
+      "body": ""
+    },
+    "list_namespace.html": {
+      "id": "list_namespace.html",
+      "kind": "list",
+      "title": "Namespaces",
+      "longname": "list:namespace",
+      "name": "Namespaces",
+      "tags": "list:namespace",
+      "summary": "All documented namespaces.",
+      "description": "",
+      "body": ""
+    },
+    "external-commander.Command.html": {
+      "id": "external-commander.Command.html",
+      "kind": "class",
+      "title": "commander.Command",
+      "longname": "external:commander.Command",
+      "name": "Command",
+      "tags": "external:commander.Command Command",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "cli.Cmd.html": {
+      "id": "cli.Cmd.html",
+      "kind": "class",
+      "title": "&lt;abstract&gt; cli~Cmd",
+      "longname": "cli.Cmd",
+      "name": "Cmd",
+      "tags": "cli.Cmd Cmd",
+      "summary": "",
+      "description": "Implementation of abstract pixeldeck cli",
+      "body": "<async, abstract> main()"
+    },
+    "cli.Cmd.html#.dbg": {
+      "id": "cli.Cmd.html#.dbg",
+      "kind": "member",
+      "title": "&lt;static&gt; dbg",
+      "longname": "cli.Cmd.dbg",
+      "name": "dbg",
+      "tags": "cli.Cmd.dbg Cmd.dbg dbg",
+      "summary": "",
+      "description": "class debugger"
+    },
+    "cli.Cmd.html#dbg": {
+      "id": "cli.Cmd.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "cli.Cmd#dbg",
+      "name": "dbg",
+      "tags": "cli.Cmd#dbg Cmd#dbg dbg",
+      "summary": "",
+      "description": "instance debugger"
+    },
+    "cli.Cmd.html#main": {
+      "id": "cli.Cmd.html#main",
+      "kind": "function",
+      "title": "&lt;async, abstract&gt; main()",
+      "longname": "cli.Cmd#main",
+      "name": "main",
+      "tags": "cli.Cmd#main Cmd#main main",
+      "summary": "",
+      "description": "start the command"
+    },
+    "cli.MakeSet.html": {
+      "id": "cli.MakeSet.html",
+      "kind": "class",
+      "title": "cli~MakeSet",
+      "longname": "cli.MakeSet",
+      "name": "MakeSet",
+      "tags": "cli.MakeSet MakeSet",
+      "summary": "",
+      "description": "",
+      "body": "<async> main()"
+    },
+    "cli.MakeSet.html#main": {
+      "id": "cli.MakeSet.html#main",
+      "kind": "function",
+      "title": "&lt;async&gt; main()",
+      "longname": "cli.MakeSet#main",
+      "name": "main",
+      "tags": "cli.MakeSet#main MakeSet#main main",
+      "summary": "",
+      "description": ""
+    },
+    "cli.Serve.html": {
+      "id": "cli.Serve.html",
+      "kind": "class",
+      "title": "cli~Serve",
+      "longname": "cli.Serve",
+      "name": "Serve",
+      "tags": "cli.Serve Serve",
+      "summary": "",
+      "description": "cli-serve",
+      "body": "<async> main()"
+    },
+    "cli.Serve.html#dbg": {
+      "id": "cli.Serve.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "cli.Serve#dbg",
+      "name": "dbg",
+      "tags": "cli.Serve#dbg Serve#dbg dbg",
+      "summary": "",
+      "description": "instance debugger"
+    },
+    "cli.Serve.html#main": {
+      "id": "cli.Serve.html#main",
+      "kind": "function",
+      "title": "&lt;async&gt; main()",
+      "longname": "cli.Serve#main",
+      "name": "main",
+      "tags": "cli.Serve#main Serve#main main",
+      "summary": "",
+      "description": "start the command"
+    },
+    "-_MakeCmd.html": {
+      "id": "-_MakeCmd.html",
+      "kind": "class",
+      "title": "_MakeCmd",
+      "longname": "_MakeCmd",
+      "name": "_MakeCmd",
+      "tags": "_MakeCmd",
+      "summary": "",
+      "description": "Creates a generic \"Make Command\"",
+      "body": ""
+    },
+    "mdl.TiledChunk.html": {
+      "id": "mdl.TiledChunk.html",
+      "kind": "class",
+      "title": "mdl.TiledChunk",
+      "longname": "mdl.TiledChunk",
+      "name": "TiledChunk",
+      "tags": "mdl.TiledChunk TiledChunk",
+      "summary": "",
+      "description": "https://docs.mapeditor.org/en/stable/reference/json-map-format/#chunk",
+      "body": ""
+    },
+    "mdl.TiledChunk.html#dbg": {
+      "id": "mdl.TiledChunk.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "mdl.TiledChunk#dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledChunk#dbg TiledChunk#dbg dbg",
+      "summary": "",
+      "description": "return the instance debugger"
+    },
+    "mdl.TiledChunk.html#uuid": {
+      "id": "mdl.TiledChunk.html#uuid",
+      "kind": "member",
+      "title": "uuid :mdl.primaryKey",
+      "longname": "mdl.TiledChunk#uuid",
+      "name": "uuid",
+      "tags": "mdl.TiledChunk#uuid TiledChunk#uuid uuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledChunk.html#.createSchemaOn": {
+      "id": "mdl.TiledChunk.html#.createSchemaOn",
+      "kind": "function",
+      "title": "&lt;async, static&gt; createSchemaOn()",
+      "longname": "mdl.TiledChunk.createSchemaOn",
+      "name": "createSchemaOn",
+      "tags": "mdl.TiledChunk.createSchemaOn TiledChunk.createSchemaOn createSchemaOn",
+      "summary": "",
+      "description": "define persisted properties on table."
+    },
+    "mdl.TiledChunk.html#render": {
+      "id": "mdl.TiledChunk.html#render",
+      "kind": "function",
+      "title": "&lt;async&gt; render()",
+      "longname": "mdl.TiledChunk#render",
+      "name": "render",
+      "tags": "mdl.TiledChunk#render TiledChunk#render render",
+      "summary": "",
+      "description": "try to render this"
+    },
+    "mdl.TiledFile.html": {
+      "id": "mdl.TiledFile.html",
+      "kind": "class",
+      "title": "mdl.TiledFile",
+      "longname": "mdl.TiledFile",
+      "name": "TiledFile",
+      "tags": "mdl.TiledFile TiledFile",
+      "summary": "",
+      "description": "Represents some cached database information about the file used to import data.",
+      "body": ""
+    },
+    "mdl.TiledFile.html#.resourceSearchPaths": {
+      "id": "mdl.TiledFile.html#.resourceSearchPaths",
+      "kind": "member",
+      "title": "&lt;static&gt; resourceSearchPaths :Array.&lt;String&gt;",
+      "longname": "mdl.TiledFile.resourceSearchPaths",
+      "name": "resourceSearchPaths",
+      "tags": "mdl.TiledFile.resourceSearchPaths TiledFile.resourceSearchPaths resourceSearchPaths",
+      "summary": "",
+      "description": "List of directories to search for paths given to TiledFile.findResourcePathFor(path)"
+    },
+    "mdl.TiledFile.html#exists": {
+      "id": "mdl.TiledFile.html#exists",
+      "kind": "member",
+      "title": "exists",
+      "longname": "mdl.TiledFile#exists",
+      "name": "exists",
+      "tags": "mdl.TiledFile#exists TiledFile#exists exists",
+      "summary": "",
+      "description": "if we can find a resourcePath, the file exists."
+    },
+    "mdl.TiledFile.html#dbg": {
+      "id": "mdl.TiledFile.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "mdl.TiledFile#dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledFile#dbg TiledFile#dbg dbg",
+      "summary": "",
+      "description": "return the instance debugger"
+    },
+    "mdl.TiledFile.html#uuid": {
+      "id": "mdl.TiledFile.html#uuid",
+      "kind": "member",
+      "title": "uuid :mdl.primaryKey",
+      "longname": "mdl.TiledFile#uuid",
+      "name": "uuid",
+      "tags": "mdl.TiledFile#uuid TiledFile#uuid uuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledFile.html#.findResourcePathFor": {
+      "id": "mdl.TiledFile.html#.findResourcePathFor",
+      "kind": "function",
+      "title": "&lt;static&gt; findResourcePathFor( path )",
+      "longname": "mdl.TiledFile.findResourcePathFor",
+      "name": "findResourcePathFor",
+      "tags": "mdl.TiledFile.findResourcePathFor TiledFile.findResourcePathFor findResourcePathFor",
+      "summary": "",
+      "description": "Using TiledFile.resourceSearchPaths; return the absolute path of the file if it exists within the first resourceSearchPath"
+    },
+    "mdl.TiledFile.html#getStat": {
+      "id": "mdl.TiledFile.html#getStat",
+      "kind": "function",
+      "title": "&lt;async&gt; getStat()",
+      "longname": "mdl.TiledFile#getStat",
+      "name": "getStat",
+      "tags": "mdl.TiledFile#getStat TiledFile#getStat getStat",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledFile.html#.createSchemaOn": {
+      "id": "mdl.TiledFile.html#.createSchemaOn",
+      "kind": "function",
+      "title": "&lt;async, static&gt; createSchemaOn( table )",
+      "longname": "mdl.TiledFile.createSchemaOn",
+      "name": "createSchemaOn",
+      "tags": "mdl.TiledFile.createSchemaOn TiledFile.createSchemaOn createSchemaOn",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledFile.html#render": {
+      "id": "mdl.TiledFile.html#render",
+      "kind": "function",
+      "title": "&lt;async&gt; render()",
+      "longname": "mdl.TiledFile#render",
+      "name": "render",
+      "tags": "mdl.TiledFile#render TiledFile#render render",
+      "summary": "",
+      "description": "try to render this"
+    },
+    "mdl.TiledFrame.html": {
+      "id": "mdl.TiledFrame.html",
+      "kind": "class",
+      "title": "mdl.TiledFrame",
+      "longname": "mdl.TiledFrame",
+      "name": "TiledFrame",
+      "tags": "mdl.TiledFrame TiledFrame",
+      "summary": "",
+      "description": "One frame of a mdl.TiledTile#animation collection",
+      "body": ""
+    },
+    "mdl.TiledFrame.html#dbg": {
+      "id": "mdl.TiledFrame.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "mdl.TiledFrame#dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledFrame#dbg TiledFrame#dbg dbg",
+      "summary": "",
+      "description": "return the instance debugger"
+    },
+    "mdl.TiledFrame.html#uuid": {
+      "id": "mdl.TiledFrame.html#uuid",
+      "kind": "member",
+      "title": "uuid :mdl.primaryKey",
+      "longname": "mdl.TiledFrame#uuid",
+      "name": "uuid",
+      "tags": "mdl.TiledFrame#uuid TiledFrame#uuid uuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledFrame.html#render": {
+      "id": "mdl.TiledFrame.html#render",
+      "kind": "function",
+      "title": "&lt;async&gt; render()",
+      "longname": "mdl.TiledFrame#render",
+      "name": "render",
+      "tags": "mdl.TiledFrame#render TiledFrame#render render",
+      "summary": "",
+      "description": "try to render this"
+    },
+    "mdl.TiledLayer.html": {
+      "id": "mdl.TiledLayer.html",
+      "kind": "class",
+      "title": "mdl.TiledLayer",
+      "longname": "mdl.TiledLayer",
+      "name": "TiledLayer",
+      "tags": "mdl.TiledLayer TiledLayer",
+      "summary": "",
+      "description": "Objection representation of TiledLayer. https://docs.mapeditor.org/en/stable/reference/json-map-format/#layer",
+      "body": ""
+    },
+    "mdl.TiledLayer.html#.relationMappings": {
+      "id": "mdl.TiledLayer.html#.relationMappings",
+      "kind": "member",
+      "title": "&lt;static&gt; relationMappings",
+      "longname": "mdl.TiledLayer.relationMappings",
+      "name": "relationMappings",
+      "tags": "mdl.TiledLayer.relationMappings TiledLayer.relationMappings relationMappings",
+      "summary": "",
+      "description": "defines relationships between: Has many mdl.TiledLayer Has many mdl.TiledObject Has many mdl.TiledProperties Has many mdl.TiledChunk"
+    },
+    "mdl.TiledLayer.html#dbg": {
+      "id": "mdl.TiledLayer.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "mdl.TiledLayer#dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledLayer#dbg TiledLayer#dbg dbg",
+      "summary": "",
+      "description": "return the instance debugger"
+    },
+    "mdl.TiledLayer.html#uuid": {
+      "id": "mdl.TiledLayer.html#uuid",
+      "kind": "member",
+      "title": "uuid :mdl.primaryKey",
+      "longname": "mdl.TiledLayer#uuid",
+      "name": "uuid",
+      "tags": "mdl.TiledLayer#uuid TiledLayer#uuid uuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledLayer.html#.createSchemaOn": {
+      "id": "mdl.TiledLayer.html#.createSchemaOn",
+      "kind": "function",
+      "title": "&lt;async, static&gt; createSchemaOn( table )",
+      "longname": "mdl.TiledLayer.createSchemaOn",
+      "name": "createSchemaOn",
+      "tags": "mdl.TiledLayer.createSchemaOn TiledLayer.createSchemaOn createSchemaOn",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledLayer.html#render": {
+      "id": "mdl.TiledLayer.html#render",
+      "kind": "function",
+      "title": "&lt;async&gt; render()",
+      "longname": "mdl.TiledLayer#render",
+      "name": "render",
+      "tags": "mdl.TiledLayer#render TiledLayer#render render",
+      "summary": "",
+      "description": "try to render this"
+    },
+    "mdl.TiledMap.html": {
+      "id": "mdl.TiledMap.html",
+      "kind": "class",
+      "title": "mdl.TiledMap",
+      "longname": "mdl.TiledMap",
+      "name": "TiledMap",
+      "tags": "mdl.TiledMap TiledMap",
+      "summary": "",
+      "description": "TiledMap",
+      "body": ""
+    },
+    "mdl.TiledMap.html#.jsonSchema": {
+      "id": "mdl.TiledMap.html#.jsonSchema",
+      "kind": "member",
+      "title": "&lt;static&gt; jsonSchema",
+      "longname": "mdl.TiledMap.jsonSchema",
+      "name": "jsonSchema",
+      "tags": "mdl.TiledMap.jsonSchema TiledMap.jsonSchema jsonSchema",
+      "summary": "",
+      "description": "Extend the data.Model schema."
+    },
+    "mdl.TiledMap.html#.relationMappings": {
+      "id": "mdl.TiledMap.html#.relationMappings",
+      "kind": "member",
+      "title": "&lt;static&gt; relationMappings",
+      "longname": "mdl.TiledMap.relationMappings",
+      "name": "relationMappings",
+      "tags": "mdl.TiledMap.relationMappings TiledMap.relationMappings relationMappings",
+      "summary": "",
+      "description": "defines relationships between: Has many mdl.TiledMapUsesSet Has many mdl.TiledSet Has many mdl.TiledLayer Has many mdl.TiledProperties"
+    },
+    "mdl.TiledMap.html#dbg": {
+      "id": "mdl.TiledMap.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "mdl.TiledMap#dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledMap#dbg TiledMap#dbg dbg",
+      "summary": "",
+      "description": "return the instance debugger"
+    },
+    "mdl.TiledMap.html#uuid": {
+      "id": "mdl.TiledMap.html#uuid",
+      "kind": "member",
+      "title": "uuid :mdl.primaryKey",
+      "longname": "mdl.TiledMap#uuid",
+      "name": "uuid",
+      "tags": "mdl.TiledMap#uuid TiledMap#uuid uuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledMap.html#.createSchemaOn": {
+      "id": "mdl.TiledMap.html#.createSchemaOn",
+      "kind": "function",
+      "title": "&lt;async, static&gt; createSchemaOn()",
+      "longname": "mdl.TiledMap.createSchemaOn",
+      "name": "createSchemaOn",
+      "tags": "mdl.TiledMap.createSchemaOn TiledMap.createSchemaOn createSchemaOn",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledMap.html#.beforeEnsureSchema": {
+      "id": "mdl.TiledMap.html#.beforeEnsureSchema",
+      "kind": "function",
+      "title": "&lt;async, static&gt; beforeEnsureSchema()",
+      "longname": "mdl.TiledMap.beforeEnsureSchema",
+      "name": "beforeEnsureSchema",
+      "tags": "mdl.TiledMap.beforeEnsureSchema TiledMap.beforeEnsureSchema beforeEnsureSchema",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledMap.html#render": {
+      "id": "mdl.TiledMap.html#render",
+      "kind": "function",
+      "title": "&lt;async&gt; render()",
+      "longname": "mdl.TiledMap#render",
+      "name": "render",
+      "tags": "mdl.TiledMap#render TiledMap#render render",
+      "summary": "",
+      "description": "try to render this"
+    },
+    "mdl.TiledMapUsesSet.html": {
+      "id": "mdl.TiledMapUsesSet.html",
+      "kind": "class",
+      "title": "mdl.TiledMapUsesSet",
+      "longname": "mdl.TiledMapUsesSet",
+      "name": "TiledMapUsesSet",
+      "tags": "mdl.TiledMapUsesSet TiledMapUsesSet",
+      "summary": "",
+      "description": "When a TiledMap needs a TiledSet...",
+      "body": ""
+    },
+    "mdl.TiledMapUsesSet.html#.jsonSchemaProperties": {
+      "id": "mdl.TiledMapUsesSet.html#.jsonSchemaProperties",
+      "kind": "member",
+      "title": "&lt;static&gt; jsonSchemaProperties :object",
+      "longname": "mdl.TiledMapUsesSet.jsonSchemaProperties",
+      "name": "jsonSchemaProperties",
+      "tags": "mdl.TiledMapUsesSet.jsonSchemaProperties TiledMapUsesSet.jsonSchemaProperties jsonSchemaProperties",
+      "summary": "",
+      "description": "extend model schemaProperties"
+    },
+    "mdl.TiledMapUsesSet.html#.relationMappings": {
+      "id": "mdl.TiledMapUsesSet.html#.relationMappings",
+      "kind": "member",
+      "title": "&lt;static&gt; relationMappings",
+      "longname": "mdl.TiledMapUsesSet.relationMappings",
+      "name": "relationMappings",
+      "tags": "mdl.TiledMapUsesSet.relationMappings TiledMapUsesSet.relationMappings relationMappings",
+      "summary": "",
+      "description": "Define relations"
+    },
+    "mdl.TiledMapUsesSet.html#dbg": {
+      "id": "mdl.TiledMapUsesSet.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "mdl.TiledMapUsesSet#dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledMapUsesSet#dbg TiledMapUsesSet#dbg dbg",
+      "summary": "",
+      "description": "return the instance debugger"
+    },
+    "mdl.TiledMapUsesSet.html#uuid": {
+      "id": "mdl.TiledMapUsesSet.html#uuid",
+      "kind": "member",
+      "title": "uuid :mdl.primaryKey",
+      "longname": "mdl.TiledMapUsesSet#uuid",
+      "name": "uuid",
+      "tags": "mdl.TiledMapUsesSet#uuid TiledMapUsesSet#uuid uuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledMapUsesSet.html#render": {
+      "id": "mdl.TiledMapUsesSet.html#render",
+      "kind": "function",
+      "title": "&lt;async&gt; render()",
+      "longname": "mdl.TiledMapUsesSet#render",
+      "name": "render",
+      "tags": "mdl.TiledMapUsesSet#render TiledMapUsesSet#render render",
+      "summary": "",
+      "description": "try to render this"
+    },
+    "mdl.TiledModel.html": {
+      "id": "mdl.TiledModel.html",
+      "kind": "class",
+      "title": "mdl.TiledModel",
+      "longname": "mdl.TiledModel",
+      "name": "TiledModel",
+      "tags": "mdl.TiledModel TiledModel",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "mdl.TiledModel.html#.dbg": {
+      "id": "mdl.TiledModel.html#.dbg",
+      "kind": "member",
+      "title": "&lt;static&gt; dbg",
+      "longname": "mdl.TiledModel.dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledModel.dbg TiledModel.dbg dbg",
+      "summary": "",
+      "description": "return the class debugger"
+    },
+    "mdl.TiledModel.html#dbg": {
+      "id": "mdl.TiledModel.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "mdl.TiledModel#dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledModel#dbg TiledModel#dbg dbg",
+      "summary": "",
+      "description": "return the instance debugger"
+    },
+    "mdl.TiledModel.html#.idColumn": {
+      "id": "mdl.TiledModel.html#.idColumn",
+      "kind": "member",
+      "title": "&lt;static&gt; idColumn",
+      "longname": "mdl.TiledModel.idColumn",
+      "name": "idColumn",
+      "tags": "mdl.TiledModel.idColumn TiledModel.idColumn idColumn",
+      "summary": "",
+      "description": "get the class's id column; Model defines this as uuid globally."
+    },
+    "mdl.TiledModel.html#.tableName": {
+      "id": "mdl.TiledModel.html#.tableName",
+      "kind": "member",
+      "title": "&lt;static&gt; tableName",
+      "longname": "mdl.TiledModel.tableName",
+      "name": "tableName",
+      "tags": "mdl.TiledModel.tableName TiledModel.tableName tableName",
+      "summary": "",
+      "description": "get the class's table name; which should be the class name."
+    },
+    "mdl.TiledModel.html#.jsonSchemaRequired": {
+      "id": "mdl.TiledModel.html#.jsonSchemaRequired",
+      "kind": "member",
+      "title": "&lt;abstract, static&gt; jsonSchemaRequired",
+      "longname": "mdl.TiledModel.jsonSchemaRequired",
+      "name": "jsonSchemaRequired",
+      "tags": "mdl.TiledModel.jsonSchemaRequired TiledModel.jsonSchemaRequired jsonSchemaRequired",
+      "summary": "",
+      "description": "define what this class requires; should be overridden if anything is required."
+    },
+    "mdl.TiledModel.html#.jsonSchemaProperties": {
+      "id": "mdl.TiledModel.html#.jsonSchemaProperties",
+      "kind": "member",
+      "title": "&lt;abstract, static&gt; jsonSchemaProperties",
+      "longname": "mdl.TiledModel.jsonSchemaProperties",
+      "name": "jsonSchemaProperties",
+      "tags": "mdl.TiledModel.jsonSchemaProperties TiledModel.jsonSchemaProperties jsonSchemaProperties",
+      "summary": "",
+      "description": "define what properties this class defines; should be EXTENDED"
+    },
+    "mdl.TiledModel.html#.jsonSchema": {
+      "id": "mdl.TiledModel.html#.jsonSchema",
+      "kind": "member",
+      "title": "&lt;abstract, static&gt; jsonSchema",
+      "longname": "mdl.TiledModel.jsonSchema",
+      "name": "jsonSchema",
+      "tags": "mdl.TiledModel.jsonSchema TiledModel.jsonSchema jsonSchema",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledModel.html#uuid": {
+      "id": "mdl.TiledModel.html#uuid",
+      "kind": "member",
+      "title": "uuid :mdl.primaryKey",
+      "longname": "mdl.TiledModel#uuid",
+      "name": "uuid",
+      "tags": "mdl.TiledModel#uuid TiledModel#uuid uuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledModel.html#.createSchemaOn": {
+      "id": "mdl.TiledModel.html#.createSchemaOn",
+      "kind": "function",
+      "title": "&lt;async, abstract, static&gt; createSchemaOn( table )",
+      "longname": "mdl.TiledModel.createSchemaOn",
+      "name": "createSchemaOn",
+      "tags": "mdl.TiledModel.createSchemaOn TiledModel.createSchemaOn createSchemaOn",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledModel.html#.ensureAllSchemas": {
+      "id": "mdl.TiledModel.html#.ensureAllSchemas",
+      "kind": "function",
+      "title": "&lt;async, static&gt; ensureAllSchemas( Knex, ...allModels )",
+      "longname": "mdl.TiledModel.ensureAllSchemas",
+      "name": "ensureAllSchemas",
+      "tags": "mdl.TiledModel.ensureAllSchemas TiledModel.ensureAllSchemas ensureAllSchemas",
+      "summary": "",
+      "description": "Ensure all these schemas exist."
+    },
+    "mdl.TiledModel.html#.ensureSchema": {
+      "id": "mdl.TiledModel.html#.ensureSchema",
+      "kind": "function",
+      "title": "&lt;async, static&gt; ensureSchema( Knex )",
+      "longname": "mdl.TiledModel.ensureSchema",
+      "name": "ensureSchema",
+      "tags": "mdl.TiledModel.ensureSchema TiledModel.ensureSchema ensureSchema",
+      "summary": "",
+      "description": "Ensures that the table for this model has been defined."
+    },
+    "mdl.TiledModel.html#.afterEnsureSchema": {
+      "id": "mdl.TiledModel.html#.afterEnsureSchema",
+      "kind": "function",
+      "title": "&lt;async, static&gt; afterEnsureSchema()",
+      "longname": "mdl.TiledModel.afterEnsureSchema",
+      "name": "afterEnsureSchema",
+      "tags": "mdl.TiledModel.afterEnsureSchema TiledModel.afterEnsureSchema afterEnsureSchema",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledModel.html#.createSchema": {
+      "id": "mdl.TiledModel.html#.createSchema",
+      "kind": "function",
+      "title": "&lt;async, static&gt; createSchema()",
+      "longname": "mdl.TiledModel.createSchema",
+      "name": "createSchema",
+      "tags": "mdl.TiledModel.createSchema TiledModel.createSchema createSchema",
+      "summary": "",
+      "description": "Create this model's schema"
+    },
+    "mdl.TiledModel.html#.dropSchema": {
+      "id": "mdl.TiledModel.html#.dropSchema",
+      "kind": "function",
+      "title": "&lt;async, static&gt; dropSchema( Knex )",
+      "longname": "mdl.TiledModel.dropSchema",
+      "name": "dropSchema",
+      "tags": "mdl.TiledModel.dropSchema TiledModel.dropSchema dropSchema",
+      "summary": "",
+      "description": "Drop this schema"
+    },
+    "mdl.TiledModel.html#render": {
+      "id": "mdl.TiledModel.html#render",
+      "kind": "function",
+      "title": "&lt;async&gt; render()",
+      "longname": "mdl.TiledModel#render",
+      "name": "render",
+      "tags": "mdl.TiledModel#render TiledModel#render render",
+      "summary": "",
+      "description": "try to render this"
+    },
+    "mdl.TiledObject.html": {
+      "id": "mdl.TiledObject.html",
+      "kind": "class",
+      "title": "mdl.TiledObject",
+      "longname": "mdl.TiledObject",
+      "name": "TiledObject",
+      "tags": "mdl.TiledObject TiledObject",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "mdl.TiledObject.html#.jsonSchemaProperties": {
+      "id": "mdl.TiledObject.html#.jsonSchemaProperties",
+      "kind": "member",
+      "title": "&lt;static&gt; jsonSchemaProperties",
+      "longname": "mdl.TiledObject.jsonSchemaProperties",
+      "name": "jsonSchemaProperties",
+      "tags": "mdl.TiledObject.jsonSchemaProperties TiledObject.jsonSchemaProperties jsonSchemaProperties",
+      "summary": "",
+      "description": "Extend model SchemaProperties"
+    },
+    "mdl.TiledObject.html#.relationMappings": {
+      "id": "mdl.TiledObject.html#.relationMappings",
+      "kind": "member",
+      "title": "&lt;static&gt; relationMappings",
+      "longname": "mdl.TiledObject.relationMappings",
+      "name": "relationMappings",
+      "tags": "mdl.TiledObject.relationMappings TiledObject.relationMappings relationMappings",
+      "summary": "",
+      "description": "define relational mappings"
+    },
+    "mdl.TiledObject.html#.createSchemaOn": {
+      "id": "mdl.TiledObject.html#.createSchemaOn",
+      "kind": "function",
+      "title": "&lt;async, static&gt; createSchemaOn()",
+      "longname": "mdl.TiledObject.createSchemaOn",
+      "name": "createSchemaOn",
+      "tags": "mdl.TiledObject.createSchemaOn TiledObject.createSchemaOn createSchemaOn",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledPoint.html": {
+      "id": "mdl.TiledPoint.html",
+      "kind": "class",
+      "title": "mdl.TiledPoint",
+      "longname": "mdl.TiledPoint",
+      "name": "TiledPoint",
+      "tags": "mdl.TiledPoint TiledPoint",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "mdl.TiledPoint.html#dbg": {
+      "id": "mdl.TiledPoint.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "mdl.TiledPoint#dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledPoint#dbg TiledPoint#dbg dbg",
+      "summary": "",
+      "description": "return the instance debugger"
+    },
+    "mdl.TiledPoint.html#uuid": {
+      "id": "mdl.TiledPoint.html#uuid",
+      "kind": "member",
+      "title": "uuid :mdl.primaryKey",
+      "longname": "mdl.TiledPoint#uuid",
+      "name": "uuid",
+      "tags": "mdl.TiledPoint#uuid TiledPoint#uuid uuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledPoint.html#.createSchemaOn": {
+      "id": "mdl.TiledPoint.html#.createSchemaOn",
+      "kind": "function",
+      "title": "&lt;async, static&gt; createSchemaOn()",
+      "longname": "mdl.TiledPoint.createSchemaOn",
+      "name": "createSchemaOn",
+      "tags": "mdl.TiledPoint.createSchemaOn TiledPoint.createSchemaOn createSchemaOn",
+      "summary": "",
+      "description": "define schma on Knex.SchemaBuilder schema builder.."
+    },
+    "mdl.TiledPoint.html#render": {
+      "id": "mdl.TiledPoint.html#render",
+      "kind": "function",
+      "title": "&lt;async&gt; render()",
+      "longname": "mdl.TiledPoint#render",
+      "name": "render",
+      "tags": "mdl.TiledPoint#render TiledPoint#render render",
+      "summary": "",
+      "description": "try to render this"
+    },
+    "mdl.TiledProperties.html": {
+      "id": "mdl.TiledProperties.html",
+      "kind": "class",
+      "title": "mdl.TiledProperties",
+      "longname": "mdl.TiledProperties",
+      "name": "TiledProperties",
+      "tags": "mdl.TiledProperties TiledProperties",
+      "summary": "",
+      "description": "Tiled lets many different kinds of things have properties. So this represents that kind of relationship between many different kinds of Tiled things:",
+      "body": ""
+    },
+    "mdl.TiledProperties.html#.jsonSchemaProperties": {
+      "id": "mdl.TiledProperties.html#.jsonSchemaProperties",
+      "kind": "member",
+      "title": "&lt;static&gt; jsonSchemaProperties",
+      "longname": "mdl.TiledProperties.jsonSchemaProperties",
+      "name": "jsonSchemaProperties",
+      "tags": "mdl.TiledProperties.jsonSchemaProperties TiledProperties.jsonSchemaProperties jsonSchemaProperties",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledProperties.html#dbg": {
+      "id": "mdl.TiledProperties.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "mdl.TiledProperties#dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledProperties#dbg TiledProperties#dbg dbg",
+      "summary": "",
+      "description": "return the instance debugger"
+    },
+    "mdl.TiledProperties.html#uuid": {
+      "id": "mdl.TiledProperties.html#uuid",
+      "kind": "member",
+      "title": "uuid :mdl.primaryKey",
+      "longname": "mdl.TiledProperties#uuid",
+      "name": "uuid",
+      "tags": "mdl.TiledProperties#uuid TiledProperties#uuid uuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledProperties.html#.createSchemaOn": {
+      "id": "mdl.TiledProperties.html#.createSchemaOn",
+      "kind": "function",
+      "title": "&lt;async, static&gt; createSchemaOn()",
+      "longname": "mdl.TiledProperties.createSchemaOn",
+      "name": "createSchemaOn",
+      "tags": "mdl.TiledProperties.createSchemaOn TiledProperties.createSchemaOn createSchemaOn",
+      "summary": "",
+      "description": "define the table for properties"
+    },
+    "mdl.TiledProperties.html#render": {
+      "id": "mdl.TiledProperties.html#render",
+      "kind": "function",
+      "title": "&lt;async&gt; render()",
+      "longname": "mdl.TiledProperties#render",
+      "name": "render",
+      "tags": "mdl.TiledProperties#render TiledProperties#render render",
+      "summary": "",
+      "description": "try to render this"
+    },
+    "mdl.TiledSet.html": {
+      "id": "mdl.TiledSet.html",
+      "kind": "class",
+      "title": "mdl.TiledSet",
+      "longname": "mdl.TiledSet",
+      "name": "TiledSet",
+      "tags": "mdl.TiledSet TiledSet",
+      "summary": "",
+      "description": "https://doc.mapeditor.org/en/stable/reference/json-map-format/#tileset",
+      "body": ""
+    },
+    "mdl.TiledSet.html#columns": {
+      "id": "mdl.TiledSet.html#columns",
+      "kind": "member",
+      "title": "columns :integer",
+      "longname": "mdl.TiledSet#columns",
+      "name": "columns",
+      "tags": "mdl.TiledSet#columns TiledSet#columns columns",
+      "summary": "",
+      "description": "defines the length of a row"
+    },
+    "mdl.TiledSet.html#firstgid": {
+      "id": "mdl.TiledSet.html#firstgid",
+      "kind": "member",
+      "title": "firstgid :mdl.TiledGid",
+      "longname": "mdl.TiledSet#firstgid",
+      "name": "firstgid",
+      "tags": "mdl.TiledSet#firstgid TiledSet#firstgid firstgid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#grid": {
+      "id": "mdl.TiledSet.html#grid",
+      "kind": "member",
+      "title": "grid :string",
+      "longname": "mdl.TiledSet#grid",
+      "name": "grid",
+      "tags": "mdl.TiledSet#grid TiledSet#grid grid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#image": {
+      "id": "mdl.TiledSet.html#image",
+      "kind": "member",
+      "title": "image :string",
+      "longname": "mdl.TiledSet#image",
+      "name": "image",
+      "tags": "mdl.TiledSet#image TiledSet#image image",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#imageheight": {
+      "id": "mdl.TiledSet.html#imageheight",
+      "kind": "member",
+      "title": "imageheight :integer",
+      "longname": "mdl.TiledSet#imageheight",
+      "name": "imageheight",
+      "tags": "mdl.TiledSet#imageheight TiledSet#imageheight imageheight",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#imagewidth": {
+      "id": "mdl.TiledSet.html#imagewidth",
+      "kind": "member",
+      "title": "imagewidth :integer",
+      "longname": "mdl.TiledSet#imagewidth",
+      "name": "imagewidth",
+      "tags": "mdl.TiledSet#imagewidth TiledSet#imagewidth imagewidth",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#margin": {
+      "id": "mdl.TiledSet.html#margin",
+      "kind": "member",
+      "title": "margin :integer",
+      "longname": "mdl.TiledSet#margin",
+      "name": "margin",
+      "tags": "mdl.TiledSet#margin TiledSet#margin margin",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#name": {
+      "id": "mdl.TiledSet.html#name",
+      "kind": "member",
+      "title": "name :string",
+      "longname": "mdl.TiledSet#name",
+      "name": "name",
+      "tags": "mdl.TiledSet#name TiledSet#name name",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#spacing": {
+      "id": "mdl.TiledSet.html#spacing",
+      "kind": "member",
+      "title": "spacing :integer",
+      "longname": "mdl.TiledSet#spacing",
+      "name": "spacing",
+      "tags": "mdl.TiledSet#spacing TiledSet#spacing spacing",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#tilecount": {
+      "id": "mdl.TiledSet.html#tilecount",
+      "kind": "member",
+      "title": "tilecount :integer",
+      "longname": "mdl.TiledSet#tilecount",
+      "name": "tilecount",
+      "tags": "mdl.TiledSet#tilecount TiledSet#tilecount tilecount",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#tileheight": {
+      "id": "mdl.TiledSet.html#tileheight",
+      "kind": "member",
+      "title": "tileheight :integer",
+      "longname": "mdl.TiledSet#tileheight",
+      "name": "tileheight",
+      "tags": "mdl.TiledSet#tileheight TiledSet#tileheight tileheight",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#tileoffset": {
+      "id": "mdl.TiledSet.html#tileoffset",
+      "kind": "member",
+      "title": "tileoffset :string",
+      "longname": "mdl.TiledSet#tileoffset",
+      "name": "tileoffset",
+      "tags": "mdl.TiledSet#tileoffset TiledSet#tileoffset tileoffset",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#tilewidth": {
+      "id": "mdl.TiledSet.html#tilewidth",
+      "kind": "member",
+      "title": "tilewidth :integer",
+      "longname": "mdl.TiledSet#tilewidth",
+      "name": "tilewidth",
+      "tags": "mdl.TiledSet#tilewidth TiledSet#tilewidth tilewidth",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#transparentcolor": {
+      "id": "mdl.TiledSet.html#transparentcolor",
+      "kind": "member",
+      "title": "transparentcolor :string",
+      "longname": "mdl.TiledSet#transparentcolor",
+      "name": "transparentcolor",
+      "tags": "mdl.TiledSet#transparentcolor TiledSet#transparentcolor transparentcolor",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#type": {
+      "id": "mdl.TiledSet.html#type",
+      "kind": "member",
+      "title": "type :string",
+      "longname": "mdl.TiledSet#type",
+      "name": "type",
+      "tags": "mdl.TiledSet#type TiledSet#type type",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#wangsets": {
+      "id": "mdl.TiledSet.html#wangsets",
+      "kind": "member",
+      "title": "wangsets :string",
+      "longname": "mdl.TiledSet#wangsets",
+      "name": "wangsets",
+      "tags": "mdl.TiledSet#wangsets TiledSet#wangsets wangsets",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#tiledversion": {
+      "id": "mdl.TiledSet.html#tiledversion",
+      "kind": "member",
+      "title": "tiledversion :string",
+      "longname": "mdl.TiledSet#tiledversion",
+      "name": "tiledversion",
+      "tags": "mdl.TiledSet#tiledversion TiledSet#tiledversion tiledversion",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#version": {
+      "id": "mdl.TiledSet.html#version",
+      "kind": "member",
+      "title": "version :string",
+      "longname": "mdl.TiledSet#version",
+      "name": "version",
+      "tags": "mdl.TiledSet#version TiledSet#version version",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#.jsonSchemaProperties": {
+      "id": "mdl.TiledSet.html#.jsonSchemaProperties",
+      "kind": "member",
+      "title": "&lt;static&gt; jsonSchemaProperties",
+      "longname": "mdl.TiledSet.jsonSchemaProperties",
+      "name": "jsonSchemaProperties",
+      "tags": "mdl.TiledSet.jsonSchemaProperties TiledSet.jsonSchemaProperties jsonSchemaProperties",
+      "summary": "",
+      "description": "extends model SchemaProperties"
+    },
+    "mdl.TiledSet.html#.jsonSchemaRequired": {
+      "id": "mdl.TiledSet.html#.jsonSchemaRequired",
+      "kind": "member",
+      "title": "&lt;static&gt; jsonSchemaRequired",
+      "longname": "mdl.TiledSet.jsonSchemaRequired",
+      "name": "jsonSchemaRequired",
+      "tags": "mdl.TiledSet.jsonSchemaRequired TiledSet.jsonSchemaRequired jsonSchemaRequired",
+      "summary": "",
+      "description": "Returns Model's SchemaRequired Just as an example of how one WOULD override."
+    },
+    "mdl.TiledSet.html#.relationMappings": {
+      "id": "mdl.TiledSet.html#.relationMappings",
+      "kind": "member",
+      "title": "&lt;static&gt; relationMappings",
+      "longname": "mdl.TiledSet.relationMappings",
+      "name": "relationMappings",
+      "tags": "mdl.TiledSet.relationMappings TiledSet.relationMappings relationMappings",
+      "summary": "",
+      "description": "defines members:"
+    },
+    "mdl.TiledSet.html#dbg": {
+      "id": "mdl.TiledSet.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "mdl.TiledSet#dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledSet#dbg TiledSet#dbg dbg",
+      "summary": "",
+      "description": "return the instance debugger"
+    },
+    "mdl.TiledSet.html#uuid": {
+      "id": "mdl.TiledSet.html#uuid",
+      "kind": "member",
+      "title": "uuid :mdl.primaryKey",
+      "longname": "mdl.TiledSet#uuid",
+      "name": "uuid",
+      "tags": "mdl.TiledSet#uuid TiledSet#uuid uuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledSet.html#.createSchemaOn": {
+      "id": "mdl.TiledSet.html#.createSchemaOn",
+      "kind": "function",
+      "title": "&lt;async, static&gt; createSchemaOn( table )",
+      "longname": "mdl.TiledSet.createSchemaOn",
+      "name": "createSchemaOn",
+      "tags": "mdl.TiledSet.createSchemaOn TiledSet.createSchemaOn createSchemaOn",
+      "summary": "",
+      "description": "Extends Model Table Definitions."
+    },
+    "mdl.TiledSet.html#render": {
+      "id": "mdl.TiledSet.html#render",
+      "kind": "function",
+      "title": "&lt;async&gt; render()",
+      "longname": "mdl.TiledSet#render",
+      "name": "render",
+      "tags": "mdl.TiledSet#render TiledSet#render render",
+      "summary": "",
+      "description": "try to render this"
+    },
+    "mdl.TiledTerrain.html": {
+      "id": "mdl.TiledTerrain.html",
+      "kind": "class",
+      "title": "mdl.TiledTerrain",
+      "longname": "mdl.TiledTerrain",
+      "name": "TiledTerrain",
+      "tags": "mdl.TiledTerrain TiledTerrain",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "mdl.TiledTile.html": {
+      "id": "mdl.TiledTile.html",
+      "kind": "class",
+      "title": "mdl.TiledTile",
+      "longname": "mdl.TiledTile",
+      "name": "TiledTile",
+      "tags": "mdl.TiledTile TiledTile",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "mdl.TiledTile.html#TiledSetUuid": {
+      "id": "mdl.TiledTile.html#TiledSetUuid",
+      "kind": "member",
+      "title": "TiledSetUuid :foreignKey",
+      "longname": "mdl.TiledTile#TiledSetUuid",
+      "name": "TiledSetUuid",
+      "tags": "mdl.TiledTile#TiledSetUuid TiledTile#TiledSetUuid TiledSetUuid",
+      "summary": "",
+      "description": "links this to a particular set"
+    },
+    "mdl.TiledTile.html#id": {
+      "id": "mdl.TiledTile.html#id",
+      "kind": "member",
+      "title": "id :integer",
+      "longname": "mdl.TiledTile#id",
+      "name": "id",
+      "tags": "mdl.TiledTile#id TiledTile#id id",
+      "summary": "",
+      "description": "unique id with a mdl.TiledSet"
+    },
+    "mdl.TiledTile.html#imageheight": {
+      "id": "mdl.TiledTile.html#imageheight",
+      "kind": "member",
+      "title": "imageheight :integer",
+      "longname": "mdl.TiledTile#imageheight",
+      "name": "imageheight",
+      "tags": "mdl.TiledTile#imageheight TiledTile#imageheight imageheight",
+      "summary": "",
+      "description": "height of image specified in mdl.TiledSet~image"
+    },
+    "mdl.TiledTile.html#imagewidth": {
+      "id": "mdl.TiledTile.html#imagewidth",
+      "kind": "member",
+      "title": "imagewidth",
+      "longname": "mdl.TiledTile#imagewidth",
+      "name": "imagewidth",
+      "tags": "mdl.TiledTile#imagewidth TiledTile#imagewidth imagewidth",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledTile.html#objectgroupUuid": {
+      "id": "mdl.TiledTile.html#objectgroupUuid",
+      "kind": "member",
+      "title": "objectgroupUuid",
+      "longname": "mdl.TiledTile#objectgroupUuid",
+      "name": "objectgroupUuid",
+      "tags": "mdl.TiledTile#objectgroupUuid TiledTile#objectgroupUuid objectgroupUuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledTile.html#terrain": {
+      "id": "mdl.TiledTile.html#terrain",
+      "kind": "member",
+      "title": "terrain",
+      "longname": "mdl.TiledTile#terrain",
+      "name": "terrain",
+      "tags": "mdl.TiledTile#terrain TiledTile#terrain terrain",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledTile.html#type": {
+      "id": "mdl.TiledTile.html#type",
+      "kind": "member",
+      "title": "type",
+      "longname": "mdl.TiledTile#type",
+      "name": "type",
+      "tags": "mdl.TiledTile#type TiledTile#type type",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledTile.html#probability": {
+      "id": "mdl.TiledTile.html#probability",
+      "kind": "member",
+      "title": "probability",
+      "longname": "mdl.TiledTile#probability",
+      "name": "probability",
+      "tags": "mdl.TiledTile#probability TiledTile#probability probability",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledTile.html#dbg": {
+      "id": "mdl.TiledTile.html#dbg",
+      "kind": "member",
+      "title": "dbg",
+      "longname": "mdl.TiledTile#dbg",
+      "name": "dbg",
+      "tags": "mdl.TiledTile#dbg TiledTile#dbg dbg",
+      "summary": "",
+      "description": "return the instance debugger"
+    },
+    "mdl.TiledTile.html#uuid": {
+      "id": "mdl.TiledTile.html#uuid",
+      "kind": "member",
+      "title": "uuid :mdl.primaryKey",
+      "longname": "mdl.TiledTile#uuid",
+      "name": "uuid",
+      "tags": "mdl.TiledTile#uuid TiledTile#uuid uuid",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledTile.html#image": {
+      "id": "mdl.TiledTile.html#image",
+      "kind": "member",
+      "title": "image :string",
+      "longname": "mdl.TiledTile#image",
+      "name": "image",
+      "tags": "mdl.TiledTile#image TiledTile#image image",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.TiledTile.html#render": {
+      "id": "mdl.TiledTile.html#render",
+      "kind": "function",
+      "title": "&lt;async&gt; render()",
+      "longname": "mdl.TiledTile#render",
+      "name": "render",
+      "tags": "mdl.TiledTile#render TiledTile#render render",
+      "summary": "",
+      "description": "try to render this"
+    },
+    "MakeMap.html": {
+      "id": "MakeMap.html",
+      "kind": "class",
+      "title": "MakeMap",
+      "longname": "MakeMap",
+      "name": "MakeMap",
+      "tags": "MakeMap",
+      "summary": "",
+      "description": "Convert Tiled TiledMap JSON files into pixeldeck'ed TiledMap to SVG Version",
+      "body": ""
+    },
+    "external-config.html": {
+      "id": "external-config.html",
+      "kind": "external",
+      "title": "config",
+      "longname": "external:config",
+      "name": "config",
+      "tags": "external:config",
+      "summary": "",
+      "description": "used by pixeldeck.cfg",
+      "body": ""
+    },
+    "external-commander.html": {
+      "id": "external-commander.html",
+      "kind": "external",
+      "title": "commander",
+      "longname": "external:commander",
+      "name": "commander",
+      "tags": "external:commander",
+      "summary": "",
+      "description": "https://www.npmjs.com/package/commander https://www.npmjs.com/package/commander https://github.com/tj/commander.js/wiki Provides a command line argument parser plus other features.",
+      "body": ""
+    },
+    "external-Path.html": {
+      "id": "external-Path.html",
+      "kind": "external",
+      "title": "Path",
+      "longname": "external:Path",
+      "name": "Path",
+      "tags": "external:Path",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "external-fs.html": {
+      "id": "external-fs.html",
+      "kind": "external",
+      "title": "fs",
+      "longname": "external:fs",
+      "name": "fs",
+      "tags": "external:fs",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "external-Knex.html": {
+      "id": "external-Knex.html",
+      "kind": "external",
+      "title": "Knex",
+      "longname": "external:Knex",
+      "name": "Knex",
+      "tags": "external:Knex",
+      "summary": "",
+      "description": "knex provides the database interface layer",
+      "body": ""
+    },
+    "external-Objection.html": {
+      "id": "external-Objection.html",
+      "kind": "external",
+      "title": "Objection",
+      "longname": "external:Objection",
+      "name": "Objection",
+      "tags": "external:Objection",
+      "summary": "",
+      "description": "this module provides the basis of Tiled data representation",
+      "body": ""
+    },
+    "external-http.html": {
+      "id": "external-http.html",
+      "kind": "external",
+      "title": "http",
+      "longname": "external:http",
+      "name": "http",
+      "tags": "external:http",
+      "summary": "",
+      "description": "Node provides HTTP support.",
+      "body": ""
+    },
+    "external-Express.html": {
+      "id": "external-Express.html",
+      "kind": "external",
+      "title": "Express",
+      "longname": "external:Express",
+      "name": "Express",
+      "tags": "external:Express",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "external-Repl.html": {
+      "id": "external-Repl.html",
+      "kind": "external",
+      "title": "Repl",
+      "longname": "external:Repl",
+      "name": "Repl",
+      "tags": "external:Repl",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "pixeldeck.arch.html": {
+      "id": "pixeldeck.arch.html",
+      "kind": "namespace",
+      "title": "pixeldeck.arch",
+      "longname": "pixeldeck.arch",
+      "name": "arch",
+      "tags": "pixeldeck.arch arch",
+      "summary": "",
+      "description": "utility stuff",
+      "body": ""
+    },
+    "pixeldeck.arch.html#.Path": {
+      "id": "pixeldeck.arch.html#.Path",
+      "kind": "member",
+      "title": "&lt;static&gt; Path",
+      "longname": "pixeldeck.arch.Path",
+      "name": "Path",
+      "tags": "pixeldeck.arch.Path arch.Path Path",
+      "summary": "",
+      "description": "the path module is used a lot. Nodejs Path docs"
+    },
+    "pixeldeck.arch.html#.Fs": {
+      "id": "pixeldeck.arch.html#.Fs",
+      "kind": "member",
+      "title": "&lt;static&gt; Fs",
+      "longname": "pixeldeck.arch.Fs",
+      "name": "Fs",
+      "tags": "pixeldeck.arch.Fs arch.Fs Fs",
+      "summary": "",
+      "description": "the fs module is used a lot. Nodejs fs docs"
+    },
+    "pixeldeck.arch.html#.Util": {
+      "id": "pixeldeck.arch.html#.Util",
+      "kind": "member",
+      "title": "&lt;static&gt; Util",
+      "longname": "pixeldeck.arch.Util",
+      "name": "Util",
+      "tags": "pixeldeck.arch.Util arch.Util Util",
+      "summary": "",
+      "description": "the util module is used a lot. Nodejs util docs"
+    },
+    "pixeldeck.arch.html#.defineRequires": {
+      "id": "pixeldeck.arch.html#.defineRequires",
+      "kind": "function",
+      "title": "&lt;static&gt; defineRequires()",
+      "longname": "pixeldeck.arch.defineRequires",
+      "name": "defineRequires",
+      "tags": "pixeldeck.arch.defineRequires arch.defineRequires defineRequires",
+      "summary": "",
+      "description": "define automated requires on target. each name in names are defined as properties on target when read the properties will require modules with the same name within the path defined by dirname"
+    },
+    "pixeldeck.arch.html#.getResPathFor": {
+      "id": "pixeldeck.arch.html#.getResPathFor",
+      "kind": "function",
+      "title": "&lt;static&gt; getResPathFor( aPath, replacementExt )",
+      "longname": "pixeldeck.arch.getResPathFor",
+      "name": "getResPathFor",
+      "tags": "pixeldeck.arch.getResPathFor arch.getResPathFor getResPathFor",
+      "summary": "",
+      "description": "Convert any path into a resource path, optionally changing the extension This will search the following paths: None: just try not modifying aPath's directory \"configured\" resource directory. \"current working directory\" as reported by node."
+    },
+    "pixeldeck.arch.html#.cleanQuery": {
+      "id": "pixeldeck.arch.html#.cleanQuery",
+      "kind": "function",
+      "title": "&lt;static&gt; cleanQuery( ...arguments ) → {object}",
+      "longname": "pixeldeck.arch.cleanQuery",
+      "name": "cleanQuery",
+      "tags": "pixeldeck.arch.cleanQuery arch.cleanQuery cleanQuery",
+      "summary": "",
+      "description": "take all inputs and turn them into a single clean query object"
+    },
+    "pixeldeck.cfg.html": {
+      "id": "pixeldeck.cfg.html",
+      "kind": "namespace",
+      "title": "pixeldeck.cfg",
+      "longname": "pixeldeck.cfg",
+      "name": "cfg",
+      "tags": "pixeldeck.cfg cfg",
+      "summary": "",
+      "description": "loads runtime configuration using the external:config npm package",
+      "body": ""
+    },
+    "cli.html": {
+      "id": "cli.html",
+      "kind": "namespace",
+      "title": "cli",
+      "longname": "cli",
+      "name": "cli",
+      "tags": "cli",
+      "summary": "",
+      "description": "index of command line interfaces",
+      "body": ""
+    },
+    "cli.html#.MakeMap": {
+      "id": "cli.html#.MakeMap",
+      "kind": "function",
+      "title": "&lt;async, static&gt; MakeMap( tileMap [, options ] ) → {string}",
+      "longname": "cli.MakeMap",
+      "name": "MakeMap",
+      "tags": "cli.MakeMap MakeMap",
+      "summary": "",
+      "description": "Render a map into HTML/SVG"
+    },
+    "pixeldeck.data.html": {
+      "id": "pixeldeck.data.html",
+      "kind": "namespace",
+      "title": "pixeldeck.data",
+      "longname": "pixeldeck.data",
+      "name": "data",
+      "tags": "pixeldeck.data data",
+      "summary": "",
+      "description": "",
+      "body": ""
+    },
+    "pixeldeck.data.html#.disknex": {
+      "id": "pixeldeck.data.html#.disknex",
+      "kind": "function",
+      "title": "&lt;static&gt; disknex()",
+      "longname": "pixeldeck.data.disknex",
+      "name": "disknex",
+      "tags": "pixeldeck.data.disknex data.disknex disknex",
+      "summary": "",
+      "description": "disconnect from knex"
+    },
+    "pixeldeck.html": {
+      "id": "pixeldeck.html",
+      "kind": "namespace",
+      "title": "pixeldeck",
+      "longname": "pixeldeck",
+      "name": "pixeldeck",
+      "tags": "pixeldeck",
+      "summary": "",
+      "description": "index of library",
+      "body": ""
+    },
+    "mdl.html": {
+      "id": "mdl.html",
+      "kind": "namespace",
+      "title": "mdl",
+      "longname": "mdl",
+      "name": "mdl",
+      "tags": "mdl",
+      "summary": "",
+      "description": "utility object that requires-on-demand each of the named model classes",
+      "body": ""
+    },
+    "mdl.html#.ALL": {
+      "id": "mdl.html#.ALL",
+      "kind": "member",
+      "title": "&lt;static&gt; ALL :Array.&lt;mdl.TiledModel&gt;",
+      "longname": "mdl.ALL",
+      "name": "ALL",
+      "tags": "mdl.ALL ALL",
+      "summary": "",
+      "description": "generates an array of all the named model classes by requiring them."
+    },
+    "mdl.html#.models.ensureAllSchemas": {
+      "id": "mdl.html#.models.ensureAllSchemas",
+      "kind": "function",
+      "title": "&lt;static&gt; models.ensureAllSchemas( [ all ] )",
+      "longname": "mdl.models.ensureAllSchemas",
+      "name": "models.ensureAllSchemas",
+      "tags": "mdl.models.ensureAllSchemas models.ensureAllSchemas ensureAllSchemas",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.html#.models.dropAllSchemas": {
+      "id": "mdl.html#.models.dropAllSchemas",
+      "kind": "function",
+      "title": "&lt;static&gt; models.dropAllSchemas( [ all ] )",
+      "longname": "mdl.models.dropAllSchemas",
+      "name": "models.dropAllSchemas",
+      "tags": "mdl.models.dropAllSchemas models.dropAllSchemas dropAllSchemas",
+      "summary": "",
+      "description": ""
+    },
+    "mdl.html#.TiledGid": {
+      "id": "mdl.html#.TiledGid",
+      "kind": "typedef",
+      "title": "TiledGid",
+      "longname": "mdl.TiledGid",
+      "name": "TiledGid",
+      "tags": "mdl.TiledGid TiledGid",
+      "summary": "",
+      "description": "A gid is a unique integer value within each TiledMap that maps to a particular TiledTile through TiledMapUsesSet where each of those notes which gid each used TiledSet starts with and the actual TileSet is the difference between the last firstgid of a TiledMapUsesSet that isn't over the needed gid."
+    },
+    "mdl.html#.primaryKey": {
+      "id": "mdl.html#.primaryKey",
+      "kind": "typedef",
+      "title": "primaryKey",
+      "longname": "mdl.primaryKey",
+      "name": "primaryKey",
+      "tags": "mdl.primaryKey primaryKey",
+      "summary": "",
+      "description": "Auto incremented integer for each table."
+    },
+    "pixeldeck.server.html": {
+      "id": "pixeldeck.server.html",
+      "kind": "namespace",
+      "title": "pixeldeck.server",
+      "longname": "pixeldeck.server",
+      "name": "server",
+      "tags": "pixeldeck.server server",
+      "summary": "",
+      "description": "instance of http server for service",
+      "body": ""
+    },
+    "pixeldeck.server.html#.Restart": {
+      "id": "pixeldeck.server.html#.Restart",
+      "kind": "function",
+      "title": "&lt;async, static&gt; Restart()",
+      "longname": "pixeldeck.server.Restart",
+      "name": "Restart",
+      "tags": "pixeldeck.server.Restart server.Restart Restart",
+      "summary": "",
+      "description": "Restart"
+    },
+    "pixeldeck.server.html#.Start": {
+      "id": "pixeldeck.server.html#.Start",
+      "kind": "function",
+      "title": "&lt;async, static&gt; Start()",
+      "longname": "pixeldeck.server.Start",
+      "name": "Start",
+      "tags": "pixeldeck.server.Start server.Start Start",
+      "summary": "",
+      "description": "Start the service"
+    },
+    "pixeldeck.server.html#.Stop": {
+      "id": "pixeldeck.server.html#.Stop",
+      "kind": "function",
+      "title": "&lt;async, static&gt; Stop()",
+      "longname": "pixeldeck.server.Stop",
+      "name": "Stop",
+      "tags": "pixeldeck.server.Stop server.Stop Stop",
+      "summary": "",
+      "description": "Halt various pixeldeck services."
+    },
+    "pixeldeck.service.html": {
+      "id": "pixeldeck.service.html",
+      "kind": "namespace",
+      "title": "pixeldeck.service",
+      "longname": "pixeldeck.service",
+      "name": "service",
+      "tags": "pixeldeck.service service",
+      "summary": "",
+      "description": "pixeldeck uses Express 4 as the route to emit pixels via http server",
+      "body": ""
+    },
+    "pixeldeck.service.html#.getRoot": {
+      "id": "pixeldeck.service.html#.getRoot",
+      "kind": "function",
+      "title": "&lt;static&gt; getRoot( req, res )",
+      "longname": "pixeldeck.service.getRoot",
+      "name": "getRoot",
+      "tags": "pixeldeck.service.getRoot service.getRoot getRoot",
+      "summary": "",
+      "description": "Handler for root '/' request"
+    },
+    "pixeldeck.service.html#.getTiledMapHtml": {
+      "id": "pixeldeck.service.html#.getTiledMapHtml",
+      "kind": "function",
+      "title": "&lt;async, static&gt; getTiledMapHtml( req, res, next )",
+      "longname": "pixeldeck.service.getTiledMapHtml",
+      "name": "getTiledMapHtml",
+      "tags": "pixeldeck.service.getTiledMapHtml service.getTiledMapHtml getTiledMapHtml",
+      "summary": "",
+      "description": "Handler for '/*.tm.html'"
+    },
+    "pixeldeck.service.html#.getTiledMapSvg": {
+      "id": "pixeldeck.service.html#.getTiledMapSvg",
+      "kind": "function",
+      "title": "&lt;static&gt; getTiledMapSvg( req, res, next )",
+      "longname": "pixeldeck.service.getTiledMapSvg",
+      "name": "getTiledMapSvg",
+      "tags": "pixeldeck.service.getTiledMapSvg service.getTiledMapSvg getTiledMapSvg",
+      "summary": "",
+      "description": "Route handler for tm.svg files."
+    },
+    "pixeldeck.service.html#.getTiledSetSvg": {
+      "id": "pixeldeck.service.html#.getTiledSetSvg",
+      "kind": "function",
+      "title": "&lt;static&gt; getTiledSetSvg( req, res, next )",
+      "longname": "pixeldeck.service.getTiledSetSvg",
+      "name": "getTiledSetSvg",
+      "tags": "pixeldeck.service.getTiledSetSvg service.getTiledSetSvg getTiledSetSvg",
+      "summary": "",
+      "description": "Handler for '/*.ts.svg'"
+    },
+    "pixeldeck.ui.html": {
+      "id": "pixeldeck.ui.html",
+      "kind": "namespace",
+      "title": "pixeldeck.ui",
+      "longname": "pixeldeck.ui",
+      "name": "ui",
+      "tags": "pixeldeck.ui ui",
+      "summary": "",
+      "description": "Just the module that represents our user interface",
+      "body": ""
+    },
+    "pixeldeck.ui.html#.Start": {
+      "id": "pixeldeck.ui.html#.Start",
+      "kind": "function",
+      "title": "&lt;static&gt; Start( opts )",
+      "longname": "pixeldeck.ui.Start",
+      "name": "Start",
+      "tags": "pixeldeck.ui.Start ui.Start Start",
+      "summary": "",
+      "description": "start the ui"
+    },
+    "pixeldeck.ui.html#.Stop": {
+      "id": "pixeldeck.ui.html#.Stop",
+      "kind": "function",
+      "title": "&lt;static&gt; Stop()",
+      "longname": "pixeldeck.ui.Stop",
+      "name": "Stop",
+      "tags": "pixeldeck.ui.Stop ui.Stop Stop",
+      "summary": "",
+      "description": "stop the ui"
+    }
+  }
+};

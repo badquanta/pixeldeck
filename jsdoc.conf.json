@@ -11,21 +11,49 @@
   "source": {
     "include": [
       "package.json",
-      "./lib/"
+      "pixeldeck.js",
+      "./lib/",
+      "bin/"
     ],
     "includePattern": ".*"
   },
   "plugins": [
     "plugins/markdown"
   ],
+  "opts": {
+    "destination": "./docs/jsdoc",
+    "recurse": true,
+    "readme": "README.md",
+    "access": "all",
+    "tutorials": "./docs/tutorials",
+    "template": "node_modules/foodoc/template"
+  },
   "templates": {
     "cleverLinks": true,
-    "monospaceLinks": true
-  },
-  "opts": {
-    "destination": "./docs",
-    "recurse": true,
-    "readme": "README.md"
+    "monospaceLinks": false,
+    "systemName": "pixeldeck",
+    "systemSummary": "a virtual pixel environment",
+    "systemLogo": "logo.gif",
+    "systemColor": "#cc5500",
+    "footer": "pixeldeck",
+    "copyright": "GPL-3.0",
+    "includeDate": true,
+    "dateFormat": "YYYY-MM-DD @ hh:mm",
+    "inlineNav": false,
+    "inverseNav": true,
+
+    "linenums": true,
+    "showTableOfContents": true,
+    "showAccessFilter": true,
+
+    "collapseSymbols": true,
+    "methodHeadingReturns": true,
+    "outputSourceFiles": false,
+    "outputSourcePath": false,
+
+    "search": true,
+    "favicon": "logo.gif"
+
   },
   "recurse": true
 }

@@ -9,7 +9,7 @@ describe('TiledObject', function () {
   after(async function () {
     await require('../lib/data').disknex()
   })
-  beforeEach(function () { TiledObject = require('../lib/models/TiledObject') })
+  beforeEach(function () { TiledObject = require('../lib/mdl/TiledObject') })
 
   it('should be ok', function () { console.assert(TiledObject) })
 
@@ -26,7 +26,7 @@ describe('TiledObject', function () {
     })
 
     it('should insert with properties', async function () {
-      await require('../lib/models/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
       const created = await TiledObject.query().insertGraph(
         { properties: [{ name: 'Child property of layer', value: 'property value of child proeprty of layer', type: 'some type' }] }
       )
@@ -52,8 +52,8 @@ describe('TiledObject', function () {
         'x': 32,
         'y': 32
       }
-      await require('../lib/models/TiledProperties').ensureSchema()
-      await require('../lib/models/TiledObject').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledObject').ensureSchema()
       const created = await TiledObject.query().insertGraph(ObjectExample)
       return console.assert(created)
     })
@@ -71,8 +71,8 @@ describe('TiledObject', function () {
         'x': 560,
         'y': 808
       }
-      await require('../lib/models/TiledProperties').ensureSchema()
-      await require('../lib/models/TiledObject').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledObject').ensureSchema()
       const created = await TiledObject.query().insertGraph(EllipseExample)
       return console.assert(created)
     })
@@ -89,8 +89,8 @@ describe('TiledObject', function () {
         'x': 220,
         'y': 350
       }
-      await require('../lib/models/TiledProperties').ensureSchema()
-      await require('../lib/models/TiledObject').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledObject').ensureSchema()
       const created = await TiledObject.query().insertGraph(PointExample)
       return console.assert(created)
     })
@@ -143,7 +143,7 @@ describe('TiledObject', function () {
         'x': -176,
         'y': 432
       }
-      await require('../lib/models/TiledPoint').ensureSchema()
+      await require('../lib/mdl/TiledPoint').ensureSchema()
       const created = await TiledObject.query().insertGraph(PolygonExample)
       return console.assert(created)
     })
@@ -185,7 +185,7 @@ describe('TiledObject', function () {
         'y': 88
       }
 
-      await require('../lib/models/TiledPoint').ensureSchema()
+      await require('../lib/mdl/TiledPoint').ensureSchema()
       const created = await TiledObject.query().insertGraph(PolylineExample)
       return console.assert(created)
     })
@@ -207,7 +207,7 @@ describe('TiledObject', function () {
         'y': 136
       }
 
-      await require('../lib/models/TiledPoint').ensureSchema()
+      await require('../lib/mdl/TiledPoint').ensureSchema()
       const created = await TiledObject.query().insertGraph(TextExample)
       return console.assert(created)
     })

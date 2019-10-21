@@ -1,85 +1,198 @@
 
 
-  pixeldeck (AKA: lib/index.js)
-    ✓ has property service (416ms)
-    ✓ has property cfg
-    ✓ has property dbg
-    ✓ has property models (56ms)
-    ✓ has property ui (136ms)
-    ✓ has property server
-
-  pixeldeck.models
+  TiledChunk
     ✓ should be ok
-    .Model
-      ✓ should be ok
-      ✓ allows me to insert (110ms)
-    .TiledSet
-      ✓ should be ok
-      ✓ should let me make one
-      ✓ allows me to insert one
-      ✓ should let me find one that I made
-    .TiledMap
-      ✓ should be ok
-      ✓ should allow me to insert one
-    .TiledMapUsesSet
-      ✓ should be ok
-      ✓ should allow me to insert one
-    .TiledObject
-      ✓ should be ok
-      ✓ should allow me to insert one
-    .TiledProperties
-      ✓ should be ok
-      ✓ should allow me to insert one
-    .TiledLayer
-      ✓ should be ok
-      ✓ should allow me to insert one
-      ✓ should allow me to insert one with child layer:
+    1) should createSchema
+    ensureSchema
+      ✓      1) "before each" hook for "should insert one"
 
-  pixeldeck/
-    ✓ responds with 200 (561ms)
-    1) can give us a tileSet
-    2) can give us a tilemap svg
-    3) can give us a tilemap html
+  TiledFile
+    ✓ should be ok
+    ✓ should createSchema (690ms)
+    ensureSchema
+      ✓ should insert one (205ms)
+      ✓ should insert with a map (122ms)
+      ✓ should be able to getTiledMap (545ms)
+      ✓ can stat
 
-  start
-    ✓ should work
+  TiledFrame
+    ✓ should be ok
+    ✓ should createSchema (135ms)
+    ensureSchema
+      ✓ should insert one
+
+  TiledLayer
+    ✓ should be ok
+    2) should createSchema
+    ensureSchema
+      ✓ should insert one
+      ✓ should insert with layers
+      ✓ should insert with objects (305ms)
+      ✓ should insert with properties
+      ✓ works with objectgroup example
+      ✓ works with tilelayer example
+
+  TiledMap
+    ✓ should be ok
+    ✓ should createSchema
+    ensureSchema
+      ✓ should insert one
+      ✓ should insert with layers
+      ✓ should insert with properties
+      ✓ works with example from website
+    with real data
+      ✓ res/test/test1.json
+      ✓ res/test/test2.json
+      ✓ res/test/test3.json
+      ✓ res/test/test4.json (170ms)
+
+  TiledModel
+    ✓ should be ok
+    ✓ allows me to insert
+
+  TiledObject
+    ✓ should be ok
+    ✓ should createSchema
+    ensureSchema
+      ✓ should insert one
+      ✓ should insert with properties
+      ✓ works with Object Example from website
+      ✓ works with Ellipse Example from website
+      ✓ works with Point Example from website
+      ✓ works with Rectangle Example from website
+      ✓ works with Polygon Example from website (47ms)
+      ✓ works with Polyline Example from website (38ms)
+      ✓ works with Text Example from website
+
+  TiledSet
+    ✓ should be ok
+    ✓ should createSchema
+    ensureSchema
+      ✓ should insert one
+      ✓ should insert     3) should createSchema
+    ensureSchema
+      ✓ should insert one
+      ✓ should insert with properties
+      ✓ should insert with terrains
+      ✓ works with example from website
+
+  TiledTerrain
+    ✓ should be ok
+    ✓ should createSchema
+    ensureSchema
+      ✓ should insert one
+      ✓ works with example from website
+
+  TiledTile
+    ✓ should be ok
+    ✓ should     4) should createSchema
+    ensureSchema
+      ✓ should insert one
+      ✓ should insert with p    ✓ re      ✓ should insert     3) "after each" hook for "responds with 200"
 
 
-  26 passing (13s)
-  3 failing
+  58    ✓ respon    ✓ responds wit    4) "after     5) "after each" hook for "responds with 200"
 
-  1) pixeldeck/
-       can give us a tileSet:
-     Error: expected 200 "OK", got 500 "Internal Server Error"
-      at Test._assertStatus (node_modules/supertest/lib/test.js:268:12)
-      at Test._assertFunction (node_modules/supertest/lib/test.js:283:11)
-      at Test.assert (node_modules/supertest/lib/test.js:173:18)
-      at localAssert (node_modules/supertest/lib/test.js:131:12)
-      at /home/badquanta/Projects/pixeldeck/node_modules/supertest/lib/test.js:128:5
-      at Test.Request.callback (node_modules/superagent/lib/node/index.js:728:3)
-      at IncomingMessage.parser (node_modules/superagent/lib/node/index.js:916:18)
-      at IncomingMessage.EventEmitter.emit (domain.js:441:20)
-      at endReadableNT (_stream_readable.js:1103:12)
-      at process._tickCallback (internal/process/next_tick.js:63:19)
 
-  2) pixeldeck/
-       can give us a tilemap svg:
-     Error: expected 200 "OK", got 500 "Internal Server Error"
-      at Test._assertStatus (node_modules/supertest/lib/test.js:268:12)
-      at Test._assertFunction (node_modules/supertest/lib/test.js:283:11)
-      at Test.assert (node_modules/supertest/lib/test.js:173:18)
-      at localAssert (node_modules/supertest/lib/test.js:131:12)
-      at /home/badquanta/Projects/pixeldeck/node_modules/supertest/lib/test.js:128:5
-      at Test.Request.callback (node_modules/superagent/lib/node/index.js:728:3)
-      at IncomingMessage.parser (node_modules/superagent/lib/node/index.js:916:18)
-      at IncomingMessage.EventEmitter.emit (domain.js:441:20)
-      at endReadableNT (_stream_readable.js:1103:12)
-      at process._tickCallback (internal/process/next_tick.js:63:19)
+  57 passing (7s)
+  5 failing
 
-  3) pixeldeck/
-       can give us a tilemap html:
-     Error: Timeout of 10000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/home/badquanta/Projects/pixeldeck/test/rootTests.js)
+  1) TiledFile
+       ensureSchema
+         should be able to getTiledMap:
+     insert into `TiledLayer` (`TiledMapUuid`, `data`, `height`, `id`, `name`, `opacity`, `type`, `visible`, `width`, `x`, `y`) values (1, '[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]', 16, 3, 'Tile Layer 3', 1, 'tilelayer', true, 16, 0, 0) - SQLITE_ERROR: no such table: TiledLayer
+  Error: SQLITE_ERROR: no such table: TiledLayer
+      at buildKnexQuery (node_modules/objection/lib/queryBuilder/QueryBuilder.js:1379:63)
+      at doExecute (node_modules/objection/lib/queryBuilder/QueryBuilder.js:1270:31)
+      at Bluebird.try.then (node_modules/objection/lib/queryBuilder/QueryBuilder.js:579:19)
+      at tryCatcher (node_modules/bluebird/js/release/util.js:16:23)
+      at Promise._settlePromiseFromHandler (node_modules/bluebird/js/release/promise.js:517:31)
+      at Promise._settlePromise (node_modules/bluebird/js/release/promise.js:574:18)
+      at Promise._settlePromise0 (node_modules/bluebird/js/release/promise.js:619:10)
+      at Promise._settlePromises (node_modules/bluebird/js/release/promise.js:699:18)
+      at _drainQueueStep (node_modules/bluebird/js/release/async.js:138:12)
+      at _drainQueue (node_modules/bluebird/js/release/async.js:131:9)
+      at Async._drainQueues (node_modules/bluebird/js/release/async.js:147:5)
+      at Immediate.Async.drainQueues [as _onImmediate] (node_modules/bluebird/js/release/async.js:17:14)
+
+  2) TiledLayer
+       ensureSchema
+         should insert with objects:
+     insert into `TiledLayer` default values - SQLITE_ERROR: no such table: TiledLayer
+  Error: SQLITE_ERROR: no such table: TiledLayer
+      at buildKnexQuery (node_modules/objection/lib/queryBuilder/QueryBuilder.js:1379:63)
+      at doExecute (node_modules/objection/lib/queryBuilder/QueryBuilder.js:1270:31)
+      at Bluebird.try.then (node_modules/objection/lib/queryBuilder/QueryBuilder.js:579:19)
+      at tryCatcher (node_modules/bluebird/js/release/util.js:16:23)
+      at Promise._settlePromiseFromHandler (node_modules/bluebird/js/release/promise.js:517:31)
+      at Promise._settlePromise (node_modules/bluebird/js/release/promise.js:574:18)
+      at Promise._settlePromise0 (node_modules/bluebird/js/release/promise.js:619:10)
+      at Promise._settlePromises (node_modules/bluebird/js/release/promise.js:699:18)
+      at _drainQueueStep (node_modules/bluebird/js/release/async.js:138:12)
+      at _drainQueue (node_modules/bluebird/js/release/async.js:131:9)
+      at Async._drainQueues (node_modules/bluebird/js/release/async.js:147:5)
+      at Immediate.Async.drainQueues [as _onImmediate] (node_modules/bluebird/js/release/async.js:17:14)
+
+  3) TiledTerrain
+       should createSchema:
+     create table `TiledTerrain` (`uuid` integer not null primary key autoincrement, `TiledSetUuid` undefined, `name` varchar(255), `tile` undefined, foreign key(`TiledSetUuid`) references `TiledSet`(`uuid`)) - SQLITE_ERROR: table `TiledTerrain` already exists
+  Error: SQLITE_ERROR: table `TiledTerrain` already exists
+      at Function.get (node_modules/knex/lib/util/make-knex.js:186:28)
+      at Function.createSchema (lib/mdl/TiledModel.js:70:35)
+
+  4) TiledTile
+       should createSchema:
+     Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/home/badquanta/Projects/pixeldeck/test/TiledTileTests.js)
   
+
+  5) pixeldeck/
+       "after each" hook for "responds with 200":
+     Error: Module did not self-register.
+      at Object.Module._extensions..node (internal/modules/cjs/loader.js:718:18)
+      at Module.load (internal/modules/cjs/loader.js:599:32)
+      at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
+      at Function.Module._load (internal/modules/cjs/loader.js:530:3)
+      at Module.require (internal/modules/cjs/loader.js:637:17)
+      at require (internal/modules/cjs/helpers.js:22:18)
+      at Object.<anonymous> (node_modules/sqlite3/lib/sqlite3.js:4:15)
+      at Module._compile (internal/modules/cjs/loader.js:689:30)
+      at Module.replacementCompile (node_modules/append-transform/index.js:58:13)
+      at Module._extensions..js (internal/modules/cjs/loader.js:700:10)
+      at Object.<anonymous> (node_modules/append-transform/index.js:62:4)
+      at Module.load (internal/modules/cjs/loader.js:599:32)
+      at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
+      at Function.Module._load (internal/modules/cjs/loader.js:530:3)
+      at Module.require (internal/modules/cjs/loader.js:637:17)
+      at require (internal/modules/cjs/helpers.js:22:18)
+      at Object.<anonymous> (lib/data.js:12:185)
+      at Module._compile (internal/modules/cjs/loader.js:689:30)
+      at Module.replacementCompile (node_modules/append-transform/index.js:58:13)
+      at Module._extensions..js (internal/modules/cjs/loader.js:700:10)
+      at Object.<anonymous> (node_modules/append-transform/index.js:62:4)
+      at Module.load (internal/modules/cjs/loader.js:599:32)
+      at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
+      at Function.Module._load (internal/modules/cjs/loader.js:530:3)
+      at Module.require (internal/modules/cjs/loader.js:637:17)
+      at require (internal/modules/cjs/helpers.js:22:18)
+      at Function.ensureSchema (lib/mdl/TiledModel.js:64:63)
+      at Promise.all.all.map.a (lib/mdl.js:19:233)
+      at Array.map (<anonymous>)
+      at Object.models.ensureAllSchemas (lib/mdl.js:19:173)
+      at Server.Start (lib/server.js:33:154)
+      at Server.Restart (lib/server.js:22:605)
+
+
+
+/modules/cjs/loader.js:538:12)
+      at Function.Module._load (internal/modules/cjs/loader.js:530:3)
+      at Module.require (internal/modules/cjs/loader.js:637:17)
+      at require (internal/modules/cjs/helpers.js:22:18)
+      at Function.ensureSchema (lib/mdl/TiledModel.js:64:63)
+      at Promise.all.all.map.a (lib/mdl.js:19:233)
+      at Array.map (<anonymous>)
+      at Object.models.ensureAllSchemas (lib/mdl.js:19:173)
+      at Server.Start (lib/server.js:33:154)
+      at Server.Restart (lib/server.js:22:605)
 
 
 

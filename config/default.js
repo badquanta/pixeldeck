@@ -1,9 +1,13 @@
 const Path = require('path')
-const package = require('../package')
+const pkg = require('../package')
+/**
+ * @lends pixeldeck.cfg
+ */
 const defs = module.exports = {
-  name: package.name,
-  version: package.version,
+  name: pkg.name,
+  version: pkg.version,
   resDir: Path.resolve(__dirname, '../res'),
+  resDirs: [],
   viewsDir: Path.resolve(__dirname, '../views'),
   ui: 'blessed',
   locals: {
@@ -15,13 +19,12 @@ const defs = module.exports = {
     useNullAsDefault: true,
     connection: {
       filename: './dev.db'
-
     },
     asyncStackTraces: true
   },
-  env: "development",
+  env: 'development',
   replOpts: {
-    get prompt () { return `${defs.name}:${process.env.NODE_ENV}>_` }
+    get prompt () { return `${defs.name}:${defs.env}>_` }
   },
   get interactive () {
     return !(process.env.INTERACTIVE && process.env.INTERACTIVE.match(/false/))

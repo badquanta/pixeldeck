@@ -7,11 +7,11 @@
 describe('TiledChunk', function () {
   let TiledChunk
   after(async function () {
-    //TiledChunk.dropSchema()
+    // TiledChunk.dropSchema()
 
     return require('../lib/data').disknex()
   })
-  beforeEach(function () { TiledChunk = require('../lib/models/TiledChunk') })
+  beforeEach(function () { TiledChunk = require('../lib/mdl/TiledChunk') })
 
   it('should be ok', function () { console.assert(TiledChunk) })
 

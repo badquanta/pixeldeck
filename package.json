@@ -25,7 +25,8 @@
   },
   "files": [
     "README.md",
-    "LICENSE.md",
+    "docs/LICENSE.md",
+    "LICENSE",
     "package.json"
   ],
   "bin": {
@@ -39,11 +40,12 @@
     "diagnostics": "nodemon --exec npm -- run test",
     "start": "DEBUG=\"$DEBUG,pixeldeck*\" bin/pixeldeck-serve.js",
     "start-watch": "nodemon --exec npm start",
-    "docs": "npm run jsdoc && npm run doc-man && npm run cover",
+    "docs": "npm run jsdoc; npm run doc-man; npm run cover",
     "cover": "NODE_ENV=test npx nyc mocha | tee ./docs/COVERAGE.TXT; npm run cover-badge",
     "cover-badge": "npx lcov-badge-generator ./docs/coverage/lcov.info -o ./docs/coverage.svg",
     "esdoc": "./node_modules/.bin/esdoc",
     "jsdoc": "./node_modules/.bin/jsdoc -c ./jsdoc.conf.json",
+    "jsdoc-watch": "nodemon --exec npm run jsdoc",
     "doc-man": "./scripts/updateMan.js ./docs/pixeldeck.md",
     "developer": "nodemon --exec npm run docs"
   },
@@ -58,6 +60,7 @@
   "nodemonConfig": {
     "verbose": true,
     "watch": [
+      "bin/*",
       "lib/*",
       "test/*",
       "package.json",
@@ -80,10 +83,10 @@
     "datauri": "^2.0.0",
     "debug": "^4.1.1",
     "express": "^4.17.1",
-    "jimp": "^0.8.4",
+    "jimp": "^0.8.5",
     "jstransformer-markdown-it": "^2.1.0",
     "knex": "^0.19.5",
-    "mocha": "^6.2.1",
+    "mocha": "^6.2.2",
     "node-gyp": "^6.0.0",
     "objection": "^1.6.11",
     "pug": "^2.0.4",
@@ -100,9 +103,10 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "foodoc": "0.0.9",
     "jsdoc": "^3.6.3",
     "lcov-badge-generator": "^1.0.5",
-    "nodemon": "^1.19.3",
+    "nodemon": "^1.19.4",
     "nyc": "^14.1.1",
     "remark-man": "^6.0.0",
     "remark-parse": "^7.0.1",

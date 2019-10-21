@@ -2,7 +2,7 @@ describe('TiledModel', function () {
   let TiledModel
   after(async function () { await require('../lib/data').disknex() })
   beforeEach(async function () {
-    TiledModel = require('../lib/models/TiledModel')
+    TiledModel = require('../lib/mdl/TiledModel')
     await TiledModel.ensureSchema()
   })
   it('should be ok', function () { console.assert(TiledModel) })

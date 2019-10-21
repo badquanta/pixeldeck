@@ -9,7 +9,7 @@ describe('TiledMap', function () {
   after(async function () {
     await require('../lib/data').disknex()
   })
-  beforeEach(function () { TiledMap = require('../lib/models/TiledMap') })
+  beforeEach(function () { TiledMap = require('../lib/mdl/TiledMap') })
 
   it('should be ok', function () { console.assert(TiledMap) })
 
@@ -26,16 +26,16 @@ describe('TiledMap', function () {
     })
 
     it('should insert with layers', async function () {
-      await require('../lib/models/TiledLayer').ensureSchema()
+      await require('../lib/mdl/TiledLayer').ensureSchema()
       const created = await TiledMap.query()
         .insertGraph({ layers: [{ name: 'Child Layer of Layer' }] })
       return console.assert(created)
     })
 
     it('should insert with properties', async function () {
-      await require('../lib/models/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
       const created = await TiledMap.query().insertGraph(
-        { properties: [{ name: 'Child property of layer', value: 'property value of child proeprty of layer', type: 'some type' }] }
+        { properties: [{ name: 'Child property of layer', value: 'property value of child property of layer', type: 'some type' }] }
       )
       return console.assert(created)
     })
@@ -66,8 +66,8 @@ describe('TiledMap', function () {
         'tiledversion': '1.0.3',
         'width': 4
       }
-      await require('../lib/models/TiledProperties').ensureSchema()
-      await require('../lib/models/TiledObject').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledObject').ensureSchema()
       const created = await TiledMap.query().insertGraph(MapExample)
       return console.assert(created)
     })
@@ -76,30 +76,30 @@ describe('TiledMap', function () {
   describe('with real data', function () {
     it('res/test/test1.json', async function () {
       const test1 = require('../res/test/test1.json')
-      await require('../lib/models/TiledMapUsesSet').ensureSchema()
+      await require('../lib/mdl/TiledMapUsesSet').ensureSchema()
       const created = await TiledMap.query().insertGraph(test1)
       return console.assert(created)
     })
 
     it('res/test/test2.json', async function () {
       const test1 = require('../res/test/test2.json')
-      await require('../lib/models/TiledMapUsesSet').ensureSchema()
+      await require('../lib/mdl/TiledMapUsesSet').ensureSchema()
       const created = await TiledMap.query().insertGraph(test1)
       return console.assert(created)
     })
 
     it('res/test/test3.json', async function () {
       const test1 = require('../res/test/test3.json')
-      await require('../lib/models/TiledMapUsesSet').ensureSchema()
-      await require('../lib/models/TiledChunk').ensureSchema()
+      await require('../lib/mdl/TiledMapUsesSet').ensureSchema()
+      await require('../lib/mdl/TiledChunk').ensureSchema()
       const created = await TiledMap.query().insertGraph(test1)
       return console.assert(created)
     })
 
     it('res/test/test4.json', async function () {
       const test1 = require('../res/test/test4.json')
-      await require('../lib/models/TiledMapUsesSet').ensureSchema()
-      await require('../lib/models/TiledChunk').ensureSchema()
+      await require('../lib/mdl/TiledMapUsesSet').ensureSchema()
+      await require('../lib/mdl/TiledChunk').ensureSchema()
       const created = await TiledMap.query().insertGraph(test1)
       return console.assert(created)
     })

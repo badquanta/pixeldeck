@@ -9,7 +9,7 @@ describe('TiledTerrain', function () {
   after(async function () {
     await require('../lib/data').disknex()
   })
-  beforeEach(function () { TiledTerrain = require('../lib/models/TiledTerrain') })
+  beforeEach(function () { TiledTerrain = require('../lib/mdl/TiledTerrain') })
 
   it('should be ok', function () { console.assert(TiledTerrain) })
 
@@ -41,8 +41,8 @@ describe('TiledTerrain', function () {
           'name': 'cliff',
           'tile': 36
         }]
-      await require('../lib/models/TiledProperties').ensureSchema()
-      await require('../lib/models/TiledObject').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledObject').ensureSchema()
       const created = await TiledTerrain.query().insertGraph(TerrainExample)
       return console.assert(created)
     })

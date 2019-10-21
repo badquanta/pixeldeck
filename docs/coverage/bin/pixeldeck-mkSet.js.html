@@ -27,7 +27,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/10</span>
+        <span class='fraction'>0/12</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/29</span>
+        <span class='fraction'>0/28</span>
       </div>
     </div>
     <p class="quiet">
@@ -97,16 +97,7 @@
 <a name='L49'></a><a href='#L49'>49</a>
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -151,7 +142,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -159,15 +149,11 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">#!/usr/bin/env node
+const MakeSet = <span class="cstat-no" title="statement not covered" >require('../lib/cli/MakeSet')</span>
+const makeSet = <span class="cstat-no" title="statement not covered" >new MakeSet()</span>
+<span class="cstat-no" title="statement not covered" >if (require.main === module) { <span class="cstat-no" title="statement not covered" >makeSet.main() </span>}</span>
 &nbsp;
-/**
- * https://www.npmjs.com/package/commander
- */
-const commander = <span class="cstat-no" title="statement not covered" >require('commander')</span>
-<span class="cstat-no" title="statement not covered" >commander.option('-f, --format &lt;type&gt;', 'Define what format to generate.')</span>
-const fs = <span class="cstat-no" title="statement not covered" >require('fs')</span>
-&nbsp;
-const TiledMaps = <span class="cstat-no" title="statement not covered" >require('../lib/models/TiledMap')</span>
+const TiledMaps = <span class="cstat-no" title="statement not covered" >require('../lib/mdl/TiledMap')</span>
 const Path = <span class="cstat-no" title="statement not covered" >require('path')</span>
 const pug = <span class="cstat-no" title="statement not covered" >require('pug')</span>
 const tileSetViewPaths = <span class="cstat-no" title="statement not covered" >{</span>
@@ -178,13 +164,13 @@ const tileSetViewPaths = <span class="cstat-no" title="statement not covered" >{
 const viewBasePath = <span class="cstat-no" title="statement not covered" >Path.resolve(__dirname, '../views')</span>
 &nbsp;
 async function <span class="fstat-no" title="function not covered" >mkSet </span>() {
-<span class="cstat-no" title="statement not covered" >  commander.parse(process.argv)</span>
+<span class="cstat-no" title="statement not covered" >  this.parse(process.argv)</span>
 &nbsp;
-  const inputFile = <span class="cstat-no" title="statement not covered" >commander.args.shift()</span>
-  const outputFile = <span class="cstat-no" title="statement not covered" >commander.args.shift()</span>
+  const inputFile = <span class="cstat-no" title="statement not covered" >this.args.shift()</span>
+  const outputFile = <span class="cstat-no" title="statement not covered" >this.args.shift()</span>
   let outputFormat = <span class="cstat-no" title="statement not covered" >Path.extname(outputFile).slice(1)</span>
 <span class="cstat-no" title="statement not covered" >  if (!outputFormat || (outputFormat === '')) {</span>
-<span class="cstat-no" title="statement not covered" >    outputFormat = commander.format</span>
+<span class="cstat-no" title="statement not covered" >    outputFormat = this.format</span>
   }
   const tileSetViewPath = <span class="cstat-no" title="statement not covered" >tileSetViewPaths[outputFormat]</span>
 <span class="cstat-no" title="statement not covered" >  if (!tileSetViewPath) {</span>
@@ -207,8 +193,7 @@ async function <span class="fstat-no" title="function not covered" >mkSet </span
   } else {
 <span class="cstat-no" title="statement not covered" >    console.log(rendered)</span>
   }
-<span class="cstat-no" title="statement not covered" >  data.base.close()</span>
-<span class="cstat-no" title="statement not covered" >  return Promise.resolve()</span>
+<span class="cstat-no" title="statement not covered" >  return require('../lib/data').disknex()</span>
 }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >if (require.main === module) {</span>
@@ -220,7 +205,7 @@ async function <span class="fstat-no" title="function not covered" >mkSet </span
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 14 2019 23:48:28 GMT-0700 (Pacific Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Oct 21 2019 04:16:56 GMT-0700 (Pacific Daylight Time)
 </div>
 </div>
 <script src="../prettify.js"></script>

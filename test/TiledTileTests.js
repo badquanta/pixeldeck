@@ -9,7 +9,7 @@ describe('TiledTile', function () {
   after(async function () {
     await require('../lib/data').disknex()
   })
-  beforeEach(function () { TiledTile = require('../lib/models/TiledTile') })
+  beforeEach(function () { TiledTile = require('../lib/mdl/TiledTile') })
 
   it('should be ok', function () { console.assert(TiledTile) })
 
@@ -26,7 +26,7 @@ describe('TiledTile', function () {
     })
 
     it('should insert with properties', async function () {
-      await require('../lib/models/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
       const created = await TiledTile.query().insertGraph(
         { properties: [{ name: 'Child property of layer', value: 'property value of child proeprty of layer', type: 'some type' }] }
       )
@@ -34,7 +34,7 @@ describe('TiledTile', function () {
     })
 
     it('should insert with terrain', async function () {
-      await require('../lib/models/TiledTerrain').ensureSchema()
+      await require('../lib/mdl/TiledTerrain').ensureSchema()
       const created = await TiledTile.query().insertGraph(
         { terrain: [0, 0, 0, 0] }
       )
@@ -74,8 +74,8 @@ describe('TiledTile', function () {
           'terrain': [1, 1, 1, 1]
         }
       ]
-      await require('../lib/models/TiledProperties').ensureSchema()
-      await require('../lib/models/TiledObject').ensureSchema()
+      await require('../lib/mdl/TiledProperties').ensureSchema()
+      await require('../lib/mdl/TiledObject').ensureSchema()
       const created = await TiledTile.query().insertGraph(TileExample)
       return console.assert(created)
     })

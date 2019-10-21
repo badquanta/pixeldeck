@@ -9,7 +9,7 @@ describe('TiledFrame', function () {
   after(async function () {
     await require('../lib/data').disknex()
   })
-  beforeEach(function () { TiledFrame = require('../lib/models/TiledFrame') })
+  beforeEach(function () { TiledFrame = require('../lib/mdl/TiledFrame') })
 
   it('should be ok', function () { console.assert(TiledFrame) })
 
