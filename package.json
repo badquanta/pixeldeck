@@ -44,7 +44,7 @@
     "cover": "NODE_ENV=test npx nyc mocha | tee ./docs/COVERAGE.TXT; npm run cover-badge",
     "cover-badge": "npx lcov-badge-generator ./docs/coverage/lcov.info -o ./docs/coverage.svg",
     "esdoc": "./node_modules/.bin/esdoc",
-    "jsdoc": "./node_modules/.bin/jsdoc -c ./jsdoc.conf.json",
+    "jsdoc": "rm ./docs/jsdoc -rf; ./node_modules/.bin/jsdoc -c ./jsdoc.conf.json",
     "jsdoc-watch": "nodemon --exec npm run jsdoc",
     "doc-man": "./scripts/updateMan.js ./docs/pixeldeck.md",
     "developer": "nodemon --exec npm run docs"
@@ -60,6 +60,7 @@
   "nodemonConfig": {
     "verbose": true,
     "watch": [
+      "pixeldeck.js",
       "bin/*",
       "lib/*",
       "test/*",

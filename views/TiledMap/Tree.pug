@@ -10,13 +10,16 @@ mixin DDs(obj, ...keys)
   block
 
 mixin LayersTree(theseLayers)
-  details
-    summary #{theseLayers.length} layers
-    ol.layers(id=theseLayers.id name=theseLayers.name)
-      each thisLayer in theseLayers
-        li
-          +LayerTree(thisLayer)
-  //End of Layers
+  if theseLayers
+    details
+      summary #{theseLayers.length} layers
+      ol.layers(id=theseLayers.id name=theseLayers.name)
+        each thisLayer in theseLayers
+          li
+            +LayerTree(thisLayer)
+    //End of Layers
+  else
+    | missing layer data
 
 mixin LayerTree(thisLayer)
   details
@@ -108,9 +111,3 @@ mixin TiledMapTree(thisMap)
 
 
   //End of TiledMapTree
-
-
-
-
-
-

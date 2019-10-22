@@ -5,17 +5,23 @@
  */
 /**
  * index of library
- * @type {object}
- * @namespace pixeldeck
- * @this pixeldeck
+ * @module pixeldeck
  */
 // eslint-disable-next-line no-unused-vars
 const pixeldeck = module.exports = {
-  get service () { return require('./lib/service') },
+
+  /** @type cfg */
   get cfg () { return require('./lib/cfg') },
+  /** @type cli */
   get cli () { return require('./lib/cli') },
-  get models () { return require('./lib/models') },
+  /** @type mdl */
+  get mdl () { return require('./lib/mdl') },
+  /** @type dbg */
   get dbg () { return require('./lib/dbg') },
+  /** @type ui */
   get ui () { return require('./lib/ui') },
+  /** @type service **/
+  get service () { return require('./lib/service') },
+  /** @type server */
   get server () { return require('./lib/server') }
 }

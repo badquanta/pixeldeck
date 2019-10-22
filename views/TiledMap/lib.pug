@@ -2,10 +2,14 @@
 
 mixin Layers(theseLayers)
   // dbg('mixin layers')
-  g.layers(id=theseLayers.id name=theseLayers.name)
-    each thisLayer in theseLayers
-      +Layer(thisLayer)
-  //End of Layers
+  if(theseLayers)
+    g.layers(id=theseLayers.id name=theseLayers.name)
+      each thisLayer in theseLayers
+        +Layer(thisLayer)
+    //End of Layers
+  else
+    text
+      | missing layer data
 
 mixin Layer(thisLayer)
   // dbg('mixin layer',thisLayer.type)
@@ -95,9 +99,3 @@ mixin TiledMap(thisMap)
   g.map(infinite=thisMap.infinite nextlayerid=thisMap.nextlayerid nextobjectid=thisMap.nextobjectid type=thisMap.type)
     +Layers(thisMap.layers)
   //End of TiledMap
-
-
-
-
-
-

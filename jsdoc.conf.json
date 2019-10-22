@@ -23,8 +23,9 @@
   "opts": {
     "destination": "./docs/jsdoc",
     "recurse": true,
-    "readme": "README.md",
+    "readme": "./docs/README.md",
     "access": "all",
+    "private": true,
     "tutorials": "./docs/tutorials",
     "template": "node_modules/foodoc/template"
   },
@@ -33,27 +34,24 @@
     "monospaceLinks": false,
     "systemName": "pixeldeck",
     "systemSummary": "a virtual pixel environment",
-    "systemLogo": "logo.gif",
+    "systemLogo": "logo.png",
     "systemColor": "#cc5500",
-    "footer": "pixeldeck",
+    "footer": "footsie",
     "copyright": "GPL-3.0",
-    "includeDate": true,
+    "includeDate": false,
     "dateFormat": "YYYY-MM-DD @ hh:mm",
     "inlineNav": false,
     "inverseNav": true,
-
     "linenums": true,
     "showTableOfContents": true,
     "showAccessFilter": true,
-
     "collapseSymbols": true,
     "methodHeadingReturns": true,
-    "outputSourceFiles": false,
+    "outputSourceFiles": true,
     "outputSourcePath": false,
-
     "search": true,
-    "favicon": "logo.gif"
-
+    "favicon": "logo.gif",
+    "sort": "longname"
   },
   "recurse": true
 }
