@@ -42,7 +42,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.gif","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"pixeldeck","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":false,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.png","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"footsie","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"longname","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
 			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -52,7 +52,7 @@
 	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.gif);">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
 					pixeldeck
 				</a>
 				<!-- displayed on small devices -->
@@ -65,13 +65,6 @@
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
 								<li class="dropdown">
-									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="global.html#getModelIndex">getModelIndex</a></li>
-											<li><a href="global.html#modelNames">modelNames</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
 									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 											<li><a href="-_MakeCmd.html">_MakeCmd</a></li>
@@ -83,6 +76,7 @@
 											<li><a href="mdl.TiledChunk.html">mdl.TiledChunk</a></li>
 											<li><a href="mdl.TiledFile.html">mdl.TiledFile</a></li>
 											<li><a href="mdl.TiledFrame.html">mdl.TiledFrame</a></li>
+											<li><a href="mdl.TiledImage.html">mdl.TiledImage</a></li>
 											<li><a href="mdl.TiledLayer.html">mdl.TiledLayer</a></li>
 											<li><a href="mdl.TiledMap.html">mdl.TiledMap</a></li>
 											<li><a href="mdl.TiledMapUsesSet.html">mdl.TiledMapUsesSet</a></li>
@@ -93,6 +87,7 @@
 											<li><a href="mdl.TiledSet.html">mdl.TiledSet</a></li>
 											<li><a href="mdl.TiledTerrain.html">mdl.TiledTerrain</a></li>
 											<li><a href="mdl.TiledTile.html">mdl.TiledTile</a></li>
+											<li><a href="mdl.TiledWorld.html">mdl.TiledWorld</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -103,6 +98,7 @@
 											<li><a href="external-Express.html">Express</a></li>
 											<li><a href="external-fs.html">fs</a></li>
 											<li><a href="external-http.html">http</a></li>
+											<li><a href="external-jimp.html">jimp</a></li>
 											<li><a href="external-Knex.html">Knex</a></li>
 											<li><a href="external-Objection.html">Objection</a></li>
 											<li><a href="external-Path.html">Path</a></li>
@@ -110,17 +106,22 @@
 									</ul>
 								</li>
 								<li class="dropdown">
+									<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="module-pixeldeck.html">pixeldeck</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
 									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 									<ul class="dropdown-menu">
+											<li><a href="arch.html">arch</a></li>
+											<li><a href="cfg.html">cfg</a></li>
 											<li><a href="cli.html">cli</a></li>
+											<li><a href="data.html">data</a></li>
 											<li><a href="mdl.html">mdl</a></li>
-											<li><a href="pixeldeck.html">pixeldeck</a></li>
-											<li><a href="pixeldeck.arch.html">pixeldeck.arch</a></li>
-											<li><a href="pixeldeck.cfg.html">pixeldeck.cfg</a></li>
-											<li><a href="pixeldeck.data.html">pixeldeck.data</a></li>
-											<li><a href="pixeldeck.server.html">pixeldeck.server</a></li>
-											<li><a href="pixeldeck.service.html">pixeldeck.service</a></li>
-											<li><a href="pixeldeck.ui.html">pixeldeck.ui</a></li>
+											<li><a href="server.html">server</a></li>
+											<li><a href="service.html">service</a></li>
+											<li><a href="ui.html">ui</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -160,6 +161,12 @@
  * @typedef mdl.primaryKey
  */
 /**
+ * Roughly corresponds to the EcmaScript Date class
+ * @see {@link https://www.w3schools.com/jsref/jsref_obj_date.asp Date @ W3Schools.com}
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date Date @ MDN}
+ * @typedef mdl.timestamp
+ */
+/**
  * this module provides the basis of Tiled data representation
  * @external Objection
  * @see {@link https://vincit.github.io/objection.js/guide/}
@@ -170,20 +177,22 @@ const { Model: Objection } = require('objection')
  * @memberof mdl
  * @class
  * @augments external:Objection
- * /property {primaryKey} uuid the database universally unique id.
  *
  */
 class TiledModel extends Objection {
   /**
    * return the class debugger
+   * @private
    */
   static get dbg () { return super.dbg ? super.dbg.extend(this.name, '>') : require('../dbg').extend(this.name) }
   /**
    * return the instance debugger
+   * @private
    */
   get dbg () { return this.constructor.dbg.extend('instance') }
   /**
    * get the class's id column; Model defines this as uuid globally.
+   * @private
    */
   static get idColumn () {
     return 'uuid'
@@ -191,6 +200,7 @@ class TiledModel extends Objection {
 
   /**
    * get the class's table name; which should be the class name.
+   * @private
    */
   static get tableName () {
     return this.name
@@ -199,6 +209,7 @@ class TiledModel extends Objection {
   /**
    * define what this class requires; should be overridden if anything is required.
    * @abstract
+   * @protected
    */
   static get jsonSchemaRequired () {
     return undefined
@@ -207,6 +218,7 @@ class TiledModel extends Objection {
   /**
    * define what properties this class defines; should be EXTENDED
    * @abstract
+   * @protected
    */
   static get jsonSchemaProperties () {
     var newProps = {
@@ -220,6 +232,7 @@ class TiledModel extends Objection {
 
   /**
    * @abstract
+   * @protected
    */
   static get jsonSchema () {
     var newSchema = {
@@ -234,6 +247,7 @@ class TiledModel extends Objection {
   /**
    * @abstract
    * @param {external:Knex.schema} table
+   * @protected
    */
   static async createSchemaOn (table) {
     this.dbg('Model createSchemaOn')
@@ -248,36 +262,19 @@ class TiledModel extends Objection {
   }
 
   /**
-   * Ensure all these schemas exist.
+   * Ensure all these schemas exist. Helper function, does not relate to any specific model.
    * @param {external:Knex} Knex
-   * @param  {...any} allModels
+   * @param  {...mdl.TiledModel} anyInheritingModels
+   * @public
+   * @todo maybe move to the mdl namespace?
    */
   static async ensureAllSchemas (Knex = require('../data'), ...allModels) {
-    global.totalSteps = (global.totalSteps || 0) + allModels.length
-    global.finishedSteps = global.finishedSteps || 0
-
-    // const dbg = this.dbg.extend('ensureAllSchemas')
-    // function stpReport () {
-    // dbg('Progress: %d of %d = %d%%',
-    // global.finishedSteps,
-    // global.totalSteps,
-    // ((global.finishedSteps / global.totalSteps) * 100)
-    // )
-    // }
-    // dbg(' %d schemas... ', allModels.length)
     return allModels.reduce(
       (promiseChain, currentModel, idx) => {
-        // const schemaId = idx
-        // const schemaDbg = this.dbg.extend(`ensureAllSchemas[${schemaId}:${currentModel.name}]`)
-        // schemaDbg('%d', schemaId)
         return promiseChain.then(
           chainResults => {
-            // schemaDbg('started', currentModel.name)
             return currentModel.ensureSchema(Knex).then(
               currentResult => {
-                // stpReport()
-                global.finishedSteps++
-                // stpReport()
                 return [...chainResults, currentResult]
               }
             )
@@ -290,13 +287,20 @@ class TiledModel extends Objection {
     })
   }
 
+  /**
+   * A hook for inheriting models to attach pre-ensureSchema logic
+   * @todo may rename to preCreate and drop the pre/post ensure.
+   * @protected
+   * @abstract
+   */
   static async beforeEnsureSchema (Knex) {
     this.dbg('beforeEnsureSchema()')
   }
 
   /**
    * Ensures that the table for this model has been defined.
-   * @param {Knex} Knex
+   * @param {Knex} Knex the knex instance we'll be operating with
+   * @public
    */
   static async ensureSchema (Knex = require('../data')) {
     return new Promise((resolve, reject) => {
@@ -314,14 +318,17 @@ class TiledModel extends Objection {
   }
 
   /**
-   *
+   * A simple hook for inheriting models classes to attach logic post-ensure-schema events.
+   * @abstract
+   * @protected
    */
   static async afterEnsureSchema () {
     this.dbg('After Ensure Schema')
   }
 
   /**
-   *  Create this model's schema
+   *  Create this model's schema. This will call the protected `createSchemaOn` method that is intended to be overridden by inheriting models.
+   * @public
    */
   static async createSchema (Knex = require('../data')) {
     await this.beforeEnsureSchema(Knex)
@@ -338,6 +345,7 @@ class TiledModel extends Objection {
   /**
    * Drop this schema
    * @param {*} Knex
+   * @public
    */
   static async dropSchema (Knex = require('../data')) {
     this.dbg('Model dropSchema')
@@ -350,12 +358,27 @@ class TiledModel extends Objection {
   }
 
   /**
-   * try to render this
+   * The idea is that this is where relationships are refreshed before
+   * a render, so each type of model should ensure it's immediate relations
+   * are updated.
+   * @abstract
+   * @protected
+   */
+  async preRender () {
+    this.dbg('preRender')
+  }
+
+  /**
+   * this does some magic following conventions within the view directory:
+   *   * the view directory has folders, the folders are named after the model's class (a.k.a. database table name.)
+   *
    * @requires pug
    * @requires path
    * @requires ../cfg
+   * @private
    */
   async render (options = {}) {
+    await this.preRender()
     const pug = require('pug')
 
     const opts = Object.assign({}, options, {
@@ -364,12 +387,13 @@ class TiledModel extends Objection {
       basedir: require('../cfg').viewsDir
     })
     const typeName = opts.typeName
-    opts[typeName] = this
+    opts[typeName] = this.$toJson()
     const format = options.format
     if (!format) {
       throw new Error('options missing format')
     }
-    const viewPath = (opts.viewPath || (opts.viewPath = require('path').join(typeName, format)))
+    const viewPath = (opts.viewPath || (require('path').join(opts.basedir, typeName, format + '.pug')))
+    this.dbg('rendering %o with options %O', viewPath, opts)
     const rendered = await pug.renderFile(viewPath, opts)
     return rendered
   }
@@ -382,9 +406,9 @@ module.exports = TiledModel
 		</div>
 	</div>
 	<footer>
-				<div class="footer-option">pixeldeck</div>
+				<div class="footer-option">footsie</div>
 				<div class="copyright">GPL-3.0</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on 2019-10-21 @ 04:17 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

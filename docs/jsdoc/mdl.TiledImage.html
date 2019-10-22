@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+		<title>mdl.TiledImage</title>
+		<link rel="icon" type="image/gif" href="favicon.gif"/>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+		<link type="text/css" rel="stylesheet" href="css/prism.min.css">
+		<link type="text/css" rel="stylesheet" href="css/template.min.css">
+			<style>
+				.page-header,
+				pre.code-toolbar > .toolbar:hover {
+					background-color: #cc5500;
+				}
+				.callout-primary,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus,
+				pre.code-toolbar > .toolbar:hover {
+					border-left-color: #cc5500;
+				}
+				pre.code-toolbar > .toolbar:hover {
+					border-bottom-color: #cc5500;
+				}
+				.callout-primary h5,
+				.symbol-title.collapsible-symbol .toggle-icon,
+				.breadcrumb li a,
+				.toc .nav > li > a:hover,
+				.toc .nav > li > a:focus,
+				.toc .nav > li.active > a,
+				.toc .nav > li.active > a:hover,
+				.toc .nav > li.active > a:focus {
+					color: #cc5500;
+				}
+			</style>
+		<script type="text/javascript">
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.png","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"footsie","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"longname","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
+			window.DOCLET_TOC_ENABLED = true;
+			window.DOCLET_AFILTER_ENABLED = true;
+		</script>
+</head>
+<body>
+	<!-- start:navbar.hbs -->
+	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
+					pixeldeck
+				</a>
+				<!-- displayed on small devices -->
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="navbar-collapse collapse" id="topNavigation">
+				<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="-_MakeCmd.html">_MakeCmd</a></li>
+											<li><a href="cli.Cmd.html">cli.Cmd</a></li>
+											<li><a href="cli.MakeSet.html">cli.MakeSet</a></li>
+											<li><a href="cli.Serve.html">cli.Serve</a></li>
+											<li><a href="external-commander.Command.html">external:commander.Command</a></li>
+											<li><a href="MakeMap.html">MakeMap</a></li>
+											<li><a href="mdl.TiledChunk.html">mdl.TiledChunk</a></li>
+											<li><a href="mdl.TiledFile.html">mdl.TiledFile</a></li>
+											<li><a href="mdl.TiledFrame.html">mdl.TiledFrame</a></li>
+											<li><a href="mdl.TiledImage.html">mdl.TiledImage</a></li>
+											<li><a href="mdl.TiledLayer.html">mdl.TiledLayer</a></li>
+											<li><a href="mdl.TiledMap.html">mdl.TiledMap</a></li>
+											<li><a href="mdl.TiledMapUsesSet.html">mdl.TiledMapUsesSet</a></li>
+											<li><a href="mdl.TiledModel.html">mdl.TiledModel</a></li>
+											<li><a href="mdl.TiledObject.html">mdl.TiledObject</a></li>
+											<li><a href="mdl.TiledPoint.html">mdl.TiledPoint</a></li>
+											<li><a href="mdl.TiledProperties.html">mdl.TiledProperties</a></li>
+											<li><a href="mdl.TiledSet.html">mdl.TiledSet</a></li>
+											<li><a href="mdl.TiledTerrain.html">mdl.TiledTerrain</a></li>
+											<li><a href="mdl.TiledTile.html">mdl.TiledTile</a></li>
+											<li><a href="mdl.TiledWorld.html">mdl.TiledWorld</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_external.html" class="dropdown-toggle" data-toggle="dropdown">Externals<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="external-commander.html">commander</a></li>
+											<li><a href="external-config.html">config</a></li>
+											<li><a href="external-Express.html">Express</a></li>
+											<li><a href="external-fs.html">fs</a></li>
+											<li><a href="external-http.html">http</a></li>
+											<li><a href="external-jimp.html">jimp</a></li>
+											<li><a href="external-Knex.html">Knex</a></li>
+											<li><a href="external-Objection.html">Objection</a></li>
+											<li><a href="external-Path.html">Path</a></li>
+											<li><a href="external-Repl.html">Repl</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="module-pixeldeck.html">pixeldeck</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="arch.html">arch</a></li>
+											<li><a href="cfg.html">cfg</a></li>
+											<li><a href="cli.html">cli</a></li>
+											<li><a href="data.html">data</a></li>
+											<li><a href="mdl.html">mdl</a></li>
+											<li><a href="server.html">server</a></li>
+											<li><a href="service.html">service</a></li>
+											<li><a href="ui.html">ui</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="list_tutorial.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="tutorial-getting-started.html">getting-started</a></li>
+									</ul>
+								</li>
+				</ul>
+					<!-- start:lunr-search-navbar.hbs -->
+					<form class="navbar-form navbar-right" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" id="lunr-search-input">
+							<div class="input-group-btn">
+								<button class="btn btn-default" id="lunr-search-submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<!-- start:lunr-search-navbar.hbs -->		</div>
+		</div>
+	</header>
+	<!-- end:navbar.hbs -->		<div class="page-header">
+			<div class="container">
+				<span class="kind">class</span>
+				<h1><span class="ancestors"><a href="mdl.html">mdl</a>.</span><span class="name">TiledImage</span></h1>
+			</div>
+		</div>
+	<div class="container content">
+		<div class="row">
+			<div class="col-md-9 main-content">
+						<ol class="breadcrumb">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="list_class.html">Classes</a></li>
+							<li class="active"><a href="mdl.html">mdl</a>.TiledImage</li>
+						</ol>
+						<div class="access-filter">
+								<label class="checkbox-inline">
+									<input class="toggle-inherited" type="checkbox" value="" checked>
+									Inherited
+								</label>
+								<label class="checkbox-inline">
+									<input class="toggle-public" type="checkbox" value="" checked>
+									Public
+								</label>
+								<label class="checkbox-inline">
+									<input class="toggle-protected" type="checkbox" value="" checked>
+									Protected
+								</label>
+								<label class="checkbox-inline">
+									<input class="toggle-private" type="checkbox" value="" checked>
+									Private
+								</label>
+						</div>
+					<section>
+							<dl class="symbol primary">
+								<dt class="symbol-title class collapsible-symbol expanded">
+			<h2 class="class"><span class="signature-new">new&nbsp;</span><span class="name">TiledImage</span><span class="signature-params">()</span><span class="signature-type"></span></h2>
+</dt>
+<dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+							<!-- augments -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Augments</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="mdl.TiledModel.html">mdl.TiledModel</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledImage.js.html">lib/mdl/TiledImage.js</a>, <a href="lib_mdl_TiledImage.js.html#line-14">line 14</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+							</dl>
+							<article class="secondary">
+									<h3>Members</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title member private inherited collapsible-symbol">
+			<h4 id="dbg" class="member private inherited"><span class="signature-attribs">&lt;private> </span><span class="name">dbg</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member private inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>return the instance debugger</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="mdl.TiledModel.html#dbg">mdl.TiledModel#dbg</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-34">line 34</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="height" class="member public"><span class="name">height</span><span class="signature-type"> :integer</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">integer</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledImage.js.html">lib/mdl/TiledImage.js</a>, <a href="lib_mdl_TiledImage.js.html#line-35">line 35</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="pixels" class="member public"><span class="name">pixels</span><span class="signature-type"> :binary</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>store binary pixel data...</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">binary</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledImage.js.html">lib/mdl/TiledImage.js</a>, <a href="lib_mdl_TiledImage.js.html#line-20">line 20</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public inherited collapsible-symbol">
+			<h4 id="uuid" class="member public inherited"><span class="name">uuid</span><span class="signature-type"> :<a href="mdl.html#.primaryKey">mdl.primaryKey</a></span></h4>
+		</dt>
+<dd class="symbol-details member public inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type"><a href="mdl.html#.primaryKey">mdl.primaryKey</a></span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="mdl.TiledModel.html#uuid">mdl.TiledModel#uuid</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-96">line 96</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="width" class="member public"><span class="name">width</span><span class="signature-type"> :integer</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">integer</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledImage.js.html">lib/mdl/TiledImage.js</a>, <a href="lib_mdl_TiledImage.js.html#line-28">line 28</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+									<h3>Methods</h3>
+									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".createSchemaOn" class="function public"><span class="signature-attribs">&lt;async, static> </span><span class="name">createSchemaOn</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledImage.js.html">lib/mdl/TiledImage.js</a>, <a href="lib_mdl_TiledImage.js.html#line-18">line 18</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".read" class="function public"><span class="signature-attribs">&lt;async, static> </span><span class="name">read</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>read an image file into the database</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledImage.js.html">lib/mdl/TiledImage.js</a>, <a href="lib_mdl_TiledImage.js.html#line-47">line 47</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function protected inherited collapsible-symbol">
+			<h4 id="preRender" class="function protected inherited"><span class="signature-attribs">&lt;async, abstract, protected> </span><span class="name">preRender</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function protected inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The idea is that this is where relationships are refreshed before
+			a render, so each type of model should ensure it's immediate relations
+			are updated.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="mdl.TiledModel.html#preRender">mdl.TiledModel#preRender</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-209">line 209</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function private inherited collapsible-symbol">
+			<h4 id="render" class="function private inherited"><span class="signature-attribs">&lt;async, private> </span><span class="name">render</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function private inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>this does some magic following conventions within the view directory:</p>
+			<ul>
+			<li>the view directory has folders, the folders are named after the model's class (a.k.a. database table name.)</li>
+			</ul></div>
+			</div>			<div class="callout callout-warning"><h5>Requires</h5>		<form class="form-horizontal requires">
+							<div class="form-group">
+								<label class="col-sm-3 control-label requires-type">module:pug</label>
+								<div class="col-sm-9">
+									<div class="form-control-static requires-summary"></div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label requires-type">module:path</label>
+								<div class="col-sm-9">
+									<div class="form-control-static requires-summary"></div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-3 control-label requires-type">module:../cfg</label>
+								<div class="col-sm-9">
+									<div class="form-control-static requires-summary"></div>
+								</div>
+							</div>
+					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="mdl.TiledModel.html#render">mdl.TiledModel#render</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-222">line 222</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+									</dl>
+							</article>
+					</section>
+			</div>
+				<div class="col-md-3 side-content">
+					<nav class="toc hidden-print hidden-sm hidden-xs"></nav>
+				</div>
+		</div>
+	</div>
+	<footer>
+				<div class="footer-option">footsie</div>
+				<div class="copyright">GPL-3.0</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/clipboard.min.js"></script>
+	<script src="js/prism.min.js"></script>
+	<script src="js/template.min.js"></script>
+		<!-- start:lunr-search-modal.hbs -->
+		<div class="modal fade" id="lunr-search-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Search results</h4>
+					</div>
+					<div class="modal-body" id="lunr-search-body">
+					</div>
+					<div class="modal-footer" id="lunr-search-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+		<!-- end:lunr-search-modal.hbs -->		<script src="js/lunr.min.js"></script>
+	
+</body>
+</html>

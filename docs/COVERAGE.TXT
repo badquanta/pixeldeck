@@ -2,49 +2,47 @@
 
   TiledChunk
     ✓ should be ok
-    1) should createSchema
+    ✓ should createSchema (279ms)
     ensureSchema
-      ✓      1) "before each" hook for "should insert one"
+      ✓ should insert one (159ms)
+      ✓ works with chunk example
 
   TiledFile
     ✓ should be ok
-    ✓ should createSchema (690ms)
+    1) should createSchema
     ensureSchema
-      ✓ should insert one (205ms)
-      ✓ should insert with a map (122ms)
-      ✓ should be able to getTiledMap (545ms)
-      ✓ can stat
+      ✓      ✓ should insert on      ✓       ✓ should insert with a map (221ms)
+      ✓ should be a      3) "before each" hook for "can stat"
 
   TiledFrame
     ✓ should be ok
-    ✓ should createSchema (135ms)
+    ✓ should createSchema (168ms)
     ensureSchema
       ✓ should insert one
 
   TiledLayer
     ✓ should be ok
-    2) should createSchema
+    ✓ should createSchema (45ms)
     ensureSchema
       ✓ should insert one
       ✓ should insert with layers
-      ✓ should insert with objects (305ms)
-      ✓ should insert with properties
-      ✓ works with objectgroup example
-      ✓ works with tilelayer example
+      ✓ should insert with objects
+      ✓ should insert with propertie      3) works with objectgroup example
+      ✓ works with tilelayer example (54ms)
 
   TiledMap
     ✓ should be ok
-    ✓ should createSchema
+    ✓ should createSchema (250ms)
     ensureSchema
       ✓ should insert one
-      ✓ should insert with layers
+      ✓ should insert with layers (149ms)
       ✓ should insert with properties
-      ✓ works with example from website
+      ✓ works with example from website (72ms)
     with real data
-      ✓ res/test/test1.json
-      ✓ res/test/test2.json
-      ✓ res/test/test3.json
-      ✓ res/test/test4.json (170ms)
+      ✓ res/test/test1.json (47ms)
+      ✓ res/test/test2.json (74ms)
+      ✓ res/test/test3.json (40ms)
+      ✓ res/test/test4.json (222ms)
 
   TiledModel
     ✓ should be ok
@@ -60,16 +58,13 @@
       ✓ works with Ellipse Example from website
       ✓ works with Point Example from website
       ✓ works with Rectangle Example from website
-      ✓ works with Polygon Example from website (47ms)
-      ✓ works with Polyline Example from website (38ms)
+      ✓ works with Polygon Example from website (56ms)
+      ✓ works with Polyline Example from website (45ms)
       ✓ works with Text Example from website
 
   TiledSet
     ✓ should be ok
     ✓ should createSchema
-    ensureSchema
-      ✓ should insert one
-      ✓ should insert     3) should createSchema
     ensureSchema
       ✓ should insert one
       ✓ should insert with properties
@@ -85,114 +80,172 @@
 
   TiledTile
     ✓ should be ok
-    ✓ should     4) should createSchema
+    ✓ should createSchema
     ensureSchema
       ✓ should insert one
-      ✓ should insert with p    ✓ re      ✓ should insert     3) "after each" hook for "responds with 200"
+      ✓ should insert with properties
+      ✓ should insert with terrain
+      ✓ works with example from website (41ms)
+
+  pixeldeck/
+    ✓ responds with 200 (597ms)
+    4) "after each" hook for "responds with 200"
 
 
-  58    ✓ respon    ✓ responds wit    4) "after     5) "after each" hook for "responds with 200"
-
-
-  57 passing (7s)
-  5 failing
+  58 passing (7s)
+  4 failing
 
   1) TiledFile
-       ensureSchema
-         should be able to getTiledMap:
-     insert into `TiledLayer` (`TiledMapUuid`, `data`, `height`, `id`, `name`, `opacity`, `type`, `visible`, `width`, `x`, `y`) values (1, '[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]', 16, 3, 'Tile Layer 3', 1, 'tilelayer', true, 16, 0, 0) - SQLITE_ERROR: no such table: TiledLayer
-  Error: SQLITE_ERROR: no such table: TiledLayer
-      at buildKnexQuery (node_modules/objection/lib/queryBuilder/QueryBuilder.js:1379:63)
-      at doExecute (node_modules/objection/lib/queryBuilder/QueryBuilder.js:1270:31)
-      at Bluebird.try.then (node_modules/objection/lib/queryBuilder/QueryBuilder.js:579:19)
-      at tryCatcher (node_modules/bluebird/js/release/util.js:16:23)
-      at Promise._settlePromiseFromHandler (node_modules/bluebird/js/release/promise.js:517:31)
-      at Promise._settlePromise (node_modules/bluebird/js/release/promise.js:574:18)
-      at Promise._settlePromise0 (node_modules/bluebird/js/release/promise.js:619:10)
-      at Promise._settlePromises (node_modules/bluebird/js/release/promise.js:699:18)
-      at _drainQueueStep (node_modules/bluebird/js/release/async.js:138:12)
-      at _drainQueue (node_modules/bluebird/js/release/async.js:131:9)
-      at Async._drainQueues (node_modules/bluebird/js/release/async.js:147:5)
-      at Immediate.Async.drainQueues [as _onImmediate] (node_modules/bluebird/js/release/async.js:17:14)
-
-  2) TiledLayer
-       ensureSchema
-         should insert with objects:
-     insert into `TiledLayer` default values - SQLITE_ERROR: no such table: TiledLayer
-  Error: SQLITE_ERROR: no such table: TiledLayer
-      at buildKnexQuery (node_modules/objection/lib/queryBuilder/QueryBuilder.js:1379:63)
-      at doExecute (node_modules/objection/lib/queryBuilder/QueryBuilder.js:1270:31)
-      at Bluebird.try.then (node_modules/objection/lib/queryBuilder/QueryBuilder.js:579:19)
-      at tryCatcher (node_modules/bluebird/js/release/util.js:16:23)
-      at Promise._settlePromiseFromHandler (node_modules/bluebird/js/release/promise.js:517:31)
-      at Promise._settlePromise (node_modules/bluebird/js/release/promise.js:574:18)
-      at Promise._settlePromise0 (node_modules/bluebird/js/release/promise.js:619:10)
-      at Promise._settlePromises (node_modules/bluebird/js/release/promise.js:699:18)
-      at _drainQueueStep (node_modules/bluebird/js/release/async.js:138:12)
-      at _drainQueue (node_modules/bluebird/js/release/async.js:131:9)
-      at Async._drainQueues (node_modules/bluebird/js/release/async.js:147:5)
-      at Immediate.Async.drainQueues [as _onImmediate] (node_modules/bluebird/js/release/async.js:17:14)
-
-  3) TiledTerrain
        should createSchema:
-     create table `TiledTerrain` (`uuid` integer not null primary key autoincrement, `TiledSetUuid` undefined, `name` varchar(255), `tile` undefined, foreign key(`TiledSetUuid`) references `TiledSet`(`uuid`)) - SQLITE_ERROR: table `TiledTerrain` already exists
-  Error: SQLITE_ERROR: table `TiledTerrain` already exists
+     create table `TiledFile` (`uuid` integer not null primary key autoincrement, `path` varchar(255), `lastStatAt` datetime, `importedAt` datetime, `ctime` datetime, `btime` datetime, `atime` datetime, `birthtime` datetime, `TileMap_uuid` integer, `TileSet_uuid` integer, foreign key(`TileMap_uuid`) references `TileMap`(`uuid`), foreign key(`TileSet_uuid`) references `TileSet`(`uuid`)) - SQLITE_ERROR: table `TiledFile` already exists
+  Error: SQLITE_ERROR: table `TiledFile` already exists
       at Function.get (node_modules/knex/lib/util/make-knex.js:186:28)
       at Function.createSchema (lib/mdl/TiledModel.js:70:35)
 
-  4) TiledTile
-       should createSchema:
-     Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves. (/home/badquanta/Projects/pixeldeck/test/TiledTileTests.js)
-  
+  2) TiledFile
+       ensureSchema
+         should be able to getTiledMap:
+     insert into `TiledLayer` (`TiledMapUuid`, `data`, `height`, `id`, `name`, `opacity`, `type`, `visible`, `width`, `x`, `y`) values (16, '[386,385,385,386,386,387,385,387,386,385,385,385,387,322,419,419,419,386,386,419,387,386,387,385,387,386,387,385,385,386,387,419,387,322,385,322,322,322,385,386,385,419,419,385,386,385,387,386,385,385,386,419,322,322,387,386,387,387,419,386,419,419,386,386,387,419,386,387,385,387,322,322,385,322,322,387,419,387,385,386,386,386,322,385,387,386,419,322,387,386,419,419,322,387,387,385,386,322,322,385,419,322,322,322,386,386,322,386,419,419,387,386,387,387,387,385,322,322,322,386,385,419,387,386,322,387,387,387,322,386,387,386,385,419,387,385,322,322,322,322,387,386,419,387,385,322,419,387,322,322,385,322,419,419,419,385,322,322,322,387,385,387,322,386,386,387,322,419,419,386,322,386,387,387,386,385,385,385,419,386,386,419,387,386,419,322,385,385,419,386,387,322,386,322,387,385,322,322,385,419,322,385,385,387,386,386,322,386,419,386,386,385,387,386,419,322,419,385,387,419,322,419,322,322,387,385,386,386,386,386,387,385,387,386,419,386,419,387,419,386,385,322,322,385,322,322,322,387,385,385,385,322,387,322,385,419]', 16, 1, 'Grass', 1, 'tilelayer', true, 16, 0, 0) - SQLITE_ERROR: no such table: TiledLayer
+  Error: SQLITE_ERROR: no such table: TiledLayer
+      at buildKne--------------------------------------|----------|----------|----------|----------|-------------------|
+File                  |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+----------------------|----------|----------|----------|----------|-------------------|
+All files             |    64.03 |    32.43 |    68.29 |    64.83 |                   |
+ bin                  |        0 |        0 |        0 |        0 |                   |
+  pixeldeck-mkMap.js  |        0 |        0 |        0 |        0 |... 37,38,39,40,42 |
+  pixeldeck-mkSet.js  |        0 |        0 |        0 |        0 |... 42,44,46,49,50 |
+  pixeldeck-serve.js  |        0 |        0 |      100 |        0 |           2,3,4,5 |
+ lib                  |    69.89 |    33.33 |     45.1 |    69.14 |                   |
+  arch.js             |        0 |        0 |        0 |        0 |... 11,112,114,117 |
+  cfg.js              |      100 |       50 |      100 |      100 |                 6 |
+  cli.js              |        0 |      100 |        0 |        0 |      6,8,10,12,15 |
+  dbg.js              |    33.33 |        0 |        0 |    33.33 | 11,12,13,14,15,17 |
+  mdl.js              |    88.89 |       50 |       75 |    93.33 |                63 |
+  models.js           |    88.89 |       50 |       75 |    93.33 |                63 |
+  server.js           |    92.98 |    83.33 |    55.56 |       92 |       63,64,86,87 |
+ lib/cli              |        0 |        0 |        0 |        0 |                   |
+  Cmd.js              |        0 |        0 |        0 |        0 |... 49,57,58,61,62 |
+  MakeMap.js          |        0 |        0 |        0 |        0 |... 29,30,31,33,34 |
+  MakeSet.js          |        0 |        0 |        0 |        0 |... 47,49,51,54,55 |
+  Serve.js            |        0 |        0 |        0 |        0 |... 36,39,40,41,42 |
+  _MakeCmd.js         |        0 |        0 |        0 |        0 |... 65,66,67,70,71 |
+ lib/mdl              |    82.97 |    60.61 |    86.59 |    84.29 |                   |
+  TiledFile.js        |    89.13 |       50 |    91.67 |    89.13 |  36,63,97,100,114 |
+  TiledMap.js         |    93.75 |      100 |    77.78 |    93.75 |           141,145 |
+  TiledMapUsesSet.js  |       50 |      100 |    66.67 |       50 |    15,16,17,18,19 |
+  TiledModel.js       |    73.68 |    66.67 |     91.3 |    80.77 |... 13,215,216,217 |
+  TiledPoint.js       |       30 |      100 |        0 |       30 |... 18,19,20,21,22 |
+  TiledProperties.js  |    17.65 |      100 |       50 |    17.65 |... 30,31,32,33,34 |
+  TiledSet.js         |    96.55 |      100 |     87.5 |    96.55 |               281 |
+  TiledTile.js        |       92 |      100 |    71.43 |       92 |            93,102 |
+  TiledWorld.js       |        0 |      100 |      100 |        0 |           4,25,38 |
+ lib/models           |    86.45 |    67.86 |    88.89 |    88.16 |                   |
+  TiledFile.js        |    89.13 |       50 |    91.67 |    89.13 |  36,63,97,100,114 |
+  TiledMap.js         |    93.75 |      100 |    77.78 |    93.75 |           132,136 |
+  TiledMapUsesSet.js  |       50 |      100 |    66.67 |       50 |    15,16,17,18,19 |
+  TiledModel.js       |    88.68 |    81.25 |      100 |      100 |         22,91,170 |
+  TiledPoint.js       |       30 |      100 |        0 |       30 |... 18,19,20,21,22 |
+  TiledProperties.js  |    17.65 |      100 |       50 |    17.65 |... 30,31,32,33,34 |
+  TiledSet.js         |    96.55 |      100 |     87.5 |    96.55 |               154 |
+  TiledTile.js        |       92 |      100 |    71.43 |       92 |             50,59 |
+ lib/service          |    24.39 |        0 |    16.67 |       25 |                   |
+  getTiledMapHtml.js  |    18.75 |        0 |        0 |       20 |... 25,26,27,28,29 |
+  getTiledMapSvg.js   |       20 |      100 |        0 |       20 |... 18,19,20,21,22 |
+  getTiledMapsList.js |    33.33 |      100 |        0 |    33.33 |               4,6 |
+  getTiledSetSvg.js   |       20 |      100 |        0 |       20 |... 18,19,20,21,23 |
+ lib/ui               |       20 |    11.11 |       25 |       20 |                   |
+  index.js            |       20 |    11.11 |       25 |       20 |... 77,78,79,84,86 |
+ scripts              |        0 |        0 |        0 |        0 |                   |
+  updateMan.js        |        0 |        0 |        0 |        0 |... 12,16,17,18,19 |
+----------------------|----------|----------|----------|----------|-------------------|
 
-  5) pixeldeck/
-       "after each" hook for "responds with 200":
-     Error: Module did not self-register.
-      at Object.Module._extensions..node (internal/modules/cjs/loader.js:718:18)
-      at Module.load (internal/modules/cjs/loader.js:599:32)
-      at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
-      at Function.Module._load (internal/modules/cjs/loader.js:530:3)
-      at Module.require (internal/modules/cjs/loader.js:637:17)
-      at require (internal/modules/cjs/helpers.js:22:18)
-      at Object.<anonymous> (node_modules/sqlite3/lib/sqlite3.js:4:15)
-      at Module._compile (internal/modules/cjs/loader.js:689:30)
-      at Module.replacementCompile (node_modules/append-transform/index.js:58:13)
-      at Module._extensions..js (internal/modules/cjs/loader.js:700:10)
-      at Object.<anonymous> (node_modules/append-transform/index.js:62:4)
-      at Module.load (internal/modules/cjs/loader.js:599:32)
-      at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
-      at Function.Module._load (internal/modules/cjs/loader.js:530:3)
-      at Module.require (internal/modules/cjs/loader.js:637:17)
-      at require (internal/modules/cjs/helpers.js:22:18)
-      at Object.<anonymous> (lib/data.js:12:185)
-      at Module._compile (internal/modules/cjs/loader.js:689:30)
-      at Module.replacementCompile (node_modules/append-transform/index.js:58:13)
-      at Module._extensions..js (internal/modules/cjs/loader.js:700:10)
-      at Object.<anonymous> (node_modules/append-transform/index.js:62:4)
-      at Module.load (internal/modules/cjs/loader.js:599:32)
-      at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
-      at Function.Module._load (internal/modules/cjs/loader.js:530:3)
-      at Module.require (internal/modules/cjs/loader.js:637:17)
-      at require (internal/modules/cjs/helpers.js:22:18)
-      at Function.ensureSchema (lib/mdl/TiledModel.js:64:63)
-      at Promise.all.all.map.a (lib/mdl.js:19:233)
-      at Array.map (<anonymous>)
-      at Object.models.ensureAllSchemas (lib/mdl.js:19:173)
-      at Server.Start (lib/server.js:33:154)
-      at Server.Restart (lib/server.js:22:605)
+=============================== Coverage summary ===============================
+Statements   : 64.03% ( 671/1048 )
+Branches     : 32.43% ( 48/148 )
+Functions    : 68.29% ( 168/246 )
+Lines        : 64.83% ( 660/1018 )
+================================================================================
+ 6 |
+  cli.js              |        0 |      100 |        0 |        0 |      6,8,10,12,15 |
+  dbg.js              |    33.33 |        0 |        0 |    33.33 | 11,12,13,14,15,17 |
+  mdl.js              |    88.89 |       50 |       75 |    93.33 |                63 |
+  models.js           |    88.89 |       50 |       75 |    93.33 |                63 |
+  server.js           |    92.98 |    83.33 |    55.56 |       92 |       63,64,86,87 |
+ lib/cli              |        0 |        0 |        0 |        0 |                   |
+  Cmd.js              |        0 |        0 |        0 |        0 |... 49,57,58,61,62 |
+  MakeMap.js          |        0 |        0 |        0 |        0 |... 29,30,31,33,34 |
+  MakeSet.js          |        0 |        0 |        0 |        0 |... 47,49,51,54,55 |
+  Serve.js            |        0 |        0 |        0 |        0 |... 36,39,40,41,42 |
+  _MakeCmd.js         |        0 |        0 |        0 |        0 |... 65,66,67,70,71 |
+ lib/mdl              |    82.97 |    60.61 |    86.59 |    84.29 |                   |
+  TiledFile.js        |    89.13 |       50 |    91.67 |    89.13 |  36,63,97,100,114 |
+  TiledMap.js         |    93.75 |      100 |    77.78 |    93.75 |           141,145 |
+  TiledMapUsesSet.js  |       50 |      100 |    66.67 |       50 |    15,16,17,18,19 |
+  TiledModel.js       |    73.68 |    66.67 |     91.3 |    80.77 |... 13,215,216,217 |
+  TiledPoint.js       |       30 |      100 |        0 |       30 |... 18,19,20,21,22 |
+  TiledProperties.js  |    17.65 |      100 |       50 |    17.65 |... 30,31,32,33,34 |
+  TiledSet.js         |    96.55 |      100 |     87.5 |    96.55 |               281 |
+  TiledTile.js        |       92 |      100 |    71.43 |       92 |            93,102 |
+  TiledWorld.js       |        0 |      100 |      100 |        0 |           4,25,38 |
+ lib/models           |    86.45 |    67.86 |    88.89 |    88.16 |                   |
+  TiledFile.js        |    89.13 |       50 |    91.67 |    89.13 |  36,63,97,100,114 |
+  TiledMap.js         |    93.75 |      100 |    77.78 |    93.75 |           132,136 |
+  TiledMapUsesSet.js  |       50 |      100 |    66.67 |       50 |    15,16,17,18,19 |
+  TiledModel.js       |    88.68 |    81.25 |      100 |      100 |         22,91,170 |
+  TiledPoint.js       |       30 |      100 |        0 |       30 |... 18,19,20,21,22 |
+  TiledProperties.js  |    17.65 |      100 |       50 |    17.65 |... 30,31,32,33,34 |
+  TiledSet.js         |    96.55 |      100 |     87.5 |    96.55 |               154 |
+  TiledTile.js        |       92 |      100 |    71.43 |       92 |             50,59 |
+ lib/service          |    24.39 |        0 |    16.67 |       25 |                   |
+  getTiledMapHtml.js  |    18.75 |        0 |        0 |       20 |... 25,26,27,28,29 |
+  getTiledMapSvg.js   |       20 |      100 |        0 |       20 |... 18,19,20,21,22 |
+  getTiledMapsList.js |    33.33 |      100 |        0 |    33.33 |               4,6 |
+  getTiledSetSvg.js   |       20 |      100 |        0 |       20 |... 18,19,20,21,23 |
+ lib/ui               |       20 |    11.11 |       25 |       20 |                   |
+  index.js            |       20 |    11.11 |       25 |       20 |... 77,78,79,84,86 |
+ scripts              |        0 |        0 |        0 |        0 |                   |
+  updateMan.js        |        0 |        0 |        0 |        0 |... 12,16,17,18,19 |
+----------------------|----------|----------|----------|----------|-------------------|
 
+=============================== Coverage summary ===============================
+Statements   : 64.03% ( 671/1048 )
+Branches     : 32.43% ( 48/148 )
+Functions    : 68.29% ( 168/246 )
+Lines        : 64.83% ( 660/1018 )
+================================================================================
+0 |    71.43 |       92 |            93,102 |
+  TiledWorld.js       |        0 |      100 |      100 |        0 |           4,25,38 |
+ lib/models           |    86.45 |    67.86 |    88.89 |    88.16 |                   |
+  TiledFile.js        |    89.13 |       50 |    91.67 |    89.13 |  36,63,97,100,114 |
+  TiledMap.js         |    93.75 |      100 |    77.78 |    93.75 |           132,136 |
+  TiledMapUsesSet.js  |       50 |      100 |    66.67 |       50 |    15,16,17,18,19 |
+  TiledModel.js       |    88.68 |    81.25 |      100 |      100 |         22,91,170 |
+  TiledPoint.js       |       30 |      100 |        0 |       30 |... 18,19,20,21,22 |
+  TiledProperties.js  |    17.65 |      100 |       50 |    17.65 |... 30,31,32,33,34 |
+  TiledSet.js         |    96.55 |      100 |     87.5 |    96.55 |               154 |
+  TiledTile.js        |       92 |      100 |    71.43 |       92 |             50,59 |
+ lib/service          |    24.39 |        0 |    16.67 |       25 |                   |
+  getTiledMapHtml.js  |    18.75 |        0 |        0 |       20 |... 25,26,27,28,29 |
+  getTiledMapSvg.js   |       20 |      100 |        0 |       20 |... 18,19,20,21,22 |
+  getTiledMapsList.js |    33.33 |      100 |        0 |    33.33 |               4,6 |
+  getTiledSetSvg.js   |       20 |      100 |        0 |       20 |... 18,19,20,21,23 |
+ lib/ui               |       20 |    11.11 |       25 |       20 |                   |
+  index.js            |       20 |    11.11 |       25 |       20 |... 77,78,79,84,86 |
+ scripts              |        0 |        0 |        0 |        0 |                   |
+  updateMan.js        |        0 |        0 |        0 |        0 |... 12,16,17,18,19 |
+----------------------|----------|----------|----------|----------|-------------------|
 
+=============================== Coverage summary ===============================
+Statements   : 64.03% ( 671/1048 )
+Branches     : 32.43% ( 48/148 )
+Functions    : 68.29% ( 168/246 )
+Lines        : 64.83% ( 660/1018 )
+================================================================================
+--------|-------------------|
 
-/modules/cjs/loader.js:538:12)
-      at Function.Module._load (internal/modules/cjs/loader.js:530:3)
-      at Module.require (internal/modules/cjs/loader.js:637:17)
-      at require (internal/modules/cjs/helpers.js:22:18)
-      at Function.ensureSchema (lib/mdl/TiledModel.js:64:63)
-      at Promise.all.all.map.a (lib/mdl.js:19:233)
-      at Array.map (<anonymous>)
-      at Object.models.ensureAllSchemas (lib/mdl.js:19:173)
-      at Server.Start (lib/server.js:33:154)
-      at Server.Restart (lib/server.js:22:605)
-
-
-
+=============================== Coverage summary ===============================
+Statements   : 64.3% ( 670/1042 )
+Branches     : 32.43% ( 48/148 )
+Functions    : 68.29% ( 168/246 )
+Lines        : 64.73% ( 659/1018 )
+================================================================================

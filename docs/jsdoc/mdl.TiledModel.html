@@ -41,9 +41,9 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.gif","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"pixeldeck","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":false,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.png","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"footsie","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"longname","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
 			window.DOCLET_TOC_ENABLED = true;
-			window.DOCLET_AFILTER_ENABLED = false;
+			window.DOCLET_AFILTER_ENABLED = true;
 		</script>
 </head>
 <body>
@@ -51,7 +51,7 @@
 	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.gif);">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
 					pixeldeck
 				</a>
 				<!-- displayed on small devices -->
@@ -64,13 +64,6 @@
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
 								<li class="dropdown">
-									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="global.html#getModelIndex">getModelIndex</a></li>
-											<li><a href="global.html#modelNames">modelNames</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
 									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 											<li><a href="-_MakeCmd.html">_MakeCmd</a></li>
@@ -82,6 +75,7 @@
 											<li><a href="mdl.TiledChunk.html">mdl.TiledChunk</a></li>
 											<li><a href="mdl.TiledFile.html">mdl.TiledFile</a></li>
 											<li><a href="mdl.TiledFrame.html">mdl.TiledFrame</a></li>
+											<li><a href="mdl.TiledImage.html">mdl.TiledImage</a></li>
 											<li><a href="mdl.TiledLayer.html">mdl.TiledLayer</a></li>
 											<li><a href="mdl.TiledMap.html">mdl.TiledMap</a></li>
 											<li><a href="mdl.TiledMapUsesSet.html">mdl.TiledMapUsesSet</a></li>
@@ -92,6 +86,7 @@
 											<li><a href="mdl.TiledSet.html">mdl.TiledSet</a></li>
 											<li><a href="mdl.TiledTerrain.html">mdl.TiledTerrain</a></li>
 											<li><a href="mdl.TiledTile.html">mdl.TiledTile</a></li>
+											<li><a href="mdl.TiledWorld.html">mdl.TiledWorld</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -102,6 +97,7 @@
 											<li><a href="external-Express.html">Express</a></li>
 											<li><a href="external-fs.html">fs</a></li>
 											<li><a href="external-http.html">http</a></li>
+											<li><a href="external-jimp.html">jimp</a></li>
 											<li><a href="external-Knex.html">Knex</a></li>
 											<li><a href="external-Objection.html">Objection</a></li>
 											<li><a href="external-Path.html">Path</a></li>
@@ -109,17 +105,22 @@
 									</ul>
 								</li>
 								<li class="dropdown">
+									<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="module-pixeldeck.html">pixeldeck</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
 									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 									<ul class="dropdown-menu">
+											<li><a href="arch.html">arch</a></li>
+											<li><a href="cfg.html">cfg</a></li>
 											<li><a href="cli.html">cli</a></li>
+											<li><a href="data.html">data</a></li>
 											<li><a href="mdl.html">mdl</a></li>
-											<li><a href="pixeldeck.html">pixeldeck</a></li>
-											<li><a href="pixeldeck.arch.html">pixeldeck.arch</a></li>
-											<li><a href="pixeldeck.cfg.html">pixeldeck.cfg</a></li>
-											<li><a href="pixeldeck.data.html">pixeldeck.data</a></li>
-											<li><a href="pixeldeck.server.html">pixeldeck.server</a></li>
-											<li><a href="pixeldeck.service.html">pixeldeck.service</a></li>
-											<li><a href="pixeldeck.ui.html">pixeldeck.ui</a></li>
+											<li><a href="server.html">server</a></li>
+											<li><a href="service.html">service</a></li>
+											<li><a href="ui.html">ui</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -157,6 +158,20 @@
 							<li><a href="list_class.html">Classes</a></li>
 							<li class="active"><a href="mdl.html">mdl</a>.TiledModel</li>
 						</ol>
+						<div class="access-filter">
+								<label class="checkbox-inline">
+									<input class="toggle-public" type="checkbox" value="" checked>
+									Public
+								</label>
+								<label class="checkbox-inline">
+									<input class="toggle-protected" type="checkbox" value="" checked>
+									Protected
+								</label>
+								<label class="checkbox-inline">
+									<input class="toggle-private" type="checkbox" value="" checked>
+									Private
+								</label>
+						</div>
 					<section>
 							<dl class="symbol primary">
 								<dt class="symbol-title class collapsible-symbol expanded">
@@ -164,73 +179,304 @@
 </dt>
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
-	</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+							<!-- augments -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Augments</label>
+								<div class="col-sm-9">
+										<p class="form-control-static"><a href="external-Objection.html">Objection</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-24">line 24</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
 </dd>
 							</dl>
 							<article class="secondary">
 									<h3>Members</h3>
 									<dl class="symbol">
 											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id=".dbg" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">dbg</span><span class="signature-type"></span></h4>
+											<dt class="symbol-title member private collapsible-symbol">
+			<h4 id=".dbg" class="member private"><span class="signature-attribs">&lt;private, static> </span><span class="name">dbg</span><span class="signature-type"></span></h4>
 		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
+<dd class="symbol-details member private  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>return the class debugger</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-29">line 29</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id="dbg" class="member public"><span class="name">dbg</span><span class="signature-type"></span></h4>
+											<dt class="symbol-title member private collapsible-symbol">
+			<h4 id=".idColumn" class="member private"><span class="signature-attribs">&lt;private, static> </span><span class="name">idColumn</span><span class="signature-type"></span></h4>
 		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>return the instance debugger</p></div>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id=".idColumn" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">idColumn</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
+<dd class="symbol-details member private  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>get the class's id column; Model defines this as uuid globally.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-39">line 39</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id=".tableName" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">tableName</span><span class="signature-type"></span></h4>
+											<dt class="symbol-title member protected collapsible-symbol">
+			<h4 id=".jsonSchema" class="member protected"><span class="signature-attribs">&lt;abstract, protected, static> </span><span class="name">jsonSchema</span><span class="signature-type"></span></h4>
 		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
+<dd class="symbol-details member protected  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>get the class's table name; which should be the class name.</p></div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-79">line 79</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id=".jsonSchemaRequired" class="member public"><span class="signature-attribs">&lt;abstract, static> </span><span class="name">jsonSchemaRequired</span><span class="signature-type"></span></h4>
+											<dt class="symbol-title member protected collapsible-symbol">
+			<h4 id=".jsonSchemaProperties" class="member protected"><span class="signature-attribs">&lt;abstract, protected, static> </span><span class="name">jsonSchemaProperties</span><span class="signature-type"></span></h4>
 		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>define what this class requires; should be overridden if anything is required.</p></div>
-			</div>	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id=".jsonSchemaProperties" class="member public"><span class="signature-attribs">&lt;abstract, static> </span><span class="name">jsonSchemaProperties</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
+<dd class="symbol-details member protected  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>define what properties this class defines; should be EXTENDED</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-65">line 65</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title member public collapsible-symbol">
-			<h4 id=".jsonSchema" class="member public"><span class="signature-attribs">&lt;abstract, static> </span><span class="name">jsonSchema</span><span class="signature-type"></span></h4>
+											<dt class="symbol-title member protected collapsible-symbol">
+			<h4 id=".jsonSchemaRequired" class="member protected"><span class="signature-attribs">&lt;abstract, protected, static> </span><span class="name">jsonSchemaRequired</span><span class="signature-type"></span></h4>
 		</dt>
-<dd class="symbol-details member public  collapsible-symbol">
+<dd class="symbol-details member protected  collapsible-symbol">
 	<div class="symbol-details-inner">
-	</div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>define what this class requires; should be overridden if anything is required.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-56">line 56</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member private collapsible-symbol">
+			<h4 id=".tableName" class="member private"><span class="signature-attribs">&lt;private, static> </span><span class="name">tableName</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member private  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>get the class's table name; which should be the class name.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-47">line 47</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member private collapsible-symbol">
+			<h4 id="dbg" class="member private"><span class="signature-attribs">&lt;private> </span><span class="name">dbg</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member private  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>return the instance debugger</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-34">line 34</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
 </dd>
 											<hr/>
 											<dt class="symbol-title member public collapsible-symbol">
@@ -238,16 +484,169 @@
 		</dt>
 <dd class="symbol-details member public  collapsible-symbol">
 	<div class="symbol-details-inner">
-	</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type"><a href="mdl.html#.primaryKey">mdl.primaryKey</a></span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-96">line 96</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
 </dd>
 									</dl>
 									<h3>Methods</h3>
 									<dl class="symbol">
 											<hr/>
+											<dt class="symbol-title function protected collapsible-symbol">
+			<h4 id=".afterEnsureSchema" class="function protected"><span class="signature-attribs">&lt;async, abstract, protected, static> </span><span class="name">afterEnsureSchema</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function protected  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>A simple hook for inheriting models classes to attach logic post-ensure-schema events.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-167">line 167</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function protected collapsible-symbol">
+			<h4 id=".beforeEnsureSchema" class="function protected"><span class="signature-attribs">&lt;async, abstract, protected, static> </span><span class="name">beforeEnsureSchema</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function protected  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>A hook for inheriting models to attach pre-ensureSchema logic</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-138">line 138</a></p>
+								</div>
+							</div>
+			
+			
+			
+							<!-- todo -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">To Do</label>
+								<div class="col-sm-9">
+										<p class="form-control-static">may rename to preCreate and drop the pre/post ensure.</p>
+								</div>
+							</div>
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".createSchemaOn" class="function public"><span class="signature-attribs">&lt;async, abstract, static> </span><span class="name">createSchemaOn</span><span class="signature-params">( <span class="signature-param">table</span>&nbsp;)</span><span class="signature-type"></span></h4>
+			<h4 id=".createSchema" class="function public"><span class="signature-attribs">&lt;async, static> </span><span class="name">createSchema</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Create this model's schema. This will call the protected <code>createSchemaOn</code> method that is intended to be overridden by inheriting models.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-175">line 175</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function protected collapsible-symbol">
+			<h4 id=".createSchemaOn" class="function protected"><span class="signature-attribs">&lt;async, abstract, protected, static> </span><span class="name">createSchemaOn</span><span class="signature-params">( <span class="signature-param">table</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function protected  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-info">
 				<h5>Parameters</h5>
@@ -269,90 +668,34 @@
 					</tbody>
 				</table>
 			</div>
-	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".ensureAllSchemas" class="function public"><span class="signature-attribs">&lt;async, static> </span><span class="name">ensureAllSchemas</span><span class="signature-params">( <span class="signature-param">Knex</span>, <span class="signature-param">...allModels</span>&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Ensure all these schemas exist.</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-							<th>Attributes</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Knex</code></td>
-							<td><span class="param-type"><a href="external-Knex.html">external:Knex</a></span></td>
-								<td class="attributes"></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>allModels</code></td>
-							<td><span class="param-type">any</span></td>
-								<td class="attributes">&lt;repeatable&gt;<br/></td>
-							<td class="last">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".ensureSchema" class="function public"><span class="signature-attribs">&lt;async, static> </span><span class="name">ensureSchema</span><span class="signature-params">( <span class="signature-param">Knex</span>&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Ensures that the table for this model has been defined.</p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>Knex</code></td>
-							<td><span class="param-type">Knex</span></td>
-							<td class="last">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".afterEnsureSchema" class="function public"><span class="signature-attribs">&lt;async, static> </span><span class="name">afterEnsureSchema</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-	</div>
-</dd>
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".createSchema" class="function public"><span class="signature-attribs">&lt;async, static> </span><span class="name">createSchema</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Create this model's schema</p></div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-94">line 94</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
 			</div>	</div>
 </dd>
 											<hr/>
@@ -382,15 +725,216 @@
 					</tbody>
 				</table>
 			</div>
-	</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-192">line 192</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
 </dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id="render" class="function public"><span class="signature-attribs">&lt;async> </span><span class="name">render</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+			<h4 id=".ensureAllSchemas" class="function public"><span class="signature-attribs">&lt;async, static> </span><span class="name">ensureAllSchemas</span><span class="signature-params">( <span class="signature-param">Knex</span>, <span class="signature-param">...anyInheritingModels</span>&nbsp;)</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details function public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>try to render this</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Ensure all these schemas exist. Helper function, does not relate to any specific model.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>Knex</code></td>
+							<td><span class="param-type"><a href="external-Knex.html">external:Knex</a></span></td>
+								<td class="attributes"></td>
+							<td class="last">
+							</td>
+						</tr>
+						<tr>
+								<td><code>anyInheritingModels</code></td>
+							<td><span class="param-type"><a href="mdl.TiledModel.html">mdl.TiledModel</a></span></td>
+								<td class="attributes">&lt;repeatable&gt;<br/></td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-113">line 113</a></p>
+								</div>
+							</div>
+			
+			
+			
+							<!-- todo -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">To Do</label>
+								<div class="col-sm-9">
+										<p class="form-control-static">maybe move to the mdl namespace?</p>
+								</div>
+							</div>
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".ensureSchema" class="function public"><span class="signature-attribs">&lt;async, static> </span><span class="name">ensureSchema</span><span class="signature-params">( <span class="signature-param">Knex</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Ensures that the table for this model has been defined.</p></div>
+			</div>			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>Knex</code></td>
+							<td><span class="param-type">Knex</span></td>
+							<td class="last">
+									<p>the knex instance we'll be operating with</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-147">line 147</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function protected collapsible-symbol">
+			<h4 id="preRender" class="function protected"><span class="signature-attribs">&lt;async, abstract, protected> </span><span class="name">preRender</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function protected  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The idea is that this is where relationships are refreshed before
+			a render, so each type of model should ensure it's immediate relations
+			are updated.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-209">line 209</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function private collapsible-symbol">
+			<h4 id="render" class="function private"><span class="signature-attribs">&lt;async, private> </span><span class="name">render</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function private  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>this does some magic following conventions within the view directory:</p>
+			<ul>
+			<li>the view directory has folders, the folders are named after the model's class (a.k.a. database table name.)</li>
+			</ul></div>
 			</div>			<div class="callout callout-warning"><h5>Requires</h5>		<form class="form-horizontal requires">
 							<div class="form-group">
 								<label class="col-sm-3 control-label requires-type">module:pug</label>
@@ -411,6 +955,34 @@
 								</div>
 							</div>
 					</form>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-222">line 222</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
 			</div>	</div>
 </dd>
 									</dl>
@@ -423,9 +995,9 @@
 		</div>
 	</div>
 	<footer>
-				<div class="footer-option">pixeldeck</div>
+				<div class="footer-option">footsie</div>
 				<div class="copyright">GPL-3.0</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on 2019-10-21 @ 04:17 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

@@ -42,7 +42,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.gif","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"pixeldeck","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":false,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.png","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"footsie","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"longname","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
 			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -52,7 +52,7 @@
 	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.gif);">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
 					pixeldeck
 				</a>
 				<!-- displayed on small devices -->
@@ -65,13 +65,6 @@
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
 								<li class="dropdown">
-									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="global.html#getModelIndex">getModelIndex</a></li>
-											<li><a href="global.html#modelNames">modelNames</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
 									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 											<li><a href="-_MakeCmd.html">_MakeCmd</a></li>
@@ -83,6 +76,7 @@
 											<li><a href="mdl.TiledChunk.html">mdl.TiledChunk</a></li>
 											<li><a href="mdl.TiledFile.html">mdl.TiledFile</a></li>
 											<li><a href="mdl.TiledFrame.html">mdl.TiledFrame</a></li>
+											<li><a href="mdl.TiledImage.html">mdl.TiledImage</a></li>
 											<li><a href="mdl.TiledLayer.html">mdl.TiledLayer</a></li>
 											<li><a href="mdl.TiledMap.html">mdl.TiledMap</a></li>
 											<li><a href="mdl.TiledMapUsesSet.html">mdl.TiledMapUsesSet</a></li>
@@ -93,6 +87,7 @@
 											<li><a href="mdl.TiledSet.html">mdl.TiledSet</a></li>
 											<li><a href="mdl.TiledTerrain.html">mdl.TiledTerrain</a></li>
 											<li><a href="mdl.TiledTile.html">mdl.TiledTile</a></li>
+											<li><a href="mdl.TiledWorld.html">mdl.TiledWorld</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -103,6 +98,7 @@
 											<li><a href="external-Express.html">Express</a></li>
 											<li><a href="external-fs.html">fs</a></li>
 											<li><a href="external-http.html">http</a></li>
+											<li><a href="external-jimp.html">jimp</a></li>
 											<li><a href="external-Knex.html">Knex</a></li>
 											<li><a href="external-Objection.html">Objection</a></li>
 											<li><a href="external-Path.html">Path</a></li>
@@ -110,17 +106,22 @@
 									</ul>
 								</li>
 								<li class="dropdown">
+									<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="module-pixeldeck.html">pixeldeck</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
 									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 									<ul class="dropdown-menu">
+											<li><a href="arch.html">arch</a></li>
+											<li><a href="cfg.html">cfg</a></li>
 											<li><a href="cli.html">cli</a></li>
+											<li><a href="data.html">data</a></li>
 											<li><a href="mdl.html">mdl</a></li>
-											<li><a href="pixeldeck.html">pixeldeck</a></li>
-											<li><a href="pixeldeck.arch.html">pixeldeck.arch</a></li>
-											<li><a href="pixeldeck.cfg.html">pixeldeck.cfg</a></li>
-											<li><a href="pixeldeck.data.html">pixeldeck.data</a></li>
-											<li><a href="pixeldeck.server.html">pixeldeck.server</a></li>
-											<li><a href="pixeldeck.service.html">pixeldeck.service</a></li>
-											<li><a href="pixeldeck.ui.html">pixeldeck.ui</a></li>
+											<li><a href="server.html">server</a></li>
+											<li><a href="service.html">service</a></li>
+											<li><a href="ui.html">ui</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -155,133 +156,37 @@
 			<div class="col-md-9 main-content">
 		<section class="readme-section">
 			<article><p><a name="top">PixelDeck links:</a></p>
-<p><a href="https://BadQuanta.github.io/pixeldeck/">home</a> |
-<a href="https://github.com/BadQuanta/pixeldeck/">github</a> |
-<a href="https://badquanta.github.io/pixeldeck/pixeldeck/0.0.1/index.html">APIv0.0.1</a> |
-<a href="https://badquanta.github.io/pixeldeck/coverage/index.html">coverage</a>
+<p><a href="https://BadQuanta.github.io/pixeldeck/">home</a>,
+<a href="https://github.com/BadQuanta/pixeldeck/">github</a>,
+<a href="https://badquanta.github.io/pixeldeck/pixeldeck/0.0.1/index.html">APIv0.0.1</a>,
 ...</p>
+<h3>API Documentation:</h3>
+<ul>
+<li><a href="./pixeldeck/0.0.1/index.html">0.0.1</a></li>
+</ul>
 <p><img src="https://badquanta.github.io/pixeldeck/coverage.svg" alt="CoverageSVG"></p>
+<h2>Developer's Blog</h2>
+<p>I'll try to share current struggles and progress below:</p>
+<h2>Monday October 7th, @12:49am U.S.A./PST</h2>
+<p>This past week has been focused on documentation, coverage, and refactoring.
+I spent way too much time on documentation; switching between <code>esdoc</code> and <code>jsdoc</code>.
+I've decided to stick with <code>jsdoc</code> for now.</p>
+<p>As one can see with the coverage badge above I've made some progress on testing; but it is far from good.
+Just the bare minimum to reach roughly 50% coverage of code.</p>
+<p>The major components that will not be testing until later revisions (0.2.0+) include the command line and repl/user interfaces.</p>
+<p>The refactoring includes almost complete re-writes of entire systems; mostly mirroring existing code but removing some duplication.  The views have been, and will continue to be refactored in major ways.  I may move away from using the PUG extend feature in lue of possibly composing everything via included mixin libraries.</p>
+<p>As for raw functionality the only new things are support for group layers and support for objects; far from complete support but rendering of test4 works but without animations.</p>
 <hr>
-<h3>About:</h3>
-<p>A work-in-progress environment for 2d games.  Lots of goals.</p>
+<h2>Monday September 30th, @02:25pm U.S.A./PST</h2>
+<p>This started with making <a href="https://www.mapeditor.org/">Tiled</a> tilesets &amp; tilemaps, and using Node &amp; Pug to convert the JSON files it produced into SVG files.</p>
+<p>Once I got that working, I converted it to do this live with an express http service; added some additional support for more than 1 tileset and infinite maps.</p>
+<p>I have a lot more to do; here is the first screenshot of it correctly rendering two test maps.</p>
 <p><a href="https://badquanta.github.io/pixeldeck/imgs/Screenshot01.png"><img src="https://badquanta.github.io/pixeldeck/imgs/Screenshot01.thumbnail.png" alt="Screenshot" title="Screenshot"></a></p>
-<hr>
-<h3>License:</h3>
-<p>The license is the G.N.U. G.P.L. for everything within the <a href="https://github.com/BadQuanta/pixeldeck">repository</a> this <a href="./README.md">README</a> and/or <a href="./LICENSE.md">LICENSE</a> were found.</p>
-<hr>
-<h3>Credits:</h3>
-<p>In general order of addition to repository.  Please <a href="https://github.com/badquanta/pixeldeck/issues/new">create a new issue</a> if there is a missing credit and/or something is incorrect or incomplete.</p>
-<hr>
-<h3>TiledSets:</h3>
-<h6>Sources:</h6>
-<ul>
-<li>From <a href="">bluecarrot16</a> <a href="https://opengameart.org/content/lpc-terrains">lpc-terrains</a></li>
-</ul>
-<hr>
-<h6>characters</h6>
-<ul>
-<li>TODO:
-<ul>
-<li>[ ] cat</li>
-<li>[ ] dog</li>
-<li>[ ] rat</li>
-<li>[ ] bird</li>
-<li>[ ] tree</li>
-<li>[ ] grass/flower/tree?</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h6>objects</h6>
-<ul>
-<li>[ ] TODO: Objects</li>
-<li>[ ] ground/floor/bridge/etc...</li>
-<li>[ ] walls/doors/windows</li>
-<li>[ ] NPC
-<ul>
-<li>[ ] Server NPCs</li>
-<li>[ ] Client NPCs</li>
-</ul>
-</li>
-<li>[ ] Players
-<ul>
-<li>[ ] Multi player w/ Server</li>
-<li>[ ] Single player
-<ul>
-<li>[ ] with Server</li>
-<li>[ ] without Server</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h6>javascript libraries:</h6>
-<p>there are really so many, so check out <a href="./package.json">package.json</a> if you really want to see just the top level dependencies.  Here are the top 10 highlights (so var...)</p>
-<ol>
-<li><a href="http://expressjs.com/en/4x/api.html">express</a> used for server http server to javascript api handling</li>
-<li><a href="https://github.com/techfort/LokiJS">lokijs</a> I'm using this to provide an <code>isomorphic database</code> that will run identically on the client &amp; the server. It also should support synchronizing changes between the client &amp; server. This concept has yet to be prototyped.</li>
-<li><a href="https://mochajs.org/">#TODO mocha</a>, along with libraries like</li>
-<li><a href="#TODO">#TODO supertest</a></li>
-<li><a href="#TODO">#TODO chai</a></li>
-<li><a href="#TODO">#TODO approvals</a> and others</li>
-<li><a href="https://pugjs.org/">pug</a> is an excellent tool for XML generation, and utilized her for <code>SVG</code> and <code>HTML</code> templates.</li>
-<li><a href="https://socket.io/">#TODO socket.io</a> Not yet really utilized; but intended to be the backbone of <code>loki database</code> synchronization.</li>
-<li><a href="https://jsdoc.app/">jsdoc</a> generates our excellent documentation.</li>
-<li><a href="#TODO">nodemon</a> TODO:</li>
-<li><a href="#TODO">nyc</a> TODO:</li>
-<li><a href="#TODO">config</a> TODO:</li>
-</ol>
-<hr>
-<p><a name="TODO"> </a></p>
-<h6>TODOs</h6>
-<p>things I need to get done:</p>
-<ul>
-<li>
-<p>[x] a lot...</p>
-</li>
-<li>
-<p>[ ] give due credit</p>
-</li>
-<li>
-<p>[ ] pacjage.json <a href="https://docs.npmjs.com/misc/config">config</a></p>
-</li>
-<li>
-<p>[ ] rewview package.json <a href="https://docs.npmjs.com/misc/scripts">scripts</a></p>
-<ol>
-<li><code>prepublish:</code> <em>generate docs?</em></li>
-<li><code>prepare:</code> something</li>
-<li><strong>(publish)</strong>
-<code>prepublishOnly</code>: Run BEFORE the package is prepared and packed, ONLY on publish. (See below.)</li>
-<li><strong>(pack| publish)</strong>
-<ol>
-<li><code>prepack</code>: run BEFORE a tarball is packed when installing git dependencies</li>
-<li><code>postpack:</code> Run AFTER the tarball has been generated and moved to its final destination.</li>
-</ol>
-</li>
-<li><strong>publish</strong>
-<ol>
-<li><code>publish, postpublish:</code> Run AFTER the package is published.</li>
-</ol>
-</li>
-<li><strong>install</strong> <code>preinstall:</code> Run BEFORE the package is installed
-install, postinstall: Run AFTER the package is installed.</li>
-<li><strong>install</strong> <code>preuninstall, uninstall:</code> Run BEFORE the package is uninstalled.</li>
-<li>postuninstall: Run AFTER the package is uninstalled.</li>
-<li>preversion: Run BEFORE bumping the package version.</li>
-<li>version: Run AFTER bumping the package version, but BEFORE commit.</li>
-<li>postversion: Run AFTER bumping the package version, and AFTER commit.
-pretest, test, posttest: Run by the npm test command.
-prestop, stop, poststop: Run by the npm stop command.
-prestart, start, poststart: Run by the npm start command.
-prerestart, restart, postrestart: Run by the npm restart command. Note: npm restart will run the stop and start scripts if no restart script is provided.
-preshrinkwrap, shrinkwrap, postshrinkwrap: Run by the npm shrinkwrap command.</li>
-</ol>
-</li>
-<li>
-<p>[ ] version 0.0.1</p>
-</li>
-</ul>
+<p>Currently this is accomplished by generating a Tilesheet &amp; Tilemap as separate SVGs; embedding the Pixels of the tiles as a url in the <code>image</code> tag's <code>href</code> attribute, then exporting each individual tile as an <code>view</code> tag with the <code>viewBox</code> attribute set to the origin in the <code>image</code> of that tile.  But there is only a single <code>image</code> tag in the tilesheet SVG; that are visible through named ids.</p>
+<p>For example: <code>some_tilesheet.svg#1</code>
+would should generally 1 tile, the very first tile available in the tilesheet; while <code>some_tilesheet.svg</code> sould show the entire sheet.  This is because the tilesheet svg does not specify a size; and will always render to fill the available size when displayed: either zooming in a single tile, or scaling down the entire tilesheet to fit.</p>
+<p>The tilemap is a 2nd SVG. Each tile in this is represented by an individual <code>image</code> tag; who's <code>href</code> attribute is pointing to a specific tilesheet svg &amp; a tile id fragment: <code>&lt;tilesheet&gt;.svg#&lt;tile_id&gt;</code>.  Each tag must have it's height &amp; width set; because the tilesheet does not specify this; and will scale to any size from 100% to 0%.</p>
+<p><strong>The immediate next steps are to</strong>: Investigate other means of generating the tilesheet &amp; tilemap svgs.  This is to embed everything into a single HTML file (all  svgs, stylesheets, javascript, and possibly json data.)  The reason is so that this can all be sent to the client all at once.  White this is a multiplayer game; if it is possible to make single player games possible to play offline the embedding of both assets; game logic; and state into one file makes it ideal for  sharing and archiving.</p>
 <p>back to <a href="#top">#top</a>?</p></article>
 		</section>
 			</div>
@@ -291,9 +196,9 @@ preshrinkwrap, shrinkwrap, postshrinkwrap: Run by the npm shrinkwrap command.</l
 		</div>
 	</div>
 	<footer>
-				<div class="footer-option">pixeldeck</div>
+				<div class="footer-option">footsie</div>
 				<div class="copyright">GPL-3.0</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on 2019-10-21 @ 04:17 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

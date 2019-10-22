@@ -42,7 +42,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.gif","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"pixeldeck","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":false,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.png","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"footsie","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"longname","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
 			window.DOCLET_TOC_ENABLED = false;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -52,7 +52,7 @@
 	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.gif);">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
 					pixeldeck
 				</a>
 				<!-- displayed on small devices -->
@@ -65,13 +65,6 @@
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
 								<li class="dropdown">
-									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="global.html#getModelIndex">getModelIndex</a></li>
-											<li><a href="global.html#modelNames">modelNames</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
 									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 											<li><a href="-_MakeCmd.html">_MakeCmd</a></li>
@@ -83,6 +76,7 @@
 											<li><a href="mdl.TiledChunk.html">mdl.TiledChunk</a></li>
 											<li><a href="mdl.TiledFile.html">mdl.TiledFile</a></li>
 											<li><a href="mdl.TiledFrame.html">mdl.TiledFrame</a></li>
+											<li><a href="mdl.TiledImage.html">mdl.TiledImage</a></li>
 											<li><a href="mdl.TiledLayer.html">mdl.TiledLayer</a></li>
 											<li><a href="mdl.TiledMap.html">mdl.TiledMap</a></li>
 											<li><a href="mdl.TiledMapUsesSet.html">mdl.TiledMapUsesSet</a></li>
@@ -93,6 +87,7 @@
 											<li><a href="mdl.TiledSet.html">mdl.TiledSet</a></li>
 											<li><a href="mdl.TiledTerrain.html">mdl.TiledTerrain</a></li>
 											<li><a href="mdl.TiledTile.html">mdl.TiledTile</a></li>
+											<li><a href="mdl.TiledWorld.html">mdl.TiledWorld</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -103,6 +98,7 @@
 											<li><a href="external-Express.html">Express</a></li>
 											<li><a href="external-fs.html">fs</a></li>
 											<li><a href="external-http.html">http</a></li>
+											<li><a href="external-jimp.html">jimp</a></li>
 											<li><a href="external-Knex.html">Knex</a></li>
 											<li><a href="external-Objection.html">Objection</a></li>
 											<li><a href="external-Path.html">Path</a></li>
@@ -110,17 +106,22 @@
 									</ul>
 								</li>
 								<li class="dropdown">
+									<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="module-pixeldeck.html">pixeldeck</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
 									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 									<ul class="dropdown-menu">
+											<li><a href="arch.html">arch</a></li>
+											<li><a href="cfg.html">cfg</a></li>
 											<li><a href="cli.html">cli</a></li>
+											<li><a href="data.html">data</a></li>
 											<li><a href="mdl.html">mdl</a></li>
-											<li><a href="pixeldeck.html">pixeldeck</a></li>
-											<li><a href="pixeldeck.arch.html">pixeldeck.arch</a></li>
-											<li><a href="pixeldeck.cfg.html">pixeldeck.cfg</a></li>
-											<li><a href="pixeldeck.data.html">pixeldeck.data</a></li>
-											<li><a href="pixeldeck.server.html">pixeldeck.server</a></li>
-											<li><a href="pixeldeck.service.html">pixeldeck.service</a></li>
-											<li><a href="pixeldeck.ui.html">pixeldeck.ui</a></li>
+											<li><a href="server.html">server</a></li>
+											<li><a href="service.html">service</a></li>
+											<li><a href="ui.html">ui</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -160,16 +161,10 @@
  * Represents some cached database information about the file used to import
  * data.
  * @memberof mdl
+ * @class
+ * @classdesc {@link external:Objection} Representation of a `Tiled` source file
  * @extends mdl.TiledModel
- * @property {string} path
- * @property {timestamp} lastStatAt
- * @property {timestamp} importedAt
- * @property {timestamp} atime
- * @property {timestamp} btime
- * @property {timestamp} ctime
- * @property {foreignKey} TileMap_uuid
- * @property {foreignKey} TileSet_uuid
- *
+ * @inheritdoc
  */
 class TiledFile extends TiledModel {
   /**
@@ -183,28 +178,49 @@ class TiledFile extends TiledModel {
   /**
    * Using TiledFile.resourceSearchPaths; return the absolute path of the file if it exists
    * within the first resourceSearchPath
-   * @param {*} path
+   * @param {string} path
    */
-  static findResourcePathFor (path) {
-    const basePath = this.resourceSearchPaths.find(function testEachSearchPath (value) {
-      return require('fs').existsSync(require('path').join(value, path))
+  static findResourcePathFor (path, newExt = undefined) {
+    let reqPath = path.slice(0)
+    if (newExt) {
+      while (require('path').extname(reqPath) !== '') {
+        reqPath = reqPath.replace(require('path').extname(reqPath), '')
+      }
+      reqPath += newExt
+    }
+    const basePath = this.resourceSearchPaths.find((value) => {
+      const testPath = require('path').join(value, reqPath)
+      const result = require('fs').existsSync(testPath)
+      this.dbg('findResourcePath(%o) testing %o = %o', reqPath, value, result, testPath)
+      return result
     })
     if (!basePath) {
+      this.dbg('no resource path found for:', reqPath)
       return undefined
     } else {
-      return require('path').join(basePath, path)
+      return require('path').join(basePath, reqPath)
     }
   }
 
+  /**
+   * @type string
+   * @see mdl.TiledFile.findResourcePathFor
+   */
   get resourcePath () {
-    return TiledFile.findResourcePathFor(this.path)
+    return TiledFile.findResourcePathFor(this.path, '.json')
   }
 
+  /**
+   * @override
+   */
   static async beforeEnsureSchema (Knex) {
     await super.beforeEnsureSchema(Knex)
     await this.ensureAllSchemas(Knex, require('./TiledSet'), require('./TiledMap'))
   }
 
+  /**
+   * @type {external:Objection.RelationalMappings}
+   */
   static get relationMappings () {
     return {
       tiledMap: {
@@ -235,7 +251,8 @@ class TiledFile extends TiledModel {
   }
 
   /**
-   *
+   * ensure we have reasonably latest stats.
+   * @todo maybe rename ensure stats?
    */
   async getStat () {
     const resPath = this.resourcePath
@@ -258,6 +275,9 @@ class TiledFile extends TiledModel {
     }
   }
 
+  /**
+   * @todo remove duplication between getTiledMap &amp;  getTiledSet
+   */
   async getTiledMap () {
     this.dbg('ensuring relations are loaded...')
     await this.$loadRelated('tiledMap')
@@ -276,21 +296,100 @@ class TiledFile extends TiledModel {
 
   /**
    *
-   * @param {Knex.SchemaBuilder} table {@link http://knexjs.org/#Schema-Building}
+   */
+  async getTiledSet () {
+    this.dbg('getTiledSet')
+    await this.$loadRelated('tiledSet')
+    if (!this.tiledSet) {
+      this.dbg('tiledSet not yet imported')
+      if (this.exists) {
+        const json = require(this.resourcePath)
+        await this.$relatedQuery('tiledSet').insertGraph(json)
+      } else {
+        throw new Error(this.path + ' does not exist.')
+      }
+    }
+    return this.tiledSet
+  }
+
+  /**
+   *
    */
   static async createSchemaOn (table) {
     super.createSchemaOn(table)
+    /**
+     * @name path
+     * @type string
+     * @memberof mdl.TiledFile
+     * @instance
+     **/
     table.string('path')
     // const knex = require('../data')
     // table.timestamp('IndexedAt').defaultTo(knex.fn.now())
+    /**
+     * Holds the time of the last stats request for this file
+     * @name lastStatAt
+     * @type mdl.timestamp
+     * @memberof mdl.TiledFile
+     * @instance
+     **/
     table.timestamp('lastStatAt')
+    /**
+     * Holds the time of the import of map from file
+     * @name importedAt
+     * @type mdl.timestamp
+     * @memberof mdl.TiledFile
+     * @instance
+     **/
     table.timestamp('importedAt')
+    /**
+     * Holds the corresponding stat value
+     * @name ctime
+     * @type mdl.timestamp
+     * @memberof mdl.TiledFile
+     * @instance
+     **/
     table.timestamp('ctime')
+    /**
+     * Holds the corresponding stat value
+     * @name btime
+     * @type mdl.timestamp
+     * @memberof mdl.TiledFile
+     * @instance
+     **/
     table.timestamp('btime')
+    /**
+     * Holds the corresponding stat value
+     * @name atime
+     * @type mdl.timestamp
+     * @memberof mdl.TiledFile
+     * @instance
+     **/
     table.timestamp('atime')
+    /**
+     * Holds the corresponding stat value
+     * @name birthtime
+     * @type mdl.timestamp
+     * @memberof mdl.TiledFile
+     * @instance
+     **/
     table.timestamp('birthtime')
+    /**
+     * Links us to a {@link mdl.TiledMap}
+     * @name TiledMap_uuid
+     * @type {mdl.primaryKey}
+     * @memberof mdl.TiledFile
+     * @instance
+     **/
     table.integer('TileMap_uuid')
     table.foreign('TileMap_uuid').references('TileMap.uuid')
+    /**
+     * Links us to a {@link mdl.TiledSet}
+     * @name TiledSet_uuid
+     * @type mdl.primaryKey
+     * @memberof mdl.TiledFile
+     * @instance
+     **/
     table.integer('TileSet_uuid')
     table.foreign('TileSet_uuid').references('TileSet.uuid')
   }
@@ -304,9 +403,9 @@ TiledFile.dbg('loaded')
 		</div>
 	</div>
 	<footer>
-				<div class="footer-option">pixeldeck</div>
+				<div class="footer-option">footsie</div>
 				<div class="copyright">GPL-3.0</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on 2019-10-21 @ 04:17 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

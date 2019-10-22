@@ -41,7 +41,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.gif","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"pixeldeck","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":false,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.png","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"footsie","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"longname","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
 			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = true;
 		</script>
@@ -51,7 +51,7 @@
 	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.gif);">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
 					pixeldeck
 				</a>
 				<!-- displayed on small devices -->
@@ -64,13 +64,6 @@
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
 								<li class="dropdown">
-									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="global.html#getModelIndex">getModelIndex</a></li>
-											<li><a href="global.html#modelNames">modelNames</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
 									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 											<li><a href="-_MakeCmd.html">_MakeCmd</a></li>
@@ -82,6 +75,7 @@
 											<li><a href="mdl.TiledChunk.html">mdl.TiledChunk</a></li>
 											<li><a href="mdl.TiledFile.html">mdl.TiledFile</a></li>
 											<li><a href="mdl.TiledFrame.html">mdl.TiledFrame</a></li>
+											<li><a href="mdl.TiledImage.html">mdl.TiledImage</a></li>
 											<li><a href="mdl.TiledLayer.html">mdl.TiledLayer</a></li>
 											<li><a href="mdl.TiledMap.html">mdl.TiledMap</a></li>
 											<li><a href="mdl.TiledMapUsesSet.html">mdl.TiledMapUsesSet</a></li>
@@ -92,6 +86,7 @@
 											<li><a href="mdl.TiledSet.html">mdl.TiledSet</a></li>
 											<li><a href="mdl.TiledTerrain.html">mdl.TiledTerrain</a></li>
 											<li><a href="mdl.TiledTile.html">mdl.TiledTile</a></li>
+											<li><a href="mdl.TiledWorld.html">mdl.TiledWorld</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -102,6 +97,7 @@
 											<li><a href="external-Express.html">Express</a></li>
 											<li><a href="external-fs.html">fs</a></li>
 											<li><a href="external-http.html">http</a></li>
+											<li><a href="external-jimp.html">jimp</a></li>
 											<li><a href="external-Knex.html">Knex</a></li>
 											<li><a href="external-Objection.html">Objection</a></li>
 											<li><a href="external-Path.html">Path</a></li>
@@ -109,17 +105,22 @@
 									</ul>
 								</li>
 								<li class="dropdown">
+									<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="module-pixeldeck.html">pixeldeck</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
 									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 									<ul class="dropdown-menu">
+											<li><a href="arch.html">arch</a></li>
+											<li><a href="cfg.html">cfg</a></li>
 											<li><a href="cli.html">cli</a></li>
+											<li><a href="data.html">data</a></li>
 											<li><a href="mdl.html">mdl</a></li>
-											<li><a href="pixeldeck.html">pixeldeck</a></li>
-											<li><a href="pixeldeck.arch.html">pixeldeck.arch</a></li>
-											<li><a href="pixeldeck.cfg.html">pixeldeck.cfg</a></li>
-											<li><a href="pixeldeck.data.html">pixeldeck.data</a></li>
-											<li><a href="pixeldeck.server.html">pixeldeck.server</a></li>
-											<li><a href="pixeldeck.service.html">pixeldeck.service</a></li>
-											<li><a href="pixeldeck.ui.html">pixeldeck.ui</a></li>
+											<li><a href="server.html">server</a></li>
+											<li><a href="service.html">service</a></li>
+											<li><a href="ui.html">ui</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -166,6 +167,14 @@
 									<input class="toggle-public" type="checkbox" value="" checked>
 									Public
 								</label>
+								<label class="checkbox-inline">
+									<input class="toggle-protected" type="checkbox" value="" checked>
+									Protected
+								</label>
+								<label class="checkbox-inline">
+									<input class="toggle-private" type="checkbox" value="" checked>
+									Private
+								</label>
 						</div>
 					<section>
 							<dl class="symbol primary">
@@ -175,135 +184,7 @@
 <dd class="symbol-details class  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description classdesc"><p>Objection representation of TiledLayer. <a href="https://docs.mapeditor.org/en/stable/reference/json-map-format/#layer">https://docs.mapeditor.org/en/stable/reference/json-map-format/#layer</a></p></div>
-			</div>			<div class="callout callout-info">
-				<h5>Properties</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>type</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>data</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>TiledLayerUuid</code></td>
-							<td><span class="param-type">foreignKey</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>TiledMapUuid</code></td>
-							<td><span class="param-type">foreignKey</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>draworder</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>encoding</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>height</code></td>
-							<td><span class="param-type">integer</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>id</code></td>
-							<td><span class="param-type">integer</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>name</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>offsetx</code></td>
-							<td><span class="param-type">double</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>offsety</code></td>
-							<td><span class="param-type">double</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>opacity</code></td>
-							<td><span class="param-type">double</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>transparentColor</code></td>
-							<td><span class="param-type">string</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>visible</code></td>
-							<td><span class="param-type">boolean</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>width</code></td>
-							<td><span class="param-type">integer</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>x</code></td>
-							<td><span class="param-type">integer</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>y</code></td>
-							<td><span class="param-type">integer</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>startx</code></td>
-							<td><span class="param-type">integer</span></td>
-							<td class="last">
-							</td>
-						</tr>
-						<tr>
-								<td><code>starty</code></td>
-							<td><span class="param-type">integer</span></td>
-							<td class="last">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
 			
 			
 			
@@ -326,6 +207,13 @@
 			
 			
 			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-10">line 10</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -346,6 +234,42 @@
 									<dl class="symbol">
 											<hr/>
 											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id=".jsonSchemaProperties" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">jsonSchemaProperties</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-163">line 163</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
 			<h4 id=".relationMappings" class="member public"><span class="signature-attribs">&lt;static> </span><span class="name">relationMappings</span><span class="signature-type"></span></h4>
 		</dt>
 <dd class="symbol-details member public  collapsible-symbol">
@@ -357,13 +281,84 @@
 			<li>Has many <a href="mdl.TiledProperties.html"><code>mdl.TiledProperties</code></a></li>
 			<li>Has many <a href="mdl.TiledChunk.html"><code>mdl.TiledChunk</code></a></li>
 			</ul></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-207">line 207</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
 			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title member public inherited collapsible-symbol">
-			<h4 id="dbg" class="member public inherited"><span class="name">dbg</span><span class="signature-type"></span></h4>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="data" class="member public"><span class="name">data</span><span class="signature-type"> :string</span></h4>
 		</dt>
-<dd class="symbol-details member public inherited  collapsible-symbol">
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">string</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-25">line 25</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member private inherited collapsible-symbol">
+			<h4 id="dbg" class="member private inherited"><span class="signature-attribs">&lt;private> </span><span class="name">dbg</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details member private inherited  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>return the instance debugger</p></div>
 			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
@@ -389,6 +384,615 @@
 			
 			
 			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-34">line 34</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="draworder" class="member public"><span class="name">draworder</span><span class="signature-type"> :string</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">string</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-49">line 49</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="encoding" class="member public"><span class="name">encoding</span><span class="signature-type"> :string</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">string</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-56">line 56</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="height" class="member public"><span class="name">height</span><span class="signature-type"> :integer</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">integer</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-63">line 63</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="id" class="member public"><span class="name">id</span><span class="signature-type"> :integer</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">integer</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-70">line 70</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="name" class="member public"><span class="name">name</span><span class="signature-type"> :string</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">string</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-77">line 77</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="offsetx" class="member public"><span class="name">offsetx</span><span class="signature-type"> :double</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">double</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-85">line 85</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="offsety" class="member public"><span class="name">offsety</span><span class="signature-type"> :double</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">double</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-92">line 92</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="opacity" class="member public"><span class="name">opacity</span><span class="signature-type"> :double</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">double</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-99">line 99</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="startx" class="member public"><span class="name">startx</span><span class="signature-type"> :integer</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">integer</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-143">line 143</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="starty" class="member public"><span class="name">starty</span><span class="signature-type"> :integer</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">integer</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-150">line 150</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="TiledLayerUuid" class="member public"><span class="name">TiledLayerUuid</span><span class="signature-type"> :<a href="mdl.html#.primaryKey">mdl.primaryKey</a></span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type"><a href="mdl.html#.primaryKey">mdl.primaryKey</a></span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-32">line 32</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="TiledMapUuid" class="member public"><span class="name">TiledMapUuid</span><span class="signature-type"> :<a href="mdl.html#.primaryKey">mdl.primaryKey</a></span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type"><a href="mdl.html#.primaryKey">mdl.primaryKey</a></span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-40">line 40</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="transparentColor" class="member public"><span class="name">transparentColor</span><span class="signature-type"> :string</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">string</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-107">line 107</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="type" class="member public"><span class="name">type</span><span class="signature-type"> :string</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">string</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-18">line 18</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -432,6 +1036,185 @@
 			
 			
 			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-96">line 96</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="visible" class="member public"><span class="name">visible</span><span class="signature-type"> :boolean</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">boolean</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-114">line 114</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="width" class="member public"><span class="name">width</span><span class="signature-type"> :integer</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">integer</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-121">line 121</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="x" class="member public"><span class="name">x</span><span class="signature-type"> :integer</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">integer</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-128">line 128</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title member public collapsible-symbol">
+			<h4 id="y" class="member public"><span class="name">y</span><span class="signature-type"> :integer</span></h4>
+		</dt>
+<dd class="symbol-details member public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">integer</span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-135">line 135</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -442,6 +1225,62 @@
 									</dl>
 									<h3>Methods</h3>
 									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".beforeEnsureSchema" class="function public"><span class="signature-attribs">&lt;async, static> </span><span class="name">beforeEnsureSchema</span><span class="signature-params">( <span class="signature-param">Knex</span>&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>Knex</code></td>
+							<td><span class="param-type">*</span></td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-195">line 195</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
 			<h4 id=".createSchemaOn" class="function public"><span class="signature-attribs">&lt;async, static> </span><span class="name">createSchemaOn</span><span class="signature-params">( <span class="signature-param">table</span>&nbsp;)</span><span class="signature-type"></span></h4>
@@ -468,15 +1307,92 @@
 					</tbody>
 				</table>
 			</div>
-	</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledLayer.js.html">lib/mdl/TiledLayer.js</a>, <a href="lib_mdl_TiledLayer.js.html#line-15">line 15</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
 </dd>
 											<hr/>
-											<dt class="symbol-title function public inherited collapsible-symbol">
-			<h4 id="render" class="function public inherited"><span class="signature-attribs">&lt;async> </span><span class="name">render</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+											<dt class="symbol-title function protected inherited collapsible-symbol">
+			<h4 id="preRender" class="function protected inherited"><span class="signature-attribs">&lt;async, abstract, protected> </span><span class="name">preRender</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
 		</dt>
-<dd class="symbol-details function public inherited  collapsible-symbol">
+<dd class="symbol-details function protected inherited  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>try to render this</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>The idea is that this is where relationships are refreshed before
+			a render, so each type of model should ensure it's immediate relations
+			are updated.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+							<!-- inherits -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Inherited From</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="mdl.TiledModel.html#preRender">mdl.TiledModel#preRender</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-209">line 209</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function private inherited collapsible-symbol">
+			<h4 id="render" class="function private inherited"><span class="signature-attribs">&lt;async, private> </span><span class="name">render</span><span class="signature-params">()</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function private inherited  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>this does some magic following conventions within the view directory:</p>
+			<ul>
+			<li>the view directory has folders, the folders are named after the model's class (a.k.a. database table name.)</li>
+			</ul></div>
 			</div>			<div class="callout callout-warning"><h5>Requires</h5>		<form class="form-horizontal requires">
 							<div class="form-group">
 								<label class="col-sm-3 control-label requires-type">module:pug</label>
@@ -520,6 +1436,13 @@
 			
 			
 			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-222">line 222</a></p>
+								</div>
+							</div>
 			
 			
 			
@@ -537,9 +1460,9 @@
 		</div>
 	</div>
 	<footer>
-				<div class="footer-option">pixeldeck</div>
+				<div class="footer-option">footsie</div>
 				<div class="copyright">GPL-3.0</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on 2019-10-21 @ 04:17 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

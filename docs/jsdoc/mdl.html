@@ -41,7 +41,7 @@
 				}
 			</style>
 		<script type="text/javascript">
-			window.TEMPLATE_OPTIONS = {"includeDate":true,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.gif","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"pixeldeck","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":false,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"linenum, longname, version, since","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
+			window.TEMPLATE_OPTIONS = {"includeDate":false,"dateFormat":"YYYY-MM-DD @ hh:mm","systemName":"pixeldeck","systemSummary":"a virtual pixel environment","systemLogo":"img/logo.png","systemColor":"#cc5500","navMembers":[{"kind":"class","title":"Classes","summary":"All documented classes."},{"kind":"external","title":"Externals","summary":"All documented external members."},{"kind":"global","title":"Globals","summary":"All documented globals."},{"kind":"mixin","title":"Mixins","summary":"All documented mixins."},{"kind":"interface","title":"Interfaces","summary":"All documented interfaces."},{"kind":"module","title":"Modules","summary":"All documented modules."},{"kind":"namespace","title":"Namespaces","summary":"All documented namespaces."},{"kind":"tutorial","title":"Tutorials","summary":"All available tutorials."}],"footer":"footsie","copyright":"GPL-3.0","linenums":true,"collapseSymbols":true,"inverseNav":true,"inlineNav":false,"outputSourceFiles":true,"sourceRootPath":null,"disablePackagePath":true,"outputSourcePath":false,"showTableOfContents":true,"showAccessFilter":true,"analytics":null,"methodHeadingReturns":true,"sort":"longname","search":true,"favicon":"favicon.gif","stylesheets":[],"scripts":[],"monospaceLinks":false,"cleverLinks":true};
 			window.DOCLET_TOC_ENABLED = true;
 			window.DOCLET_AFILTER_ENABLED = false;
 		</script>
@@ -51,7 +51,7 @@
 	<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
 		<div class="container">
 			<div class="navbar-header">
-				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.gif);">
+				<a class="navbar-brand branding-logo" href="index.html" style="background-image: url(img/logo.png);">
 					pixeldeck
 				</a>
 				<!-- displayed on small devices -->
@@ -64,13 +64,6 @@
 			<div class="navbar-collapse collapse" id="topNavigation">
 				<ul class="nav navbar-nav">
 								<li class="dropdown">
-									<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Globals<b class="caret"></b></a>
-									<ul class="dropdown-menu">
-											<li><a href="global.html#getModelIndex">getModelIndex</a></li>
-											<li><a href="global.html#modelNames">modelNames</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
 									<a href="list_class.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 									<ul class="dropdown-menu">
 											<li><a href="-_MakeCmd.html">_MakeCmd</a></li>
@@ -82,6 +75,7 @@
 											<li><a href="mdl.TiledChunk.html">mdl.TiledChunk</a></li>
 											<li><a href="mdl.TiledFile.html">mdl.TiledFile</a></li>
 											<li><a href="mdl.TiledFrame.html">mdl.TiledFrame</a></li>
+											<li><a href="mdl.TiledImage.html">mdl.TiledImage</a></li>
 											<li><a href="mdl.TiledLayer.html">mdl.TiledLayer</a></li>
 											<li><a href="mdl.TiledMap.html">mdl.TiledMap</a></li>
 											<li><a href="mdl.TiledMapUsesSet.html">mdl.TiledMapUsesSet</a></li>
@@ -92,6 +86,7 @@
 											<li><a href="mdl.TiledSet.html">mdl.TiledSet</a></li>
 											<li><a href="mdl.TiledTerrain.html">mdl.TiledTerrain</a></li>
 											<li><a href="mdl.TiledTile.html">mdl.TiledTile</a></li>
+											<li><a href="mdl.TiledWorld.html">mdl.TiledWorld</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -102,6 +97,7 @@
 											<li><a href="external-Express.html">Express</a></li>
 											<li><a href="external-fs.html">fs</a></li>
 											<li><a href="external-http.html">http</a></li>
+											<li><a href="external-jimp.html">jimp</a></li>
 											<li><a href="external-Knex.html">Knex</a></li>
 											<li><a href="external-Objection.html">Objection</a></li>
 											<li><a href="external-Path.html">Path</a></li>
@@ -109,17 +105,22 @@
 									</ul>
 								</li>
 								<li class="dropdown">
+									<a href="list_module.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+									<ul class="dropdown-menu">
+											<li><a href="module-pixeldeck.html">pixeldeck</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
 									<a href="list_namespace.html" class="dropdown-toggle" data-toggle="dropdown">Namespaces<b class="caret"></b></a>
 									<ul class="dropdown-menu">
+											<li><a href="arch.html">arch</a></li>
+											<li><a href="cfg.html">cfg</a></li>
 											<li><a href="cli.html">cli</a></li>
+											<li><a href="data.html">data</a></li>
 											<li><a href="mdl.html">mdl</a></li>
-											<li><a href="pixeldeck.html">pixeldeck</a></li>
-											<li><a href="pixeldeck.arch.html">pixeldeck.arch</a></li>
-											<li><a href="pixeldeck.cfg.html">pixeldeck.cfg</a></li>
-											<li><a href="pixeldeck.data.html">pixeldeck.data</a></li>
-											<li><a href="pixeldeck.server.html">pixeldeck.server</a></li>
-											<li><a href="pixeldeck.service.html">pixeldeck.service</a></li>
-											<li><a href="pixeldeck.ui.html">pixeldeck.ui</a></li>
+											<li><a href="server.html">server</a></li>
+											<li><a href="service.html">service</a></li>
+											<li><a href="ui.html">ui</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">
@@ -165,6 +166,34 @@
 <dd class="symbol-details namespace  collapsible-symbol expanded" style="max-height: 9999px;">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>utility object that requires-on-demand each of the named model classes</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl.js.html">lib/mdl.js</a>, <a href="lib_mdl.js.html#line-49">line 49</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
 			</div>	</div>
 </dd>
 							</dl>
@@ -190,6 +219,14 @@
 											<hr/>
 											<dt class="symbol-title class public">
 			<h4 id="TiledFrame" class="class public"><a href="mdl.TiledFrame.html"><span class="signature-new">new&nbsp;</span><span class="name">TiledFrame</span><span class="signature-params">()</span><span class="signature-type"></span></a></h4>
+		</dt>
+<dd class="symbol-details class public">
+	<div class="symbol-details-inner">
+	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title class public">
+			<h4 id="TiledImage" class="class public"><a href="mdl.TiledImage.html"><span class="signature-new">new&nbsp;</span><span class="name">TiledImage</span><span class="signature-params">()</span><span class="signature-type"></span></a></h4>
 		</dt>
 <dd class="symbol-details class public">
 	<div class="symbol-details-inner">
@@ -275,6 +312,14 @@
 	<div class="symbol-details-inner">
 	</div>
 </dd>
+											<hr/>
+											<dt class="symbol-title class public">
+			<h4 id="TiledWorld" class="class public"><a href="mdl.TiledWorld.html"><span class="signature-new">new&nbsp;</span><span class="name">TiledWorld</span><span class="signature-params">()</span><span class="signature-type"></span></a></h4>
+		</dt>
+<dd class="symbol-details class public">
+	<div class="symbol-details-inner">
+	</div>
+</dd>
 									</dl>
 									<h3>Members</h3>
 									<dl class="symbol">
@@ -285,43 +330,46 @@
 <dd class="symbol-details member public  collapsible-symbol">
 	<div class="symbol-details-inner">
 			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>generates an array of all the named model classes by requiring them.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+							<!-- type -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Type</label>
+								<div class="col-sm-9">
+									<div class="form-control-static type-names"><span class="param-type">Array.&lt;<a href="mdl.TiledModel.html">mdl.TiledModel</a>></span></div>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl.js.html">lib/mdl.js</a>, <a href="lib_mdl.js.html#line-37">line 37</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
 			</div>	</div>
 </dd>
 									</dl>
 									<h3>Methods</h3>
 									<dl class="symbol">
-											<hr/>
-											<dt class="symbol-title function public collapsible-symbol">
-			<h4 id=".models.ensureAllSchemas" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">models.ensureAllSchemas</span><span class="signature-params">( [&nbsp;<span class="signature-param">all</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
-		</dt>
-<dd class="symbol-details function public  collapsible-symbol">
-	<div class="symbol-details-inner">
-			<div class="callout callout-info">
-				<h5>Parameters</h5>
-				<table class="params table table-striped">
-					<thead>
-					<tr>
-							<th>Name</th>
-						<th>Type</th>
-							<th>Attributes</th>
-							<th>Default</th>
-						<th class="last">Description</th>
-					</tr>
-					</thead>
-					<tbody>
-						<tr>
-								<td><code>all</code></td>
-							<td><span class="param-type">Array.&lt;<a href="mdl.TiledModel.html">mdl.TiledModel</a>></span></td>
-								<td class="attributes">&lt;optional&gt;<br/></td>
-								<td>mdl.ALL</td>
-							<td class="last">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-	</div>
-</dd>
 											<hr/>
 											<dt class="symbol-title function public collapsible-symbol">
 			<h4 id=".models.dropAllSchemas" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">models.dropAllSchemas</span><span class="signature-params">( [&nbsp;<span class="signature-param">all</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
@@ -352,11 +400,136 @@
 					</tbody>
 				</table>
 			</div>
-	</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl.js.html">lib/mdl.js</a>, <a href="lib_mdl.js.html#line-68">line 68</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
+											<hr/>
+											<dt class="symbol-title function public collapsible-symbol">
+			<h4 id=".models.ensureAllSchemas" class="function public"><span class="signature-attribs">&lt;static> </span><span class="name">models.ensureAllSchemas</span><span class="signature-params">( [&nbsp;<span class="signature-param">all</span>&nbsp;]&nbsp;)</span><span class="signature-type"></span></h4>
+		</dt>
+<dd class="symbol-details function public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-info">
+				<h5>Parameters</h5>
+				<table class="params table table-striped">
+					<thead>
+					<tr>
+							<th>Name</th>
+						<th>Type</th>
+							<th>Attributes</th>
+							<th>Default</th>
+						<th class="last">Description</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+								<td><code>all</code></td>
+							<td><span class="param-type">Array.&lt;<a href="mdl.TiledModel.html">mdl.TiledModel</a>></span></td>
+								<td class="attributes">&lt;optional&gt;<br/></td>
+								<td>mdl.ALL</td>
+							<td class="last">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl.js.html">lib/mdl.js</a>, <a href="lib_mdl.js.html#line-60">line 60</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
 </dd>
 									</dl>
 									<h3>Type Definitions</h3>
 									<dl class="symbol">
+											<hr/>
+											<dt class="symbol-title typedef public collapsible-symbol">
+			<h4 id=".primaryKey" class="typedef public"><span class="name">primaryKey</span></h4>
+		</dt>
+<dd class="symbol-details typedef public  collapsible-symbol">
+	<div class="symbol-details-inner">
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Auto incremented integer for each table.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-1">line 1</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
+			</div>	</div>
+</dd>
 											<hr/>
 											<dt class="symbol-title typedef public collapsible-symbol">
 			<h4 id=".TiledGid" class="typedef public"><span class="name">TiledGid</span></h4>
@@ -368,15 +541,88 @@
 			through <a href="mdl.TiledMapUsesSet.html"><code>TiledMapUsesSet</code></a>
 			where each of those notes which <code>gid</code> each used <a href="mdl.TiledSet.html"><code>TiledSet</code></a> starts with and the actual <code>TileSet</code> is the
 			difference between the last <code>firstgid</code> of a <code>TiledMapUsesSet</code> that isn't over the needed <code>gid</code>.</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+							<!-- augments -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Augments</label>
+								<div class="col-sm-9">
+										<p class="form-control-static">Number</p>
+								</div>
+							</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledChunk.js.html">lib/mdl/TiledChunk.js</a>, <a href="lib_mdl_TiledChunk.js.html#line-1">line 1</a></p>
+								</div>
+							</div>
+			
+			
+			
+			
+					</form>
 			</div>	</div>
 </dd>
 											<hr/>
 											<dt class="symbol-title typedef public collapsible-symbol">
-			<h4 id=".primaryKey" class="typedef public"><span class="name">primaryKey</span></h4>
+			<h4 id=".timestamp" class="typedef public"><span class="name">timestamp</span></h4>
 		</dt>
 <dd class="symbol-details typedef public  collapsible-symbol">
 	<div class="symbol-details-inner">
-			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Auto incremented integer for each table.</p></div>
+			<div class="callout callout-primary"><h5>Description</h5>		<div class="description"><p>Roughly corresponds to the EcmaScript Date class</p></div>
+			</div>			<div class="callout callout-default"><h5>Details</h5>		<form class="form-horizontal details">
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							<!-- source -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">Source</label>
+								<div class="col-sm-9">
+									<p class="form-control-static"><a href="lib_mdl_TiledModel.js.html">lib/mdl/TiledModel.js</a>, <a href="lib_mdl_TiledModel.js.html#line-5">line 5</a></p>
+								</div>
+							</div>
+			
+			
+							<!-- see -->
+							<div class="form-group">
+								<label class="col-sm-3 control-label">See</label>
+								<div class="col-sm-9">
+										<ul class="form-control-static">
+												<li><a href="https://www.w3schools.com/jsref/jsref_obj_date.asp">Date @ W3Schools.com</a></li>
+												<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date @ MDN</a></li>
+										</ul>
+								</div>
+							</div>
+			
+			
+					</form>
 			</div>	</div>
 </dd>
 									</dl>
@@ -389,9 +635,9 @@
 		</div>
 	</div>
 	<footer>
-				<div class="footer-option">pixeldeck</div>
+				<div class="footer-option">footsie</div>
 				<div class="copyright">GPL-3.0</div>
-			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on 2019-10-21 @ 04:17 using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
+			<div class="generated-by">Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> using the <a href="https://github.com/steveush/foodoc">FooDoc template</a>.</div>
 	</footer>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
